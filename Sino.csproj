@@ -79,6 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\CharacterControl.cs" />
+    <Compile Include="Assets\Script\CharWithItem.cs" />
+    <Compile Include="Assets\Script\ItemInfo.cs" />
+    <Compile Include="Assets\Script\UI_bag.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
