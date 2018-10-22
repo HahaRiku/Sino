@@ -10,7 +10,8 @@ public class ItemInfo : MonoBehaviour {
 		multi_get
 	};
 	public Act_Mode actMode;
-	public Sprite[] pics;
+	public Sprite[] pics;		//1: idle;	2: HL;	3:InfoImg
+	public string description;
 	
 	/*
 	public bool IsHighlight;
