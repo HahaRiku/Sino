@@ -38,9 +38,9 @@ GameObject:
   - component: {fileID: 212752140530009220}
   - component: {fileID: 61218100671714108}
   - component: {fileID: 114722746319809758}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: 'Item_MPick '
-  m_TagString: Untagged
+  m_TagString: ActableItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2100d331adc361945905ab98772d6938, type: 3}
   - {fileID: 21300000, guid: 4e344f6098e580445947b83f7b2b6fe0, type: 3}
   - {fileID: 21300000, guid: 2100d331adc361945905ab98772d6938, type: 3}
-  description: 
+  description: "\u9019\u500B\u7269\u4EF6\u53EF\u4EE5\u91CD\u8907\u62FF"
 --- !u!212 &212741787357978540
 SpriteRenderer:
   m_ObjectHideFlags: 1

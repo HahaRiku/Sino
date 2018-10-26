@@ -8,7 +8,8 @@ public class CharWithItem : MonoBehaviour {
     
 	public GameObject interactItem,Info_UI;
 	private bool IsHighlight;
-	private bool actEnable;
+	public bool actEnable;
+	private int count = 0;
 	
 	void Start () {
 		IsHighlight = false;
@@ -16,48 +17,51 @@ public class CharWithItem : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Z) && IsHighlight) {		//按下Z && 有物體可互動
+        if(actEnable){
+			gameObject.transform.parent.GetComponent<CharacterControl>().enabled = true;
+		}else{
+			gameObject.transform.parent.GetComponent<CharacterControl>().enabled = false;
+		}
+		
+		
+		if (Input.GetKeyDown(KeyCode.Z) && IsHighlight) {		//按下Z && 有物體可互動
             
 			if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){		//look
 				effect_ShowInfo(interactItem,true);
 			}
 			else{		//pick
-				pick_TEMP(interactItem);
+				StartCoroutine(pick_TEMP(interactItem));
 			}
         }
     }
 	
 //touching
 	void OnTriggerEnter2D(Collider2D col_item){
+Debug.LogError(col_item.transform.tag);
+		
 		if(col_item.transform.tag == "ActableItem" && !IsHighlight){
 			interactItem = col_item.gameObject;
 			effect_Highlight(interactItem, true);
 			IsHighlight = true;
 		}
 	}
-	void OnTriggerStay2D(Collider2D col_item){
-		if(col_item.transform.tag == "ActableItem" && !IsHighlight){
-			interactItem = col_item.gameObject;
-			effect_Highlight(interactItem, true);
-			IsHighlight = true;
-		}
-	}
-	
-//
 	void OnTriggerExit2D(Collider2D col_item){
 		if(col_item.transform.tag == "ActableItem" && IsHighlight){
-			interactItem = null;
-			effect_Highlight(interactItem, false);
 			IsHighlight = false;
+			effect_Highlight(interactItem, false);
+			effect_ShowInfo(interactItem,false);
+			interactItem = null;
 		}
 	}
 	
+//HL effect
 	void effect_Highlight(GameObject item, bool IsHighlight){
 		if(IsHighlight){
 				item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[1];}
 		else{	item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[0];}
 	}
 	void effect_ShowInfo(GameObject item, bool IsOpen){
+		
 		if(item.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){
 			item.transform.GetChild(0).gameObject.SetActive(IsOpen);}
 		else{
@@ -69,33 +73,82 @@ public class CharWithItem : MonoBehaviour {
 		}
 	}
 	
-	void pick_TEMP(GameObject item){
+	private IEnumerator pick_TEMP(GameObject item){
 		
 		actEnable = false;
+	Debug.LogError(actEnable);
 		effect_ShowInfo(item,true);
 		
-		//interactItem.SetActive(false);
 		if(item.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.one_time_get){
+			item.GetComponent<SpriteRenderer>().sprite = null;
+			
+			while(!actEnable){
+				if(count == 0 && Input.GetKeyUp(KeyCode.Z)){
+					count++;
+				}
+				else if(count == 1 && Input.GetKeyDown(KeyCode.Z)){
+					actEnable = true;
+					Debug.LogError(actEnable + "1");
+					count = 0;
+					
+					effect_ShowInfo(item,false);
+					effect_Highlight(item, false);
+					IsHighlight = false;
+					interactItem = null;
+					
+					break;
+				}
+				Debug.LogError(actEnable + "2");
+				yield return 0;
+			}
+			//StartCoroutine(waitKeyPress(KeyCode.Z, item));
 			item.SetActive(false);
 		}
-		
-		//press z
-		StartCoroutine(waitKeyPress(KeyCode.Z));
-		
-		interactItem = null;
-		effect_Highlight(item, false);
-		IsHighlight = false;
-		//antEnable = true;
-	}
-	private IEnumerator waitKeyPress( KeyCode code){
-		while(!actEnable){
-			if(Input.GetKeyDown(code)){
-				actEnable = true;
-				break;
+		else{
+			while(!actEnable){
+				if(count == 0 && Input.GetKeyUp(KeyCode.Z)){
+					count++;
+				}
+				else if(count == 1 && Input.GetKeyDown(KeyCode.Z)){
+					actEnable = true;
+					Debug.LogError(actEnable + "1");
+					count = 0;
+					
+					effect_ShowInfo(item,false);
+					effect_Highlight(item, false);
+					IsHighlight = false;
+					interactItem = null;
+					
+					break;
+				}
+				Debug.LogError(actEnable + "2");
+				yield return 0;
 			}
-			yield return 0;
 		}
 	}
+	/*
+	private IEnumerator waitKeyPress(KeyCode code, GameObject item){
+		
+		while(!actEnable){
+			if(count == 0 && Input.GetKeyUp(code)){
+				count++;
+			}
+			else if(count == 1 && Input.GetKeyDown(code)){
+				actEnable = true;
+				Debug.LogError(actEnable + "1");
+				count++;
+				
+				effect_ShowInfo(item,false);
+				effect_Highlight(item, false);
+				IsHighlight = false;
+				interactItem = null;
+				
+				break;
+			}
+			Debug.LogError(actEnable + "2");
+			yield return 0;
+		}
+	}*/
 	
 }
 

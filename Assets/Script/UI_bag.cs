@@ -10,6 +10,7 @@ public class UI_bag : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		itemInBag = this.gameObject.GetComponent<Text>();
 		itemInBag.text = "Item: ";
 	}
 	
