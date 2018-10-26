@@ -8,7 +8,7 @@ public class CharWithItem : MonoBehaviour {
     
 	public GameObject interactItem,Info_UI;
 	private bool IsHighlight;
-	public bool actEnable;
+	private bool actEnable;
 	private int count = 0;
 	
 	void Start () {
@@ -23,22 +23,22 @@ public class CharWithItem : MonoBehaviour {
 			gameObject.transform.parent.GetComponent<CharacterControl>().enabled = false;
 		}
 		
-		
-		if (Input.GetKeyDown(KeyCode.Z) && IsHighlight) {		//按下Z && 有物體可互動
-            
-			if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){		//look
-				effect_ShowInfo(interactItem,true);
-			}
-			else{		//pick
+	//按下Z && 有物體可互動
+		if (Input.GetKeyDown(KeyCode.Z) && IsHighlight) {
+			
+		//只能看的物體：info綁在item下，直接顯示即可
+			if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){	
+				effect_ShowInfo(interactItem,true);}
+				
+		//可以撿的物體：在function裡處理
+			else{
 				StartCoroutine(pick_TEMP(interactItem));
 			}
         }
     }
 	
-//touching
+//碰觸trigger
 	void OnTriggerEnter2D(Collider2D col_item){
-Debug.LogError(col_item.transform.tag);
-		
 		if(col_item.transform.tag == "ActableItem" && !IsHighlight){
 			interactItem = col_item.gameObject;
 			effect_Highlight(interactItem, true);
@@ -54,16 +54,20 @@ Debug.LogError(col_item.transform.tag);
 		}
 	}
 	
-//HL effect
+//highlight效果
 	void effect_Highlight(GameObject item, bool IsHighlight){
 		if(IsHighlight){
 				item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[1];}
 		else{	item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[0];}
 	}
+	
+//顯示敘述的效果
 	void effect_ShowInfo(GameObject item, bool IsOpen){
 		
+	//只能看的物體 - 直接顯示資訊
 		if(item.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){
 			item.transform.GetChild(0).gameObject.SetActive(IsOpen);}
+	//撿取物品的UI設定
 		else{
 			
 		//UI_set & open
@@ -73,22 +77,27 @@ Debug.LogError(col_item.transform.tag);
 		}
 	}
 	
+//撿取動作
 	private IEnumerator pick_TEMP(GameObject item){
 		
+	/*物體訊息顯示：
+		關閉人物移動 -> 打開UI層的物件訊息 [等待Z鍵輸入] -> 關閉訊息、恢復人物移動*/
 		actEnable = false;
-	Debug.LogError(actEnable);
 		effect_ShowInfo(item,true);
 		
+	//一次撿取的物品：撿取時關閉地圖上的圖示，訊息結束後刪除物品
 		if(item.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.one_time_get){
-			item.GetComponent<SpriteRenderer>().sprite = null;
-			
+		
+		//關閉圖像
+			item.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0f);
+		
+		//等待輸入&關閉訊息
 			while(!actEnable){
 				if(count == 0 && Input.GetKeyUp(KeyCode.Z)){
 					count++;
 				}
 				else if(count == 1 && Input.GetKeyDown(KeyCode.Z)){
 					actEnable = true;
-					Debug.LogError(actEnable + "1");
 					count = 0;
 					
 					effect_ShowInfo(item,false);
@@ -98,12 +107,12 @@ Debug.LogError(col_item.transform.tag);
 					
 					break;
 				}
-				Debug.LogError(actEnable + "2");
 				yield return 0;
 			}
-			//StartCoroutine(waitKeyPress(KeyCode.Z, item));
+			
 			item.SetActive(false);
 		}
+	//重複撿取的物品：撿取前後都不動畫面上的物品
 		else{
 			while(!actEnable){
 				if(count == 0 && Input.GetKeyUp(KeyCode.Z)){
@@ -111,7 +120,6 @@ Debug.LogError(col_item.transform.tag);
 				}
 				else if(count == 1 && Input.GetKeyDown(KeyCode.Z)){
 					actEnable = true;
-					Debug.LogError(actEnable + "1");
 					count = 0;
 					
 					effect_ShowInfo(item,false);
@@ -121,65 +129,8 @@ Debug.LogError(col_item.transform.tag);
 					
 					break;
 				}
-				Debug.LogError(actEnable + "2");
 				yield return 0;
 			}
 		}
 	}
-	/*
-	private IEnumerator waitKeyPress(KeyCode code, GameObject item){
-		
-		while(!actEnable){
-			if(count == 0 && Input.GetKeyUp(code)){
-				count++;
-			}
-			else if(count == 1 && Input.GetKeyDown(code)){
-				actEnable = true;
-				Debug.LogError(actEnable + "1");
-				count++;
-				
-				effect_ShowInfo(item,false);
-				effect_Highlight(item, false);
-				IsHighlight = false;
-				interactItem = null;
-				
-				break;
-			}
-			Debug.LogError(actEnable + "2");
-			yield return 0;
-		}
-	}*/
-	
 }
-
-
-
-                  /*
-public class CoroutineTest : MonoBehaviour {
-	bool bKeyPressed =false;
-	// Use this for initialization
-	void Start () {
-		FirstFunction();
-	}
-
-	void FirstFunction(){
-		print("before  start coroutine ");
-		StartCoroutine(waitKeyPress(KeyCode.A));
-		print ("after start coroutine");
-	}
-	IEnumerator waitKeyPress(KeyCode code){
-		while(!bKeyPressed){
-			if(Input.GetKeyDown(code)){
-				StartGame();
-				break;
-			}
-			print (" wait key press  yield return");
-			yield return 0;
-		}
-		print ("end of wait key press ");
-	}
-	void StartGame(){
-		bKeyPressed = true;
-		print("StartGame!!!!!!!!!!!!!!!!!!!");
-	}
-}*/

@@ -12,12 +12,4 @@ public class ItemInfo : MonoBehaviour {
 	public Act_Mode actMode;
 	public Sprite[] pics;		//1: idle;	2: HL;	3:InfoImg
 	public string description;
-	
-	/*
-	public bool IsHighlight;
-	
-	void Start(){
-		IsHighlight = false;
-	}
-	*/
 }
