@@ -41,32 +41,42 @@ public class CharWithItem : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col_item){
 		if(col_item.transform.tag == "ActableItem" && !IsHighlight){
 			interactItem = col_item.gameObject;
-			effect_Highlight(interactItem, true);
+			effect_Scope(interactItem, true);
 			IsHighlight = true;
 		}
 	}
 	void OnTriggerExit2D(Collider2D col_item){
 		if(col_item.transform.tag == "ActableItem" && IsHighlight){
 			IsHighlight = false;
-			effect_Highlight(interactItem, false);
+			effect_Scope(interactItem, false);
 			effect_ShowInfo(interactItem,false);
 			interactItem = null;
 		}
 	}
 	
-//highlight效果
+//放大鏡效果
+	void effect_Scope(GameObject item, bool IsHighlight){
+		if(IsHighlight){
+			item.transform.GetChild(0).gameObject.SetActive(true);}
+		else{
+			item.transform.GetChild(0).gameObject.SetActive(false);
+			item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[0];
+		}
+	}
+	/*
 	void effect_Highlight(GameObject item, bool IsHighlight){
 		if(IsHighlight){
 				item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[1];}
 		else{	item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[0];}
-	}
+	}*/
 	
 //顯示敘述的效果
 	void effect_ShowInfo(GameObject item, bool IsOpen){
 		
-	//只能看的物體 - 直接顯示資訊
+	//只能看的物體 - highlight + 直接顯示資訊
 		if(item.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){
-			item.transform.GetChild(0).gameObject.SetActive(IsOpen);}
+			if(IsOpen){	item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[1];}
+			item.transform.GetChild(1).gameObject.SetActive(IsOpen);}
 	//撿取物品的UI設定
 		else{
 			
@@ -101,7 +111,7 @@ public class CharWithItem : MonoBehaviour {
 					count = 0;
 					
 					effect_ShowInfo(item,false);
-					effect_Highlight(item, false);
+					effect_Scope(item, false);
 					IsHighlight = false;
 					interactItem = null;
 					
@@ -123,7 +133,7 @@ public class CharWithItem : MonoBehaviour {
 					count = 0;
 					
 					effect_ShowInfo(item,false);
-					effect_Highlight(item, false);
+					effect_Scope(item, false);
 					IsHighlight = false;
 					interactItem = null;
 					
