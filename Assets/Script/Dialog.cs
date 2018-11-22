@@ -20,7 +20,8 @@ public class Dialog : MonoBehaviour {
     private string textOfFile;
     private int nowPointerOfOutput;
     private State state;
-    public bool nowStateShouldBeDialog;
+    private bool nowStateShouldBeDialog;
+    public bool lineDone;
 
     // Use this for initialization
     void Start() {
@@ -35,9 +36,8 @@ public class Dialog : MonoBehaviour {
         textName = gameObject.transform.GetChild(0).GetComponent<Text>();
         dialog = gameObject.transform.GetChild(1).GetComponent<Text>();
         textOfFile = file.text;
+        lineDone = true;
         //dialog.text = file.text;
-        ChangeDialog();
-        
     }
 
     // Update is called once per frame
@@ -46,12 +46,16 @@ public class Dialog : MonoBehaviour {
             if (state == State.Explore) {   //切換到dialog
                 canvasAni.SetBool("Dialog", true);
                 state = State.Dialog;
+                ChangeDialog();
             }
             else {  //當下即是dialog
                 if (Input.GetKeyDown(KeyCode.Z)) {
                     if (nowPointerOfOutput < textOfFile.Length) {
-                        currentLine += 1;
-                        ChangeDialog();
+                        if (!NextIsExplore()) {
+                            currentLine += 1;
+                            ChangeDialog();
+                        }
+                        else WhatType(false, "");
                     }
                 }
             }
@@ -62,7 +66,10 @@ public class Dialog : MonoBehaviour {
                 state = State.Explore;
             }
             else {  //當下即是explore
-                WhatType(false, "");
+                if (nowPointerOfOutput < textOfFile.Length && lineDone) {
+                    currentLine += 1;
+                    WhatType(false, "");
+                }
             }
         }
         
@@ -81,8 +88,10 @@ public class Dialog : MonoBehaviour {
     void ChangeDialog() {
         int nameStart=0, nameEnd=0;
         while (nowPointerOfOutput != textOfFile.Length && textOfFile[nowPointerOfOutput] != '\n') {
+            
             if (textOfFile[nowPointerOfOutput] == '【') {
                 nameStart = nowPointerOfOutput + 1;
+                print(nameStart);
             }
             else if (textOfFile[nowPointerOfOutput] == '】') {
                 nameEnd = nowPointerOfOutput - 1;
@@ -109,8 +118,11 @@ public class Dialog : MonoBehaviour {
         }
         type = textOfFile.Substring(typeStart, typeEnd + 1 - typeStart);
         description = textOfFile.Substring(typeEnd + 2, nowPointerOfOutput - typeEnd - 2);
+        nowPointerOfOutput += 1;
         if (transition) {
-
+            if (transType == "亮光") {
+                
+            }
         }
         else if (type == "Dialog") {
             nowStateShouldBeDialog = true;
@@ -119,13 +131,32 @@ public class Dialog : MonoBehaviour {
             nowStateShouldBeDialog = false;
         }
         else if (type == "等待完成探索") {
-
+            lineDone = false;
         }
         else if (type == "其他腳本") {
+            lineDone = false;
 
+            lineDone = true;
         }
         else if (type == "轉場") {
-            WhatType(true, description);
+            lineDone = false;
+            WhatType(true, description);    //要讀是什麼場景
         }
+        else if (type == "行走圖") {
+            lineDone = false;
+            CharacterAnimation();
+            lineDone = true;
+        }
+    }
+
+    void CharacterAnimation() {
+
+    }
+
+    bool NextIsExplore() {
+        if (textOfFile[nowPointerOfOutput] == '《') {
+            return true;
+        }
+        else return false;
     }
 }
