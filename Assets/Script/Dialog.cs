@@ -43,12 +43,11 @@ public class Dialog : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (nowStateShouldBeDialog) {
-            print(state);
-            if (state == State.Explore) {
+            if (state == State.Explore) {   //切換到dialog
                 canvasAni.SetBool("Dialog", true);
                 state = State.Dialog;
             }
-            else {
+            else {  //當下即是dialog
                 if (Input.GetKeyDown(KeyCode.Z)) {
                     if (nowPointerOfOutput < textOfFile.Length) {
                         currentLine += 1;
@@ -58,16 +57,18 @@ public class Dialog : MonoBehaviour {
             }
         }
         else {
-            if (state == State.Dialog) {
+            if (state == State.Dialog) {    //切換到explore
                 canvasAni.SetBool("Dialog", false);
                 state = State.Explore;
-                WaitAndPressZToNextLine();
+            }
+            else {  //當下即是explore
+                WhatType(false, "");
             }
         }
         
     }
 
-    IEnumerator WaitAndPressZToNextLine() {
+    IEnumerator WaitAndPressZToNextLine() {     //for waiting the time of changing dialog and explore
         yield return new WaitForSeconds(1.0f);
         if (Input.GetKeyDown(KeyCode.Z)) {
             if (nowPointerOfOutput < textOfFile.Length) {
@@ -91,5 +92,40 @@ public class Dialog : MonoBehaviour {
         textName.text = textOfFile.Substring(nameStart, nameEnd+1-nameStart);
         dialog.text = textOfFile.Substring(nameEnd+2, nowPointerOfOutput-nameEnd-2);
         nowPointerOfOutput += 1;
+    }
+
+    void WhatType(bool transition, string transType) { //transType 0: not transition, 1: 亮光
+        int typeStart = 0, typeEnd = 0;
+        string type;
+        string description;
+        while (nowPointerOfOutput < textOfFile.Length && textOfFile[nowPointerOfOutput] != '\n') {
+            if (textOfFile[nowPointerOfOutput] == '《') {
+                typeStart = nowPointerOfOutput + 1;
+            }
+            else if (textOfFile[nowPointerOfOutput] == '》') {
+                typeEnd = nowPointerOfOutput - 1;
+            }
+            nowPointerOfOutput += 1;
+        }
+        type = textOfFile.Substring(typeStart, typeEnd + 1 - typeStart);
+        description = textOfFile.Substring(typeEnd + 2, nowPointerOfOutput - typeEnd - 2);
+        if (transition) {
+
+        }
+        else if (type == "Dialog") {
+            nowStateShouldBeDialog = true;
+        }
+        else if (type == "Explore") {
+            nowStateShouldBeDialog = false;
+        }
+        else if (type == "等待完成探索") {
+
+        }
+        else if (type == "其他腳本") {
+
+        }
+        else if (type == "轉場") {
+            WhatType(true, description);
+        }
     }
 }
