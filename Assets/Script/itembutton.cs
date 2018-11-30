@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class itembutton : MonoBehaviour {
     public int id;
-    List<int> idofitem = new List<int>(10);
+    List<int> idofitem = new List<int>();
 
     public List<int> Idofitem
     {
@@ -19,7 +19,7 @@ public class itembutton : MonoBehaviour {
         }
     }
 
-    // Use this for initialization
+    // Use this for initializationk
     void Start () {
 		
 	}
