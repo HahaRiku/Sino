@@ -6,14 +6,13 @@ using UnityEngine.UI;
 
 public class CharWithItem : MonoBehaviour {
     
-	public GameObject interactItem,Info_UI;
-	private bool IsHighlight;
-	private bool actEnable;
-	private int count = 0;
+	public GameObject interactItem,Info_UI,pickChoose;
+	public static bool actEnable;
 	
 	void Start () {
-		IsHighlight = false;
+		//IsHighlight = false;
 		actEnable = true;
+		pickChoose.SetActive(false);
 	}
 	
 	void Update () {
@@ -22,9 +21,11 @@ public class CharWithItem : MonoBehaviour {
 		}else{
 			gameObject.transform.parent.GetComponent<CharacterControl>().enabled = false;
 		}
-		
+		/*
 	//按下Z && 有物體可互動
-		if (Input.GetKeyDown(KeyCode.Z) && IsHighlight) {
+		if (Input.GetKeyDown(KeyCode.Z) && interactItem) {
+			
+		//調查OR撿取
 			
 		//只能看的物體：info綁在item下，直接顯示即可
 			if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){	
@@ -34,113 +35,153 @@ public class CharWithItem : MonoBehaviour {
 			else{
 				StartCoroutine(pick_TEMP(interactItem));
 			}
-        }
+        }*/
     }
 	
-//碰觸trigger
-	void OnTriggerEnter2D(Collider2D col_item){
-		if(col_item.transform.tag == "ActableItem" && !IsHighlight){
-			interactItem = col_item.gameObject;
-			effect_Scope(interactItem, true);
-			IsHighlight = true;
+//pre_funct
+	private IEnumerator waitForKeyPress(KeyCode key){
+		bool done = false;
+		while(!done){
+			if(Input.GetKeyDown(key)){	done = true;}
+			yield return 0; // wait until next frame, then continue execution from here (loop continues)
 		}
 	}
+	private void SetPickUIInfo(int imgNumber, string description){
+		Info_UI.GetComponentInChildren<Image>().sprite = interactItem.GetComponent<ItemInfo>().pics[imgNumber];
+		Info_UI.GetComponentInChildren<Text>().text = description;
+	}
+	private void ActivePickUI(bool IsActive){
+		Info_UI.SetActive(IsActive);
+	}
+	
+//Touch: "idle -> touched"
+	void OnTriggerEnter2D(Collider2D col_item){
+		if(col_item.transform.tag == "ActableItem"){
+			interactItem = col_item.gameObject;
+			StartCoroutine(F_Touched());
+		}
+	}
+//Untouch: "touched -> idle"
 	void OnTriggerExit2D(Collider2D col_item){
-		if(col_item.transform.tag == "ActableItem" && IsHighlight){
-			IsHighlight = false;
-			effect_Scope(interactItem, false);
-			effect_ShowInfo(interactItem,false);
+		if(col_item.transform.tag == "ActableItem"){
 			interactItem = null;
 		}
 	}
-	
-//放大鏡效果
-	void effect_Scope(GameObject item, bool IsHighlight){
-		if(IsHighlight){
-			item.transform.GetChild(0).gameObject.SetActive(true);}
-		else{
-			item.transform.GetChild(0).gameObject.SetActive(false);
-			item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[0];
+//F_touched
+	private IEnumerator F_Touched(){
+	//(press Z) -> {describe}
+		if(interactItem != null ){
+			yield return waitForKeyPress(KeyCode.Z);
+			StartCoroutine(F_Describe());
 		}
+		//(untouch) -> {idle}: At item
 	}
-	/*
-	void effect_Highlight(GameObject item, bool IsHighlight){
-		if(IsHighlight){
-				item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[1];}
-		else{	item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[0];}
-	}*/
-	
-//顯示敘述的效果
-	void effect_ShowInfo(GameObject item, bool IsOpen){
-		
-	//只能看的物體 - highlight + 直接顯示資訊
-		if(item.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){
-			if(IsOpen){	item.GetComponent<SpriteRenderer>().sprite = item.GetComponent<ItemInfo>().pics[1];}
-			item.transform.GetChild(1).gameObject.SetActive(IsOpen);}
-	//撿取物品的UI設定
+//F_describe
+	private IEnumerator F_Describe(){
+		interactItem.GetComponent<ItemInfo>().HLE = ItemInfo.HighLightState.describe;
+		interactItem.GetComponent<ItemInfo>().ItemState();
+	//(unpick) -> [describe_1]
+		if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){
+		//(unpick && untouch) -> {idle}: At item
+		}
+	//(pickable) -> [describe_2]
 		else{
+			SetPickUIInfo(2,interactItem.GetComponent<ItemInfo>().description[0]);
+			ActivePickUI(true);
+		
+		//(wait press Z) -> [dialogue] + {choosing_action}	//"pick? Y/N"
+			actEnable = false;
+			yield return waitForKeyPress(KeyCode.Z);
+			ActivePickUI(false);
 			
-		//UI_set & open
-			Info_UI.GetComponentInChildren<Image>().sprite = item.GetComponent<ItemInfo>().pics[2];
-			Info_UI.GetComponentInChildren<Text>().text = item.GetComponent<ItemInfo>().description;
-			Info_UI.SetActive(IsOpen);
+			//dialogue
+			
+			yield return StartCoroutine(F_WhetherPick());
 		}
+	}
+//F_choosing_action
+	private IEnumerator F_WhetherPick(){
+		pickChoose.SetActive(true);
+		int choice = 0;
+		bool done = false;
+		RectTransform cursor = pickChoose.transform.GetChild(0).gameObject.GetComponent<RectTransform> ();	
+		Vector3 cursor_localPos = new Vector3(-75.0f, 20.0f, 0);
+		while(!done){
+			if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow)){
+				choice = (choice+1)%2;
+				cursor.localPosition = new Vector3(cursor_localPos.x, cursor_localPos.y - 40.0f * choice, cursor_localPos.z);
+			}
+			else if(Input.GetKeyDown(KeyCode.Z)){
+				
+				done = true;
+				pickChoose.SetActive(false);
+			//(press Z && "Y") -> //dial + pic
+				if(choice == 0){
+					Debug.Log(choice);
+					yield return F_Pick();
+				}
+			//(press Z && "N") -> {touched}
+				else{
+					actEnable = true;
+				}
+			}
+			yield return 0; // wait until choosing
+		}
+	}
+//F_picking & picken
+	private IEnumerator F_Pick(){
+		Debug.Log("test");
+		
+		SetPickUIInfo(2, "獲得" + interactItem.gameObject.name );
+		ActivePickUI(true);
+		yield return new WaitForSeconds(Time.deltaTime);
+		yield return waitForKeyPress(KeyCode.Z);
+		ActivePickUI(false);
+		actEnable = true;
+	//(press Z && 1pick) -> {picken} : -> active(false)
+		if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.one_time_get){
+			interactItem.SetActive(false);
+			interactItem = null;
+		}
+	//(press Z && mulpick) -> {touched}
+		/*else if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.multi_get){
+			
+		}*/
 	}
 	
-//撿取動作
-	private IEnumerator pick_TEMP(GameObject item){
-		
-	/*物體訊息顯示：
-		關閉人物移動 -> 打開UI層的物件訊息 [等待Z鍵輸入] -> 關閉訊息、恢復人物移動*/
-		actEnable = false;
-		effect_ShowInfo(item,true);
-		
-	//一次撿取的物品：撿取時關閉地圖上的圖示，訊息結束後刪除物品
-		if(item.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.one_time_get){
-		
-		//關閉圖像
-			item.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0f);
-		
-		//等待輸入&關閉訊息
-			while(!actEnable){
-				if(count == 0 && Input.GetKeyUp(KeyCode.Z)){
-					count++;
-				}
-				else if(count == 1 && Input.GetKeyDown(KeyCode.Z)){
-					actEnable = true;
-					count = 0;
-					
-					effect_ShowInfo(item,false);
-					effect_Scope(item, false);
-					IsHighlight = false;
-					interactItem = null;
-					
-					break;
-				}
-				yield return 0;
-			}
-			
-			item.SetActive(false);
-		}
-	//重複撿取的物品：撿取前後都不動畫面上的物品
-		else{
-			while(!actEnable){
-				if(count == 0 && Input.GetKeyUp(KeyCode.Z)){
-					count++;
-				}
-				else if(count == 1 && Input.GetKeyDown(KeyCode.Z)){
-					actEnable = true;
-					count = 0;
-					
-					effect_ShowInfo(item,false);
-					effect_Scope(item, false);
-					IsHighlight = false;
-					interactItem = null;
-					
-					break;
-				}
-				yield return 0;
-			}
-		}
-	}
 }
+
+/*
+ItemState{
+	idle,
+		(touch) -> {touched}
+	touched,
+		(press Z) -> {describe}
+		(untouch) -> {idle}
+	describe,
+		(pickable && press Z) -> [dialogue] + {choosing_action}	//"pick? Y/N"
+		(unpiuck && untouch) -> {idle}
+	choosing_action,
+		(press Z && "Y") -> //dial + pic
+		(press Z && "N") -> {touched}
+	picking,
+		(press Z) -> {picken}
+		(press Z) -> {touched}
+	picken
+		-> active(false)
+};
+*/
+/*
+DoorState{
+	idle,
+		(touch) -> {touched}
+	touched,
+		(press Z && locked) -> {describe}
+		(press Z && openable) -> [open] + [in]
+		(UseItem() && locked) -> [unlocked] + {touched}
+		(untouch) -> {idle}
+	describe,
+		(press Z) -> {touched}
+		(untouch) -> {idle}
+};
+*/

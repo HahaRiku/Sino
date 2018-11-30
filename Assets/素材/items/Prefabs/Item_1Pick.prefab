@@ -336,12 +336,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b1ff2971c75f346aa8887be2bebc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HLE: 0
   actMode: 1
   pics:
   - {fileID: 21300000, guid: 3121e9292bd63704a8db1ef3485c79b1, type: 3}
   - {fileID: 21300000, guid: 0b893db2446f49d4e95ad77d056f1816, type: 3}
   - {fileID: 21300000, guid: 3121e9292bd63704a8db1ef3485c79b1, type: 3}
-  description: "\u9019\u500B\u7269\u4EF6\u53EF\u4EE5\u62FF\u4E00\u6B21"
+  description:
+  - "\u9019\u500B\u7269\u4EF6\u53EF\u4EE5\u62FF\u4E00\u6B21"
+  - 
 --- !u!212 &212052106621045224
 SpriteRenderer:
   m_ObjectHideFlags: 1

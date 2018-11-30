@@ -222,12 +222,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b1ff2971c75f346aa8887be2bebc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HLE: 0
   actMode: 0
   pics:
   - {fileID: 21300000, guid: 384768a01b5f105428c0c7886c09c64c, type: 3}
   - {fileID: 21300000, guid: d6d1e4378b0ea6f46b426e483aba43f3, type: 3}
   - {fileID: 0}
-  description: "\u9019\u500B\u7269\u4EF6\u53EA\u80FD\u770B"
+  description:
+  - "\u9019\u500B\u7269\u4EF6\u53EA\u80FD\u770B"
+  - 
 --- !u!212 &212232150143395972
 SpriteRenderer:
   m_ObjectHideFlags: 1
