@@ -14,6 +14,7 @@ public class Dialog : MonoBehaviour {
     public bool defaultStateIsDialog;
     public int currentLine;
     public Animator canvasAni ;
+    public Animator BGAni;
 
     private Text textName;
     private Text dialog;
@@ -21,7 +22,7 @@ public class Dialog : MonoBehaviour {
     private int nowPointerOfOutput;
     private State state;
     private bool nowStateShouldBeDialog;
-    public bool lineDone;
+    private bool lineDone;
 
     // Use this for initialization
     void Start() {
@@ -45,6 +46,7 @@ public class Dialog : MonoBehaviour {
         if (nowStateShouldBeDialog) {
             if (state == State.Explore) {   //切換到dialog
                 canvasAni.SetBool("Dialog", true);
+                BGAni.SetBool("Dialog", true);
                 state = State.Dialog;
                 ChangeDialog();
             }
@@ -63,6 +65,7 @@ public class Dialog : MonoBehaviour {
         else {
             if (state == State.Dialog) {    //切換到explore
                 canvasAni.SetBool("Dialog", false);
+                BGAni.SetBool("Dialog", false);
                 state = State.Explore;
             }
             else {  //當下即是explore
@@ -121,7 +124,7 @@ public class Dialog : MonoBehaviour {
         nowPointerOfOutput += 1;
         if (transition) {
             if (transType == "亮光") {
-                
+
             }
         }
         else if (type == "Dialog") {
@@ -132,6 +135,8 @@ public class Dialog : MonoBehaviour {
         }
         else if (type == "等待完成探索") {
             lineDone = false;
+            SystemVariables.ExploreDone = false;
+            StartCoroutine(WaitExploreDone());
         }
         else if (type == "其他腳本") {
             lineDone = false;
@@ -142,11 +147,25 @@ public class Dialog : MonoBehaviour {
             lineDone = false;
             WhatType(true, description);    //要讀是什麼場景
         }
-        else if (type == "行走圖") {
+        else if (type == "換圖") {
+            lineDone = false;
+            int i = 0;
+            for (i = 0 ; description[i]!=',' ; i++) {
+
+            }
+            string tempName = description.Substring(0, i);
+            string tempSpriteIndex = description.Substring(i + 1, description.Length);
+            ChangeSprite(tempName, tempSpriteIndex);
+        }
+        else if (type == "動畫") {
             lineDone = false;
             CharacterAnimation();
             lineDone = true;
         }
+    }
+
+    void ChangeSprite(string name, string spriteIndex) {
+
     }
 
     void CharacterAnimation() {
@@ -158,5 +177,12 @@ public class Dialog : MonoBehaviour {
             return true;
         }
         else return false;
+    }
+
+    IEnumerator WaitExploreDone() {
+        while (!SystemVariables.ExploreDone) {
+            yield return null;
+        }
+        lineDone = true;
     }
 }
