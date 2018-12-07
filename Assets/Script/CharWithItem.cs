@@ -21,21 +21,6 @@ public class CharWithItem : MonoBehaviour {
 		}else{
 			gameObject.transform.parent.GetComponent<CharacterControl>().enabled = false;
 		}
-		/*
-	//按下Z && 有物體可互動
-		if (Input.GetKeyDown(KeyCode.Z) && interactItem) {
-			
-		//調查OR撿取
-			
-		//只能看的物體：info綁在item下，直接顯示即可
-			if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){	
-				effect_ShowInfo(interactItem,true);}
-				
-		//可以撿的物體：在function裡處理
-			else{
-				StartCoroutine(pick_TEMP(interactItem));
-			}
-        }*/
     }
 	
 //pre_funct
@@ -70,8 +55,9 @@ public class CharWithItem : MonoBehaviour {
 //F_touched
 	private IEnumerator F_Touched(){
 	//(press Z) -> {describe}
+		yield return new WaitForSeconds(Time.deltaTime);
+		yield return waitForKeyPress(KeyCode.Z);		
 		if(interactItem != null ){
-			yield return waitForKeyPress(KeyCode.Z);
 			StartCoroutine(F_Describe());
 		}
 		//(untouch) -> {idle}: At item
@@ -88,7 +74,7 @@ public class CharWithItem : MonoBehaviour {
 		else{
 			SetPickUIInfo(2,interactItem.GetComponent<ItemInfo>().description[0]);
 			ActivePickUI(true);
-		
+			
 		//(wait press Z) -> [dialogue] + {choosing_action}	//"pick? Y/N"
 			actEnable = false;
 			yield return waitForKeyPress(KeyCode.Z);
@@ -106,23 +92,23 @@ public class CharWithItem : MonoBehaviour {
 		bool done = false;
 		RectTransform cursor = pickChoose.transform.GetChild(0).gameObject.GetComponent<RectTransform> ();	
 		Vector3 cursor_localPos = new Vector3(-75.0f, 20.0f, 0);
+		cursor.localPosition = cursor_localPos;
 		while(!done){
 			if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow)){
 				choice = (choice+1)%2;
 				cursor.localPosition = new Vector3(cursor_localPos.x, cursor_localPos.y - 40.0f * choice, cursor_localPos.z);
 			}
 			else if(Input.GetKeyDown(KeyCode.Z)){
-				
 				done = true;
 				pickChoose.SetActive(false);
 			//(press Z && "Y") -> //dial + pic
 				if(choice == 0){
-					Debug.Log(choice);
-					yield return F_Pick();
+					StartCoroutine(F_Pick());
 				}
 			//(press Z && "N") -> {touched}
 				else{
 					actEnable = true;
+					StartCoroutine(F_Touched());
 				}
 			}
 			yield return 0; // wait until choosing
@@ -130,23 +116,24 @@ public class CharWithItem : MonoBehaviour {
 	}
 //F_picking & picken
 	private IEnumerator F_Pick(){
-		Debug.Log("test");
-		
 		SetPickUIInfo(2, "獲得" + interactItem.gameObject.name );
 		ActivePickUI(true);
 		yield return new WaitForSeconds(Time.deltaTime);
 		yield return waitForKeyPress(KeyCode.Z);
+			//item++
 		ActivePickUI(false);
 		actEnable = true;
 	//(press Z && 1pick) -> {picken} : -> active(false)
 		if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.one_time_get){
+			interactItem.GetComponent<SpriteRenderer>().color = new Vector4(255.0f, 255.0f, 255.0f, 0);
 			interactItem.SetActive(false);
 			interactItem = null;
 		}
 	//(press Z && mulpick) -> {touched}
-		/*else if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.multi_get){
-			
-		}*/
+		else if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.multi_get){
+			StartCoroutine(F_Touched());
+		}
+		
 	}
 	
 }
@@ -169,19 +156,5 @@ ItemState{
 		(press Z) -> {touched}
 	picken
 		-> active(false)
-};
-*/
-/*
-DoorState{
-	idle,
-		(touch) -> {touched}
-	touched,
-		(press Z && locked) -> {describe}
-		(press Z && openable) -> [open] + [in]
-		(UseItem() && locked) -> [unlocked] + {touched}
-		(untouch) -> {idle}
-	describe,
-		(press Z) -> {touched}
-		(untouch) -> {idle}
 };
 */
