@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/TestScene/Item.unity
     guid: f04cebeef21031e4c873268b20e2832e
+  - enabled: 1
+    path: Assets/Scene/TestScene/Trans2.unity
+    guid: 5f63fc6f2b007fd4da3a34706816cb24

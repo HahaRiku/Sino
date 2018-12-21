@@ -3,21 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharWithDoor : MonoBehaviour {
     
 	public GameObject interactDoor;
-	private Vector3 tempTransPosition = new Vector3(-7.25f, -1.47f, 0.0f);
+	//private Vector3 tempTransPosition = new Vector3(-7.25f, -1.47f, 0.0f);
 	
-	/*
-//pre_funct
-	private IEnumerator waitForKeyPress(KeyCode key){
-		bool done = false;
-		while(!done){
-			if(Input.GetKeyDown(key)){	done = true;}
-			yield return 0;
-		}
-	}*/
 	
 //Touch: "idle -> touched"
 	void OnTriggerEnter2D(Collider2D col){
@@ -75,9 +67,9 @@ public class CharWithDoor : MonoBehaviour {
 	private void F_IntoDoor(){
 		
 	//用場景序號傳送，序號在門上的DoorInfo腳本裡作修改
-		//SceneManager.LoadSceneAsync(interactDoor.GetComponent<DoorInfo_Indep>().nextSceneAsync);
+		SceneManager.LoadSceneAsync(interactDoor.GetComponent<DoorInfo_Indep>().nextSceneAsync);
 		
-		gameObject.transform.position =  tempTransPosition;	//臨時code，會改用上面的傳送funct
+		//gameObject.transform.position =  tempTransPosition;	//臨時code，會改用上面的傳送funct
 	}
 	
 }

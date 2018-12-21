@@ -1546,6 +1546,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114451726605400644, guid: 3a3f4104b9acc49449d89e11140912fb,
+        type: 2}
+      propertyPath: pics
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114451726605400644, guid: 3a3f4104b9acc49449d89e11140912fb,
+        type: 2}
+      propertyPath: description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114451726605400644, guid: 3a3f4104b9acc49449d89e11140912fb,
+        type: 2}
+      propertyPath: IsLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114451726605400644, guid: 3a3f4104b9acc49449d89e11140912fb,
+        type: 2}
+      propertyPath: nextSceneAsync
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a3f4104b9acc49449d89e11140912fb, type: 2}
   m_IsPrefabParent: 0
