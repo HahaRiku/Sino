@@ -7,21 +7,13 @@ using UnityEngine.UI;
 public class CharWithItem : MonoBehaviour {
     
 	public GameObject interactItem,Info_UI,pickChoose;
-	public static bool actEnable;
+	public static bool actEnable;	//會移到GlobalValue裡
 	
 	void Start () {
 		//IsHighlight = false;
 		actEnable = true;
 		pickChoose.SetActive(false);
 	}
-	
-	void Update () {
-        if(actEnable){
-			gameObject.transform.parent.GetComponent<CharacterControl>().enabled = true;
-		}else{
-			gameObject.transform.parent.GetComponent<CharacterControl>().enabled = false;
-		}
-    }
 	
 //pre_funct
 	private IEnumerator waitForKeyPress(KeyCode key){

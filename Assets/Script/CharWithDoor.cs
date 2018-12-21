@@ -64,12 +64,10 @@ public class CharWithDoor : MonoBehaviour {
 	}
 	
 //F_intoDoor
-	private void F_IntoDoor(){
+	public void F_IntoDoor(){
 		
-	//用場景序號傳送，序號在門上的DoorInfo腳本裡作修改
-		SceneManager.LoadSceneAsync(interactDoor.GetComponent<DoorInfo_Indep>().nextSceneAsync);
-		
-		//gameObject.transform.position =  tempTransPosition;	//臨時code，會改用上面的傳送funct
+	//用場景名稱傳送，名稱在門上的DoorInfo腳本裡作修改
+		SceneManager.LoadScene(interactDoor.GetComponent<DoorInfo_Indep>().nextSceneName);
 	}
 	
 }

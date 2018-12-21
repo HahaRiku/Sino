@@ -13,10 +13,10 @@ public class DoorInfo_Indep : MonoBehaviour {
 	
 	//一單位選項字高=40
 	
-	public Sprite pics;		//1: idle
+	//public Sprite pics;		//1: idle
 	public string description;
 	public bool IsLocked;
-	public int nextSceneAsync;	//場景序號
+	public string nextSceneName;	//場景序號
 	
 	void Start(){
 		HLE = HighLightState.idle;
