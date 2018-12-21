@@ -15,6 +15,7 @@ public class Dialog : MonoBehaviour {
     public int currentLine;
     public Animator canvasAni ;
     public Animator BGAni;
+    public Sprite BackGround;
 
     private Text textName;
     private Text dialog;
