@@ -26,7 +26,6 @@ public class CharacterControl : MonoBehaviour {
         else {
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                print("123");
                 transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
                 if (transform.localScale.x > 0)
                 {
