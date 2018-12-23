@@ -108,18 +108,18 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2025937515
+--- !u!1 &173797744
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 2025937520}
-  - component: {fileID: 2025937519}
-  - component: {fileID: 2025937518}
-  - component: {fileID: 2025937517}
-  - component: {fileID: 2025937516}
+  - component: {fileID: 173797749}
+  - component: {fileID: 173797748}
+  - component: {fileID: 173797747}
+  - component: {fileID: 173797746}
+  - component: {fileID: 173797745}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -127,33 +127,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2025937516
+--- !u!81 &173797745
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2025937515}
+  m_GameObject: {fileID: 173797744}
   m_Enabled: 1
---- !u!124 &2025937517
+--- !u!124 &173797746
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2025937515}
+  m_GameObject: {fileID: 173797744}
   m_Enabled: 1
---- !u!92 &2025937518
+--- !u!92 &173797747
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2025937515}
+  m_GameObject: {fileID: 173797744}
   m_Enabled: 1
---- !u!20 &2025937519
+--- !u!20 &173797748
 Camera:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2025937515}
+  m_GameObject: {fileID: 173797744}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -184,12 +184,12 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!4 &2025937520
+--- !u!4 &173797749
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2025937515}
+  m_GameObject: {fileID: 173797744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}

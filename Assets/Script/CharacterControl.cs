@@ -5,45 +5,48 @@ using UnityEngine;
 public class CharacterControl : MonoBehaviour {
     public float speed;
     private Animator ani;
+    private bool KeyDown;
 
-	// Use this for initialization
-	void Start () {
-        ani = gameObject.GetComponent<Animator>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKey(KeyCode.RightArrow)) {
-            MoveRight();
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow)) {
-            MoveLeft();
-        }
+    void Start() {
+        ani= gameObject.GetComponent<Animator>();
+        KeyDown = false;
     }
 
-    public void MoveRight() {
-        transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
-        if (transform.localScale.x < 0) {
-            transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+    // Update is called once per frame
+    void Update () {
+        //if(CharWithItem.actEnable){
+        if (!KeyDown)
+        {
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                KeyDown = true;
+                ani.SetBool("Walk", true);
+            }
         }
-    }
-
-    public void MoveLeft() {
-        transform.localPosition = new Vector3(transform.localPosition.x - speed, transform.localPosition.y, transform.localPosition.z);
-        if (transform.localScale.x > 0) {
-            transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+        else {
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                print("123");
+                transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
+                if (transform.localScale.x > 0)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+                }
+            }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.localPosition = new Vector3(transform.localPosition.x - speed, transform.localPosition.y, transform.localPosition.z);
+                if (transform.localScale.x < 0)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+                }
+            }
+            if ((Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow)))
+            {
+                KeyDown = false;
+                ani.SetBool("Walk", false);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow)) {
-            ani.SetBool("Walk", true);
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-            ani.SetBool("Walk", true);
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow)) {
-            ani.SetBool("Walk", false);
-        }
-        if (Input.GetKeyUp(KeyCode.LeftArrow)) {
-            ani.SetBool("Walk", false);
-        }
+		//}
     }
 }
