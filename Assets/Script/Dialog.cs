@@ -10,11 +10,42 @@ public class Dialog : MonoBehaviour {
         Explore
     }
 
+    [System.Serializable]
+    public struct BGSpriteAndName {
+        public string BGName;
+        public Sprite BGSprite;
+    }
+
+    [System.Serializable]
+    public struct CharacterSpriteAndName {
+        public string CharacterName;
+        public string CharacterSpriteName;
+        public Sprite CharacterSprtie;
+    }
+
+    [System.Serializable]
+    public struct CharacterObjectAndName {
+        public string CharacterName;
+        public SpriteRenderer CharacterSpriteComponent;
+    }
+
+    /**************************
+     * B1醫務室
+     * 回憶_舊街道
+     * 穿越_B1醫務室外走廊
+     * ************************/
+
     public TextAsset file;
     public bool defaultStateIsDialog;
     public int currentLine;
+    public BGSpriteAndName[] BGs;
+    public CharacterSpriteAndName[] CharacterSprites;
+    public CharacterObjectAndName[] CharacterObjects;
     public Animator canvasAni ;
     public Animator BGAni;
+    public Animator WhiteAni;
+    public Animator BlackAni;
+    public Sprite BackGround;
 
     private Text textName;
     private Text dialog;
@@ -89,20 +120,31 @@ public class Dialog : MonoBehaviour {
     }
 
     void ChangeDialog() {
-        int nameStart=0, nameEnd=0;
+        int nameStart=0, nameEnd=0, returnLine=0;
         while (nowPointerOfOutput != textOfFile.Length && textOfFile[nowPointerOfOutput] != '\n') {
-            
-            if (textOfFile[nowPointerOfOutput] == '【') {
+            if (textOfFile[nowPointerOfOutput] == '\\' && textOfFile[nowPointerOfOutput + 1] == 'N') {
+                returnLine = nowPointerOfOutput;
+                nowPointerOfOutput += 2;
+            }
+            else if (textOfFile[nowPointerOfOutput] == '【') {
                 nameStart = nowPointerOfOutput + 1;
-                print(nameStart);
+                nowPointerOfOutput += 1;
             }
             else if (textOfFile[nowPointerOfOutput] == '】') {
                 nameEnd = nowPointerOfOutput - 1;
+                nowPointerOfOutput += 1;
             }
-            nowPointerOfOutput += 1 ;
         }
         textName.text = textOfFile.Substring(nameStart, nameEnd+1-nameStart);
-        dialog.text = textOfFile.Substring(nameEnd+2, nowPointerOfOutput-nameEnd-2);
+        if (returnLine == 0) {
+            dialog.text = textOfFile.Substring(nameEnd + 2, nowPointerOfOutput - nameEnd - 2);
+        }
+        else {
+            string str1, str2;
+            str1= textOfFile.Substring(nameEnd + 2, returnLine - nameEnd - 2);
+            str2= textOfFile.Substring(returnLine + 2, nowPointerOfOutput - returnLine - 2);
+            dialog.text = string.Concat(str1, "\n", str2);
+        }
         nowPointerOfOutput += 1;
     }
 
@@ -124,7 +166,22 @@ public class Dialog : MonoBehaviour {
         nowPointerOfOutput += 1;
         if (transition) {
             if (transType == "亮光") {
-
+                WhiteAni.SetBool("White", true);
+                for (int i = 0; i < BGs.Length; i++) {
+                    if (BGs[i].BGName==description) {
+                        ChangeBGSprite(BGs[i].BGSprite);
+                        break;
+                    }
+                }
+            }
+            else if (transType == "黑屏") {
+                BlackAni.SetBool("Black", true);
+                for (int i = 0; i < BGs.Length; i++) {
+                    if (BGs[i].BGName == description) {
+                        ChangeBGSprite(BGs[i].BGSprite);
+                        break;
+                    }
+                }
             }
         }
         else if (type == "Dialog") {
@@ -136,6 +193,7 @@ public class Dialog : MonoBehaviour {
         else if (type == "等待完成探索") {
             lineDone = false;
             SystemVariables.ExploreDone = false;
+            SystemVariables.PlayerCanMove = true;
             StartCoroutine(WaitExploreDone());
         }
         else if (type == "其他腳本") {
@@ -145,17 +203,17 @@ public class Dialog : MonoBehaviour {
         }
         else if (type == "轉場") {
             lineDone = false;
-            WhatType(true, description);    //要讀是什麼場景
+            WhatType(true, description);    //再看看要讀是什麼場景
         }
         else if (type == "換圖") {
             lineDone = false;
             int i = 0;
             for (i = 0 ; description[i]!=',' ; i++) {
-
+                
             }
             string tempName = description.Substring(0, i);
-            string tempSpriteIndex = description.Substring(i + 1, description.Length);
-            ChangeSprite(tempName, tempSpriteIndex);
+            string tempSpriteName = description.Substring(i + 1, description.Length-i-1);
+            ChangeSprite(tempName, tempSpriteName);
         }
         else if (type == "動畫") {
             lineDone = false;
@@ -164,8 +222,16 @@ public class Dialog : MonoBehaviour {
         }
     }
 
-    void ChangeSprite(string name, string spriteIndex) {
-
+    void ChangeSprite(string name, string spriteName) {
+        for (int i = 0; i < CharacterSprites.Length; i++) {
+            if (CharacterSprites[i].CharacterName == name && CharacterSprites[i].CharacterSpriteName == spriteName) {
+                for (int j = 0; j < CharacterObjects.Length; j++) {
+                    if (CharacterObjects[j].CharacterName == name) {
+                        CharacterObjects[j].CharacterSpriteComponent.sprite = CharacterSprites[i].CharacterSprtie;
+                    }
+                }
+            }
+        }
     }
 
     void CharacterAnimation() {
@@ -184,5 +250,11 @@ public class Dialog : MonoBehaviour {
             yield return null;
         }
         lineDone = true;
+        SystemVariables.PlayerCanMove = false;
+    }
+
+    IEnumerator ChangeBGSprite(Sprite wantToChange) {
+        yield return new WaitForSeconds(0.5f);
+        BackGround = wantToChange;
     }
 }
