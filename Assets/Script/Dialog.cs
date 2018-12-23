@@ -20,7 +20,7 @@ public class Dialog : MonoBehaviour {
     public struct CharacterSpriteAndName {
         public string CharacterName;
         public string CharacterSpriteName;
-        public Sprite CharacterSprtie;
+        public Sprite CharacterSprite;
     }
 
     [System.Serializable]
@@ -45,7 +45,8 @@ public class Dialog : MonoBehaviour {
     public Animator BGAni;
     public Animator WhiteAni;
     public Animator BlackAni;
-    public Sprite BackGround;
+    public SpriteRenderer BackGround;
+    public CharacterControl CharControl;
 
     private Text textName;
     private Text dialog;
@@ -54,6 +55,7 @@ public class Dialog : MonoBehaviour {
     private State state;
     private bool nowStateShouldBeDialog;
     private bool lineDone;
+    private Sprite recordedSprite;
 
     // Use this for initialization
     void Start() {
@@ -168,8 +170,8 @@ public class Dialog : MonoBehaviour {
             if (transType == "亮光") {
                 WhiteAni.SetBool("White", true);
                 for (int i = 0; i < BGs.Length; i++) {
-                    if (BGs[i].BGName==description) {
-                        ChangeBGSprite(BGs[i].BGSprite);
+                    if (BGs[i].BGName == description) {
+                        StartCoroutine(ChangeBGSprite(BGs[i].BGSprite));
                         break;
                     }
                 }
@@ -178,7 +180,7 @@ public class Dialog : MonoBehaviour {
                 BlackAni.SetBool("Black", true);
                 for (int i = 0; i < BGs.Length; i++) {
                     if (BGs[i].BGName == description) {
-                        ChangeBGSprite(BGs[i].BGSprite);
+                        StartCoroutine(ChangeBGSprite(BGs[i].BGSprite));
                         break;
                     }
                 }
@@ -208,12 +210,29 @@ public class Dialog : MonoBehaviour {
         else if (type == "換圖") {
             lineDone = false;
             int i = 0;
-            for (i = 0 ; description[i]!=',' ; i++) {
-                
+            for (i = 0; description[i] != ','; i++) {
+
             }
             string tempName = description.Substring(0, i);
-            string tempSpriteName = description.Substring(i + 1, description.Length-i-1);
+            string tempSpriteName = description.Substring(i + 1, description.Length - i - 1);
             ChangeSprite(tempName, tempSpriteName);
+            StartCoroutine(ChangePicDelay());
+        }
+        else if (type == "存圖") {
+            lineDone = false;
+            for (int i = 0; i < CharacterObjects.Length; i++) {
+                if (CharacterObjects[i].CharacterName == description) {
+                    for (int j = 0; j < CharacterSprites.Length; j++) {
+                        if (CharacterSprites[j].CharacterName == description && CharacterSprites[j].CharacterSpriteName == "default") {
+                            CharacterSprites[j].CharacterSprite = CharacterObjects[i].CharacterSpriteComponent.sprite;
+                        }
+                    }
+                }
+            }
+        }
+        else if (type == "移動") {
+            lineDone = false;
+            CharControl.AutoWalk(StringToInt(description));
         }
         else if (type == "動畫") {
             lineDone = false;
@@ -227,7 +246,7 @@ public class Dialog : MonoBehaviour {
             if (CharacterSprites[i].CharacterName == name && CharacterSprites[i].CharacterSpriteName == spriteName) {
                 for (int j = 0; j < CharacterObjects.Length; j++) {
                     if (CharacterObjects[j].CharacterName == name) {
-                        CharacterObjects[j].CharacterSpriteComponent.sprite = CharacterSprites[i].CharacterSprtie;
+                        CharacterObjects[j].CharacterSpriteComponent.sprite = CharacterSprites[i].CharacterSprite;
                     }
                 }
             }
@@ -255,6 +274,23 @@ public class Dialog : MonoBehaviour {
 
     IEnumerator ChangeBGSprite(Sprite wantToChange) {
         yield return new WaitForSeconds(0.5f);
-        BackGround = wantToChange;
+        BackGround.sprite = wantToChange;
+    }
+
+    IEnumerator ChangePicDelay() {
+        yield return new WaitForSeconds(0.5f);
+        lineDone = true;
+    }
+
+    public void SetLineDone(bool b) {
+        lineDone = b;
+    }
+
+    int StringToInt(string str) {
+        int result=0;
+        for (int i = 0; i < str.Length; i++) {
+            result = result * 10 + str[i] - 48;
+        }
+        return result;
     }
 }

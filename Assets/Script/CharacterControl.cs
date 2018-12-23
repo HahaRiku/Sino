@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterControl : MonoBehaviour {
     public float speed;
+    public Dialog dialogComp;
     private Animator ani;
     private bool KeyDown;
 
@@ -47,5 +48,19 @@ public class CharacterControl : MonoBehaviour {
             }
         }
 		//}
+    }
+
+    public void AutoWalk(float x) {
+        StartCoroutine(WalkLerp(x));
+    }
+
+    IEnumerator WalkLerp(float x) {
+        ani.SetBool("Walk", true);
+        for (float i = transform.position.x; i < x; i += speed) {
+            transform.localPosition = new Vector3(i, transform.position.y, transform.position.z);
+            yield return null;
+        }
+        ani.SetBool("Walk", false);
+        dialogComp.SetLineDone(true);
     }
 }
