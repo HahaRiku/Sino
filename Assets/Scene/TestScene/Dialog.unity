@@ -198,7 +198,7 @@ RectTransform:
   - {fileID: 1956002499}
   - {fileID: 1629547114}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -373,7 +373,7 @@ Transform:
   m_LocalScale: {x: 1.39, y: 1.39, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &397404949
 GameObject:
@@ -617,11 +617,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715287303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4604316, y: -0.6, z: 0}
-  m_LocalScale: {x: 1.2014385, y: 1.2014385, z: 1.63}
+  m_LocalPosition: {x: 2.03, y: -0.83400005, z: 0}
+  m_LocalScale: {x: 1.6699996, y: 1.6699996, z: 1.63}
   m_Children: []
-  m_Father: {fileID: 894676230}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &803918955
 GameObject:
@@ -671,7 +671,7 @@ Transform:
   - {fileID: 397404950}
   - {fileID: 1460183763}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894676228
 GameObject:
@@ -740,8 +740,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 715287305}
+  m_Children: []
   m_Father: {fileID: 803918957}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -974,7 +973,7 @@ RectTransform:
   m_Children:
   - {fileID: 515094947}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1397,7 +1396,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1460183762
 GameObject:
@@ -1556,15 +1555,33 @@ MonoBehaviour:
   defaultStateIsDialog: 0
   currentLine: 0
   BGs:
-  - BGName: 
-    BGSprite: {fileID: 0}
-  CharacterSprites: []
-  CharacterObjects: []
+  - BGName: "B1\u91AB\u52D9\u5BA4"
+    BGSprite: {fileID: 21300000, guid: 13e131c79e3799c46b422b5aa8c3254b, type: 3}
+  - BGName: "\u56DE\u61B6_\u820A\u8857\u9053"
+    BGSprite: {fileID: 21300000, guid: 9b38825308ab02c478bed50f3ac79b24, type: 3}
+  - BGName: "\u7A7F\u8D8A_B1\u91AB\u52D9\u5BA4\u5916\u8D70\u5ECA"
+    BGSprite: {fileID: 21300000, guid: d032a1ab7ccf80c45bc5dad9c6e01b51, type: 3}
+  CharacterSprites:
+  - CharacterName: "\u5E2D\u8AFE"
+    CharacterSpriteName: default
+    CharacterSprite: {fileID: 21300000, guid: 9e503ddd97df628448e5eb1389bd7fe5, type: 3}
+  - CharacterName: "\u5E2D\u8AFE"
+    CharacterSpriteName: b
+    CharacterSprite: {fileID: 21300000, guid: fc9268bc09b618247ab192dce5360df2, type: 3}
+  - CharacterName: "\u5E2D\u8AFE"
+    CharacterSpriteName: b
+    CharacterSprite: {fileID: 21300000, guid: 5aa5eeab895a26a468533f8270f7e653, type: 3}
+  - CharacterName: "\u5E2D\u8AFE"
+    CharacterSpriteName: c
+    CharacterSprite: {fileID: 21300000, guid: a629716ad76bd5a439e964b0c585bfda, type: 3}
+  CharacterObjects:
+  - CharacterName: "\u5E2D\u8AFE"
+    CharacterSpriteComponent: {fileID: 715287304}
   canvasAni: {fileID: 47225072}
   BGAni: {fileID: 803918956}
-  WhiteAni: {fileID: 0}
-  BlackAni: {fileID: 0}
-  BackGround: {fileID: 0}
+  WhiteAni: {fileID: 1419996602}
+  BlackAni: {fileID: 1186416280}
+  BackGround: {fileID: 894676229}
 --- !u!1 &1651044500
 GameObject:
   m_ObjectHideFlags: 0
