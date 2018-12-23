@@ -10,11 +10,21 @@ public class Dialog : MonoBehaviour {
         Explore
     }
 
+    [System.Serializable]
+    public struct BGs {
+        public Sprite B1醫務室;
+        public Sprite 回憶_舊街道 ;
+        public Sprite 穿越_B1醫務室外走廊;
+    }
+
     public TextAsset file;
     public bool defaultStateIsDialog;
     public int currentLine;
+    public BGs bgs;
     public Animator canvasAni ;
     public Animator BGAni;
+    public Animator WhiteAni;
+    public Animator BlackAni;
     public Sprite BackGround;
 
     private Text textName;
@@ -90,20 +100,31 @@ public class Dialog : MonoBehaviour {
     }
 
     void ChangeDialog() {
-        int nameStart=0, nameEnd=0;
+        int nameStart=0, nameEnd=0, returnLine=0;
         while (nowPointerOfOutput != textOfFile.Length && textOfFile[nowPointerOfOutput] != '\n') {
-            
-            if (textOfFile[nowPointerOfOutput] == '【') {
+            if (textOfFile[nowPointerOfOutput] == '\\' && textOfFile[nowPointerOfOutput + 1] == 'N') {
+                returnLine = nowPointerOfOutput;
+                nowPointerOfOutput += 2;
+            }
+            else if (textOfFile[nowPointerOfOutput] == '【') {
                 nameStart = nowPointerOfOutput + 1;
-                print(nameStart);
+                nowPointerOfOutput += 1;
             }
             else if (textOfFile[nowPointerOfOutput] == '】') {
                 nameEnd = nowPointerOfOutput - 1;
+                nowPointerOfOutput += 1;
             }
-            nowPointerOfOutput += 1 ;
         }
         textName.text = textOfFile.Substring(nameStart, nameEnd+1-nameStart);
-        dialog.text = textOfFile.Substring(nameEnd+2, nowPointerOfOutput-nameEnd-2);
+        if (returnLine == 0) {
+            dialog.text = textOfFile.Substring(nameEnd + 2, nowPointerOfOutput - nameEnd - 2);
+        }
+        else {
+            string str1, str2;
+            str1= textOfFile.Substring(nameEnd + 2, returnLine - nameEnd - 2);
+            str2= textOfFile.Substring(returnLine + 2, nowPointerOfOutput - returnLine - 2);
+            dialog.text = string.Concat(str1, "\n", str2);
+        }
         nowPointerOfOutput += 1;
     }
 
@@ -125,7 +146,10 @@ public class Dialog : MonoBehaviour {
         nowPointerOfOutput += 1;
         if (transition) {
             if (transType == "亮光") {
-
+                WhiteAni.SetBool("White", true);
+            }
+            else if (transType == "黑屏") {
+                BlackAni.SetBool("Black", true);
             }
         }
         else if (type == "Dialog") {
