@@ -1422,7 +1422,7 @@ Prefab:
     - target: {fileID: 114451726605400644, guid: 3a3f4104b9acc49449d89e11140912fb,
         type: 2}
       propertyPath: IsLocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114451726605400644, guid: 3a3f4104b9acc49449d89e11140912fb,
         type: 2}
@@ -1438,7 +1438,13 @@ Prefab:
       propertyPath: nextSceneName
       value: Trans2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 212043866311571254, guid: 3a3f4104b9acc49449d89e11140912fb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 212043866311571254, guid: 3a3f4104b9acc49449d89e11140912fb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3a3f4104b9acc49449d89e11140912fb, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1542312604

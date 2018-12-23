@@ -45,7 +45,7 @@ public class CharWithDoor : MonoBehaviour {
 					}
 				}
 			//(UseItem() && locked) -> [unlocked] + {touched}
-			//目前用X鍵代替用道具
+			//目前用X鍵代替用道具						**************************************************************************************
 				else if(Input.GetKeyDown(KeyCode.X) && interactDoor.GetComponent<DoorInfo_Indep>().IsLocked){
 					done = true;
 					Debug.Log("門打開了");

@@ -40,6 +40,7 @@ public class ItemInfo : MonoBehaviour {
 					
 				break;
 			case HighLightState.touched:
+				gameObject.GetComponent<SpriteRenderer>().sprite = pics[0];
 				transform.GetChild(0).gameObject.SetActive(true);
 				break;
 			case HighLightState.describe:

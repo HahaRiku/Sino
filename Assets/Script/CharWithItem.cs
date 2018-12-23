@@ -58,9 +58,18 @@ public class CharWithItem : MonoBehaviour {
 	private IEnumerator F_Describe(){
 		interactItem.GetComponent<ItemInfo>().HLE = ItemInfo.HighLightState.describe;
 		interactItem.GetComponent<ItemInfo>().ItemState();
+		actEnable = false;
 	//(unpick) -> [describe_1]
 		if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.look_only){
-		//(unpick && untouch) -> {idle}: At item
+		//describe: At item
+		//(wait press Z) -> {touched}
+			yield return waitForKeyPress(KeyCode.Z);
+				
+				//Event functions	**************************************************************************************
+			
+			interactItem.GetComponent<ItemInfo>().HLE = ItemInfo.HighLightState.touched;
+			interactItem.GetComponent<ItemInfo>().ItemState();
+			StartCoroutine(F_Touched());
 		}
 	//(pickable) -> [describe_2]
 		else{
@@ -68,13 +77,12 @@ public class CharWithItem : MonoBehaviour {
 			ActivePickUI(true);
 			
 		//(wait press Z) -> [dialogue] + {choosing_action}	//"pick? Y/N"
-			actEnable = false;
 			yield return waitForKeyPress(KeyCode.Z);
 			ActivePickUI(false);
 			
-			//dialogue
+				//dialogue			**************************************************************************************
 			
-			yield return StartCoroutine(F_WhetherPick());
+			StartCoroutine(F_WhetherPick());
 		}
 	}
 //F_choosing_action
@@ -100,6 +108,8 @@ public class CharWithItem : MonoBehaviour {
 			//(press Z && "N") -> {touched}
 				else{
 					actEnable = true;
+					interactItem.GetComponent<ItemInfo>().HLE = ItemInfo.HighLightState.touched;
+					interactItem.GetComponent<ItemInfo>().ItemState();
 					StartCoroutine(F_Touched());
 				}
 			}
@@ -112,7 +122,7 @@ public class CharWithItem : MonoBehaviour {
 		ActivePickUI(true);
 		yield return new WaitForSeconds(Time.deltaTime);
 		yield return waitForKeyPress(KeyCode.Z);
-			//item++
+			//item++				**************************************************************************************
 		ActivePickUI(false);
 		actEnable = true;
 	//(press Z && 1pick) -> {picken} : -> active(false)
@@ -123,11 +133,17 @@ public class CharWithItem : MonoBehaviour {
 		}
 	//(press Z && mulpick) -> {touched}
 		else if(interactItem.GetComponent<ItemInfo>().actMode == ItemInfo.Act_Mode.multi_get){
+			interactItem.GetComponent<ItemInfo>().HLE = ItemInfo.HighLightState.touched;
+			interactItem.GetComponent<ItemInfo>().ItemState();
 			StartCoroutine(F_Touched());
 		}
 		
 	}
-	
+	/*
+//F_EventTrigger：預想的global控制函式
+	public virtual void F_EventTrigger(){
+		
+	}*/
 }
 
 /*
@@ -138,8 +154,8 @@ ItemState{
 		(press Z) -> {describe}
 		(untouch) -> {idle}
 	describe,
+		(unpick && press Z) -> {touched}
 		(pickable && press Z) -> [dialogue] + {choosing_action}	//"pick? Y/N"
-		(unpiuck && untouch) -> {idle}
 	choosing_action,
 		(press Z && "Y") -> //dial + pic
 		(press Z && "N") -> {touched}
