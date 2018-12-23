@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/TestScene/Trans2.unity
     guid: 5f63fc6f2b007fd4da3a34706816cb24
+  - enabled: 1
+    path: "Assets/Scene/\u63A2\u7D22/B1/B1.unity"
+    guid: f42b2168a9542a540a4aac46da332dd5
+  - enabled: 1
+    path: "Assets/Scene/\u63A2\u7D22/B1/\u9152\u7A96.unity"
+    guid: 7ac0acef4b9d75044a0fa031eea3fb85
