@@ -53,4 +53,6 @@ public class DoorInfo_Indep : MonoBehaviour {
 		ItemState();
 	}
 	
+	
+	
 }
