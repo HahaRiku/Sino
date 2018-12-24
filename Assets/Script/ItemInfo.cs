@@ -12,6 +12,7 @@ public class ItemInfo : MonoBehaviour {
 		picking,
 		picken
 	};
+	[HideInInspector]
 	public HighLightState HLE;
 	
 	//一單位選項字高=40

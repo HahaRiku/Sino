@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114598453084158562}
   - component: {fileID: 61070109326745130}
   m_Layer: 0
-  m_Name: TransitionPoint
+  m_Name: AutoTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1919600463553752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e5825750d686d4d8bb91ebcb8413d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 60dc99be3c90ef64783dc680ad54c42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetScenename: Trans2
+  nextScenePos: {x: 0, y: 0, z: 0}

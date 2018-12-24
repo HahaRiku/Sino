@@ -9,7 +9,9 @@ public class DoorInfo_Indep : MonoBehaviour {
 		touched,
 		describe
 	};
+	[HideInInspector]
 	public HighLightState HLE;
+	public Vector3 nextScenePos;// = new Vector3;
 	
 	//一單位選項字高=40
 	
@@ -22,7 +24,7 @@ public class DoorInfo_Indep : MonoBehaviour {
 		HLE = HighLightState.idle;
 	}
 	
-//物品狀態&效果
+//狀態&效果
 	public void ItemState(){//HighLightState HLState
 		switch(HLE){
 			case HighLightState.idle:

@@ -316,6 +316,16 @@ Prefab:
       propertyPath: targetScenename
       value: B1
       objectReference: {fileID: 0}
+    - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
+        type: 2}
+      propertyPath: nextScenePos.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
+        type: 2}
+      propertyPath: nextScenePos.y
+      value: -4.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 047748c55921db6498e202a34cbcfd69, type: 2}
   m_IsPrefabParent: 0

@@ -68,6 +68,9 @@ public class CharWithDoor : MonoBehaviour {
 		
 	//用場景名稱傳送，名稱在門上的DoorInfo腳本裡作修改
 		SceneManager.LoadScene(interactDoor.GetComponent<DoorInfo_Indep>().nextSceneName);
+		if(interactDoor.GetComponent<DoorInfo_Indep>().nextScenePos != Vector3.zero){
+			//Set Player's position
+		}
 	}
 	
 }
