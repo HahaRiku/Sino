@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+  dialogComp: {fileID: 0}
 --- !u!212 &212189129956946044
 SpriteRenderer:
   m_ObjectHideFlags: 1
