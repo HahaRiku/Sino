@@ -149,7 +149,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1919600463553752, guid: 047748c55921db6498e202a34cbcfd69, type: 2}
       propertyPath: m_Name
-      value: ToB1-1
+      value: To1F-5
       objectReference: {fileID: 0}
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}
@@ -239,7 +239,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 427607531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.328, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4654315, y: 1.6517695, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -465,7 +465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1919600463553752, guid: 047748c55921db6498e202a34cbcfd69, type: 2}
       propertyPath: m_Name
-      value: ToB1-3
+      value: "To1F\u5DE6\u6A13\u68AF"
       objectReference: {fileID: 0}
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}

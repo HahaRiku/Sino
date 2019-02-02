@@ -154,7 +154,7 @@ Prefab:
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}
       propertyPath: targetScenename
-      value: F1
+      value: 1F-1
       objectReference: {fileID: 0}
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}
@@ -399,7 +399,7 @@ Prefab:
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}
       propertyPath: targetScenename
-      value: F1
+      value: 2F
       objectReference: {fileID: 0}
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}
@@ -484,7 +484,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1954354895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.336, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4666116, y: 1.6583163, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

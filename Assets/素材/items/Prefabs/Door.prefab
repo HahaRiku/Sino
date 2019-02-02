@@ -35,8 +35,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4636576013806742}
-  - component: {fileID: 61790442109790638}
   - component: {fileID: 114451726605400644}
+  - component: {fileID: 61790442109790638}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
