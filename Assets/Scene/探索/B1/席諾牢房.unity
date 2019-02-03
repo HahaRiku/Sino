@@ -268,6 +268,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &472396861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 472396862}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &472396862
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472396861}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.5, y: -4.07, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &826050699
 Prefab:
   m_ObjectHideFlags: 0
@@ -309,12 +337,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1919600463553752, guid: 047748c55921db6498e202a34cbcfd69, type: 2}
       propertyPath: m_Name
-      value: ToB1
+      value: ToB1-6
       objectReference: {fileID: 0}
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}
       propertyPath: targetScenename
-      value: B1
+      value: B1-6
       objectReference: {fileID: 0}
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}
@@ -325,6 +353,11 @@ Prefab:
         type: 2}
       propertyPath: nextScenePos.y
       value: -4.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
+        type: 2}
+      propertyPath: nextScenePosLabel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 047748c55921db6498e202a34cbcfd69, type: 2}
@@ -338,7 +371,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.18
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.y

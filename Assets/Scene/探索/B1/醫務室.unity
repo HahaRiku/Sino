@@ -182,7 +182,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1404428098223452, guid: 3a3f4104b9acc49449d89e11140912fb, type: 2}
       propertyPath: m_Name
-      value: ToB1
+      value: ToB1-3
       objectReference: {fileID: 0}
     - target: {fileID: 1908713350549312, guid: 3a3f4104b9acc49449d89e11140912fb, type: 2}
       propertyPath: m_IsActive
@@ -191,7 +191,7 @@ Prefab:
     - target: {fileID: 114451726605400644, guid: 3a3f4104b9acc49449d89e11140912fb,
         type: 2}
       propertyPath: nextSceneName
-      value: B1
+      value: B1-3
       objectReference: {fileID: 0}
     - target: {fileID: 4963124099440316, guid: 3a3f4104b9acc49449d89e11140912fb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -210,6 +210,11 @@ Prefab:
         type: 2}
       propertyPath: nextScenePos.y
       value: -4.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 114451726605400644, guid: 3a3f4104b9acc49449d89e11140912fb,
+        type: 2}
+      propertyPath: nextScenePosLabel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a3f4104b9acc49449d89e11140912fb, type: 2}
@@ -318,6 +323,34 @@ Transform:
   - {fileID: 32488991}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1441640367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1441640368}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1441640368
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1441640367}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3, y: -2.035, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 32488991}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1898016215
 Prefab:

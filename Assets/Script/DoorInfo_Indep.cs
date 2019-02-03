@@ -19,6 +19,7 @@ public class DoorInfo_Indep : MonoBehaviour {
 	public string description;
 	public bool IsLocked;
 	public string nextSceneName;	//場景序號
+	public int nextScenePosLabel;
 	
 	void Start(){
 		HLE = HighLightState.idle;
