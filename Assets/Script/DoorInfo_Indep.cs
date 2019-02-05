@@ -18,7 +18,7 @@ public class DoorInfo_Indep : MonoBehaviour {
 	//public Sprite pics;		//1: idle
 	public string description;
 	public bool IsLocked;
-	public string nextSceneName;	//場景序號
+	public Object nextScene;	//抓場景，轉成名稱供LoadScene使用
 	public int nextScenePosLabel;
 	
 	void Start(){
