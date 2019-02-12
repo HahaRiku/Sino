@@ -147,7 +147,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.07
       objectReference: {fileID: 0}
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.y
@@ -198,7 +198,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4214220497556508, guid: a5823042f29e1da4cb9bd36a689459fe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4214220497556508, guid: a5823042f29e1da4cb9bd36a689459fe, type: 2}
       propertyPath: m_LocalPosition.y
@@ -235,6 +235,23 @@ Prefab:
     - target: {fileID: 114191508836674350, guid: a5823042f29e1da4cb9bd36a689459fe,
         type: 2}
       propertyPath: targetScene
+      value: 
+      objectReference: {fileID: 102900000, guid: 27dc58cb1abd812488129991746e1d36,
+        type: 3}
+    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
+        type: 2}
+      propertyPath: sceneList.Array.data[0].targetScene
+      value: 
+      objectReference: {fileID: 102900000, guid: 27dc58cb1abd812488129991746e1d36,
+        type: 3}
+    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
+        type: 2}
+      propertyPath: stairType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
+        type: 2}
+      propertyPath: sceneList.Array.data[1].targetScene
       value: 
       objectReference: {fileID: 102900000, guid: 27dc58cb1abd812488129991746e1d36,
         type: 3}

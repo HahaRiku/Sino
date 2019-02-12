@@ -147,7 +147,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4214220497556508, guid: a5823042f29e1da4cb9bd36a689459fe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4214220497556508, guid: a5823042f29e1da4cb9bd36a689459fe, type: 2}
       propertyPath: m_LocalPosition.y
@@ -186,6 +186,18 @@ Prefab:
       propertyPath: targetScene
       value: 
       objectReference: {fileID: 102900000, guid: 884df735f4c474e46b9bc8051a97b35a,
+        type: 3}
+    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
+        type: 2}
+      propertyPath: sceneList.Array.data[0].targetScene
+      value: 
+      objectReference: {fileID: 102900000, guid: 884df735f4c474e46b9bc8051a97b35a,
+        type: 3}
+    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
+        type: 2}
+      propertyPath: sceneList.Array.data[1].targetScene
+      value: 
+      objectReference: {fileID: 102900000, guid: fce8e433b9fb7eb49a66b961503cd6de,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5823042f29e1da4cb9bd36a689459fe, type: 2}
@@ -291,7 +303,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147814070}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 888d795994f671b4092dc7d5aa2328a9, type: 3}
   m_Name: 
@@ -306,7 +318,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.y

@@ -174,7 +174,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.46
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.y
@@ -398,7 +398,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4243191555243350, guid: 0679702b6358cfa4597dd5a83eee2cea, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4243191555243350, guid: 0679702b6358cfa4597dd5a83eee2cea, type: 2}
       propertyPath: m_LocalPosition.y
@@ -432,6 +432,18 @@ Prefab:
       propertyPath: m_Name
       value: "To1F\u5DE6\u6A13\u68AF&B2\u5DE6\u6A13\u68AF"
       objectReference: {fileID: 0}
+    - target: {fileID: 114638674318020536, guid: 0679702b6358cfa4597dd5a83eee2cea,
+        type: 2}
+      propertyPath: sceneList.Array.data[0].targetScene
+      value: 
+      objectReference: {fileID: 102900000, guid: 0edf92ccfb373044681d99f5134f101c,
+        type: 3}
+    - target: {fileID: 114638674318020536, guid: 0679702b6358cfa4597dd5a83eee2cea,
+        type: 2}
+      propertyPath: sceneList.Array.data[1].targetScene
+      value: 
+      objectReference: {fileID: 102900000, guid: ba67fcb7f5d380941b369f53796c4d72,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0679702b6358cfa4597dd5a83eee2cea, type: 2}
   m_IsPrefabParent: 0
