@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   file: {fileID: 4900000, guid: 9ec866f87ae72b54593e642641774be9, type: 3}
-  defaultStateIsDialog: 1
+  defaultStateIsDialog: 0
   currentLine: 0
   BGs:
   - BGName: "B1\u91AB\u52D9\u5BA4"
