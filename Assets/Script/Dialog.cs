@@ -6,6 +6,7 @@ using System;
 
 public class Dialog : MonoBehaviour {
     enum State {
+        None,
         Dialog,
         Explore
     }
@@ -79,12 +80,13 @@ public class Dialog : MonoBehaviour {
     // Use this for initialization
     void Start() {
         if (defaultStateIsDialog) {
-            state = State.Dialog;
+            nowStateShouldBeDialog = true;
         }
         else {
-            state = State.Explore;
+            nowStateShouldBeDialog = false;
         }
-        currentLine = 1;
+        state = State.None;
+        currentLine = 0;
         nowPointerOfOutput = 0;
         textName = gameObject.transform.GetChild(0).GetComponent<Text>();
         dialog = gameObject.transform.GetChild(1).GetComponent<Text>();
@@ -106,48 +108,53 @@ public class Dialog : MonoBehaviour {
         //print(nowPointerOfOutput);
         //print(textOfFile[nowPointerOfOutput]);
         if (nowStateShouldBeDialog) {
-            if (state == State.Explore) {   //切換到dialog
+            if (state != State.Dialog)
+            {   //切換到dialog
                 canvasAni.SetBool("Dialog", true);
                 PlayerDialogAni.SetBool("Dialog", true);
                 BGAni.SetBool("Dialog", true);
                 state = State.Dialog;
-                if (nowPointerOfOutput < textOfFile.Length) {
+                if (nowPointerOfOutput < textOfFile.Length - 1)
+                {
                     ChangeDialog();
+                    currentLine += 1;
                 }
             }
-            else {  //當下即是dialog
-                if (Input.GetKeyDown(KeyCode.Z)) {
-                    if (nowPointerOfOutput < textOfFile.Length) {
-                        if (!NextIsExplore()) {
-                            currentLine += 1;
-                            ChangeDialog();
-                        }
-                        else WhatType(false, "");
+            else if (nowPointerOfOutput < textOfFile.Length - 1)
+            {
+                if (Input.GetKeyDown(KeyCode.Z))
+                {
+                    if (!NextIsExplore())
+                    {
+                        ChangeDialog();
+                        currentLine += 1;
+                    }
+                    else
+                    {
+                        WhatType(false, "");
+                        currentLine += 1;
                     }
                 }
             }
         }
         else {
-            if (state == State.Dialog) {    //切換到explore
+            if (state != State.Explore) {    //切換到explore
                 canvasAni.SetBool("Dialog", false);
                 PlayerDialogAni.SetBool("Dialog", false);
                 BGAni.SetBool("Dialog", false);
                 state = State.Explore;
             }
-            else {  //當下即是explore
-                if (nowPointerOfOutput < textOfFile.Length && lineDone) {
-                    currentLine += 1;
-                    WhatType(false, "");
-                }
+            else if (nowPointerOfOutput < textOfFile.Length - 1 && lineDone) {
+                currentLine += 1;
+                WhatType(false, "");
             }
         }
-        
     }
 
     IEnumerator WaitAndPressZToNextLine() {     //for waiting the time of changing dialog and explore
         yield return new WaitForSeconds(1.0f);
         if (Input.GetKeyDown(KeyCode.Z)) {
-            if (nowPointerOfOutput < textOfFile.Length) {
+            if (nowPointerOfOutput < textOfFile.Length - 1) {
                 currentLine += 1;
                 ChangeDialog();
             }
@@ -157,20 +164,18 @@ public class Dialog : MonoBehaviour {
     void ChangeDialog() {
         int nameStart=0, nameEnd=0, returnLine=0;
         //print(nowPointerOfOutput);
-        while (nowPointerOfOutput != textOfFile.Length && textOfFile[nowPointerOfOutput] != '\n') {
+        while (nowPointerOfOutput < textOfFile.Length - 1 && textOfFile[nowPointerOfOutput] != '\n') {
             //print(nowPointerOfOutput);
             //print(textOfFile[nowPointerOfOutput]);
             if (textOfFile[nowPointerOfOutput] == '\\' && textOfFile[nowPointerOfOutput + 1] == 'N') {
                 returnLine = nowPointerOfOutput;
-                nowPointerOfOutput += 2;
+                nowPointerOfOutput += 1;
             }
             else if (textOfFile[nowPointerOfOutput] == '【') {
                 nameStart = nowPointerOfOutput + 1;
-                nowPointerOfOutput += 1;
             }
             else if (textOfFile[nowPointerOfOutput] == '】') {
                 nameEnd = nowPointerOfOutput - 1;
-                nowPointerOfOutput += 1;
             }
             nowPointerOfOutput += 1;
         }
@@ -191,12 +196,12 @@ public class Dialog : MonoBehaviour {
             rightTachieCanvasGroup.alpha = 0.5f;
         }
         if (returnLine == 0) {
-            dialog.text = textOfFile.Substring(nameEnd + 2, nowPointerOfOutput - nameEnd - 2 - 1);
+            dialog.text = textOfFile.Substring(nameEnd + 2, nowPointerOfOutput - nameEnd - 2);
         }
         else {
             string str1, str2;
             str1= textOfFile.Substring(nameEnd + 2, returnLine - nameEnd - 2);
-            str2= textOfFile.Substring(returnLine + 2, nowPointerOfOutput - returnLine - 2 - 1);
+            str2= textOfFile.Substring(returnLine + 2, nowPointerOfOutput - returnLine - 2);
             dialog.text = string.Concat(str1, "\n", str2);
         }
         nowPointerOfOutput += 1;
@@ -206,7 +211,7 @@ public class Dialog : MonoBehaviour {
         int typeStart = 0, typeEnd = 0;
         string type;
         string description;
-        while (nowPointerOfOutput < textOfFile.Length && textOfFile[nowPointerOfOutput] != '\n') {
+        while (nowPointerOfOutput < textOfFile.Length - 1 && textOfFile[nowPointerOfOutput] != '\n') {
             if (textOfFile[nowPointerOfOutput] == '《') {
                 typeStart = nowPointerOfOutput + 1;
             }
@@ -218,7 +223,7 @@ public class Dialog : MonoBehaviour {
             print(nowPointerOfOutput);*/
         }
         type = textOfFile.Substring(typeStart, typeEnd + 1 - typeStart);
-        description = textOfFile.Substring(typeEnd + 2, nowPointerOfOutput - typeEnd - 2 - 1);
+        description = textOfFile.Substring(typeEnd + 2, nowPointerOfOutput - typeEnd - 2);
         nowPointerOfOutput += 1;
         //print(nowPointerOfOutput);
         if (transition) {
