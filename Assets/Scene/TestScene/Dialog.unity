@@ -2249,7 +2249,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.07
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2280,27 +2280,6 @@ Prefab:
       propertyPath: dialogComp
       value: 
       objectReference: {fileID: 1629547117}
-    - target: {fileID: 212189129956946044, guid: a2a1f3237ee8d574b836b18a44993cdd,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b88f7717195e39d4daf1b76cd33dfb98,
-        type: 3}
-    - target: {fileID: 212189129956946044, guid: a2a1f3237ee8d574b836b18a44993cdd,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95279037608168810, guid: a2a1f3237ee8d574b836b18a44993cdd,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114672205293025236, guid: a2a1f3237ee8d574b836b18a44993cdd,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
   m_IsPrefabParent: 0

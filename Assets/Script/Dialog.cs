@@ -294,8 +294,14 @@ public class Dialog : MonoBehaviour {
         }
         else if (type == "移動") {
             lineDone = false;
-            PlayerAni.enabled = true;
-            CharControl.AutoWalk(StringToInt(description));
+            //PlayerAni.enabled = true;
+            int i = 0;
+            for (i = 0; description[i] != ','; i++) {
+
+            }
+            string tempName = description.Substring(0, i);
+            string tempPosition = description.Substring(i + 1, description.Length - i - 1);
+            CharControl.AutoWalk(tempName, StringToInt(tempPosition));
         }
         else if (type == "換立繪") {
             //print(description);
