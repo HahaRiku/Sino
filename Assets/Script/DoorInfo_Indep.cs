@@ -9,20 +9,23 @@ public class DoorInfo_Indep : MonoBehaviour {
 		touched,
 		describe
 	};
+	[HideInInspector]
 	public HighLightState HLE;
+	public Vector3 nextScenePos;// = new Vector3;
 	
 	//一單位選項字高=40
 	
 	//public Sprite pics;		//1: idle
 	public string description;
 	public bool IsLocked;
-	public string nextSceneName;	//場景序號
+	public Object nextScene;	//抓場景，轉成名稱供LoadScene使用
+	public int nextScenePosLabel;
 	
 	void Start(){
 		HLE = HighLightState.idle;
 	}
 	
-//物品狀態&效果
+//狀態&效果
 	public void ItemState(){//HighLightState HLState
 		switch(HLE){
 			case HighLightState.idle:
