@@ -211,7 +211,7 @@ public class Dialog : MonoBehaviour {
         int typeStart = 0, typeEnd = 0;
         string type;
         string description;
-        while (nowPointerOfOutput < textOfFile.Length - 1 && textOfFile[nowPointerOfOutput] != '\n') {
+        while (nowPointerOfOutput < textOfFile.Length /*- 1*/ && textOfFile[nowPointerOfOutput] != '\n') {
             if (textOfFile[nowPointerOfOutput] == '《') {
                 typeStart = nowPointerOfOutput + 1;
             }
@@ -279,8 +279,6 @@ public class Dialog : MonoBehaviour {
             }
             string tempName = description.Substring(0, i);
             string tempSpriteName = description.Substring(i + 1, description.Length - i - 1);
-            print(tempName);
-            print(tempSpriteName.Length);
             ChangeSprite(tempName, tempSpriteName);
             StartCoroutine(ChangePicDelay());
         }
@@ -306,6 +304,8 @@ public class Dialog : MonoBehaviour {
             }
             string tempName = description.Substring(0, i);
             string tempPosition = description.Substring(i + 1, description.Length - i - 1);
+            print(description);
+            print(tempPosition);
             CharControl.AutoWalk(tempName, StringToInt(tempPosition));
         }
         else if (type == "換立繪") {

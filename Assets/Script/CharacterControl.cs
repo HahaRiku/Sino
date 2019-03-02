@@ -63,10 +63,30 @@ public class CharacterControl : MonoBehaviour {
     }
 
     IEnumerator WalkLerp(string name, float x) {
+        GameObject tempGameObject= null;
+        print(name);
+        print(x);
+        if (name != "席諾") {
+            for (int i = 0; i < otherCharactersObjects.Length; i++) {
+                if (name == otherCharactersObjects[i].name) {
+                    tempGameObject = otherCharactersObjects[i].obj;
+                    break;
+                }
+            }
+        }
+        else {
+            tempGameObject = gameObject;
+        }
         ani.SetBool("Walk", true);
-        for (float i = transform.position.x; i < x; i += speed) {
-            transform.localPosition = new Vector3(i, transform.position.y, transform.position.z);
-            yield return null;
+        if (tempGameObject != null) {
+            print("123");
+            for (float i = transform.position.x; i < x; i += speed) {
+                tempGameObject.transform.localPosition = new Vector3(i, tempGameObject.transform.position.y, tempGameObject.transform.position.z);
+                yield return null;
+            }
+        }
+        else {
+            print("walk name error");
         }
         ani.SetBool("Walk", false);
         dialogComp.SetLineDone(true);
