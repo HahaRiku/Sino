@@ -100,3 +100,99 @@ public class CharacterControl : MonoBehaviour {
         //ani.enabled = false;
     }
 }
+
+/*
+	//private int temp_stats = 0;	//0 = idle, 1 = left, 2=right
+	
+    void Start() {
+        ani= gameObject.GetComponent<Animator>();
+        aniWalk = false;
+		//StartCoroutine(WalkController ());
+    }
+	
+	private void UpdateWalk (int stats) {
+		switch(stats){
+			case 0:
+				aniWalk = false;
+				ani.SetBool("Walk", false);
+				break;
+				
+			case 1:
+				if (!aniWalk) {
+					aniWalk = true;
+					ani.SetBool("Walk", true);
+				}
+				transform.localPosition = new Vector3(transform.localPosition.x - speed, transform.localPosition.y, transform.localPosition.z);
+				if (transform.localScale.x < 0) {
+					transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+				}
+				break;
+				
+			case 2:
+				if (!aniWalk) {
+					aniWalk = true;
+					ani.SetBool("Walk", true);
+				}
+				transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
+				if (transform.localScale.x > 0) {
+					transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+				}
+				break;
+				
+			default:	break;
+		}
+	}
+	
+	private IEnumerator WalkController () {
+        //if(CharWithItem.actEnable){//
+        while(true){
+			
+			switch(temp_stats){
+				case 0:
+					UpdateWalk (0);
+					//Debug.Log("414");
+					if (Input.GetKey(KeyCode.RightArrow)) {	//2
+						temp_stats = 2;
+					}
+					if (Input.GetKey(KeyCode.LeftArrow)) {
+						temp_stats = 1;
+					}
+					if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
+						temp_stats = 0;
+					}
+					break;
+					
+				case 1:
+					UpdateWalk (1);
+					
+					if (Input.GetKey(KeyCode.LeftArrow)) {
+						temp_stats = 1;
+					}
+					if (Input.GetKeyDown(KeyCode.RightArrow)) {	//2
+						temp_stats = 2;
+					}
+					if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
+						temp_stats = 0;
+					}
+					break;
+					
+				case 2:
+					UpdateWalk (2);
+					
+					if (Input.GetKey(KeyCode.RightArrow)) {	//2
+						temp_stats = 2;
+					}
+					if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+						temp_stats = 1;
+					}
+					if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
+						temp_stats = 0;
+					}
+					break;
+					
+				default:	break;
+			}
+			
+			yield return 0;
+        }
+    }*/

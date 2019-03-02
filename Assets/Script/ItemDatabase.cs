@@ -1,18 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
-//[CreateAssetMenu(menuName="MySubMenue/ItemDatabase ")]
-public class ItemDatabase{
+
+public class ItemDatabase {
 	
-	[MenuItem("window/itemDatabase")]
-	static void ItemDatabase(){
-		
+	public struct item{
+		//int id;// = list.at();
+		public string name;
+		public GameObject obj;
+		public int number;
+	};
+
+	public static List<item> itemList = new List<item>();
+	
+	private void addItem (string objName, string itemName){
+		item temp = new item();
+		//temp.id = itemList.Count();
+		temp.obj = GameObject.Find(objName);
+		temp.name = itemName;
+		temp.number = 0;
+		itemList.Add(temp);
 	}
 
-	public static int ID;
-	/*public static ;
-	public static ;
-	public static ;
-
-}*/
+	public void Awake (){
+		//Create all items here.
+		
+		addItem("item_1pick", "test" ); //0
+	}
+	
+}
