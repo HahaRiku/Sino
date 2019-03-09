@@ -12,6 +12,7 @@ public class ItemInfo : MonoBehaviour {
 		picking,
 		picken
 	};
+	[HideInInspector]
 	public HighLightState HLE;
 	
 	//一單位選項字高=40
@@ -40,6 +41,7 @@ public class ItemInfo : MonoBehaviour {
 					
 				break;
 			case HighLightState.touched:
+				gameObject.GetComponent<SpriteRenderer>().sprite = pics[0];
 				transform.GetChild(0).gameObject.SetActive(true);
 				break;
 			case HighLightState.describe:

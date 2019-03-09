@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class CharWithDoor : MonoBehaviour {
     
 	public GameObject interactDoor;
+	//public int nextScenePosLabel;
+	
 	//private Vector3 tempTransPosition = new Vector3(-7.25f, -1.47f, 0.0f);
 	
 	
@@ -45,7 +47,7 @@ public class CharWithDoor : MonoBehaviour {
 					}
 				}
 			//(UseItem() && locked) -> [unlocked] + {touched}
-			//目前用X鍵代替用道具
+			//目前用X鍵代替用道具						**************************************************************************************
 				else if(Input.GetKeyDown(KeyCode.X) && interactDoor.GetComponent<DoorInfo_Indep>().IsLocked){
 					done = true;
 					Debug.Log("門打開了");
@@ -67,7 +69,13 @@ public class CharWithDoor : MonoBehaviour {
 	public void F_IntoDoor(){
 		
 	//用場景名稱傳送，名稱在門上的DoorInfo腳本裡作修改
-		SceneManager.LoadScene(interactDoor.GetComponent<DoorInfo_Indep>().nextSceneName);
+		SceneManager.LoadScene(interactDoor.GetComponent<DoorInfo_Indep>().nextScene.name);
+		
+		Temp_sceneinit.transformPointNum = interactDoor.GetComponent<DoorInfo_Indep>().nextScenePosLabel;
+		/*
+		if(interactDoor.GetComponent<DoorInfo_Indep>().nextScenePos != Vector3.zero){
+			//Set Player's position
+		}*/
 	}
 	
 }

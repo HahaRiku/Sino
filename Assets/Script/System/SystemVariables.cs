@@ -16,6 +16,6 @@ public static class SystemVariables {
     }
 
     public static bool ExploreDone=false ;
-
+    public static bool PlayerCanMove = false;
 
 }
