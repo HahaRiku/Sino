@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Temp_sceneinit : MonoBehaviour {
 
+	public static Scene lastScene;
 	public static int transformPointNum;	//傳送點標號
-	public GameObject player;				//玩家物件
+	//public GameObject player;				//玩家物件
+	public Temp_GameManager gameManager;
+	
+	void Awake(){
+		
+	}
 	
 	void Start () {
-		//player = Instantiate("player");
-		
+		gameManager = GameObject.Find("GMng").GetComponent<Temp_GameManager>();
 		if(transformPointNum != 0){
 			GameObject g = null;
 			switch(transformPointNum){
@@ -32,11 +38,9 @@ public class Temp_sceneinit : MonoBehaviour {
 			}
 			
 			if(g != null){
-				player.transform.position = g.transform.position;
-				
+				gameManager.playerObj.transform.position = g.transform.position;
 			}
 			transformPointNum = 0;
 		}
 	}
-	
 }
