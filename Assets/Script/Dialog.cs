@@ -55,6 +55,7 @@ public class Dialog : MonoBehaviour {
     public Animator BGAni;
     public Animator WhiteAni;
     public Animator BlackAni;
+    public Animator BlurAni;
     public Animator PlayerDialogAni;
     public SpriteRenderer BackGround;
     public CharacterControl CharControl;
@@ -108,29 +109,23 @@ public class Dialog : MonoBehaviour {
         //print(nowPointerOfOutput);
         //print(textOfFile[nowPointerOfOutput]);
         if (nowStateShouldBeDialog) {
-            if (state != State.Dialog)
-            {   //切換到dialog
+            if (state != State.Dialog) {   //切換到dialog
                 canvasAni.SetBool("Dialog", true);
                 PlayerDialogAni.SetBool("Dialog", true);
                 BGAni.SetBool("Dialog", true);
                 state = State.Dialog;
-                if (nowPointerOfOutput < textOfFile.Length - 1)
-                {
+                if (nowPointerOfOutput < textOfFile.Length - 1) {
                     ChangeDialog();
                     currentLine += 1;
                 }
             }
-            else if (nowPointerOfOutput < textOfFile.Length - 1)
-            {
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    if (!NextIsExplore())
-                    {
+            else if (nowPointerOfOutput < textOfFile.Length - 1) {
+                if (Input.GetKeyDown(KeyCode.Z)) {
+                    if (!NextIsExplore()) {
                         ChangeDialog();
                         currentLine += 1;
                     }
-                    else
-                    {
+                    else {
                         WhatType(false, "");
                         currentLine += 1;
                     }
@@ -240,6 +235,16 @@ public class Dialog : MonoBehaviour {
             else if (transType == "黑屏") {
                 lineDone = false;
                 BlackAni.SetBool("Black", true);
+                for (int i = 0; i < BGs.Length; i++) {
+                    if (BGs[i].BGName == description) {
+                        StartCoroutine(ChangeBGSprite(BGs[i].BGSprite));
+                        break;
+                    }
+                }
+            }
+            else if (transType == "模糊") {
+                lineDone = false;
+                BlurAni.SetBool("Blur", true);
                 for (int i = 0; i < BGs.Length; i++) {
                     if (BGs[i].BGName == description) {
                         StartCoroutine(ChangeBGSprite(BGs[i].BGSprite));
@@ -361,7 +366,7 @@ public class Dialog : MonoBehaviour {
         }
         else if (type == "等待") {
             lineDone = false;
-
+            StartCoroutine(WaitTime(StringToInt(description)));
         }
     }
 
@@ -403,6 +408,11 @@ public class Dialog : MonoBehaviour {
 
     IEnumerator ChangePicDelay() {
         yield return new WaitForSeconds(2);
+        lineDone = true;
+    }
+
+    IEnumerator WaitTime(float time) {
+        yield return new WaitForSeconds(time);
         lineDone = true;
     }
 
