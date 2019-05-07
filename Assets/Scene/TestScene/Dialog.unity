@@ -740,7 +740,7 @@ Transform:
   m_GameObject: {fileID: 803918955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.39, y: 1.39, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children:
   - {fileID: 894676230}
   - {fileID: 188899117}
@@ -1875,7 +1875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841ab51294844024894fd1739dd880ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  file: {fileID: 4900000, guid: 9ec866f87ae72b54593e642641774be9, type: 3}
+  file: {fileID: 4900000, guid: 35dd89e9f800ba84c9c8e93aeb365b73, type: 3}
   defaultStateIsDialog: 0
   currentLine: 0
   BGs:
@@ -2174,11 +2174,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -4.07
       objectReference: {fileID: 0}
     - target: {fileID: 4678031972001846, guid: a2a1f3237ee8d574b836b18a44993cdd, type: 2}
       propertyPath: m_LocalPosition.z
