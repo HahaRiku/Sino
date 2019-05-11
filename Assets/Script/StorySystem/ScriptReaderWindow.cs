@@ -4,10 +4,13 @@ using System.Collections;
 using System.IO;
 using System.Diagnostics;
 
-public class ScriptReaderWindow : EditorWindow {
+public class ScriptReaderWindow : EditorWindow
+{
 
-    string fileName;
-    string filePath;
+    private string fileName;
+    private string filePath;
+
+    string test;
 
     ScriptReaderWindow()
     {
@@ -24,15 +27,19 @@ public class ScriptReaderWindow : EditorWindow {
     void OnGUI()
     {
         GUILayout.Space(10);
-        fileName = EditorGUILayout.TextField("劇本名稱", fileName);
 
         //路徑選擇
         GUILayout.BeginHorizontal();
-        GUILayout.Label("劇本路徑  " + filePath);
+        GUILayout.Label("劇本文檔路徑  " + filePath);
         GUILayout.FlexibleSpace();
         if (GUILayout.Button("..."))
             filePath = EditorUtility.OpenFilePanel("Overwrite with txt", "", "txt");
         GUILayout.EndHorizontal();
+        if (fileName == "")
+            fileName = Path.GetFileName(filePath);
+        GUILayout.Space(10);
+        fileName = EditorGUILayout.TextField("新劇本名稱", fileName);
+
         GUI.skin.button.alignment = TextAnchor.MiddleCenter;
         //確定
         if (GUILayout.Button("按我生成 Story Data"))
@@ -40,27 +47,17 @@ public class ScriptReaderWindow : EditorWindow {
             if (File.Exists(filePath))
             {
                 string dataAsTxt = File.ReadAllText(filePath);
-                UnityEngine.Debug.Log(dataAsTxt);
+                int warn = Reader.CheckFormat(dataAsTxt);
+                if (warn == 0)
+                    Reader.TextToStoryData(fileName, dataAsTxt);
+                else if (warn > 0 && EditorUtility.DisplayDialog("帽の提醒", "警告：第" + warn + "行格式有誤", "仍要繼續", "取消"))
+                    Reader.TextToStoryData(fileName, dataAsTxt);
+                EditorUtility.FocusProjectWindow();
             }
             else
             {
                 EditorUtility.DisplayDialog("帽の提醒", "發生錯誤：路徑不存在", "OK");
             }
-        } 
+        }
     }
-
-    private void LoadGameData()
-    {
-
-    }
-
-    /*private void SaveGameData()
-    {
-
-       // string dataAsJson = JsonUtility.ToJson(gameData);
-
-        string filePath = Application.dataPath + gameDataProjectFilePath;
-        //File.WriteAllText(filePath, dataAsJson);
-
-    }*/
 }
