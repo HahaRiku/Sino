@@ -1,21 +1,22 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
 public static class SystemVariables {
 
-    [SerializeField]
-    public static List<Sprite> sino = new List<Sprite>();
-    [SerializeField]
-    public static List<Sprite> doctor = new List<Sprite>();
+    public static string Scene;
+    public static long gameStartTime=0;
+    public static long PlayedTime = 0;
 
-    public enum Progress {
-        序幕,
+    [SerializeField]
+    public static Dictionary<string, int> OtherVariables = new Dictionary<string, int>();
 
+}
+
+public static class Init {
+    [RuntimeInitializeOnLoadMethod]
+    static void OnRuntimeMethodLoad() {
+        SystemVariables.gameStartTime = (Int64)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
     }
-
-    public static bool ExploreDone=false ;
-    public static bool PlayerCanMove = false;
-
 }
