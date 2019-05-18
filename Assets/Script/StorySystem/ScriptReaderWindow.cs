@@ -59,5 +59,11 @@ public class ScriptReaderWindow : EditorWindow
                 EditorUtility.DisplayDialog("帽の提醒", "發生錯誤：路徑不存在", "OK");
             }
         }
+        test = EditorGUILayout.TextField("input", test);
+        if (GUILayout.Button("Test"))
+        {
+            int warn = Reader.CheckFormat(test);
+            UnityEngine.Debug.Log(warn);
+        }
     }
 }

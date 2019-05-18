@@ -46,8 +46,9 @@ public static class Reader
         string tag_dialog = @"^<\s*dialog (?:open|close)\s*>$";
 
         string name = "";
-        foreach (string data in list)
+        foreach (string t in list)
         {
+            string data = t.Trim().Replace("\r", "");
             if (Regex.IsMatch(data, tag_name))
             {
                 name = Regex.Matches(data, word)[0].ToString();
@@ -91,6 +92,7 @@ public static class Reader
         string tag_dialog = @"^<\s*dialog (?:open|close)\s*>$";
         for (int i = 0; i < array.Length; i++)
         {
+            array[i] = array[i].Trim().Replace("\r", "");
             if (Regex.IsMatch(array[i], word))
                 continue;
             else if (Regex.IsMatch(array[i], tag_name))
