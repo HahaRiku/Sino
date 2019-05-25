@@ -14,8 +14,8 @@ public class AutoTrans : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D col_item){
 		
-		SceneManager.LoadScene(targetScene.name/* , LoadSceneMode.Additive*/);
 		Temp_sceneinit.transformPointNum = nextScenePosLabel;
+		SceneManager.LoadScene(targetScene.name/* , LoadSceneMode.Additive*/);
 		
 		//player.transform.position = (GameObject.Find("L") as GameObject).transform.position;
 		
