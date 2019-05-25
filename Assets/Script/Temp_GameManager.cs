@@ -14,8 +14,8 @@ public class Temp_GameManager : MonoBehaviour {
 		new Vector3(-5.5f, -4.07f, 0),
 		new Vector3(0, -4.07f, 0),
 		new Vector3(-2.3f, -4.07f, 0),
-		new Vector3(1.5f, -4.07f, 0),
-		new Vector3(-1.5f, -4.07f, 0)
+		new Vector3(-1.5f, -4.07f, 0),
+		new Vector3(1.5f, -4.07f, 0)
 	};
 	
 	void Awake(){
@@ -36,34 +36,32 @@ public class Temp_GameManager : MonoBehaviour {
 	}
 	
 	public static void transPosSet(int nextScenePosLabel){
-		if(nextScenePosLabel != 0){
-			switch(nextScenePosLabel){
-				case 0:
-					playerObj.transform.position = transPos[2];
-					break;
-				case 1:		//to right
-					playerObj.transform.position = transPos[0];
-					break;
-				case 2:		//to left
-					playerObj.transform.position = transPos[1];
-					break;
-				case 3:		//to door
-					playerObj.transform.position = transPos[2];
-					break;
-				case 4:		//to small door
-					playerObj.transform.position = transPos[3];
-					break;
-				case 5:		//to right stair
-					playerObj.transform.position = transPos[4];
-					break;
-				case 6:		//to left stair
-					playerObj.transform.position = transPos[4];
-					break;
-				/*case 6:
-					GameObject g = GameObject.Find("Door") as GameObject;
-					break;*/
-				default:	break;
-			}
+		switch(nextScenePosLabel){
+			case 0:
+				playerObj.transform.position = transPos[2];
+				break;
+			case 1:		//to right
+				playerObj.transform.position = transPos[0];
+				break;
+			case 2:		//to left
+				playerObj.transform.position = transPos[1];
+				break;
+			case 3:		//to door
+				playerObj.transform.position = transPos[2];
+				break;
+			case 4:		//to small door
+				playerObj.transform.position = transPos[3];
+				break;
+			case 5:		//to right stair
+				playerObj.transform.position = transPos[4];
+				break;
+			case 6:		//to left stair
+				playerObj.transform.position = transPos[5];
+				break;
+			/*case 6:
+				GameObject g = GameObject.Find("Door") as GameObject;
+				break;*/
+			default:	break;
 		}
 	}
 }

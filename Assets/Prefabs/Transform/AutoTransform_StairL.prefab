@@ -165,9 +165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneList:
   - targetScene: {fileID: 102900000, guid: ba67fcb7f5d380941b369f53796c4d72, type: 3}
-    nextScenePosLabel: 4
+    nextScenePosLabel: 6
   - targetScene: {fileID: 102900000, guid: ba67fcb7f5d380941b369f53796c4d72, type: 3}
-    nextScenePosLabel: 4
+    nextScenePosLabel: 6
   stairType: 1
 --- !u!212 &212101019658000680
 SpriteRenderer:

@@ -218,15 +218,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1609046333442840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb01c7ff1d9d7f8499329ade7ddcaf26, type: 3}
+  m_Script: {fileID: 11500000, guid: d4abdadfad3d781449ccca8539bf0195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HLE: 0
   nextScenePos: {x: 0, y: 0, z: 0}
-  description: "\u9580\u9396\u8457\u3002"
+  description: 
   IsLocked: 0
-  nextScene: {fileID: 102900000, guid: f152798c7ec1d2a48b44934d396b0682, type: 3}
-  nextScenePosLabel: 2
+  nextScene: {fileID: 0}
+  nextScenePosLabel: 4
 --- !u!212 &212067291904646568
 SpriteRenderer:
   m_ObjectHideFlags: 1

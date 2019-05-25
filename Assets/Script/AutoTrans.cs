@@ -11,10 +11,7 @@ public class AutoTrans : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 		
-		//Temp_GameManager.transformPointNum = nextScenePosLabel;
-		//player = Temp_GameManager.playerObj;
 		Temp_GameManager.transPosSet(nextScenePosLabel);
-		
 		SceneManager.LoadScene(targetScene.name/* , LoadSceneMode.Additive*/);
 		
 	}

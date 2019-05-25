@@ -356,11 +356,6 @@ Prefab:
       value: 
       objectReference: {fileID: 102900000, guid: 5a14676bb267333429b57fa209c40266,
         type: 3}
-    - target: {fileID: 114746369982335516, guid: 0e0693a912b5fcc45a2f8346ba4b8389,
-        type: 2}
-      propertyPath: nextScenePosLabel
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e0693a912b5fcc45a2f8346ba4b8389, type: 2}
   m_IsPrefabParent: 0
