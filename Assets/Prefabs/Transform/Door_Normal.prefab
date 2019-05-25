@@ -54,7 +54,6 @@ GameObject:
   - component: {fileID: 4610840353039334}
   - component: {fileID: 23030893274797006}
   - component: {fileID: 102591119406049624}
-  - component: {fileID: 114840364828684574}
   m_Layer: 8
   m_Name: Info
   m_TagString: Untagged
@@ -78,34 +77,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &1918258321864320
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4087978688213588}
-  m_Layer: 0
-  m_Name: Door
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4087978688213588
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1918258321864320}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.2850001, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4636576013806742}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4481668595279044
 Transform:
   m_ObjectHideFlags: 1
@@ -145,7 +116,6 @@ Transform:
   m_Children:
   - {fileID: 4963124099440316}
   - {fileID: 4481668595279044}
-  - {fileID: 4087978688213588}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -255,21 +225,8 @@ MonoBehaviour:
   nextScenePos: {x: 0, y: 0, z: 0}
   description: "\u9580\u9396\u8457\u3002"
   IsLocked: 0
-  nextScene: {fileID: 0}
-  nextScenePosLabel: 3
---- !u!114 &114840364828684574
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1766125877822924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6b5a6ae1511e594ea69e3be8d7fa137, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingLayerName: Info
-  sortingOrder: 2
+  nextScene: {fileID: 102900000, guid: 7ac0acef4b9d75044a0fa031eea3fb85, type: 3}
+  nextScenePosLabel: 2
 --- !u!212 &212065945632695804
 SpriteRenderer:
   m_ObjectHideFlags: 1

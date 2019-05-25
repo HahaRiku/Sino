@@ -69,9 +69,11 @@ public class CharWithDoor : MonoBehaviour {
 	public void F_IntoDoor(){
 		
 	//用場景名稱傳送，名稱在門上的DoorInfo腳本裡作修改
+		
+		Temp_GameManager.transPosSet(interactDoor.GetComponent<DoorInfo_Indep>().nextScenePosLabel);
 		SceneManager.LoadScene(interactDoor.GetComponent<DoorInfo_Indep>().nextScene.name);
 		
-		Temp_sceneinit.transformPointNum = interactDoor.GetComponent<DoorInfo_Indep>().nextScenePosLabel;
+		//Temp_sceneinit.transformPointNum = interactDoor.GetComponent<DoorInfo_Indep>().nextScenePosLabel;
 		/*
 		if(interactDoor.GetComponent<DoorInfo_Indep>().nextScenePos != Vector3.zero){
 			//Set Player's position

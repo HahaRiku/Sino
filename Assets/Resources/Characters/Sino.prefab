@@ -1291,7 +1291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f453ddf314725848b9b1fa4cdd5d1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.1
   dialogComp: {fileID: 0}
   otherCharactersObjects: []
 --- !u!114 &114389306015374144
