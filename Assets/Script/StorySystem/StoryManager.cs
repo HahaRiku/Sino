@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //[RequireComponent(typeof(StoryReader))]
-public class StoryManager : MonoBehaviour
+public class StoryManager : Singleton<StoryManager>
 {
     /* 
      * 功能說明：
      *  負責解讀StoryData，跟StoryReader一起使用
      *  對話開始、選項切換、人物移動都由這裏控管
      */
-    public StoryData 劇本;
+
+    public string 劇本名稱;
+    StoryData 劇本;
     List<StoryData.StoryState> stories;
     //GameObject clickRegion;
     StoryReader reader;
@@ -23,7 +25,9 @@ public class StoryManager : MonoBehaviour
     bool PauseLock = true;
 
     TwoF_GameManager GM;
-    public bool 一開始就執行;
+    //public bool 一開始就執行;
+
+    protected StoryManager() { }
 
     public bool IsStoryFinish()
     {
@@ -31,11 +35,19 @@ public class StoryManager : MonoBehaviour
     }
 
     public void BeginStory()
-    {
+    {  
+        if(!(劇本 = (StoryData)Resources.Load(劇本名稱)))
+        {
+            Debug.LogError("Error: \"" + 劇本名稱 + "\" 劇本讀入錯誤！請檢查 Assets/Resources 是否存在此檔案名稱。");
+            enabled = false;
+            return;
+        }
         /*if (GM == null)
             GM = GameObject.Find("GM").GetComponent<TwoF_GameManager>();
         GM.StartEvent();
         GM.SetStoryManager(this);*/
+        stories = 劇本.StateList;
+        listCount = stories.Count;
         isStoryFinish = false;
         PauseLock = true;
         StartCoroutine(WaitAndWork(0.5f, "ExecuteState"));
@@ -59,29 +71,14 @@ public class StoryManager : MonoBehaviour
 
     void OnEnable()
     {
-        if (劇本 == null)
-        {
-            Debug.Log("Error: No 劇本 has found.");
-            enabled = false;
-            return;
-        }
-        stories = 劇本.StateList;
-        if (stories == null)
-        {
-            Debug.Log("Error: No stories has found.");
-            enabled = false;
-            return;
-        }
         if (GetComponent<StoryReader>() == null)
             gameObject.AddComponent<StoryReader>();
         if (GetComponent<MovementControl>() == null)
             gameObject.AddComponent<MovementControl>();
         reader = GetComponent<StoryReader>();
         moveContol = GetComponent<MovementControl>();
-        
-        listCount = stories.Count;
-        if(一開始就執行)
-            BeginStory();
+        /*if(一開始就執行)
+            BeginStory();*/
     }
 
     void Update()

@@ -961,6 +961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852512393}
   - component: {fileID: 852512392}
+  - component: {fileID: 852512394}
   m_Layer: 0
   m_Name: StoryManager
   m_TagString: Untagged
@@ -979,9 +980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4fb2d9e6e68e4490bc7b40755627e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u5287\u672C": {fileID: 11400000, guid: 7291798848d74af47b460c05328578f5, type: 2}
+  "\u5287\u672C\u540D\u7A31": 
   nowIndex: 0
-  "\u4E00\u958B\u59CB\u5C31\u57F7\u884C": 1
 --- !u!4 &852512393
 Transform:
   m_ObjectHideFlags: 0
@@ -995,6 +995,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &852512394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 852512391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5399e64c84d0536479b16d32b60f69bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &865832652
 GameObject:
   m_ObjectHideFlags: 0

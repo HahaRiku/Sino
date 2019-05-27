@@ -31,7 +31,7 @@ public static class Reader
 
     public static void TextToStoryData(string filename, string txt)
     {
-        StoryData story = CreateAsset<StoryData>(filename, "素材/文本");
+        StoryData story = CreateAsset<StoryData>(filename, "Resources");
         List<string> list = txt.Split('\n').ToList();
 
         string word = @"""([^<>""]*)""";

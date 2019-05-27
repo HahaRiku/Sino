@@ -170,7 +170,7 @@ public class StoryDataEditor:Editor
         menu.AddItem(new GUIContent("新增動作"), false, AddMovement);
         menu.AddSeparator("");
         menu.AddItem(new GUIContent("新增分支"), false, AddBranch);
-        menu.AddItem(new GUIContent("新增變數"), false, AddBranch);
+        menu.AddItem(new GUIContent("新增變數"), false, AddVariable);
         menu.DropDown(buttonRect);
     }
     void onRemoveCallback(ReorderableList list)

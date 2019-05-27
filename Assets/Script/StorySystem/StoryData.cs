@@ -16,6 +16,7 @@ public class StoryData : ScriptableObject
 
         public string Name;
         public string Text;
+        public Sprite Image;
 
         public string Character;
         public float OriPositionX;
