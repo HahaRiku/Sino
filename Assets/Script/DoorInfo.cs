@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class DoorInfo_Indep : MonoBehaviour {
+public class DoorInfo : MonoBehaviour {
     
 	public enum HighLightState{
 		idle,
@@ -40,22 +41,53 @@ public class DoorInfo_Indep : MonoBehaviour {
 			//All doors are look_only
 				this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
 				break;
-		//others: as char
 			default:
 				break;
 		}
 	}
 	
-//Scope Effect
 	void OnTriggerEnter2D(Collider2D player){
 		HLE = HighLightState.touched;
 		ItemState();
+	}
+	void OnTriggerStay2D(Collider2D player){
+		if(Input.GetKeyDown(KeyCode.Z)){	//(press Z && locked) -> {describe}
+			if(IsLocked){
+				HLE = HighLightState.describe;
+				ItemState();
+			}
+			else{							//(press Z && openable) -> [open] + [in]
+				Temp_GameManager.transPosSet(nextScenePosLabel);
+				SceneManager.LoadScene(nextScene.name);
+			}
+		}
+		else if(Input.GetKeyDown(KeyCode.X) && IsLocked){
+			//(UseItem() && locked) -> [unlocked] + {touched}
+			//目前用X鍵代替用道具		
+			
+			Debug.Log("門打開了");
+			IsLocked = false;
+		}
 	}
 	void OnTriggerExit2D(Collider2D player){
 		HLE = HighLightState.idle;
 		ItemState();
 	}
 	
-	
-	
 }
+
+
+/*
+DoorState{
+	idle,
+		(touch) -> {touched}
+	touched,
+		(press Z && locked) -> {describe}
+		(press Z && openable) -> [open] + [in]
+		(UseItem() && locked) -> [unlocked] + {touched}
+		(untouch) -> {idle}
+	describe,
+		(press Z) -> {touched}
+		(untouch) -> {idle}
+};
+*/

@@ -37,13 +37,15 @@ public class Trans_Stair : MonoBehaviour {
 				while(!done){
 					if(Input.GetKeyDown(KeyCode.UpArrow)){
 						done = true;
+						
+						Temp_GameManager.transPosSet(sceneList[0].nextScenePosLabel);
 						SceneManager.LoadScene(sceneList[0].targetScene.name);
-						Temp_sceneinit.transformPointNum = sceneList[0].nextScenePosLabel;
 					}
 					else if(Input.GetKeyDown(KeyCode.DownArrow)){
 						done = true;
+						
+						Temp_GameManager.transPosSet(sceneList[1].nextScenePosLabel);
 						SceneManager.LoadScene(sceneList[1].targetScene.name);
-						Temp_sceneinit.transformPointNum = sceneList[1].nextScenePosLabel;
 					}
 					/*else if(Input.GetKeyDown(KeyCode.X)){	//cancel
 						
@@ -59,8 +61,9 @@ public class Trans_Stair : MonoBehaviour {
 				while(!done){
 					if(Input.GetKeyDown(KeyCode.UpArrow)){
 						done = true;
+						
+						Temp_GameManager.transPosSet(sceneList[0].nextScenePosLabel);
 						SceneManager.LoadScene(sceneList[0].targetScene.name);
-						Temp_sceneinit.transformPointNum = sceneList[0].nextScenePosLabel;
 					}
 					yield return 0;
 				}
@@ -72,8 +75,9 @@ public class Trans_Stair : MonoBehaviour {
 				while(!done){
 					if(Input.GetKeyDown(KeyCode.DownArrow)){
 						done = true;
-						SceneManager.LoadScene(sceneList[1].targetScene.name);
-						Temp_sceneinit.transformPointNum = sceneList[1].nextScenePosLabel;
+						
+						Temp_GameManager.transPosSet(sceneList[1].nextScenePosLabel);
+						SceneManager.LoadScene(sceneList[1].targetScene.name);						
 					}
 					yield return 0;
 				}
