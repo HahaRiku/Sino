@@ -55,14 +55,12 @@ public class CharacterControl2 : MonoBehaviour {
                 }
             }
             if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
-                aniWalk = false;
-				Debug.Log("456");				
+                aniWalk = false;			
                 ani.Play("stand");
             }
         }
         else {
             aniWalk = false;
-			Debug.Log("123");
             ani.Play("stand");
         }
         //}

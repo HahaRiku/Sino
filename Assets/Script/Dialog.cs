@@ -391,11 +391,11 @@ public class Dialog : MonoBehaviour {
     }
 
     IEnumerator WaitExploreDone() {
-        while (!SystemVariables.ExploreDone) {
+        while (/*!SystemVariables.ExploreDone*/true) {
             yield return null;
         }
         lineDone = true;
-        SystemVariables.PlayerCanMove = false;
+        //SystemVariables.PlayerCanMove = false;
         PlayerAni.enabled = false;
     }
 
