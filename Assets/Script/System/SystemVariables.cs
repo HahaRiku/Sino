@@ -8,6 +8,7 @@ public static class SystemVariables {
     public static string Scene;
     public static long startGameTime= 0;
     public static long PlayedTime= 0;
+    public static bool lockMoving = false;
 
     [SerializeField]
     public static Dictionary<string, int> otherVariables = new Dictionary<string, int>();
