@@ -10,7 +10,8 @@ public class SavedData {
     public long playedTime;
     public long systemTime;
     public float playerX;
-    public string globalVariables;
+    public string globalVariables_int;
+    public string globalVariables_bool;
 
 }
 
@@ -21,7 +22,8 @@ public class SaveAndLoad {
         string scene = SystemVariables.Scene;
         long playedTime = SystemVariables.PlayedTime;
         long SystemTime = (Int64)(DateTime.Now.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
-        string GlobalVars = JsonUtility.ToJson(SystemVariables.otherVariables, false);
+        string GlobalVars_int = JsonUtility.ToJson(SystemVariables.otherVariables_int, false);
+        string GlobalVars_bool = JsonUtility.ToJson(SystemVariables.otherVariables_bool, false);
         //float playerX= //I need Actor or something
 
         SavedData SavedD = new SavedData {
@@ -29,7 +31,8 @@ public class SaveAndLoad {
             playedTime = playedTime,
             systemTime = SystemTime,
             //playerX
-            globalVariables = GlobalVars
+            globalVariables_int = GlobalVars_int,
+            globalVariables_bool = GlobalVars_bool
         };
 
         string data = JsonUtility.ToJson(SavedD, false);

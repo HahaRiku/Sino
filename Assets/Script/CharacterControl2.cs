@@ -24,46 +24,48 @@ public class CharacterControl2 : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         //if(CharWithItem.actEnable){
-        if (!(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))) {
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-                aniWalk = true;
-                ani.Play("walk");
-            }
-            /*if ((Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))) {
-                KeyDown = false;
-                ani.SetBool("Walk", false);
+        if (!SystemVariables.lockMoving) {
+            if (!(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))) {
+                if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+                    aniWalk = true;
+                    ani.Play("walk");
+                }
+                /*if ((Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))) {
+                    KeyDown = false;
+                    ani.SetBool("Walk", false);
 
-            }*/
-            if (Input.GetKey(KeyCode.RightArrow)) {
-                if (!aniWalk) {
-                    aniWalk = true;
-                    ani.Play("walk");
+                }*/
+                if (Input.GetKey(KeyCode.RightArrow)) {
+                    if (!aniWalk) {
+                        aniWalk = true;
+                        ani.Play("walk");
+                    }
+                    transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
+                    if (transform.localScale.x > 0) {
+                        transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+                    }
                 }
-                transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
-                if (transform.localScale.x > 0) {
-                    transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+                if (Input.GetKey(KeyCode.LeftArrow)) {
+                    if (!aniWalk) {
+                        aniWalk = true;
+                        ani.Play("walk");
+                    }
+                    transform.localPosition = new Vector3(transform.localPosition.x - speed, transform.localPosition.y, transform.localPosition.z);
+                    if (transform.localScale.x < 0) {
+                        transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
+                    }
+                }
+                if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
+                    aniWalk = false;
+                    ani.Play("stand");
                 }
             }
-            if (Input.GetKey(KeyCode.LeftArrow)) {
-                if (!aniWalk) {
-                    aniWalk = true;
-                    ani.Play("walk");
-                }
-                transform.localPosition = new Vector3(transform.localPosition.x - speed, transform.localPosition.y, transform.localPosition.z);
-                if (transform.localScale.x < 0) {
-                    transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
-                }
-            }
-            if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
-                aniWalk = false;			
+            else {
+                aniWalk = false;
                 ani.Play("stand");
             }
+            //}
         }
-        else {
-            aniWalk = false;
-            ani.Play("stand");
-        }
-        //}
     }
 
     public void AutoWalk(string name, float x) {
