@@ -32,10 +32,14 @@ public class NPC : MonoBehaviour {
     public GameObject player;
     public Sprite 淺白點;
     public Sprite 白點;
+    public Sprite 一個點;
+    public Sprite 兩個點;
+    public Sprite 三個點;
     public ItemQuestion ItemQuestion;
 
     private Actor actor;
     private SpriteRenderer 白點SP;
+    private SpriteRenderer 點點點SP;
     private bool toggleWithPlayer= false;
     private bool itemToggleLeft = false;
     private bool itemToggleRight = false;
@@ -45,7 +49,12 @@ public class NPC : MonoBehaviour {
     // Use this for initialization
     void Start () {
         actor = GameObject.Find("Actor").GetComponent<Actor>();
-        白點SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        if (type == Type.item) {
+            白點SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }
+        else if (type == Type.talk) {
+            點點點SP = gameObject.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+        }
         player = actor.userCharacter;
 
         if (type == Type.item) {
@@ -67,7 +76,7 @@ public class NPC : MonoBehaviour {
         else if ((state == State.範圍外 || state == State.快接近_僅限item) && toggleWithPlayer) {
             state = State.可以講話;
             if (type == Type.talk) {
-
+                //點點點animation play
             }
             else if (type == Type.item) {
                 白點SP.sprite = 白點;
@@ -103,7 +112,8 @@ public class NPC : MonoBehaviour {
         else if (state != State.範圍外 && !toggleWithPlayer && type != Type.item) {
             state = State.範圍外;
             if (type == Type.talk) {
-
+                
+                //點點點animation stop
             }
             else if (type == Type.door) {
 
@@ -131,6 +141,7 @@ public class NPC : MonoBehaviour {
         }
         else if (state == State.對話中 && type == Type.talk) {
 
+            //點點點animation stop
         }
         
 
