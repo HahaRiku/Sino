@@ -499,11 +499,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &373674282 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95279037608168810, guid: a2a1f3237ee8d574b836b18a44993cdd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1680720871}
 --- !u!1 &397404949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,17 +1516,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1083096398 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114672205293025236, guid: a2a1f3237ee8d574b836b18a44993cdd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1680720871}
-  m_Script: {fileID: 11500000, guid: 5fd96b495557b7949abed534f1a6a25d, type: 3}
---- !u!212 &1083096400 stripped
-SpriteRenderer:
-  m_PrefabParentObject: {fileID: 212189129956946044, guid: a2a1f3237ee8d574b836b18a44993cdd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1680720871}
 --- !u!1 &1125143767
 GameObject:
   m_ObjectHideFlags: 0

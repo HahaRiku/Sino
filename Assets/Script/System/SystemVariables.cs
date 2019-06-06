@@ -11,29 +11,55 @@ public static class SystemVariables {
     public static bool lockMoving = false;
 
     [SerializeField]
-    public static Dictionary<string, int> otherVariables = new Dictionary<string, int>();
+    public static Dictionary<string, int> otherVariables_int = new Dictionary<string, int>();
 
-    public static void AddVariable(string varName, int varValue) {
-        if (otherVariables.ContainsKey(varName)) {
-            otherVariables[varName] = varValue;
+    [SerializeField]
+    public static Dictionary<string, bool> otherVariables_bool = new Dictionary<string, bool>();
+
+    public static void AddIntVariable(string varName, int varValue) {
+        if (otherVariables_int.ContainsKey(varName)) {
+            otherVariables_int[varName] = varValue;
         }
         else {
-            otherVariables.Add(varName, varValue);
+            otherVariables_int.Add(varName, varValue);
         }
     }
 
-    public static void RemoveVariable(string varName) {
-        if (otherVariables.ContainsKey(varName)) {
-            otherVariables.Remove(varName);
+    public static void AddBoolVariable(string varName, bool varValue) {
+        if (otherVariables_bool.ContainsKey(varName)) {
+            otherVariables_bool[varName] = varValue;
+        }
+        else {
+            otherVariables_bool.Add(varName, varValue);
         }
     }
 
-    public static bool IsVariableExisted(string varName) {
-        return otherVariables.ContainsKey(varName);
+    public static void RemoveIntVariable(string varName) {
+        if (otherVariables_int.ContainsKey(varName)) {
+            otherVariables_int.Remove(varName);
+        }
     }
 
-    public static void FlushVariables() {
-        otherVariables.Clear();
+    public static void RemoveBoolVariable(string varName) {
+        if (otherVariables_bool.ContainsKey(varName)) {
+            otherVariables_bool.Remove(varName);
+        }
+    }
+
+    public static bool IsIntVariableExisted(string varName) {
+        return otherVariables_int.ContainsKey(varName);
+    }
+
+    public static bool IsBoolVariableExisted(string varName) {
+        return otherVariables_bool.ContainsKey(varName);
+    }
+
+    public static void FlushIntVariables() {
+        otherVariables_int.Clear();
+    }
+
+    public static void FlushBoolVariables() {
+        otherVariables_bool.Clear();
     }
 
 }
