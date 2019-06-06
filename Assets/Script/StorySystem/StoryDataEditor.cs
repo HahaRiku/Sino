@@ -27,6 +27,7 @@ public class StoryDataEditor:Editor
     }
     void DrawListElement(Rect rect, int index, bool isActive, bool isFocused)
     {
+        #region
         var spacing = 5f;
         var arect = rect;
         var serElem = this.list.serializedProperty.GetArrayElementAtIndex(index);
@@ -59,7 +60,7 @@ public class StoryDataEditor:Editor
         arect.y = rect.y + arect.height;
 
         input_w = EditorGUIUtility.currentViewWidth - label_w - 180;
-
+        #endregion
         if (serElem.FindPropertyRelative("state類型").enumValueIndex == 0)
         {
             EditorGUI.LabelField(arect, "人名: ", fontStyle);
@@ -120,21 +121,21 @@ public class StoryDataEditor:Editor
             arect.y += arect.height + spacing;
             arect.width = label_w;
             arect.x -= arect.width;
-            EditorGUI.LabelField(arect, "當0跳到: ", fontStyle);
+            EditorGUI.LabelField(arect, "當其值為: ", fontStyle);
             arect.x += arect.width;
             arect.width = input_w;
-            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WhenFlagFalse"), GUIContent.none);
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WhenFlagIs"), GUIContent.none);
             arect.y += arect.height + spacing;
             arect.width = label_w;
             arect.x -= arect.width;
-            EditorGUI.LabelField(arect, "當1跳到: ", fontStyle);
+            EditorGUI.LabelField(arect, "則跳到: ", fontStyle);
             arect.x += arect.width;
             arect.width = input_w;
-            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WhenFlagTrue"), GUIContent.none);
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("ThanJumpTo"), GUIContent.none);
             arect.y += arect.height + spacing;
             arect.width = label_w;
             arect.x -= arect.width;
-            EditorGUI.LabelField(arect, "直接跳到: ", fontStyle);
+            EditorGUI.LabelField(arect, "或跳到id: ", fontStyle);
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("JustJump"), GUIContent.none);
@@ -161,16 +162,112 @@ public class StoryDataEditor:Editor
             arect.height = EditorGUIUtility.singleLineHeight / 5;
             EditorGUI.LabelField(arect, "");
         }
+        else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 4)
+        {
+            var optProp = serElem.FindPropertyRelative("Options");
+            for (int i = 0; i < optProp.arraySize; i++)
+            {
+                EditorGUI.LabelField(arect, "選項 " + i + ": ", fontStyle);
+                arect.x += arect.width;
+                arect.width = input_w;
+                EditorGUI.PropertyField(arect, optProp.GetArrayElementAtIndex(i).FindPropertyRelative("Content"), GUIContent.none);
+                arect.y += arect.height + spacing;
+                arect.width = label_w;
+                arect.x -= arect.width;
+                EditorGUI.LabelField(arect, "跳至標籤: ", fontStyle);
+                arect.x += arect.width;
+                arect.width = input_w;
+                EditorGUI.PropertyField(arect, optProp.GetArrayElementAtIndex(i).FindPropertyRelative("JumpTo"), GUIContent.none);
+                arect.y += arect.height + spacing;
+                arect.width = label_w;
+                arect.x -= arect.width;
+            }           
+            arect.y += spacing;
+            arect.x = rect.x;
+            arect.height = EditorGUIUtility.singleLineHeight / 5;
+            EditorGUI.LabelField(arect, "");
+        }
+        else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 5)
+        {
+            EditorGUI.LabelField(arect, "角色: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("CharName"), GUIContent.none);
+            arect.y += arect.height + spacing;
+            arect.width = label_w;
+            arect.x -= arect.width;
+            EditorGUI.LabelField(arect, "心情氣泡: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Emotion"), GUIContent.none);
+            arect.y += spacing;
+            arect.x = rect.x;
+            arect.height = EditorGUIUtility.singleLineHeight / 5;
+            EditorGUI.LabelField(arect, "");
+        }
+        else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 6)
+        {
+            EditorGUI.LabelField(arect, "標籤名: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Label"), GUIContent.none);
+            arect.y += spacing;
+            arect.x = rect.x;
+            arect.height = EditorGUIUtility.singleLineHeight / 5;
+            EditorGUI.LabelField(arect, "");
+        }
+        else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 7)
+        {
+            EditorGUI.LabelField(arect, "標籤名: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("LabelJump"), GUIContent.none);
+            arect.y += spacing;
+            arect.x = rect.x;
+            arect.height = EditorGUIUtility.singleLineHeight / 5;
+            EditorGUI.LabelField(arect, "");
+        }
+        else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 8)
+        {
+            EditorGUI.LabelField(arect, "腳本: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Character"), GUIContent.none);
+            arect.y += arect.height + spacing;
+            arect.width = label_w;
+            arect.x -= arect.width;
+            var parProp = serElem.FindPropertyRelative("Parameters");
+            for (int i = 0; i < parProp.arraySize; i++)
+            {
+                EditorGUI.LabelField(arect, "參數 " + i + ": ", fontStyle);
+                arect.x += arect.width;
+                arect.width = input_w;
+                EditorGUI.PropertyField(arect, parProp.GetArrayElementAtIndex(i), GUIContent.none);
+                arect.y += arect.height + spacing;
+                arect.width = label_w;
+                arect.x -= arect.width;
+            }
+            arect.y += spacing;
+            arect.x = rect.x;
+            arect.height = EditorGUIUtility.singleLineHeight / 5;
+            EditorGUI.LabelField(arect, "");
+        }
         EditorGUI.indentLevel--;
     }
     void onAddDropdownCallback(Rect buttonRect, ReorderableList list)
     {
         var menu = new GenericMenu();
         menu.AddItem(new GUIContent("新增對話"), false, AddStory);
+        menu.AddItem(new GUIContent("新增選項"), false, AddSelectOptions);
+        menu.AddSeparator("");
+        menu.AddItem(new GUIContent("新增心情"), false, AddEmotion);
         menu.AddItem(new GUIContent("新增動作"), false, AddMovement);
         menu.AddSeparator("");
         menu.AddItem(new GUIContent("新增分支"), false, AddBranch);
         menu.AddItem(new GUIContent("新增變數"), false, AddVariable);
+        menu.AddItem(new GUIContent("新增標籤設立"), false, AddLabelSetting);
+        menu.AddItem(new GUIContent("新增標籤跳轉"), false, AddLabelJumping);
+        menu.AddSeparator("");
         menu.DropDown(buttonRect);
     }
     void onRemoveCallback(ReorderableList list)
@@ -214,9 +311,8 @@ public class StoryDataEditor:Editor
         var element = list.serializedProperty.GetArrayElementAtIndex(index);
         element.FindPropertyRelative("state類型").enumValueIndex = 2;
         element.FindPropertyRelative("Flag").stringValue = "";
-        element.FindPropertyRelative("WhenFlagTrue").floatValue = 0;
-        element.FindPropertyRelative("WhenFlagFalse").floatValue = 0;
-        element.FindPropertyRelative("JustJump").floatValue = 0;
+        element.FindPropertyRelative("WhenFlagIs").intValue = 0;
+        element.FindPropertyRelative("JustJump").intValue = 0;
         element.FindPropertyRelative("continue條件").enumValueIndex = 2;
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
@@ -227,9 +323,65 @@ public class StoryDataEditor:Editor
         list.serializedProperty.arraySize++;
         list.index = index;
         var element = list.serializedProperty.GetArrayElementAtIndex(index);
-        element.FindPropertyRelative("state類型").enumValueIndex = 2;
+        element.FindPropertyRelative("state類型").enumValueIndex = 3;
         element.FindPropertyRelative("Variable").stringValue = "";
-        element.FindPropertyRelative("Value").boolValue = true;
+        element.FindPropertyRelative("Value").intValue = 0;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 2;
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
+    }
+    void AddSelectOptions()
+    {
+        var index = list.serializedProperty.arraySize;
+        list.serializedProperty.arraySize++;
+        list.index = index;
+        var element = list.serializedProperty.GetArrayElementAtIndex(index);
+        element.FindPropertyRelative("state類型").enumValueIndex = 4;
+        while (element.FindPropertyRelative("Options").arraySize < 2)
+            element.FindPropertyRelative("Options").InsertArrayElementAtIndex(0);
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
+    }
+    void AddEmotion()
+    {
+        var index = list.serializedProperty.arraySize;
+        list.serializedProperty.arraySize++;
+        list.index = index;
+        var element = list.serializedProperty.GetArrayElementAtIndex(index);
+        element.FindPropertyRelative("state類型").enumValueIndex = 5;
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
+    }
+    void AddLabelSetting()
+    {
+        var index = list.serializedProperty.arraySize;
+        list.serializedProperty.arraySize++;
+        list.index = index;
+        var element = list.serializedProperty.GetArrayElementAtIndex(index);
+        element.FindPropertyRelative("state類型").enumValueIndex = 6;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 2;
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
+    }
+    void AddLabelJumping()
+    {
+        var index = list.serializedProperty.arraySize;
+        list.serializedProperty.arraySize++;
+        list.index = index;
+        var element = list.serializedProperty.GetArrayElementAtIndex(index);
+        element.FindPropertyRelative("state類型").enumValueIndex = 7;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 2;
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
+    }
+    void AddOther()
+    {
+        var index = list.serializedProperty.arraySize;
+        list.serializedProperty.arraySize++;
+        list.index = index;
+        var element = list.serializedProperty.GetArrayElementAtIndex(index);
+        element.FindPropertyRelative("state類型").enumValueIndex = 8;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 2;
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
     }

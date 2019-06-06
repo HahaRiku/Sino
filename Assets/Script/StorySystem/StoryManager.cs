@@ -152,7 +152,7 @@ public class StoryManager : Singleton<StoryManager>
             reader.ClosePanel();
             moveContol.Move(stories[nowIndex].Character, stories[nowIndex].OriPositionX, stories[nowIndex].NewPositionX, stories[nowIndex].Duration);
         }
-        else if (stories[index].state類型 == StoryData.StoryState.type.分支)
+        /*else if (stories[index].state類型 == StoryData.StoryState.type.分支)
         {
             var 變數名稱 = stories[nowIndex].Flag;
             if (stories[nowIndex].JustJump > 0)
@@ -201,10 +201,10 @@ public class StoryManager : Singleton<StoryManager>
                 }
                 ExecuteState(nowIndex);
             }
-        }
+        }*/
         else if (stories[index].state類型 == StoryData.StoryState.type.指派變數)
         {
-            Variables.AddVariable(stories[nowIndex].Variable, stories[nowIndex].Value);
+            //Variables.AddVariable(stories[nowIndex].Variable, stories[nowIndex].Value);
         }
     }
     IEnumerator WaitAndWork(float waitTime, string funcName)

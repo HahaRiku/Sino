@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "StoryData", menuName = "The ways of freedom/Story Data", order = 0)]
 public class StoryData : ScriptableObject
 {
     public List<StoryState> StateList = new List<StoryState>();
@@ -8,28 +9,52 @@ public class StoryData : ScriptableObject
     [System.Serializable]
     public class StoryState
     {
-        public enum type { 故事對話, 人物移動, 分支, 指派變數 }
+        public enum type { 故事對話, 人物移動, 分支, 指派變數, 出現選項, 心情氣泡, 設置標籤, 跳轉標籤, 外部腳本}
         public type state類型;
 
         public enum condition { 完成等待滑鼠或鍵盤點擊, 等待此完成, 直接繼續 }
         public condition continue條件;
 
+        //故事對話
         public string Name;
         public string Text;
         public Sprite Image;
+        public Vector2 Location;
+        public bool IsFlip;
 
+        //人物移動
         public string Character;
         public float OriPositionX;
         public float NewPositionX;
         public float Duration;
 
-        public string Flag;
-        public int WhenFlagTrue;
-        public int WhenFlagFalse;
+        //分支
+        public string Flag;//ex: num
+        public int WhenFlagIs;
+        public string ThanJumpTo;
         public int JustJump;
 
+        //指派變數
         public string Variable;
-        public bool Value;
+        public int Value;
+
+        //選項
+        public SelectOption[] Options = new SelectOption[2];
+
+        //心情氣泡
+        public string CharName;
+        public string Emotion;
+
+        //設置標籤
+        public string Label;
+
+        //跳轉標籤
+        public string LabelJump;
+
+        //外部腳本
+        public string Class;
+        public float[] Parameters = new float[3];
+
 
         public StoryState(string Name, string Text)
         {
@@ -60,4 +85,11 @@ public class StoryData : ScriptableObject
             StateList[key] = value;
         }
     }
+
+}
+[System.Serializable]
+public struct SelectOption
+{
+    public string Content;
+    public string JumpTo;
 }
