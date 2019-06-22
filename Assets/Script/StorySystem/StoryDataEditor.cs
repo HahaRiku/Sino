@@ -252,6 +252,17 @@ public class StoryDataEditor:Editor
             arect.height = EditorGUIUtility.singleLineHeight / 5;
             EditorGUI.LabelField(arect, "");
         }
+        else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 9)
+        {
+            EditorGUI.LabelField(arect, "等待時間: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WaitTime"), GUIContent.none);
+            arect.y += spacing;
+            arect.x = rect.x;
+            arect.height = EditorGUIUtility.singleLineHeight / 5;
+            EditorGUI.LabelField(arect, "");
+        }
         EditorGUI.indentLevel--;
     }
     void onAddDropdownCallback(Rect buttonRect, ReorderableList list)
@@ -268,6 +279,8 @@ public class StoryDataEditor:Editor
         menu.AddItem(new GUIContent("新增標籤設立"), false, AddLabelSetting);
         menu.AddItem(new GUIContent("新增標籤跳轉"), false, AddLabelJumping);
         menu.AddSeparator("");
+        menu.AddItem(new GUIContent("新增等待時間"), false, AddWaitTime);
+        menu.AddItem(new GUIContent("新增外部腳本"), false, AddOuterScript);
         menu.DropDown(buttonRect);
     }
     void onRemoveCallback(ReorderableList list)
@@ -374,7 +387,7 @@ public class StoryDataEditor:Editor
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
     }
-    void AddOther()
+    void AddOuterScript()
     {
         var index = list.serializedProperty.arraySize;
         list.serializedProperty.arraySize++;
@@ -385,6 +398,18 @@ public class StoryDataEditor:Editor
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
     }
+    void AddWaitTime()
+    {
+        var index = list.serializedProperty.arraySize;
+        list.serializedProperty.arraySize++;
+        list.index = index;
+        var element = list.serializedProperty.GetArrayElementAtIndex(index);
+        element.FindPropertyRelative("state類型").enumValueIndex = 9;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 2;
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
+    }
+    
     public override void OnInspectorGUI()
     {
         serializedObject.Update();

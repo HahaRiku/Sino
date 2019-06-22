@@ -9,7 +9,7 @@ public class StoryData : ScriptableObject
     [System.Serializable]
     public class StoryState
     {
-        public enum type { 故事對話, 人物移動, 分支, 指派變數, 出現選項, 心情氣泡, 設置標籤, 跳轉標籤, 外部腳本}
+        public enum type { 故事對話, 人物移動, 分支, 指派變數, 出現選項, 心情氣泡, 設置標籤, 跳轉標籤, 外部腳本, 等待時間}
         public type state類型;
 
         public enum condition { 完成等待滑鼠或鍵盤點擊, 等待此完成, 直接繼續 }
@@ -55,6 +55,9 @@ public class StoryData : ScriptableObject
         public string Class;
         public float[] Parameters = new float[3];
 
+        //等待時間
+        public float WaitTime;
+
 
         public StoryState(string Name, string Text)
         {
@@ -90,6 +93,6 @@ public class StoryData : ScriptableObject
 [System.Serializable]
 public struct SelectOption
 {
-    public string Content;
-    public string JumpTo;
+    public string Content; //選項文字
+    public string JumpTo; //選擇跳轉label名
 }
