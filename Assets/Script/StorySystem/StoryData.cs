@@ -29,9 +29,11 @@ public class StoryData : ScriptableObject
         public float Duration;
 
         //分支
-        public string Flag;//ex: num
-        public int WhenFlagIs;
+        //ex: year (2019)、2020、20、19 => jump to state 19
+        public string Flag; 
+        public int WhenFlagIs; 
         public string ThanJumpTo;
+        public string ElseJumpTo;
         public int JustJump;
 
         //指派變數
@@ -46,9 +48,15 @@ public class StoryData : ScriptableObject
         public string Emotion;
 
         //設置標籤
+        /// <summary>
+        /// 設置的標籤名稱
+        /// </summary>
         public string Label;
 
         //跳轉標籤
+        /// <summary>
+        /// 用來跳轉的標籤名稱
+        /// </summary>
         public string LabelJump;
 
         //外部腳本

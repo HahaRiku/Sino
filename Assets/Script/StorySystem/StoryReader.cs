@@ -66,16 +66,16 @@ public class StoryReader : MonoBehaviour
     {
         if (isReadStory)
         {
+            if (isFinish)
+            {
+                isReadStory = false;
+                return;
+            }
             //if (Input.GetKeyDown(KeyCode.Z) || (EventSystem.current.currentSelectedGameObject == clickRegion && Input.GetMouseButtonDown(0)))
             if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
             {
                 if (!isFinish && charIndex > 2)
                     isForceFinish = true;
-                else if(isFinish)
-                {
-                    isReadStory = false;
-                    return;
-                }
             }
             if (!isFinish)
             {

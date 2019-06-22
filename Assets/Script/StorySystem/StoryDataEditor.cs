@@ -114,20 +114,21 @@ public class StoryDataEditor:Editor
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 2)
         {
-            EditorGUI.LabelField(arect, "變數: ", fontStyle);
+            var half_input_w = Mathf.Max((EditorGUIUtility.currentViewWidth - label_w * 3 / 2 - 180) / 2, 0);
+            EditorGUI.LabelField(arect, "當變數: ", fontStyle);
             arect.x += arect.width;
-            arect.width = input_w;
+            arect.width = half_input_w;
+            if (half_input_w < 0) Debug.Log("oops");
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Flag"), GUIContent.none);
-            arect.y += arect.height + spacing;
-            arect.width = label_w;
-            arect.x -= arect.width;
-            EditorGUI.LabelField(arect, "當其值為: ", fontStyle);
             arect.x += arect.width;
-            arect.width = input_w;
+            arect.width = label_w / 2;
+            EditorGUI.LabelField(arect, "等於", fontStyle);
+            arect.x += arect.width;
+            arect.width = half_input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WhenFlagIs"), GUIContent.none);
             arect.y += arect.height + spacing;
             arect.width = label_w;
-            arect.x -= arect.width;
+            arect.x -= arect.width * 3 / 2 + half_input_w;
             EditorGUI.LabelField(arect, "則跳到: ", fontStyle);
             arect.x += arect.width;
             arect.width = input_w;
@@ -135,7 +136,14 @@ public class StoryDataEditor:Editor
             arect.y += arect.height + spacing;
             arect.width = label_w;
             arect.x -= arect.width;
-            EditorGUI.LabelField(arect, "或跳到id: ", fontStyle);
+            EditorGUI.LabelField(arect, "否則跳到: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("ElseJumpTo"), GUIContent.none);
+            arect.y += arect.height + spacing;
+            arect.width = label_w;
+            arect.x -= arect.width;
+            EditorGUI.LabelField(arect, "直接跳到: ", fontStyle);
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("JustJump"), GUIContent.none);
@@ -362,6 +370,7 @@ public class StoryDataEditor:Editor
         list.index = index;
         var element = list.serializedProperty.GetArrayElementAtIndex(index);
         element.FindPropertyRelative("state類型").enumValueIndex = 5;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 1;
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
     }
@@ -405,7 +414,7 @@ public class StoryDataEditor:Editor
         list.index = index;
         var element = list.serializedProperty.GetArrayElementAtIndex(index);
         element.FindPropertyRelative("state類型").enumValueIndex = 9;
-        element.FindPropertyRelative("continue條件").enumValueIndex = 2;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 1;
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
     }
