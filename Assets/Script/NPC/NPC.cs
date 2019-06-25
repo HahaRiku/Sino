@@ -25,21 +25,30 @@ public class NPC : MonoBehaviour {
         不可撿
     }
 
+    public enum DoorState {
+        打開的,
+        關起來的
+    }
+
     public State state = State.範圍外;
     public Type type;
     public ItemType itemType;
     public float 冷卻時間 = 2f;
+    public string 不可撿的物品的敘述;
     public GameObject player;
     public Sprite 淺白點;
     public Sprite 白點;
     public Sprite 一個點;
     public Sprite 兩個點;
     public Sprite 三個點;
+    public Sprite 鎖打開;
+    public Sprite 鎖鎖起來;
     public ItemQuestion ItemQuestion;
 
     private Actor actor;
     private SpriteRenderer 白點SP;
     private SpriteRenderer 點點點SP;
+    private SpriteRenderer 鎖SP;
     private bool toggleWithPlayer= false;
     private bool itemToggleLeft = false;
     private bool itemToggleRight = false;
@@ -55,12 +64,18 @@ public class NPC : MonoBehaviour {
         else if (type == Type.talk) {
             點點點SP = gameObject.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
         }
+        else if (type == Type.door) {
+            鎖SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }
         player = actor.userCharacter;
 
         if (type == Type.item) {
-            ItemQuestion.SetDescription("這個到時候應該是從背包系統抓ㄅ");
             if (itemType == ItemType.可撿) {
-                ItemQuestion.SetQuestion("是否要拿起？", "是", "否");
+                ItemQuestion.SetDescription_CanPick("這個到時候應該是從背包系統抓ㄅ");
+                ItemQuestion.SetQuestion("是否要拾取？", "是", "否");
+            }
+            else if (itemType == ItemType.不可撿) {
+                ItemQuestion.SetDescription_CannotPick(不可撿的物品的敘述);
             }
         }
         
@@ -82,72 +97,92 @@ public class NPC : MonoBehaviour {
                 白點SP.sprite = 白點;
             }
             else if (type == Type.door) {
-
+                //access bag system and determine what sprite it is
             }
         }
         else if (state == State.可以講話 && Input.GetKeyDown(KeyCode.Z)) {
             state = State.對話中;
-            SystemVariables.lockMoving = true;
+            
 
             if (type == Type.door) {
+                SystemVariables.lockMoving = true;
 
             }
             else if (type == Type.item) {
                 //if it can be got, description and question
                 //if it can not, only description
-                ItemQuestion.DescWork();
+                if (itemType == ItemType.可撿) {
+                    SystemVariables.lockMoving = true;
+                    ItemQuestion.QuestionWork();
+                }
+                else if (itemType == ItemType.不可撿) {
+                    ItemQuestion.DescWork_CannotPick();
+                }
             }
             else if (type == Type.talk) {
+                SystemVariables.lockMoving = true;
+                //點點點animation stop
                 //dialog
             }
         }
         else if (state != State.快接近_僅限item && state != State.範圍外 && type == Type.item && (itemToggleLeft || itemToggleRight) && !toggleWithPlayer) {
+            if (itemType == ItemType.不可撿) {
+                ItemQuestion.SetDescCannotPickDisable(true);
+                //state = State.講完話冷卻中;
+                Invoke("ResumeTalk", 冷卻時間);
+            }
             state = State.快接近_僅限item;
             白點SP.sprite = 淺白點;
         }
         else if (state != State.範圍外 && type == Type.item && !itemToggleLeft && !itemToggleRight && !toggleWithPlayer) {
+            if (itemType == ItemType.不可撿) {
+                ItemQuestion.SetDescCannotPickDisable(true);
+                //state = State.講完話冷卻中;
+                Invoke("ResumeTalk", 冷卻時間);
+            }
             state = State.範圍外;
             白點SP.sprite = null;
         }
         else if (state != State.範圍外 && !toggleWithPlayer && type != Type.item) {
             state = State.範圍外;
             if (type == Type.talk) {
-                
+
                 //點點點animation stop
             }
             else if (type == Type.door) {
 
             }
         }
-        else if (state == State.對話中 && type == Type.item && itemType == ItemType.不可撿 && ItemQuestion.IsDescDone()) {
-            state = State.講完話冷卻中;
-            SystemVariables.lockMoving = false;
-            Invoke("ResumeTalk", 冷卻時間);
-        }
-        else if (state == State.對話中 && type == Type.item && itemType == ItemType.可撿 && ItemQuestion.IsDescDone() && !waitItemQuesDone) {
-            //maintain at State.對話中
-            //do 可撿 的question
-            ItemQuestion.QuestionWork();
-            waitItemQuesDone = true;
-        }
-        else if (state == State.對話中 && type == Type.item && itemType == ItemType.可撿 && waitItemQuesDone && ItemQuestion.IsQuesDone()) {
-            state = State.講完話冷卻中;
-            SystemVariables.lockMoving = false;
-            Invoke("ResumeTalk", 冷卻時間);
-            waitItemQuesDone = false;
-        }
-        else if (state == State.對話中 && type == Type.door) {
+        else if (state == State.對話中) {
+            if (type == Type.item && itemType == ItemType.可撿) {
+                if (ItemQuestion.IsQuesDone()) {
+                    state = State.講完話冷卻中;
+                    SystemVariables.lockMoving = false;
+                    Invoke("ResumeTalk", 冷卻時間);
+                }
+            }
+            else if (type == Type.item && itemType == ItemType.不可撿) {
+                if (!toggleWithPlayer) {
+                    ItemQuestion.SetDescCannotPickDisable(true);
+                    state = State.講完話冷卻中;
+                    Invoke("ResumeTalk", 冷卻時間);
+                }
+            }
+            else if (type == Type.talk) {
 
-        }
-        else if (state == State.對話中 && type == Type.talk) {
+            }
+            else if (type == Type.door/* && detectDialogDone*/) {
 
-            //點點點animation stop
+            }
         }
         
 
 	}
 
     void ResumeTalk() {
+        if (type == Type.item && itemType == ItemType.不可撿) {
+            ItemQuestion.SetDescCannotPickDisable(false);
+        }
         state = State.可以講話;
     }
 
