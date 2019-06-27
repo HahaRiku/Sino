@@ -30,16 +30,15 @@ public class StoryReader : MonoBehaviour
 
     void OnEnable()
     {
-        GameObject Canvas = GameObject.Find("Canvas");
-        if (Canvas == null)
+        dialogPanel = FindObjectOfType<DialogPanelController>();
+        if (dialogPanel == null)
         {
-            Debug.Log("Error: No Canvas has found.");
+            Debug.Log("Error: No Dialog has found.");
             enabled = false;
             return;
         }
-        dialogPanel = Canvas.transform.GetChild(0).GetComponent<DialogPanelController>();
-        NameText = Canvas.transform.GetChild(0).GetChild(1).GetComponent<Text>();
-        DialogText = Canvas.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+        NameText = dialogPanel.transform.GetChild(1).GetComponent<Text>();
+        DialogText = dialogPanel.transform.GetChild(0).GetComponent<Text>();
         DialogText.text = "";
     }
     public bool IsFinished()
