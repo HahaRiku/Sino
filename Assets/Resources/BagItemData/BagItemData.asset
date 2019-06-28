@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dfc254582c47ae49b91d3cbb1996ef0, type: 3}
+  m_Name: BagItemData
+  m_EditorClassIdentifier: 
+  bagItemList:
+  - name: Starlight
+    sprite: {fileID: 21300000, guid: cb93b997abbf65d4db46270b267aeacd, type: 3}
+    desc: "\u5C0F\u3055\u306A\u661F\u3092\u6458\u3093\u3060\u306A\u3089"
+    inBag: 0
+  - name: "\u30B9\u30BF\u30A1\u30E9\u30A4\u30C8"
+    sprite: {fileID: 21300000, guid: d78bb6fddb72d244d9572f2d605e1c57, type: 3}
+    desc: "\u3042\u306A\u305F\u306F\u5C0F\u3055\u306A\u5E78\u305B\u3092\u624B\u306B\u5165\u308C\u308B"
+    inBag: 0
+  - name: "\u5C11\u5973\u6B4C\u5287"
+    sprite: {fileID: 21300000, guid: 35d939e7835acb54581070f427952873, type: 3}
+    desc: "\u5927\u304D\u306A\u661F\u3092\u6458\u3093\u3060\u306A\u3089"
+    inBag: 0
+  - name: "\u767D\u5148\u751F"
+    sprite: {fileID: 21300000, guid: 9b30f37cd5b9d4b4a8a7b934fe8b5623, type: 3}
+    desc: "\u3042\u306A\u305F\u306F\u5927\u304D\u306A\u5BCC\u3092\u624B\u306B\u5165\u308C\u308B"
+    inBag: 0
+  - name: "\u68D2\u7403\u8C93"
+    sprite: {fileID: 21300000, guid: cf141f16b0fdf0c4a9f62012fe87b50c, type: 3}
+    desc: "\u305D\u306E\u4E21\u65B9\u3092\u6458\u3093\u3060\u306A\u3089"
+    inBag: 0
+  - name: "\u308F\u304B\u308A\u307E\u3059\u3002"
+    sprite: {fileID: 21300000, guid: 8f1dce7d6aaaf4943ae88c12e1306cc8, type: 3}
+    desc: "\u3042\u306A\u305F\u306F\u6C38\u9060\u306E\u9858\u3044\u3092\u624B\u306B\u5165\u308C\u308B"
+    inBag: 0
+  - name: "\u6E2C\u8A66\u6E2C\u8A66\u6E2C\u8A66"
+    sprite: {fileID: 21300000, guid: 128564b0f6c9e474caf861349f0f0a8f, type: 3}
+    desc: "\u9019\u53EA\u662F\u6E2C\u8A66\u3002\n\u9019\u53EA\u662F\u6E2C\u8A66\n\u9019\u53EA\u662F\u6E2C\n\u9019\u53EA\u662F\n\u9019\u53EA\n\u9019"
+    inBag: 0
+  - name: "\u96FB\u71C8"
+    sprite: {fileID: 21300000, guid: 128564b0f6c9e474caf861349f0f0a8f, type: 3}
+    desc: "\u4F60\u600E\u9EBC\u628A\u96FB\u71C8\u7D66\u62D4\u4E0B\u4F86\u4E86\uFF1F\uFF1F"
+    inBag: 1
+  - name: "\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66"
+    sprite: {fileID: 21300000, guid: 128564b0f6c9e474caf861349f0f0a8f, type: 3}
+    desc: "\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66"
+    inBag: 0

@@ -7,8 +7,19 @@ using UnityEngine.UI;
  * 
  * 請把此腳本掛在 要把desc或ques掛上去的Canvas上
  * 再Call function
+ * (物件部分已經做好Prefab 拉ItemPrefab 再做設定即可)
  * 
- * 問題預設選項是右邊的
+ * 可以撿：
+ * 1. call SetDescription_CanPick
+ * 2. call SetQuestion
+ * 3. call QuestionWork
+ * 
+ * 不能撿：
+ * 1. call SetDescription_CannotPick
+ * 2. call DescWork_CannotPick
+ * 
+ * 
+ * 問題預設選項是右邊的(否)
  * 
  * **********************************************/
 
@@ -19,22 +30,32 @@ public class ItemQuestion : MonoBehaviour {
         右
     }
 
-    public GameObject descPref;
+    public GameObject descPref_CannotPick;
+    public GameObject descPref_CanPick;
     public GameObject quesPref;
     public QuesState quesState = QuesState.右;
 
-    private GameObject descInScene = null;
+    private GameObject descInScene_CannotPick = null;
+    private GameObject descInScene_CanPick = null;
     private GameObject quesInScene = null;
-    private Text DescriptionD;
+    private Text DescriptionD_CannotPick;
+    private Text DescriptionD_CanPick;
+    private Text DescriptionN_CanPick;
+    private string itemName;
     private Text QuestionQ;
     private Text QuestionA1;
     private Text QuestionA2;
-    private bool detectDescZ = false;
+    private bool detectDescZ_CannotPick = false;
     private bool detectQues = false;
-    private bool isDescDone = true;
+    private bool isDescDone_CannotPick = true;
     private bool isQuesDone = true;
     private string ques右邊要call的function;
     private string ques左邊要call的function;
+    private GameObject camObj;
+    private RectTransform rectTransform;
+    private GameObject itemPrefab;
+    private BoxCollider2D itemCollider;
+    private bool descriptionCannotPickDisable = false;
 
     // Use this for initialization
     void Start () {
@@ -43,12 +64,11 @@ public class ItemQuestion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (detectDescZ) {
-            if (Input.GetKeyDown(KeyCode.Z)) {
-                descInScene.SetActive(false);
-                isDescDone = true;
-                detectDescZ = false;
-                descInScene.SetActive(false);
+        if (detectDescZ_CannotPick) {
+            if (descriptionCannotPickDisable) {
+                isDescDone_CannotPick = true;
+                detectDescZ_CannotPick = false;
+                descInScene_CannotPick.SetActive(false);   //need to change
             }
         }
 
@@ -60,10 +80,11 @@ public class ItemQuestion : MonoBehaviour {
                 }
                 else if (quesState == QuesState.左) {
                     //背包新增物品
+                    BagSystem.SetItemInBagOrNot(itemName, true);
                 }
-                print("123");
                 isQuesDone = true;
                 detectQues = false;
+                descInScene_CanPick.SetActive(false);
                 quesInScene.SetActive(false);
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow)) {
@@ -81,14 +102,39 @@ public class ItemQuestion : MonoBehaviour {
         }
 	}
 
-    public void SetDescription(string d) {
-        if (descInScene == null) {
-            descInScene = Instantiate(descPref, this.transform);
-            DescriptionD = descInScene.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>();
-            descInScene.SetActive(false);
+    public void SetDescription_CannotPick(string d) {   //only small text
+        if (descInScene_CanPick == null) {
+            camObj = Camera.main.gameObject;
+            rectTransform = gameObject.GetComponent<RectTransform>();
+            itemPrefab = gameObject.transform.parent.gameObject;
+            itemCollider = itemPrefab.GetComponent<BoxCollider2D>();
+            descInScene_CannotPick = Instantiate(descPref_CannotPick, this.transform);
+            GameObject tempPanelObj = descInScene_CannotPick.transform.GetChild(0).gameObject;
+            GameObject tempTextObj = tempPanelObj.transform.GetChild(0).gameObject;
+            DescriptionD_CannotPick = tempTextObj.GetComponent<Text>();
+            tempPanelObj.transform.localPosition = new Vector2((itemPrefab.transform.localPosition.x + (camObj.transform.localPosition.x) * -1) / 9 * rectTransform.sizeDelta.x / 2,
+                (itemPrefab.transform.localPosition.y + (camObj.transform.localPosition.y) * -1) / 5 * rectTransform.sizeDelta.y / 2);
+            float tempPosition = (itemCollider.size.x / 2) / 9 * rectTransform.sizeDelta.x / 2;
+            tempTextObj.transform.localPosition = new Vector2(tempPosition, 0);
+            
+            descInScene_CannotPick.SetActive(false);
         }
 
-        DescriptionD.text = d;
+        DescriptionD_CannotPick.text = d;
+
+    }
+
+    public void SetDescription_CanPick(string d, string n) {
+        if (descInScene_CanPick == null) {
+            descInScene_CanPick = Instantiate(descPref_CanPick, this.transform);
+            DescriptionD_CanPick = descInScene_CanPick.transform.GetChild(0).GetChild(2).gameObject.GetComponent<Text>();
+            DescriptionN_CanPick = descInScene_CanPick.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
+            descInScene_CanPick.SetActive(false);
+        }
+
+        DescriptionD_CanPick.text = d;
+        DescriptionN_CanPick.text = n;
+        itemName = n;
 
     }
 
@@ -107,14 +153,14 @@ public class ItemQuestion : MonoBehaviour {
 
     }
 
-    public void DescWork() {
-        if (descInScene == null) {
+    public void DescWork_CannotPick() {
+        if (descInScene_CannotPick == null) {
             Debug.Log("請先Call SetDescription(string d)");
         }
         else {
-            descInScene.SetActive(true);
-            detectDescZ = true;
-            isDescDone = false;
+            descInScene_CannotPick.SetActive(true);
+            isDescDone_CannotPick = false;
+            Invoke("StartDetectDesc", 0.5f);
         }
     }
 
@@ -123,17 +169,31 @@ public class ItemQuestion : MonoBehaviour {
             Debug.Log("請先Call SetQuestion(string q, string a1, string a2)");
         }
         else {
+            print("question");
             quesInScene.SetActive(true);
-            detectQues = true;
+            descInScene_CanPick.SetActive(true);
             isQuesDone = false;
+            Invoke("StartDetectQuestion", 0.5f);
         }
     }
 
-    public bool IsDescDone() {
-        return isDescDone;
+    public bool IsDescDone_CannotPick() {
+        return isDescDone_CannotPick;
     }
 
     public bool IsQuesDone() {
         return isQuesDone;
+    }
+
+    private void StartDetectDesc() {
+        detectDescZ_CannotPick = true;
+    }
+
+    private void StartDetectQuestion() {
+        detectQues = true;
+    }
+
+    public void SetDescCannotPickDisable(bool b) {
+        descriptionCannotPickDisable = b;
     }
 }
