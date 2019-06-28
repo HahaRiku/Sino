@@ -1,0 +1,431 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c6fdbd9f7d21a4386f846813473c52, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  StateList:
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u597D\u60F3\u5403\u7CD6\u679C\u554A\uFF5E\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u54A6\uFF0C\u5927\u934B\u934B\u4F60\u597D\u554A\uFF01\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u4EC0\u9EBD\uFF0C\u4F60\u60F3\u8981\u770B\u770B\u6211\u624B\u4E0A\u7684\u6771\u897F\uFF1F\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u96D6\u7136\u90A3\u500B\u5C0D\u6211\u662F\u6C92\u6709\u4EC0\u9EBD\u7528\u5566\uFF0C\u63DB\u4E5F\u53EF\u4EE5...\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u4F46\u662F\uFF0C\u7AA9\u62D2\u7D55\uFF01\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u6211\u6700\u559C\u6B61\u5C0D\u6436\u5C0F\u5B69\u6771\u897F\u7684\u4EBA\u8AAA\u4E0D\u4E86\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u9664\u975E\u4F60\u62FF\u7CD6\u679C\u548C\u6211\u4EA4\u63DB\uFF0C\u4E0D\u7136\u6211\u662F\u4E0D\u6703\u7D66\u4F60\u7684\uFF0C\u54FC\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u554A\u2026\u4F60\u4E5F\u6C92\u6709\u55CE\r\n\u6211\u4E0D\u7BA1\u6211\u4E0D\u7BA1\uFF0C\u6211\u5C31\u8981\u5403\u7CD6\u679C\uFF01\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u4F60\u5982\u679C\u4E0D\u7ED9\u6211\u7CD6\u679C\uFF0C\r\n \u7AA9\u5C31\u4E0D\u7D66\u4F60\uFF0C\r\n
+      \u9084\u8981\u53EB\u8B66\u885B\u53D4\u53D4\u628A\u4F60\u6293\u8D77\u4F86\uFF01\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u55EF\u2026\u2026\u8AB0\u77E5\u9053\u4F60\u662F\u4E0D\u662F\u60F3\u9A19\u6211\r\n\u65E2\u7136\u4F60\u771F\u7684\u9858\u610F\u7D66\u6211\u7CD6\u679C\u7684\u767C\u2026\u2026\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u90A3\u934B\u934B\u53BB\u5C0F\u5B69\u623F\u770B\u4E00\u4E0B\uFF0C\u6211\u4E4B\u524D\u6709\u807D\u5230\u8B66\u885B\u53D4\u53D4\u8AAA\u90A3\u908A\u6709\u597D\u5403\u7684\u7CD6\u7CD6\uFF01\n\u7AA9\u8D85\u60F3\u56DB\u56DB\u7684\uFF01\n\u771F\u60F3\u4F4F\u5728\u90A3\u88CF\u5929\u5929\u5403\u7CD6\u679C\u554A......"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u5982\u679C\u4F60\u80FD\u62FF\u5230\u5C0F\u5B69\u623F\u88E1\u7684\u7CD6\u679C\u8DDF\u6211\u4EA4\u63DB\uFF0C\u6211\u5C31\u628A\u6771\u897F\u7D66\u4F60~\n\u934B\u934B\u5982\u679C\u5077\u5077\u62FF\u8D70\u7CD6\u7CD6\u81EA\u5DF1\u8DD1\u6389\u7684\u8A71\uFF0C\u6211\u5C31\u54ED\u7D66\u4F60\u770B\u5594\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u6211\u4E0D\u7BA1\u6211\u4E0D\u7BA1\uFF0C\u7AA9\u73FE\u5728\u5C31\u8981\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u65E2\u7136\u4F60\u4E0D\u5E6B\u6211\u62FF\u2026\u2026"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u8B66\u885B\u53D4\u53D4\uFF01\u8B66\u885B\u53D4\u53D4\uFF01\u5FEB\u4F86\u4EBA\u554A\uFF01\n\u9019\u88CF\u6709\u9003\u72AF\u5FEB\u4F86\u554A\uFF01\uFF01\uFF01\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u5C0F\u5B69"
+    Text: "\u597D\u54E6\u5927\u934B\u934B\uFF0C\u6211\u5728\u9019\u88CF\u7B49\u4F60\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
