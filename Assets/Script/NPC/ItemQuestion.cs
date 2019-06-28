@@ -40,6 +40,8 @@ public class ItemQuestion : MonoBehaviour {
     private GameObject quesInScene = null;
     private Text DescriptionD_CannotPick;
     private Text DescriptionD_CanPick;
+    private Text DescriptionN_CanPick;
+    private string itemName;
     private Text QuestionQ;
     private Text QuestionA1;
     private Text QuestionA2;
@@ -78,6 +80,7 @@ public class ItemQuestion : MonoBehaviour {
                 }
                 else if (quesState == QuesState.左) {
                     //背包新增物品
+                    BagSystem.SetItemInBagOrNot(itemName, true);
                 }
                 isQuesDone = true;
                 detectQues = false;
@@ -109,9 +112,6 @@ public class ItemQuestion : MonoBehaviour {
             GameObject tempPanelObj = descInScene_CannotPick.transform.GetChild(0).gameObject;
             GameObject tempTextObj = tempPanelObj.transform.GetChild(0).gameObject;
             DescriptionD_CannotPick = tempTextObj.GetComponent<Text>();
-            if (camObj == null) {
-                print("123");
-            }
             tempPanelObj.transform.localPosition = new Vector2((itemPrefab.transform.localPosition.x + (camObj.transform.localPosition.x) * -1) / 9 * rectTransform.sizeDelta.x / 2,
                 (itemPrefab.transform.localPosition.y + (camObj.transform.localPosition.y) * -1) / 5 * rectTransform.sizeDelta.y / 2);
             float tempPosition = (itemCollider.size.x / 2) / 9 * rectTransform.sizeDelta.x / 2;
@@ -124,14 +124,17 @@ public class ItemQuestion : MonoBehaviour {
 
     }
 
-    public void SetDescription_CanPick(string d) {
+    public void SetDescription_CanPick(string d, string n) {
         if (descInScene_CanPick == null) {
             descInScene_CanPick = Instantiate(descPref_CanPick, this.transform);
-            DescriptionD_CanPick = descInScene_CanPick.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
+            DescriptionD_CanPick = descInScene_CanPick.transform.GetChild(0).GetChild(2).gameObject.GetComponent<Text>();
+            DescriptionN_CanPick = descInScene_CanPick.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
             descInScene_CanPick.SetActive(false);
         }
 
         DescriptionD_CanPick.text = d;
+        DescriptionN_CanPick.text = n;
+        itemName = n;
 
     }
 

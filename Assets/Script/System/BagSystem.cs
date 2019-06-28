@@ -2,47 +2,61 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+/**********************************
+ * 
+ * BagItemData的資料只有bool inBag會在遊戲中動到
+ * data內資料被更動(基本上只有inBag會被更動)的話，會寫BagUI dirty
+ * 
+ * *******************************/
+
+
 public static class BagSystem {
 
-    [SerializeField]
-    public struct BagItem {
-        public string name;
-        public Sprite sprite;
-        public string desc;
-        public bool existed;
-    }
+    public static BagItemsData data = Resources.Load<BagItemsData>("BagItemData/BagItemData");
 
-    [SerializeField]
-    public static List<BagItem> bagItemList = new List<BagItem>();
+    public static bool bagUIDirty = false ;
 
-    public static void AddItemToBag(BagItem item) {
-        bagItemList.Add(item);
-    }
-
-    public static void SetItemExisted(string name, bool existed) {
-        BagItem tempItem;
-        foreach (BagItem item in bagItemList) {
+    public static void SetItemInBagOrNot(string name, bool inbag) {     //要設bagUI的dirty
+        foreach (BagItem item in data.bagItemList) {
             if (name == item.name) {
-                tempItem = item;
+                item.inBag = inbag;
                 break;
             }
         }
-        tempItem.existed = existed;
+
+        bagUIDirty = true;
+
     }
 
-    public static void DeleteItemFromBag(string name) {
-        foreach (BagItem item in bagItemList) {
-            if (name == item.name) {
-                bagItemList.Remove(item);
-                break;
+    public static void ResetItemsInBag() {      //開始新遊戲的時候用到(也要設bagUI dirty
+        foreach (BagItem item in data.bagItemList) {
+            item.inBag = false;
+        }
+
+        bagUIDirty = true;
+
+    }
+
+    public static string ReturnDescByName(string n) {
+        foreach (BagItem item in data.bagItemList) {
+            if (n == item.name) {
+                return item.desc;
             }
         }
-        
+        Debug.Log("注意！可撿的物件NPC輸入錯名字：" + n);
+        return "";
     }
 
-    public static void ClearBag() {
-        bagItemList.Clear();
+    public static bool IsItemInBag(string n) {
+        foreach (BagItem item in data.bagItemList) {
+            if (n == item.name) {
+                if (item.inBag) {
+                    return true;
+                }
+                return false;
+            }
+        }
+        return false;
     }
 
 }
