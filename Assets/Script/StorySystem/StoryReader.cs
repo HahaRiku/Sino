@@ -26,7 +26,6 @@ public class StoryReader : MonoBehaviour
     bool isReadStory = false;
     bool isForceFinish = false;
     bool isFinish = false;
-    bool isEnd = false;
 
     void OnEnable()
     {
@@ -71,32 +70,29 @@ public class StoryReader : MonoBehaviour
                 return;
             }
             //if (Input.GetKeyDown(KeyCode.Z) || (EventSystem.current.currentSelectedGameObject == clickRegion && Input.GetMouseButtonDown(0)))
-            if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
+            else if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
             {
-                if (!isFinish && charIndex > 2)
+                if (charIndex > 2)
                     isForceFinish = true;
             }
-            if (!isFinish)
+            if (charIndex == currentString.Length)
             {
-                if (charIndex == currentString.Length)
-                {
-                    isFinish = true;
-                    return;
-                }
-                if (isForceFinish)
-                {
-                    DialogText.text = currentString;
-                    isFinish = true;
-                    return;
-                }
-                timer += Time.deltaTime;
-                if (timer >= intervalTime)
-                {
-                    if (charIndex > 0 && charIndex % 27 == 0)
-                        DialogText.text += "\n";
-                    DialogText.text += currentString[charIndex++];
-                    timer = 0;
-                }
+                isFinish = true;
+                return;
+            }
+            else if (isForceFinish)
+            {
+                DialogText.text = currentString;
+                isFinish = true;
+                return;
+            }
+            timer += Time.deltaTime;
+            if (timer >= intervalTime)
+            {
+                if (charIndex > 0 && charIndex % 27 == 0)
+                    DialogText.text += "\n";
+                DialogText.text += currentString[charIndex++];
+                timer = 0;
             }
         }
     }

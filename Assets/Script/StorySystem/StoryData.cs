@@ -9,7 +9,7 @@ public class StoryData : ScriptableObject
     [System.Serializable]
     public class StoryState
     {
-        public enum type { 故事對話, 人物移動, 分支, 指派變數, 出現選項, 心情氣泡, 設置標籤, 跳轉標籤, 外部腳本, 等待時間}
+        public enum type { 故事對話, 人物移動, 分支, 指派變數, 出現選項, 心情氣泡, 設置標籤, 跳轉標籤, 外部腳本, 等待時間, 轉換場景 }
         public type state類型;
 
         public enum condition { 完成等待滑鼠或鍵盤點擊, 等待此完成, 直接繼續 }
@@ -18,9 +18,9 @@ public class StoryData : ScriptableObject
         //故事對話
         public string Name;
         public string Text;
-        public Sprite Image;
-        public Vector2 Location;
-        public bool IsFlip;
+        public Sprite Image; //立繪
+        public Vector2 Location; //立繪位置
+        public bool IsFlip; //立繪左右相反
 
         //人物移動
         public string Character;
@@ -39,6 +39,9 @@ public class StoryData : ScriptableObject
         //指派變數
         public string Variable;
         public int Value;
+
+        //轉換場景
+        public string SceneName;
 
         //選項
         public SelectOption[] Options = new SelectOption[2];
