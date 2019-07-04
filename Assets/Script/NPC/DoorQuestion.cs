@@ -19,6 +19,7 @@ public class DoorQuestion : MonoBehaviour {
     public QuesState quesState = QuesState.右;
 
     string sceneName;
+    bool isInteract = false;
 
     void Start() {
         openDoorPanel = GetComponent<OpenDoorPanelController>();
@@ -28,19 +29,16 @@ public class DoorQuestion : MonoBehaviour {
 
     void Update() {
 
-        if (openDoorPanel.IsVisible())
+        if (isInteract)
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                if (quesState == QuesState.右)
-                {
-                    //nothing
-                }
-                else if (quesState == QuesState.左)
+                if (quesState == QuesState.左)
                 {
                     SceneManager.LoadScene(sceneName);     //可能call水哥的傳送的腳本(?
                 }
                 openDoorPanel.SetInvisible();
+                isInteract = false;
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) && quesState == QuesState.左)
             {
@@ -68,5 +66,11 @@ public class DoorQuestion : MonoBehaviour {
         transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 25;
 
         openDoorPanel.SetVisible();
+        Invoke("StartInteract", 0.1f);
+    }
+
+    void StartInteract()
+    {
+        isInteract = true;
     }
 }

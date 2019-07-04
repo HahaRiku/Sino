@@ -19,6 +19,7 @@ public class ItemQuestion : MonoBehaviour
     public QuesState quesState = QuesState.右;
 
     string itemName;
+    bool isInteract = false;
 
     void Start()
     {
@@ -28,20 +29,16 @@ public class ItemQuestion : MonoBehaviour
     }
     void Update()
     {
-        if (pickablePanel.IsVisible())
+        if (isInteract)
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 if (quesState == QuesState.左)
                 {
                     BagSystem.SetItemInBagOrNot(itemName, true);
-                    //告訴其他人東西新增之類的
-                }
-                else
-                {     //我先做撿起來的 其他再說(躺 call其他各處的function好麻煩 但還沒有背包系統 我也不能幹嘛(躺
-                      //nothing
                 }
                 pickablePanel.SetInvisible();
+                isInteract = false;
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) && quesState == QuesState.左)
             {
@@ -67,5 +64,11 @@ public class ItemQuestion : MonoBehaviour
         transform.GetChild(3).GetChild(0).GetComponent<Text>().fontSize = 25;
 
         pickablePanel.SetVisible();
+        Invoke("StartInteract", 0.1f);
+    }
+
+    void StartInteract()
+    {
+        isInteract = true;
     }
 }

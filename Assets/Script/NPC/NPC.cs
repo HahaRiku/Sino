@@ -187,7 +187,7 @@ public class NPC : MonoBehaviour {
                 }
                 else if (type == NpcType.door)
                 {
-                    StartCoroutine(WaitAndResumeTalk());
+                    StartCoroutine(WaitAndResumeTalk()); //門真的有需要wait嗎?
                 }
             }
         }
