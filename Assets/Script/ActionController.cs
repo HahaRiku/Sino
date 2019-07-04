@@ -12,11 +12,11 @@ public class ActionController : MonoBehaviour {
 	//使用單一一個動作組List管理
 	
 	//使用說明
-	//1. 設定所有移動順序：依序呼叫 SetSingleMove(要移動的腳色, 目標座標, 是否等待動作完成, 移動速度)
+	//1. 設定所有移動順序：依序呼叫 MoveManager.SetSingleMove(要移動的腳色, 目標X軸, 是否等待動作完成, 移動速度)
 	//		。SetSingleMove負責把一個動作加入動作表
 	//		。需要連續動作時，依序呼叫即可
 	//2. 設定完移動列表後，呼叫 RunAllMove()
-	//3. 欲檢查動作表是否全部完成，調閱 GameMoveManager.isFinished即可。
+	//3. 欲檢查動作表是否全部完成，調閱 MoveManager.isFinished即可。
 	
 	public class GameMoveManager{
 		
@@ -70,10 +70,10 @@ public class ActionController : MonoBehaviour {
 		
 		//---------------函式區---------------
 		
-		//設定移動(要移動的腳色, 目標座標, 是否等待動作完成, 移動速度)
+		//設定移動(要移動的腳色, 目標X軸, 是否等待動作完成, 移動速度)
 		//把單獨一個移動指令加到動作列表裡
-		public void SetSingleMove(GameObject character, Vector3 targetPlace, bool needsWaiting, int speed){//int MoveListID
-			MoveList.Add(new MoveSingle(character, targetPlace, needsWaiting, speed));
+		public void SetSingleMove(GameObject character, float targetX, bool needsWaiting, int speed){//int MoveListID
+			MoveList.Add(new MoveSingle(character, new Vector3(targetX, character.transform.localPosition.y, character.transform.localPosition.z), needsWaiting, speed));
 		}
 		
 		//依序執行列表裡的移動指令
