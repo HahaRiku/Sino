@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class OpenDoorPanelController : OptionsPanelController {
+public class OpenDoorPanelController : PanelController {
 
     public void SetQuest(string content)
     {

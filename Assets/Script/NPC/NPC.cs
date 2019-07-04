@@ -86,32 +86,25 @@ public class NPC : MonoBehaviour {
                     state = NpcState.可以講話;
                     if (type == NpcType.talk)
                     {
-                        //點點點animation play -> maybe ienumerator
                         stopDotDotDotAni = false;
                         StartCoroutine(DotDotDot());
                     }
                     else if (type == NpcType.item)
-                    {
                         白點SP.sprite = 白點;
-                    }
-                    else if (type == NpcType.door)
+                    else if (type == NpcType.door && SystemVariables.IsDoorStatusExisted(門的名字))
+                        鎖SP.sprite = SystemVariables.doorLockOrNot[門的名字] ? 鎖鎖起來 : 鎖打開;
+                    else
                     {
-                        //access system variables and determine what sprite it is
-                        if (SystemVariables.IsDoorStatusExisted(門的名字))
-                        {
-                            鎖SP.sprite = SystemVariables.doorLockOrNot[門的名字] ? 鎖鎖起來 : 鎖打開;
-                        }
-                        else
-                        {
-                            SystemVariables.AddDoorStatus(門的名字, 門一開始有沒有鎖);
-                            鎖SP.sprite = 門一開始有沒有鎖 ? 鎖鎖起來 : 鎖打開;
-                        }
+                        SystemVariables.AddDoorStatus(門的名字, 門一開始有沒有鎖);
+                        鎖SP.sprite = 門一開始有沒有鎖 ? 鎖鎖起來 : 鎖打開;
                     }
                 }
                 else if (type == NpcType.item)
-                {
                     白點SP.sprite = CheckIsPlayerInRange(HintRaius) ? 淺白點 : null;
-                }
+                else if (type == NpcType.talk)
+                    stopDotDotDotAni = true;
+                else if (type == NpcType.door)
+                    鎖SP.sprite = null;
             }
             else if (state == NpcState.可以講話)
             {
@@ -123,13 +116,15 @@ public class NPC : MonoBehaviour {
                     SystemVariables.lockBag = true;
                     if (type == NpcType.item && itemType == ItemType.不可撿)
                     {
-                        UnpickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字));
+                        面板定位();
+                        UnpickablePanel.SetInfo(不可撿的物品的敘述);
                         UnpickablePanel.SetVisible();
                         return;
                     }
                     SystemVariables.lockMoving = true;
                     if (type == NpcType.item)
                     {
+                        PickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字));
                         ItemQuestion.ShowQuestion(可撿的物品的名字);
                     }
                     else if (type == NpcType.talk)
@@ -166,20 +161,16 @@ public class NPC : MonoBehaviour {
             }
             else if (state == NpcState.對話中)
             {
-                if (type == NpcType.item && itemType == ItemType.可撿)
+                if (type == NpcType.item && itemType == ItemType.可撿 && !PickablePanel.IsVisible())
                 {
-                    if (!PickablePanel.IsVisible())
-                        StartCoroutine(WaitAndResumeTalk());
+                    StartCoroutine(WaitAndResumeTalk());
                 }
-                else if (type == NpcType.item &&itemType == ItemType.不可撿)
+                else if (type == NpcType.item && itemType == ItemType.不可撿)
                 {
-                    if (!UnpickablePanel.IsVisible())
-                        StartCoroutine(WaitAndResumeTalk());
-                    else if (!CheckIsPlayerInRange(Radius))
-                    {
-                        UnpickablePanel.SetInvisible();
-                        StartCoroutine(WaitAndResumeTalk());
-                    }
+                    if (UnpickablePanel.IsVisible() && CheckIsPlayerInRange(Radius))
+                        return;
+                    UnpickablePanel.SetInvisible();
+                    StartCoroutine(WaitAndResumeTalk());
                 }
                 else if (type == NpcType.talk && GetComponent<StoryManager>().IsStoryFinish())
                 {
@@ -190,12 +181,20 @@ public class NPC : MonoBehaviour {
                     StartCoroutine(WaitAndResumeTalk()); //門真的有需要wait嗎?
                 }
             }
+            else if (state == NpcState.講完話冷卻中)
+            {
+                if (type == NpcType.item)
+                {
+                    state = NpcState.範圍外;
+                }            
+            }
         }
     }
     bool CheckIsPlayerInRange(float radius)
     {
         Vector2 _range = new Vector2(transform.position.x + Offset - radius, transform.position.x + Offset + radius);
         float x = player.transform.position.x;
+        Debug.Log(x+" "+ _range.x+" "+ _range.y);
         if (x < _range.x)
             return false;
         if (x > _range.y)
@@ -204,11 +203,56 @@ public class NPC : MonoBehaviour {
     }
     IEnumerator WaitAndResumeTalk()
     {
-        SystemVariables.lockBag = true;
+        SystemVariables.lockBag = false;
         SystemVariables.lockMoving = false;
         state = NpcState.講完話冷卻中;
-        yield return new WaitForSeconds(冷卻時間);
-        state = NpcState.可以講話;
+        if (type == NpcType.item)
+        {
+            yield return new WaitForSeconds(0.1f);
+            state = NpcState.範圍外;
+        }
+        else
+        {
+            yield return new WaitForSeconds(冷卻時間);
+            state = NpcState.可以講話;
+        }
+    }
+
+    /* * *
+     * 定位規則：
+     * 1. 不貼或跑出畫面邊緣(太左就會在右角、太高就會在下角)
+     * 2. 
+     * 
+     * * */
+
+    void 面板定位()
+    {
+        var canvasRT = UnpickablePanel.GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+        var screenPos = Camera.main.WorldToViewportPoint(transform.position);
+        var targetRT = UnpickablePanel.transform.GetChild(0).GetComponent<RectTransform>();
+        UnpickablePanel.GetComponent<RectTransform>().anchorMax = screenPos;
+        UnpickablePanel.GetComponent<RectTransform>().anchorMin = screenPos;
+
+        float 間距 = 3;
+
+        
+
+        //在右上角
+        targetRT.pivot = Vector2.zero;
+        targetRT.anchoredPosition = new Vector2(間距, 間距);
+
+        //在右下角
+        targetRT.pivot = Vector2.right;
+        targetRT.anchoredPosition = new Vector2(間距, -間距);
+
+        //在左上角
+        targetRT.pivot = Vector2.up;
+        targetRT.anchoredPosition = new Vector2(-間距, 間距);
+
+        //在左下角
+        targetRT.pivot = Vector2.one;
+        targetRT.anchoredPosition = new Vector2(-間距, -間距);
+
     }
     private IEnumerator CannotOpenDoorAni()
     {
@@ -274,21 +318,34 @@ public class NPC : MonoBehaviour {
 
     void OnDrawGizmos()
     {
-        float cHeight = 20;
+        float cHeight = 12;
 
         Vector3 pos = new Vector3(transform.position.x+Offset, Camera.main.transform.position.y, 0);
         float region_width = Radius * 2.0f;
+        if (type == NpcType.item)
+        {
+            Gizmos.color = new Color32(0xFF, 0xF3, 0x9D, 0xA0); ;
+            Gizmos.DrawCube(pos, new Vector3(region_width, cHeight, 1.0f));
 
-        Gizmos.color = new Color(0.0f, 1.0f, 0.0f, 0.3f);
-        Gizmos.DrawCube(pos, new Vector3(region_width, cHeight, 1.0f));
-
-        Gizmos.color = new Color(0.0f, 1.0f, 1.0f, 0.3f);
-
-        pos = new Vector3(transform.position.x + Offset - HintRaius + (HintRaius - Radius) / 2, Camera.main.transform.position.y, 0);
-        Gizmos.DrawCube(pos, new Vector3(HintRaius - Radius, cHeight, 1.0f));
-
-        pos = new Vector3(transform.position.x + Offset + HintRaius - (HintRaius - Radius) / 2, Camera.main.transform.position.y, 0);
-        Gizmos.DrawCube(pos, new Vector3(HintRaius - Radius, cHeight, 1.0f));
+            Gizmos.color = new Color32(0xFF, 0xFF, 0xFF, 0x4D);
+            pos = new Vector3(transform.position.x + Offset - HintRaius + (HintRaius - Radius) / 2, Camera.main.transform.position.y, 0);
+            Gizmos.DrawCube(pos, new Vector3(HintRaius - Radius, cHeight, 1.0f));
+            pos = new Vector3(transform.position.x + Offset + HintRaius - (HintRaius - Radius) / 2, Camera.main.transform.position.y, 0);
+            Gizmos.DrawCube(pos, new Vector3(HintRaius - Radius, cHeight, 1.0f));
+        }
+        else if (type == NpcType.talk)
+        {
+            Gizmos.color = new Color32(0x00, 0xC8, 0xE5, 0x4A);
+            Gizmos.DrawCube(pos, new Vector3(region_width, cHeight, 1.0f)); 
+        }
+        else if (type == NpcType.door)
+        {
+            if(門一開始有沒有鎖)
+                Gizmos.color = new Color32(0xE3, 0x00, 0x00, 0x4A);
+            else
+                Gizmos.color = new Color32(0x70, 0xE5, 0x00, 0x4A);
+            Gizmos.DrawCube(pos, new Vector3(region_width, cHeight, 1.0f));
+        }
     }
 
 }

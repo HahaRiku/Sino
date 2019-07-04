@@ -35,7 +35,6 @@ public class NPCEditor : Editor {
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(sO.FindProperty("冷卻時間"));
             EditorGUILayout.PropertyField(sO.FindProperty("Radius"));
-            EditorGUILayout.PropertyField(sO.FindProperty("HintRaius"));
             EditorGUILayout.PropertyField(sO.FindProperty("Offset"));
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(sO.FindProperty("一個點"));
@@ -54,7 +53,6 @@ public class NPCEditor : Editor {
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(sO.FindProperty("冷卻時間"));
             EditorGUILayout.PropertyField(sO.FindProperty("Radius"));
-            EditorGUILayout.PropertyField(sO.FindProperty("HintRaius"));
             EditorGUILayout.PropertyField(sO.FindProperty("Offset"));
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(sO.FindProperty("鎖打開"));
