@@ -1427,12 +1427,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1737306629724298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f453ddf314725848b9b1fa4cdd5d1e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f48c272aa359c46a968520faf19dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aniState: 0
   IsHoldCandle_ani: 0
-  speed: 0.08
+  aniState: 1
+  speed: 0.1
   otherCharactersObjects: []
 --- !u!114 &114508479431280080
 MonoBehaviour:

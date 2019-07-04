@@ -469,6 +469,11 @@ Prefab:
       value: 
       objectReference: {fileID: 102900000, guid: 00887f21b8aa0ae469612a9ccfbdcb21,
         type: 3}
+    - target: {fileID: 114638674318020536, guid: 0679702b6358cfa4597dd5a83eee2cea,
+        type: 2}
+      propertyPath: stairType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0679702b6358cfa4597dd5a83eee2cea, type: 2}
   m_IsPrefabParent: 0

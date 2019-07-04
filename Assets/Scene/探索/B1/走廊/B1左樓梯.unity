@@ -151,6 +151,17 @@ Prefab:
       propertyPath: m_Name
       value: "To1F\u5DE6\u6A13\u68AF&B2\u5DE6\u6A13\u68AF"
       objectReference: {fileID: 0}
+    - target: {fileID: 114638674318020536, guid: 0679702b6358cfa4597dd5a83eee2cea,
+        type: 2}
+      propertyPath: stairType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114638674318020536, guid: 0679702b6358cfa4597dd5a83eee2cea,
+        type: 2}
+      propertyPath: sceneList.Array.data[0].targetScene
+      value: 
+      objectReference: {fileID: 102900000, guid: 0edf92ccfb373044681d99f5134f101c,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0679702b6358cfa4597dd5a83eee2cea, type: 2}
   m_IsPrefabParent: 0

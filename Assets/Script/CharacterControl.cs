@@ -25,7 +25,8 @@ public class CharacterControl : MonoBehaviour {
 	
 	public bool IsHoldCandle_ani = false;		//預設為不拿蠟燭，須從外面腳本改動
 	public AnimationState aniState = AnimationState.stand;		//偵測玩家動作
-    public float speed;
+    [Range(0.1f, 0.3f)]
+	public float speed;
     public CharacterObjectAndName[] otherCharactersObjects;
 	
 	
@@ -33,7 +34,8 @@ public class CharacterControl : MonoBehaviour {
         ani = GetComponent<UnityArmatureComponent>().armature.animation;
         IsWalk_ani = false;
 		IsHoldCandle_ani = false;
-		aniState = AnimationState.stand;		
+		aniState = AnimationState.stand;
+		//speed = 0.1f;
     }
 
     void Update () {
@@ -52,7 +54,6 @@ public class CharacterControl : MonoBehaviour {
 				
                 if (Input.GetKey(KeyCode.RightArrow)) {		//持續向右
 					AnimationController("continuing_right");
-					
                     transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
                     if (transform.localScale.x > 0) {
                         transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
@@ -60,7 +61,6 @@ public class CharacterControl : MonoBehaviour {
                 }
                 if (Input.GetKey(KeyCode.LeftArrow)) {		//持續向左
                     AnimationController("continuing_left");
-					
                     transform.localPosition = new Vector3(transform.localPosition.x - speed, transform.localPosition.y, transform.localPosition.z);
                     if (transform.localScale.x < 0) {
                         transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
