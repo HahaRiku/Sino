@@ -17,13 +17,21 @@ public class ItemQuestion : MonoBehaviour
     PickablePanelController pickablePanel;
     public enum QuesState { 左, 右 }
     public QuesState quesState = QuesState.右;
+    public Sprite 選項底_選擇;
+    public Sprite 選項底_未選;
+
 
     string itemName;
     bool isInteract = false;
 
+    private Image 選項L;
+    private Image 選項R;
+
     void Start()
     {
         pickablePanel = GetComponent<PickablePanelController>();
+        選項L = transform.GetChild(2).GetComponent<Image>();
+        選項R = transform.GetChild(3).GetComponent<Image>();
         transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 20;
         transform.GetChild(3).GetChild(0).GetComponent<Text>().fontSize = 25;
     }
@@ -44,13 +52,17 @@ public class ItemQuestion : MonoBehaviour
             {
                 quesState = QuesState.右;
                 transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 20;
+                選項L.sprite = 選項底_未選;
                 transform.GetChild(3).GetChild(0).GetComponent<Text>().fontSize = 25;
+                選項R.sprite = 選項底_選擇;
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow) && quesState == QuesState.右)
             {
                 quesState = QuesState.左;
                 transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 25;
+                選項L.sprite = 選項底_選擇;
                 transform.GetChild(3).GetChild(0).GetComponent<Text>().fontSize = 20;
+                選項R.sprite = 選項底_未選;
             }
         }
     }

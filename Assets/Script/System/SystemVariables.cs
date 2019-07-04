@@ -100,6 +100,6 @@ public static class Init {
         SystemVariables.FlushIntVariables();
         SystemVariables.FlushBoolVariables();
         SystemVariables.FlushDoorStatus();
-        //BagSystem.ResetItemsInBag();
+        BagSystem.ResetItemsInBag();
     }
 }
