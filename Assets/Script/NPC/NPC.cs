@@ -123,17 +123,19 @@ public class NPC : MonoBehaviour {
                     SystemVariables.lockBag = true;
                     if (type == NpcType.item && itemType == ItemType.不可撿)
                     {
+                        UnpickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字));
                         UnpickablePanel.SetVisible();
                         return;
                     }
                     SystemVariables.lockMoving = true;
                     if (type == NpcType.item)
                     {
-                        ItemQuestion.ShowQuestion();
+                        ItemQuestion.ShowQuestion(可撿的物品的名字);
                     }
                     else if (type == NpcType.talk)
                     {
                         stopDotDotDotAni = true;
+                        GetComponent<StoryManager>().BeginStory();
                     }
                     else if (type == NpcType.door)
                     {
@@ -152,13 +154,12 @@ public class NPC : MonoBehaviour {
                             {
                                 //左右晃動的動畫
                                 doorCannotOpenAniDone = false;
-
                                 StartCoroutine(CannotOpenDoorAni());
                             }
                         }
                         else
                         {  //unlock
-                            DoorQuestion.QuestionWork();
+                            DoorQuestion.ShowQuestion(門要傳送到的場景名稱);
                         }
                     }
                 }
