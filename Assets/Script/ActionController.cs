@@ -6,88 +6,150 @@ using System;
 using DragonBones;
 
 public class ActionController : MonoBehaviour {
-	
-	
-	//移動設定class：
-	//使用單一一個動作組List管理
-	
-	//使用說明
-	//1. 設定所有移動順序：依序呼叫 MoveManager.SetSingleMove(要移動的腳色, 目標X軸, 是否等待動作完成, 移動速度)
-	//		。SetSingleMove負責把一個動作加入動作表
-	//		。需要連續動作時，依序呼叫即可
-	//2. 設定完移動列表後，呼叫 RunAllMove()
-	//3. 欲檢查動作表是否全部完成，調閱 MoveManager.isFinished即可。
-	
-	public class GameMoveManager{
 		
-		//---------宣告區---------
-		
-		//個別人物移動
-		public class MoveSingle : MonoBehaviour {
+	//移動設定
+	
+	int running = 0;
 
-			private DragonBones.Animation ani;
-			private int speed;
-			//bool IsFinished;
-			private GameObject character;
-			private Vector3 targetPlace;
-			private bool needsWaiting;
-			public MoveSingle(GameObject character, Vector3 targetPlace, bool needsWaiting, int speed){
-				this.character = character;
-				this.targetPlace = targetPlace;
-				this.needsWaiting = needsWaiting;
-				this.speed = speed;
-			}
-
-			public IEnumerator RunMove(){
-				//the char needs its Dragonbone Animation
-				if(needsWaiting){
-					yield return this.move_Single();
-				}
-				else{
-					StartCoroutine(this.move_Single());
-					yield return null;
-				}
-			}
-
-			private IEnumerator move_Single(){
-				//the char needs its Dragonbone Animation
-				ani = character.GetComponent<UnityArmatureComponent>().armature.animation;
-				ani.Play("walk");
-				//IsFinished = false;
-				while( Vector3.Distance(character.transform.localPosition, targetPlace) < 0.001f){
-					character.transform.localPosition = Vector3.MoveTowards(character.transform.localPosition, targetPlace, speed * Time.deltaTime);
-					yield return null;
-				}
-				ani.Play("stand");
-				//IsFinished = true;
-				yield return null;
-			}
-			
-		}
-		public List<MoveSingle> MoveList = new List<MoveSingle>();
-		public bool isFinished = false;		//檢查動作表是否全部完成
-		//public MoveManager(){}
-		
-		//---------------函式區---------------
-		
-		//設定移動(要移動的腳色, 目標X軸, 是否等待動作完成, 移動速度)
-		//把單獨一個移動指令加到動作列表裡
-		public void SetSingleMove(GameObject character, float targetX, bool needsWaiting, int speed){//int MoveListID
-			MoveList.Add(new MoveSingle(character, new Vector3(targetX, character.transform.localPosition.y, character.transform.localPosition.z), needsWaiting, speed));
-		}
-		
-		//依序執行列表裡的移動指令
-		//執行完會把 isFinished 設成 true
-		public void RunAllMove(){
-			foreach(MoveSingle anis in MoveList){
-				anis.RunMove();
-			}
-			isFinished = true;
-			MoveList.Clear();
+	public bool IsFinished()
+	{
+		if (running == 0)
+			return true;
+		else
+			return false;
+	}
+	public void Move(string charaName, float finX, float duration)		//要移動就call這個funct
+	{
+		running++;
+		var chara = GameObject.Find(charaName);
+		if (chara)
+			StartCoroutine(MoveTo(GameObject.Find(charaName), finX, duration));
+		else
+		{
+			StartCoroutine(Wait(duration));
+			if (charaName.Trim() != "")
+			Debug.LogWarning("Warning: 人物移動 \"" + charaName + "\" is not found!");
 		}
 	}
-	public GameMoveManager MoveManager = new GameMoveManager();
-	
+	IEnumerator MoveTo(GameObject chara, float fin, float duration)
+	{
+		float ori = chara.transform.position.x;
+		chara.transform.position = new Vector3(ori, chara.transform.position.y);
+		var armature = chara.GetComponent<UnityArmatureComponent>();
+		float time = 0, speed = (fin - ori) / duration;
+		if(chara.name == "Sino"){			
+			var charaCtrlScript = chara.GetComponent<CharacterControl>();
+			if(charaCtrlScript.IsHoldCandle_ani){
+				if (speed < 0){	//預設朝左
+					if (armature.animation.animationNames.Exists(x => x.Equals("walk_with_candle_left")))
+					{
+						armature.animation.FadeIn("walk_with_candle_left", 0.15f, -1);
+						armature.animationName = "walk_with_candle_left";
+					}
+						/*
+					else if(armature.animation.animationNames.Exists(x => x.Equals("run")))
+					{
+						armature.animation.FadeIn("run", 0.15f, -1);
+						armature.animationName = "run";
+					}*/
+				}
+				else{
+					if (armature.animation.animationNames.Exists(x => x.Equals("walk_with_candle_right")))
+					{
+						armature.animation.FadeIn("walk_with_candle_right", 0.15f, -1);
+						armature.animationName = "walk_with_candle_right";
+					}
+				}
+				while (time < duration)
+				{
+					time += Time.fixedDeltaTime;
+					if (speed < 0){
+						armature.armature.flipX = false;
+					}
+					else{
+						armature.armature.flipX = true;
+					}
+					chara.transform.Translate(Vector2.right * speed * Time.fixedDeltaTime);
+					yield return new WaitForFixedUpdate();
+				}
+				
+				if (armature.animationName == "walk_with_candle_left"){	//candle_left
+					armature.animation.FadeIn("stand_with_candle_left", 0.15f, -1);
+					armature.animationName = "stand_with_candle_left";
+				}else if (armature.animationName == "walk_with_candle_right"){	//candle_right
+					armature.animation.FadeIn("stand_with_candle_right", 0.15f, -1);
+					armature.animationName = "stand_with_candle_right";
+				}					
+			}
+			else{
+				if (armature.animation.animationNames.Exists(x => x.Equals("walk")))
+				{
+					armature.animation.FadeIn("walk", 0.15f, -1);
+					armature.animationName = "walk";
+				}
+				else if(armature.animation.animationNames.Exists(x => x.Equals("run")))
+				{
+					armature.animation.FadeIn("run", 0.15f, -1);
+					armature.animationName = "run";
+				}
+				while (time < duration)
+				{
+					time += Time.fixedDeltaTime;
+					if (speed < 0){
+						armature.armature.flipX = false;
+					}
+					else{
+						armature.armature.flipX = true;
+					}
+					chara.transform.Translate(Vector2.right * speed * Time.fixedDeltaTime);
+					yield return new WaitForFixedUpdate();
+				}
+				armature.animation.FadeIn("stand", 0.15f, -1);
+				armature.animationName = "stand";
+			}
+			chara.transform.position = new Vector3(fin, chara.transform.position.y);
+			
+		}	
+		else {
+			if (armature.animation.animationNames.Exists(x => x.Equals("walk")))
+			{
+				armature.animation.FadeIn("walk", 0.15f, -1);
+				armature.animationName = "walk";
+			}
+			else if(armature.animation.animationNames.Exists(x => x.Equals("run")))
+			{
+				armature.animation.FadeIn("run", 0.15f, -1);
+				armature.animationName = "run";
+			}
+			while (time < duration)
+			{
+				time += Time.fixedDeltaTime;
+				if (speed < 0){
+					armature.armature.flipX = false;
+				}
+				else{
+					armature.armature.flipX = true;
+				}
+				chara.transform.Translate(Vector2.right * speed * Time.fixedDeltaTime);
+				yield return new WaitForFixedUpdate();
+			}
+			armature.animation.FadeIn("stand", 0.15f, -1);
+			armature.animationName = "stand";
+			chara.transform.position = new Vector3(fin, chara.transform.position.y);
+		}
+		running--;
+	}
+	IEnumerator Wait(float duration)
+	{
+		float time = 0;
+		while (time < duration)
+		{
+			time += Time.fixedDeltaTime;
+			yield return new WaitForFixedUpdate();
+		}
+		running--;
+	}
+
 	
 	/*
 	public void PlayAudio(GameObject listener, AudioClip audioFile, bool needsWait){

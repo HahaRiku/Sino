@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DragonBones;
 
-public class CharacterControl2 : MonoBehaviour {
+public class CharacterControl : MonoBehaviour {
     [System.Serializable]
     public struct CharacterObjectAndName {
         public string name;
         public GameObject obj;
     }
-	
-	
 	public enum AnimationState{
 		idle,
 		stand,
@@ -20,16 +18,17 @@ public class CharacterControl2 : MonoBehaviour {
 		walk_with_candle_left,
 		walk_with_candle_right
 	};
-	public AnimationState aniState;		//偵測玩家動作
 	private bool IsWalk_ani;
-	public bool IsHoldCandle_ani;	//預設為不拿蠟燭，須從外面腳本改動
-	
-
-    public float speed;
-    //public Dialog dialogComp;
-    public CharacterObjectAndName[] otherCharactersObjects;
     private DragonBones.Animation ani;
-    
+	
+	//---------------接口---------------
+	
+	public bool IsHoldCandle_ani = false;		//預設為不拿蠟燭，須從外面腳本改動
+	public AnimationState aniState = AnimationState.stand;		//偵測玩家動作
+    public float speed;
+    public CharacterObjectAndName[] otherCharactersObjects;
+	
+	
     void Start() {
         ani = GetComponent<UnityArmatureComponent>().armature.animation;
         IsWalk_ani = false;
@@ -37,7 +36,6 @@ public class CharacterControl2 : MonoBehaviour {
 		aniState = AnimationState.stand;		
     }
 
-    // Update is called once per frame
     void Update () {
         //if(CharWithItem.actEnable){
         if (!SystemVariables.lockMoving) {
@@ -70,7 +68,6 @@ public class CharacterControl2 : MonoBehaviour {
                 }
                 if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {		//按鍵放開(停下)
                     AnimationController("stand_or_stop");
-					
                 }
             }
             else {		//按鍵同時按住
@@ -115,7 +112,6 @@ public class CharacterControl2 : MonoBehaviour {
         //dialogComp.SetLineDone(true);		//沒在用
         //ani.enabled = false;
     }
-	
 	
 	
 	public void AnimationController(string command){
