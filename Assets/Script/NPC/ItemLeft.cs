@@ -9,13 +9,13 @@ public class ItemLeft : MonoBehaviour {
     void Start() {
         NPC = gameObject.GetComponentInParent<NPC>();
     }
-
+    /*
     void OnTriggerEnter2D(Collider2D collider) {
         NPC.ItemLeftTrigger(true);
     }
 
     void OnTriggerExit2D(Collider2D collider) {
         NPC.ItemLeftTrigger(false);
-    }
+    }*/
 
 }
