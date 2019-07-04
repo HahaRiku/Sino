@@ -53,7 +53,8 @@ public class NPC : MonoBehaviour {
 
     private PickablePanelController PickablePanel;
     private UnPickablePanelController UnpickablePanel;
-    
+    private OpenDoorPanelController OpenDoorPanel;
+
     void Start () {
         actor = GameObject.Find("Actor").GetComponent<Actor>();
         if (type == NpcType.item) {
@@ -70,6 +71,7 @@ public class NPC : MonoBehaviour {
         DoorQuestion = FindObjectOfType<DoorQuestion>();
         PickablePanel = FindObjectOfType<PickablePanelController>();
         UnpickablePanel = FindObjectOfType<UnPickablePanelController>();
+        OpenDoorPanel = FindObjectOfType<OpenDoorPanelController>();
     }
 
     void Update()
@@ -176,7 +178,7 @@ public class NPC : MonoBehaviour {
                 {
                     StartCoroutine(WaitAndResumeTalk());
                 }
-                else if (type == NpcType.door)
+                else if (type == NpcType.door && !OpenDoorPanel.IsVisible())
                 {
                     StartCoroutine(WaitAndResumeTalk()); //門真的有需要wait嗎?
                 }
@@ -206,16 +208,11 @@ public class NPC : MonoBehaviour {
         SystemVariables.lockBag = false;
         SystemVariables.lockMoving = false;
         state = NpcState.講完話冷卻中;
-        if (type == NpcType.item)
-        {
-            yield return new WaitForSeconds(0.1f);
-            state = NpcState.範圍外;
-        }
-        else
-        {
+        if (type == NpcType.talk)
             yield return new WaitForSeconds(冷卻時間);
-            state = NpcState.可以講話;
-        }
+        else
+            yield return new WaitForSeconds(0.1f);
+        state = NpcState.可以講話;
     }
 
     /* * *
