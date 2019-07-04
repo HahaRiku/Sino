@@ -1432,7 +1432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsHoldCandle_ani: 0
   aniState: 1
-  speed: 0.1
+  speed: 0.08
   otherCharactersObjects: []
 --- !u!114 &114508479431280080
 MonoBehaviour:
@@ -1482,7 +1482,7 @@ MonoBehaviour:
   debugDraw: 0
   animationName: stand
   _playTimes: 0
-  _timeScale: 1
+  _timeScale: 1.7
   _sortingMode: 0
   _sortingLayerName: Player
   _sortingOrder: 0

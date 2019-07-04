@@ -25,10 +25,11 @@ public class CharacterControl : MonoBehaviour {
 	
 	public bool IsHoldCandle_ani = false;		//預設為不拿蠟燭，須從外面腳本改動
 	public AnimationState aniState = AnimationState.stand;		//偵測玩家動作
-    [Range(0.1f, 0.3f)]
+    [Range(0.05f, 0.3f)]
 	public float speed;
     public CharacterObjectAndName[] otherCharactersObjects;
-	
+
+    private bool controlLock = false;
 	
     void Start() {
         ani = GetComponent<UnityArmatureComponent>().armature.animation;
@@ -40,7 +41,7 @@ public class CharacterControl : MonoBehaviour {
 
     void Update () {
         //if(CharWithItem.actEnable){
-        if (!SystemVariables.lockMoving) {
+        if (!controlLock) {
             if (!(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))) {				//左右鍵非同時按住
                 /*
 				if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)) {	//開始走路
@@ -167,100 +168,12 @@ public class CharacterControl : MonoBehaviour {
 		}
 	}
 	
-}
-
-/*
-	//private int temp_stats = 0;	//0 = idle, 1 = left, 2=right
-	
-    void Start() {
-        ani= gameObject.GetComponent<Animator>();
-        IsWalk_ani = false;
-		//StartCoroutine(WalkController ());
+    public void SetIsPlayerCanControl(bool b)
+    {
+        controlLock = !b;
     }
-	
-	private void UpdateWalk (int stats) {
-		switch(stats){
-			case 0:
-				IsWalk_ani = false;
-				ani.SetBool("Walk", false);
-				break;
-				
-			case 1:
-				if (!IsWalk_ani) {
-					IsWalk_ani = true;
-					ani.SetBool("Walk", true);
-				}
-				transform.localPosition = new Vector3(transform.localPosition.x - speed, transform.localPosition.y, transform.localPosition.z);
-				if (transform.localScale.x < 0) {
-					transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
-				}
-				break;
-				
-			case 2:
-				if (!IsWalk_ani) {
-					IsWalk_ani = true;
-					ani.SetBool("Walk", true);
-				}
-				transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
-				if (transform.localScale.x > 0) {
-					transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
-				}
-				break;
-				
-			default:	break;
-		}
-	}
-	
-	private IEnumerator WalkController () {
-        //if(CharWithItem.actEnable){//
-        while(true){
-			
-			switch(temp_stats){
-				case 0:
-					UpdateWalk (0);
-					//Debug.Log("414");
-					if (Input.GetKey(KeyCode.RightArrow)) {	//2
-						temp_stats = 2;
-					}
-					if (Input.GetKey(KeyCode.LeftArrow)) {
-						temp_stats = 1;
-					}
-					if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
-						temp_stats = 0;
-					}
-					break;
-					
-				case 1:
-					UpdateWalk (1);
-					
-					if (Input.GetKey(KeyCode.LeftArrow)) {
-						temp_stats = 1;
-					}
-					if (Input.GetKeyDown(KeyCode.RightArrow)) {	//2
-						temp_stats = 2;
-					}
-					if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
-						temp_stats = 0;
-					}
-					break;
-					
-				case 2:
-					UpdateWalk (2);
-					
-					if (Input.GetKey(KeyCode.RightArrow)) {	//2
-						temp_stats = 2;
-					}
-					if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-						temp_stats = 1;
-					}
-					if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {
-						temp_stats = 0;
-					}
-					break;
-					
-				default:	break;
-			}
-			
-			yield return 0;
-        }
-    }*/
+    public void SetPlayerStopMove()
+    {
+        controlLock = true;
+    }
+}

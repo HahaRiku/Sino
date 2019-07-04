@@ -3,88 +3,87 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Trans_Stair : MonoBehaviour {
-	
-	[System.Serializable]
-	public struct targetscenelist{
-		public Object targetScene;
-		public int nextScenePosLabel;	//0=null , 1=L , 2=R , 3=door , 4=stair
-	};
-	[SerializeField]
-	private targetscenelist[] sceneList;
-	
-	public enum stairtype{
-		UpAndDown,
-		Up,
-		Down
-	};
-	public stairtype stairType;
-	
-	void OnTriggerEnter2D(Collider2D col_item){
-		StartCoroutine(TransUI());
-	}
-	
-	private IEnumerator TransUI(){
-		CharWithItem.actEnable = false;		//limit moving
-		
-		switch(stairType){
-			case stairtype.UpAndDown:
-				this.transform.GetChild(0).gameObject.SetActive(true);
-				this.transform.GetChild(1).gameObject.SetActive(true);
-				
-				//UI+choose
-				bool done = false;
-				while(!done){
-					if(Input.GetKeyDown(KeyCode.UpArrow)){
-						done = true;
-						
-						Temp_GameManager.transPosSet(sceneList[0].nextScenePosLabel);
-						SceneManager.LoadScene(sceneList[0].targetScene.name);
-					}
-					else if(Input.GetKeyDown(KeyCode.DownArrow)){
-						done = true;
-						
-						Temp_GameManager.transPosSet(sceneList[1].nextScenePosLabel);
-						SceneManager.LoadScene(sceneList[1].targetScene.name);
-					}
-					/*else if(Input.GetKeyDown(KeyCode.X)){	//cancel
+public class Trans_Stair : MonoBehaviour
+{
+    [System.Serializable]
+    public struct Portal
+    {
+        public Object targetScene;
+        public GameStateManager.SpawnPoint nextScenePos;    //0=null , 1=L , 2=R , 3=door , 4=stair
+    };
+    [SerializeField]
+    private Portal[] portalList;
+
+    public enum Stair
+    {
+        UpAndDown,
+        Up,
+        Down
+    };
+    public Stair StairType;
+
+    void OnTriggerEnter2D(Collider2D col_item)
+    {
+        StartCoroutine(TransUI());
+    }
+
+    private IEnumerator TransUI()
+    {
+        CharWithItem.actEnable = false;     //limit moving
+
+        switch ((int)StairType)
+        {
+            case 0:
+                this.transform.GetChild(0).gameObject.SetActive(true);
+                this.transform.GetChild(1).gameObject.SetActive(true);
+
+                //UI+choose
+                bool done = false;
+                while (!done)
+                {
+                    if (Input.GetKeyDown(KeyCode.UpArrow))
+                    {
+                        done = true;
+                        GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                    }
+                    else if (Input.GetKeyDown(KeyCode.DownArrow))
+                    {
+                        done = true;
+                        GameStateManager.Instance.黑幕轉場(portalList[1].targetScene.name, portalList[1].nextScenePos);
+                    }
+                    /*else if(Input.GetKeyDown(KeyCode.X)){	//cancel
 						
 					}*/
-					yield return 0;
-				}
-				
-				break;
-			case stairtype.Up:
-				this.transform.GetChild(0).gameObject.SetActive(true);
-				
-				done = false;
-				while(!done){
-					if(Input.GetKeyDown(KeyCode.UpArrow)){
-						done = true;
-						
-						Temp_GameManager.transPosSet(sceneList[0].nextScenePosLabel);
-						SceneManager.LoadScene(sceneList[0].targetScene.name);
-					}
-					yield return 0;
-				}
-				break;
-			case stairtype.Down:
-				this.transform.GetChild(1).gameObject.SetActive(true);
-				
-				done = false;
-				while(!done){
-					if(Input.GetKeyDown(KeyCode.DownArrow)){
-						done = true;
-						
-						Temp_GameManager.transPosSet(sceneList[1].nextScenePosLabel);
-						SceneManager.LoadScene(sceneList[1].targetScene.name);						
-					}
-					yield return 0;
-				}
-				break;
-			default:	break;
-		}
-		
-	}
-	
+                    yield return 0;
+                }
+                break;
+            case 1:
+                this.transform.GetChild(0).gameObject.SetActive(true);
+                done = false;
+                while (!done)
+                {
+                    if (Input.GetKeyDown(KeyCode.UpArrow))
+                    {
+                        done = true;
+                        GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                    }
+                    yield return 0;
+                }
+                break;
+            case 2:
+                this.transform.GetChild(1).gameObject.SetActive(true);
+                done = false;
+                while (!done)
+                {
+                    if (Input.GetKeyDown(KeyCode.DownArrow))
+                    {
+                        done = true;
+                        GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                    }
+                    yield return 0;
+                }
+                break;
+            default: break;
+        }
+    }
 }

@@ -42,6 +42,7 @@ public class StoryData : ScriptableObject
 
         //轉換場景
         public string SceneName;
+        public GameStateManager.SpawnPoint SpawnPoint;
 
         //選項
         public SelectOption[] Options = new SelectOption[2];

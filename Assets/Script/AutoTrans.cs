@@ -7,12 +7,10 @@ public class AutoTrans : MonoBehaviour {
 	
 	[SerializeField]
 	private Object targetScene;
-	public int nextScenePosLabel;	//0=null , 1=L , 2=R , 3=door , 4=stair , 5=smallDoor	
-	
-	void OnTriggerEnter2D(Collider2D other){
-		
-		Temp_GameManager.transPosSet(nextScenePosLabel);
-		SceneManager.LoadScene(targetScene.name/* , LoadSceneMode.Additive*/);
-		
-	}
+	public GameStateManager.SpawnPoint nextScenePos;    //0=null , 1=L , 2=R , 3=door , 4=stair , 5=smallDoor	
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        GameStateManager.Instance.黑幕轉場(targetScene.name, nextScenePos);
+    }
 }

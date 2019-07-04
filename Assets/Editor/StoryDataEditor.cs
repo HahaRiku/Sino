@@ -271,6 +271,24 @@ public class StoryDataEditor:Editor
             arect.height = EditorGUIUtility.singleLineHeight / 5;
             EditorGUI.LabelField(arect, "");
         }
+        else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 10)
+        {
+            EditorGUI.LabelField(arect, "場景名稱: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("SceneName"), GUIContent.none);
+            arect.y += arect.height + spacing;
+            arect.width = label_w;
+            arect.x -= arect.width;
+            EditorGUI.LabelField(arect, "人物位置: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("SpawnPoint"), GUIContent.none);
+            arect.y += spacing;
+            arect.x = rect.x;
+            arect.height = EditorGUIUtility.singleLineHeight / 5;
+            EditorGUI.LabelField(arect, "");
+        }
         EditorGUI.indentLevel--;
     }
     void onAddDropdownCallback(Rect buttonRect, ReorderableList list)
