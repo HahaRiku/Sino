@@ -126,13 +126,14 @@ public class NPC : MonoBehaviour {
                             itemType = ItemType.可撿;*/
                         return;
                     }
-                    SystemVariables.lockMoving = true;
+                    GameStateManager.Instance.StartEvent();
                     if (type == NpcType.item) {
                         PickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字));
                         PickablePanel.ShowQuestion(可撿的物品的名字);
                     }
                     else if (type == NpcType.talk) {
                         stopDotDotDotAni = true;
+                        dotAni.SetBool("Dot", false);
                         GetComponent<StoryManager>().BeginStory();
                     }
                     else if (type == NpcType.door) {
@@ -143,6 +144,7 @@ public class NPC : MonoBehaviour {
                                 //I don't know how to do it with only two pictures. If the animation done, the two statements below will be replaced.
                                 鎖SP.sprite = 鎖打開;
                                 SystemVariables.AddDoorStatus(門的名字, false);
+                                
                                 doorUnlockingAniDone = true;
                                 doorType = DoorType.開啟;
                             }
@@ -190,6 +192,7 @@ public class NPC : MonoBehaviour {
                 }
                 else if (type == NpcType.door && !OpenDoorPanel.IsVisible())
                 {
+                    
                     StartCoroutine(WaitAndResumeTalk()); //門真的有需要wait嗎?
                 }
             }
@@ -215,12 +218,16 @@ public class NPC : MonoBehaviour {
     IEnumerator WaitAndResumeTalk()
     {
         SystemVariables.lockBag = false;
-        SystemVariables.lockMoving = false;
+        GameStateManager.Instance.FinEvent();
         state = NpcState.講完話冷卻中;
         if (type == NpcType.talk)
             yield return new WaitForSeconds(冷卻時間);
         else
             yield return new WaitForSeconds(0.1f);
+        if (type == NpcType.door && doorType == DoorType.開啟) {
+            string temp = string.Concat(SystemVariables.Scene, "_", gameObject.name);
+            SystemVariables.AddIntVariable(temp, 1);
+        }
         state = NpcState.可以講話;
     }
 

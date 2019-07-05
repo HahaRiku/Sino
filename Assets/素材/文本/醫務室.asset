@@ -1,0 +1,1362 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c6fdbd9f7d21a4386f846813473c52, type: 3}
+  m_Name: "\u91AB\u52D9\u5BA4"
+  m_EditorClassIdentifier: 
+  StateList:
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u7D66(\u66FE\u7D93\u7684)\u6700\u89AA\u611B\u7684\u4F60\uFF1A"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u7576\u5E74\uFF0C\u4F60\u8AAA\u6703\u4E00\u76F4\u611B\u8457\u6211\uFF0C"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u8AAA\u8457\u4F60\u6700\u559C\u6B61\u6211\u716E\u7684\u8591\u7CD6\uFF0C"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u96D6\u7136\u4E0D\u77E5\u73FE\u5728\u7684\u4F60\u9084\u559C\u4E0D\u559C\u6B61\u2026\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u6211\u5011\u4E00\u8D77\u7D93\u6B77\u4E86\u8A31\u591A"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u7F8E\u597D\u7684\u3001\u96E3\u904E\u7684\uFF0C\u96D6\u7136\u4F60\u8AAA\u2026\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u4F60\u8AAA\u653E\u68C4\u4E86\u611B\uFF0C\u624D\u80FD\u771F\u6B63\u64C1\u62B1\u81EA\u7531\u2026"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u6211\u9084\u662F\u7121\u6CD5\u539F\u8AD2\u4F60\u7684\u8F15\u6613\u653E\u68C4\uFF0C\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u9019\u5C01\u4FE1\u548C\u9019\u7BB1\u5B50\u5C31\u7576\u662F\u7D66\u4F60\u7684\u991E\u884C\u79AE\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u9019\u5C01\u4FE1\u548C\u9019\u7BB1\u5B50\u5C31\u7576\u662F\u7D66\u4F60\u7684\u991E\u884C\u79AE\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u88E1\u9762\u7684\u4E94\u500B\u74F6\u5B50\u5206\u5225\u88DD\u8457\uFF1A"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u77F3\u5B50\u3001\u7CD6\u679C\u3001\u6BD2\u85E5\u3001\u81F4\u5E7B\u85E5\u8207\u5B89\u7720\u85E5"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u4EE5\u4E0B\u8B0E\u984C\u662F\u5167\u5BB9\u7269\u7684\u6392\u5E8F"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u74F6\u5B50\u7531\u5DE6\u81F3\u53F3\uFF0C\u5206\u5225\u4EE5\u4E00\u5230\u4E94\u6A19\u793A"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u89E3\u4E0D\u958B\uFF0C\u6211\u9858\u8207\u4F60\u966A\u846C..."
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u4F46\u8070\u660E\u7684\u4F60\u4E00\u5B9A\u80FD\u89E3\u958B\u7684\u5427\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u5230\u6642\u8A18\u5F97\u5E36\u8457\u6211\u7684\u7CD6\u53BB\u904D\u5404\u5730\uFF0C"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u800C\u6211\u5C07\u6C38\u9060\u5728\u834A\u68D8\u7684\u82E6\u75DB\u4E2D\u795D\u798F\u8457\u4F60\u2026"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u81EA\u7531\u7684\u98DB\u9CE5\u7A7F\u8D8A\u834A\u68D8\u53E2\u6797\u5C0B\u627E\u751C\u7F8E\u679C\u5BE6\uFF0C"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u8ACB\u5C0F\u5FC3\u4E0D\u8981\u88AB\u5C16\u523A\u4E0A\u7684\u6BD2\u5283\u7834\u5DE6\u908A\u7684\u7FC5\u8180\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u6C38\u7720\u8207\u77ED\u66AB\u6C89\u7761\uFF0C\u4EE5\u5C0F\u5973\u5B69\u9EDE\u71C3\u706B\u67F4\u70BA\u4E2D\u9EDE\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u5E7B\u5883\u548C\u5922\u9109\uFF0C\u9694\u8457\u5C71\u5CA9\u9059\u9059\u76F8\u671B
+      \u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u5E7B\u5883\u548C\u5922\u9109\uFF0C\u9694\u8457\u5C71\u5CA9\u9059\u9059\u76F8\u671B
+      \u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u8981\u6253\u958B\u54EA\u4E00\u500B\u74F6\u5B50\uFF1F"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 4
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 1
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 2
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 3
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 4
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 5
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 1
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 7
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: End
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 2
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Value: 2
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 7
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: End
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 3
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Value: 3
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 7
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: End
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 4
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Value: 4
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 7
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: End
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 5
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Value: 5
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: End
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
+    Value: 1
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0

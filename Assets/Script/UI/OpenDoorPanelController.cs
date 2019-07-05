@@ -12,15 +12,21 @@ public class OpenDoorPanelController : PanelController
 {
     public enum QuesState { 左, 右 }
     public QuesState quesState = QuesState.右;
+    public Sprite 選項底_選擇;
+    public Sprite 選項底_未選;
 
     private string sceneName;
     private GameStateManager.SpawnPoint newScenePos;
     private bool isInteract = false;
+    private Image 選項L;
+    private Image 選項R;
 
     void Start()
     {
         transform.GetChild(1).GetChild(0).GetComponent<Text>().fontSize = 20;
         transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 25;
+        選項L = transform.GetChild(1).GetComponent<Image>();
+        選項R = transform.GetChild(2).GetComponent<Image>();
     }
 
     void Update()
@@ -41,6 +47,8 @@ public class OpenDoorPanelController : PanelController
                 //記得新增UI變化
                 transform.GetChild(1).GetChild(0).GetComponent<Text>().fontSize = 20;
                 transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 25;
+                選項L.sprite = 選項底_未選;
+                選項R.sprite = 選項底_選擇;
 
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow) && quesState == QuesState.右)
@@ -48,6 +56,8 @@ public class OpenDoorPanelController : PanelController
                 quesState = QuesState.左;
                 transform.GetChild(1).GetChild(0).GetComponent<Text>().fontSize = 25;
                 transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 20;
+                選項R.sprite = 選項底_未選;
+                選項L.sprite = 選項底_選擇;
             }
         }
     }
