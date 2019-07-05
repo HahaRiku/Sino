@@ -28,10 +28,6 @@ public class NPC : MonoBehaviour {
 
     private GameObject player;
 
-    public Sprite 一個點;
-    public Sprite 兩個點;
-    public Sprite 三個點;
-
     public Sprite 鎖打開;
     public Sprite 鎖鎖起來;
 
@@ -43,6 +39,7 @@ public class NPC : MonoBehaviour {
     private bool doorCannotOpenAniDone = true;
     private bool stopDotDotDotAni = true;
     private float 白點亮度差距 = 0.8f;
+    private Animator dotAni;
 
     public float Radius = 1.5f;
     public float HintRaius = 2.0f;
@@ -62,6 +59,7 @@ public class NPC : MonoBehaviour {
         }
         else if (type == NpcType.talk) {
             點點點SP = gameObject.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+            dotAni = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
         }
         else if (type == NpcType.door) {
             鎖SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -84,8 +82,9 @@ public class NPC : MonoBehaviour {
                 if (CheckIsPlayerInRange(Radius)) {
                     state = NpcState.可以講話;
                     if (type == NpcType.talk) {
-                        stopDotDotDotAni = false;
-                        StartCoroutine(DotDotDot());
+                        //stopDotDotDotAni = false;
+                        //StartCoroutine(DotDotDot());
+                        dotAni.SetBool("Dot", true);
                     }
                     else if (type == NpcType.item) {
                         float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius - Mathf.Abs(player.transform.position.x - transform.position.x))    //various part
@@ -107,7 +106,8 @@ public class NPC : MonoBehaviour {
                         new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, 0);
                 }
                 else if (type == NpcType.talk)
-                    stopDotDotDotAni = true;
+                    //stopDotDotDotAni = true;
+                    dotAni.SetBool("Dot", false);
                 else if (type == NpcType.door)
                     鎖SP.sprite = null;
             }
@@ -122,8 +122,8 @@ public class NPC : MonoBehaviour {
                         面板定位();
                         UnpickablePanel.SetInfo(不可撿的物品的敘述);
                         UnpickablePanel.SetVisible();
-                        if (是否不撿完變可撿)
-                            itemType = ItemType.可撿;
+                        /*if (是否不撿完變可撿)
+                            itemType = ItemType.可撿;*/
                         return;
                     }
                     SystemVariables.lockMoving = true;
@@ -170,8 +170,8 @@ public class NPC : MonoBehaviour {
                 if (type == NpcType.item && itemType == ItemType.可撿 && !PickablePanel.IsVisible())
                 {
                     StartCoroutine(WaitAndResumeTalk());
-                    if (是否撿完變不可撿)
-                        itemType = ItemType.不可撿;
+                    /*if (是否撿完變不可撿)
+                        itemType = ItemType.不可撿;*/
                 }
                 else if (type == NpcType.item && itemType == ItemType.不可撿)
                 {
@@ -181,8 +181,8 @@ public class NPC : MonoBehaviour {
                     string temp = string.Concat(SystemVariables.Scene, "_", gameObject.name);
                     SystemVariables.AddIntVariable(temp, 1);
                     StartCoroutine(WaitAndResumeTalk());
-                    if (是否不撿完變可撿)
-                        itemType = ItemType.可撿;
+                    /*if (是否不撿完變可撿)
+                        itemType = ItemType.可撿;*/
                 }
                 else if (type == NpcType.talk && GetComponent<StoryManager>().IsStoryFinish())
                 {
@@ -295,7 +295,7 @@ public class NPC : MonoBehaviour {
         doorCannotOpenAniDone = true;
     }
 
-    private IEnumerator DotDotDot() {
+    /*private IEnumerator DotDotDot() {
         while (true) {
             if (stopDotDotDotAni) {
                 break;
@@ -319,7 +319,7 @@ public class NPC : MonoBehaviour {
             
         }
         點點點SP.sprite = null;
-    }
+    }*/
 
     void OnDrawGizmos()
     {

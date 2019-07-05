@@ -411,11 +411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08cc6cff9abae93479bf3be6df239ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quesState: 1
-  "\u9078\u9805\u5E95_\u9078\u64C7": {fileID: 21300000, guid: f4fb09f1c316a11478251bcf506b45a7,
-    type: 3}
-  "\u9078\u9805\u5E95_\u672A\u9078": {fileID: 21300000, guid: 6953ddc5466df2a44ae2d62fe839c178,
-    type: 3}
 --- !u!114 &157930632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114812b92787da14487d92e7a2729af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quesState: 1
+  "\u9078\u9805\u5E95_\u9078\u64C7": {fileID: 0}
+  "\u9078\u9805\u5E95_\u672A\u9078": {fileID: 0}
 --- !u!225 &157930633
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -591,11 +589,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 111077964527879834, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
-        type: 2}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4823484619387266, guid: e4eb6476182dd7c4aa7a63d8bc0fde34, type: 2}
       propertyPath: m_LocalPosition.x
       value: 5.96
@@ -627,41 +620,6 @@ Prefab:
     - target: {fileID: 4823484619387266, guid: e4eb6476182dd7c4aa7a63d8bc0fde34, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 212845739145871002, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 212845739145871002, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212845739145871002, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212845739145871002, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 111077964527879834, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
-        type: 2}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 7400000, guid: b08d3a4187b84634487259902fd4e263, type: 2}
-    - target: {fileID: 111077964527879834, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
-        type: 2}
-      propertyPath: m_Animations.Array.data[0]
-      value: 
-      objectReference: {fileID: 7400000, guid: b08d3a4187b84634487259902fd4e263, type: 2}
-    - target: {fileID: 111077964527879834, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
-        type: 2}
-      propertyPath: m_Animations.Array.data[1]
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4eb6476182dd7c4aa7a63d8bc0fde34, type: 2}
@@ -4493,7 +4451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d188f2c0923f1ee4d995314fde3bf4db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quesState: 1
 --- !u!225 &1936642843
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4549,6 +4506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b775d925c6c9a243886b8fc09e83498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quesState: 1
 --- !u!1 &2005201392
 GameObject:
   m_ObjectHideFlags: 0

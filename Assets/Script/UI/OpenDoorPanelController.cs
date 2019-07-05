@@ -41,13 +41,13 @@ public class OpenDoorPanelController : PanelController
                 //記得新增UI變化
                 transform.GetChild(1).GetChild(0).GetComponent<Text>().fontSize = 20;
                 transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 25;
+
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow) && quesState == QuesState.右)
             {
                 quesState = QuesState.左;
                 transform.GetChild(1).GetChild(0).GetComponent<Text>().fontSize = 25;
                 transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 20;
-                //記得新增UI變化
             }
         }
     }

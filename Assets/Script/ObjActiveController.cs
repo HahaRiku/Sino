@@ -41,7 +41,7 @@ public class ObjActiveController : MonoBehaviour {
                     }
                 }
                 else if (e.要使用哪種判斷 == Condition.道具是否在背包) {
-                    if (BagSystem.IsItemInBag(e.道具名稱)) {
+                    if (BagSystem.IsItemInBag(e.道具名稱) == e.道具是否在背包) {
                         e.要設定Active的物件.SetActive(e.Active的值);
                         檢查的序列.Remove(e);
                         return;

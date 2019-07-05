@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4702158583659060}
   - component: {fileID: 212318175896827470}
-  - component: {fileID: 111077964527879834}
+  - component: {fileID: 95996502613524756}
   m_Layer: 8
   m_Name: "\u9EDE\u9EDE\u9EDE\u7684\u5E95"
   m_TagString: Untagged
@@ -103,21 +103,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &111077964527879834
-Animation:
+--- !u!95 &95996502613524756
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356875952114454}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b08d3a4187b84634487259902fd4e263, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: b08d3a4187b84634487259902fd4e263, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 780cfa662070bd249abfd15dc818bade, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114416608423154050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,14 +134,17 @@ MonoBehaviour:
   state: 0
   type: 1
   itemType: 0
+  doorType: 0
   "\u51B7\u537B\u6642\u9593": 2
   "\u53EF\u64BF\u7684\u7269\u54C1\u7684\u540D\u5B57": 
   "\u4E0D\u53EF\u64BF\u7684\u7269\u54C1\u7684\u6558\u8FF0": 
+  "\u662F\u5426\u64BF\u5B8C\u8B8A\u4E0D\u53EF\u64BF": 0
+  "\u662F\u5426\u4E0D\u64BF\u5B8C\u8B8A\u53EF\u64BF": 0
   "\u9580\u7684\u540D\u5B57": 
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
-  "\u9580\u4E00\u958B\u59CB\u6709\u6C92\u6709\u9396": 0
-  "\u9580\u8981\u50B3\u9001\u5230\u7684\u5834\u666F\u540D\u7A31": 
-  player: {fileID: 0}
+  "\u9580\u8981\u50B3\u9001\u5230\u7684\u5834\u666F": {fileID: 0}
+  "\u662F\u5426\u6709\u50B3\u9001\u529F\u80FD": 1
+  "\u50B3\u9001\u5730\u9EDE": 0
   "\u4E00\u500B\u9EDE": {fileID: 21300000, guid: 35d939e7835acb54581070f427952873,
     type: 3}
   "\u5169\u500B\u9EDE": {fileID: 21300000, guid: 9b30f37cd5b9d4b4a8a7b934fe8b5623,
@@ -148,8 +153,6 @@ MonoBehaviour:
     type: 3}
   "\u9396\u6253\u958B": {fileID: 0}
   "\u9396\u9396\u8D77\u4F86": {fileID: 0}
-  ItemQuestion: {fileID: 0}
-  DoorQuestion: {fileID: 0}
   Radius: 1.5
   HintRaius: 2
   Offset: 0

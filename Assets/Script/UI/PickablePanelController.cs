@@ -74,16 +74,9 @@ public class PickablePanelController : PanelController
         Invoke("StartInteract", 0.1f);
     }
 
-    void StartInteract(string input) //根據輸入得知物品
+    void StartInteract() //根據輸入得知物品
     {
         isInteract = true;
-        itemName = input;
-        quesState = QuesState.右;
-        transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 20;
-        transform.GetChild(3).GetChild(0).GetComponent<Text>().fontSize = 25;
-
-        SetVisible();
-        Invoke("StartInteract", 0.1f);
     }
 
     public void SetInfo(string name, string desc, Sprite img = null)

@@ -46,10 +46,6 @@ public class NPCEditor : Editor {
             EditorGUILayout.PropertyField(sO.FindProperty("冷卻時間"));
             EditorGUILayout.PropertyField(sO.FindProperty("Radius"));
             EditorGUILayout.PropertyField(sO.FindProperty("Offset"));
-            EditorGUILayout.Space();
-            EditorGUILayout.PropertyField(sO.FindProperty("一個點"));
-            EditorGUILayout.PropertyField(sO.FindProperty("兩個點"));
-            EditorGUILayout.PropertyField(sO.FindProperty("三個點"));
         }
         if (sO.FindProperty("type").enumValueIndex == (int)NPC.NpcType.door)
         {
