@@ -27,8 +27,6 @@ public class NPCEditor : Editor {
             EditorGUILayout.PropertyField(sO.FindProperty("HintRaius"));
             EditorGUILayout.PropertyField(sO.FindProperty("Offset"));
             EditorGUILayout.Space();
-            EditorGUILayout.PropertyField(sO.FindProperty("淺白點"));
-            EditorGUILayout.PropertyField(sO.FindProperty("白點"));
         }
         if (sO.FindProperty("type").enumValueIndex == (int)NPC.NpcType.talk)
         {

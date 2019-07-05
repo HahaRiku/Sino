@@ -41,7 +41,7 @@ public class CharacterControl : MonoBehaviour {
 
     void Update () {
         //if(CharWithItem.actEnable){
-        if (!controlLock) {
+        if (!SystemVariables.lockMoving) {
             if (!(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))) {				//左右鍵非同時按住
                 /*
 				if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)) {	//開始走路
