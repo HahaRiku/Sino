@@ -30,7 +30,8 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    SceneName: 
+    Scene: {fileID: 0}
+    SpawnPoint: 0
     Options:
     - Content: 
       JumpTo: 

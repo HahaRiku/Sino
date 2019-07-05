@@ -41,7 +41,7 @@ public class StoryData : ScriptableObject
         public int Value;
 
         //轉換場景
-        public string SceneName;
+        public Object Scene;
         public GameStateManager.SpawnPoint SpawnPoint;
 
         //選項
