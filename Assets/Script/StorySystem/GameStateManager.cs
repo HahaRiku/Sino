@@ -33,9 +33,9 @@ public class GameStateManager : Singleton<GameStateManager> {
 
     void Update()
     {
-        if(Player != null && Player.GetComponent<CharacterControl>() != null)
+        if(Player != null && Player.GetComponent<PlayerController>() != null)
         {
-            Player.GetComponent<CharacterControl>().SetIsPlayerCanControl(!PlayerControlLock);
+            Player.GetComponent<PlayerController>().SetIsPlayerCanControl(!PlayerControlLock);
             SystemVariables.lockMoving = PlayerControlLock;
         }
     }
@@ -80,14 +80,12 @@ public class GameStateManager : Singleton<GameStateManager> {
     public void 黑幕轉場(string sceneName, SpawnPoint point)
     {
         StartEvent();
-        Player.GetComponent<CharacterControl>().SetIsPlayerCanControl(false);
         StartCoroutine(Loading(sceneName, transPos[(int)point]));
     }
 
     public void 黑幕轉場(string sceneName, Vector3 point)
     {
         StartEvent();
-        Player.GetComponent<CharacterControl>().SetIsPlayerCanControl(false);
         StartCoroutine(Loading(sceneName, point));
     }
 

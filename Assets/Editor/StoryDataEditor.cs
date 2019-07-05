@@ -75,10 +75,6 @@ public class StoryDataEditor:Editor
             arect.width = input_w;
             arect.height = 60;
             serElem.FindPropertyRelative("Text").stringValue = EditorGUI.TextArea(arect, serElem.FindPropertyRelative("Text").stringValue);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 1)
         {
@@ -93,10 +89,13 @@ public class StoryDataEditor:Editor
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("OriPositionX"), GUIContent.none);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
+            arect.y += arect.height + spacing;
+            arect.width = label_w;
+            arect.x -= arect.width;
+            EditorGUI.LabelField(arect, "花費時間: ", fontStyle);
+            arect.x += arect.width;
+            arect.width = input_w;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Duration"), GUIContent.none);
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 2)
         {
@@ -133,10 +132,6 @@ public class StoryDataEditor:Editor
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("JustJump"), GUIContent.none);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 3)
         {
@@ -151,10 +146,6 @@ public class StoryDataEditor:Editor
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Value"), GUIContent.none);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 4)
         {
@@ -175,11 +166,17 @@ public class StoryDataEditor:Editor
                 arect.y += arect.height + spacing;
                 arect.width = label_w;
                 arect.x -= arect.width;
-            }           
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
+            }
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("+"))
+            {
+                AddOption(index, optProp.arraySize);
+            }
+            if(GUILayout.Button("-"))
+            {
+                DeleteOption(index, optProp.arraySize);
+            }
+            EditorGUILayout.EndHorizontal();
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 5)
         {
@@ -194,10 +191,6 @@ public class StoryDataEditor:Editor
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Emotion"), GUIContent.none);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 6)
         {
@@ -205,10 +198,6 @@ public class StoryDataEditor:Editor
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Label"), GUIContent.none);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 7)
         {
@@ -216,10 +205,6 @@ public class StoryDataEditor:Editor
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("LabelJump"), GUIContent.none);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 8)
         {
@@ -241,10 +226,6 @@ public class StoryDataEditor:Editor
                 arect.width = label_w;
                 arect.x -= arect.width;
             }
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 9)
         {
@@ -252,10 +233,6 @@ public class StoryDataEditor:Editor
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WaitTime"), GUIContent.none);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 10)
         {
@@ -270,10 +247,6 @@ public class StoryDataEditor:Editor
             arect.x += arect.width;
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("SpawnPoint"), GUIContent.none);
-            arect.y += spacing;
-            arect.x = rect.x;
-            arect.height = EditorGUIUtility.singleLineHeight / 5;
-            EditorGUI.LabelField(arect, "");
         }
         EditorGUI.indentLevel--;
     }
@@ -422,7 +395,18 @@ public class StoryDataEditor:Editor
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
     }
-    
+
+    void AddOption(int stateListIndex, int arrayNewIndex)
+    {
+        var element = serializedObject.FindProperty("StateList").GetArrayElementAtIndex(stateListIndex);
+        element.FindPropertyRelative("Options").InsertArrayElementAtIndex(arrayNewIndex);
+    }
+    void DeleteOption(int stateListIndex, int arrayNewIndex)
+    {
+        var element = serializedObject.FindProperty("StateList").GetArrayElementAtIndex(stateListIndex);
+        element.FindPropertyRelative("Options").DeleteArrayElementAtIndex(arrayNewIndex);
+    }
+
     public override void OnInspectorGUI()
     {
         serializedObject.Update();

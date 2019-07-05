@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DragonBones;
 
-public class CharacterControl : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
     [System.Serializable]
     public struct CharacterObjectAndName {
         public string name;
@@ -19,7 +20,7 @@ public class CharacterControl : MonoBehaviour {
 		walk_with_candle_right
 	};
 	private bool IsWalk_ani;
-    private DragonBones.Animation ani;
+    private DragonBones.Armature arma;
 
     private bool controlLock = false;
     private int running = 0;
@@ -32,16 +33,8 @@ public class CharacterControl : MonoBehaviour {
 	public float speed;
     public CharacterObjectAndName[] otherCharactersObjects;
 
-    public bool IsFinished()
-    {
-        if (running == 0)
-            return true;
-        else
-            return false;
-    }
-
     void Start() {
-        ani = GetComponent<UnityArmatureComponent>().armature.animation;
+        arma = GetComponent<UnityArmatureComponent>().armature;
         IsWalk_ani = false;
 		IsHoldCandle_ani = false;
 		aniState = AnimationState.stand;
@@ -53,16 +46,10 @@ public class CharacterControl : MonoBehaviour {
                 if (Input.GetKey(KeyCode.RightArrow)) {		//持續向右
 					AnimationController("continuing_right");
                     transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
-                    if (transform.localScale.x > 0) {
-                        transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
-                    }
                 }
                 if (Input.GetKey(KeyCode.LeftArrow)) {		//持續向左
                     AnimationController("continuing_left");
                     transform.localPosition = new Vector3(transform.localPosition.x - speed, transform.localPosition.y, transform.localPosition.z);
-                    if (transform.localScale.x < 0) {
-                        transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
-                    }
                 }
                 if (!(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))) {		//按鍵放開(停下)
                     AnimationController("stand_or_stop");
@@ -75,40 +62,6 @@ public class CharacterControl : MonoBehaviour {
         else
             AnimationController("stand_or_stop");
     }
-
-    public void AutoWalk(string name, float x) {
-        running++;
-        StartCoroutine(WalkLerp(name, x));
-    }
-
-    IEnumerator WalkLerp(string name, float x) {
-        GameObject tempGameObject= null;
-        print(name);
-        print(x);
-        if (name != "席諾") {
-            for (int i = 0; i < otherCharactersObjects.Length; i++) {
-                if (name == otherCharactersObjects[i].name) {
-                    tempGameObject = otherCharactersObjects[i].obj;
-                    break;
-                }
-            }
-        }
-        else {
-            tempGameObject = gameObject;
-        }
-        ani.Play("walk");
-        if (tempGameObject != null) {
-            for (float i = transform.position.x; i < x; i += speed) {
-                tempGameObject.transform.localPosition = new Vector3(i, tempGameObject.transform.position.y, tempGameObject.transform.position.z);
-                yield return null;
-            }
-        }
-        else {
-            print("walk name error");
-        }
-        ani.Play("stand");
-        running--;
-    }
 	
 	
 	public void AnimationController(string command){
@@ -120,42 +73,44 @@ public class CharacterControl : MonoBehaviour {
 				if(aniState == AnimationState.stand || aniState == AnimationState.walk){	//normal
 					IsWalk_ani = false;
 					aniState = AnimationState.stand;
-					ani.Play("stand");
+                    arma.animation.Play("stand");
 				}else if (aniState == AnimationState.walk_with_candle_left || aniState == AnimationState.stand_with_candle_left){	//candle_left
 					IsWalk_ani = false;
 					aniState = AnimationState.stand_with_candle_left;
-					ani.Play("stand_with_candle_left");
+                    arma.animation.Play("stand_with_candle_left");
 				}else if (aniState == AnimationState.walk_with_candle_right || aniState == AnimationState.stand_with_candle_right){	//candle_right
 					IsWalk_ani = false;
 					aniState = AnimationState.stand_with_candle_right;
-					ani.Play("stand_with_candle_right");
+                    arma.animation.Play("stand_with_candle_right");
 				}
 				break;
 				
 			case "continuing_right":
 				if (!IsWalk_ani) {
 					IsWalk_ani = true;
-					if(IsHoldCandle_ani){
+                    arma.flipX = true;
+                    if (IsHoldCandle_ani){
 						aniState = AnimationState.walk_with_candle_right;
-						ani.Play("walk_with_candle_right");
+                        arma.animation.Play("walk_with_candle_right");
 					}
 					else{
 						aniState = AnimationState.walk;
-						ani.Play("walk");
+                        arma.animation.Play("walk");
 					}
 				}
 				break;
 				
 			case "continuing_left":
 				if (!IsWalk_ani) {
-					IsWalk_ani = true;
+                    arma.flipX = true;
+                    IsWalk_ani = true;
 					if(IsHoldCandle_ani){
 						aniState = AnimationState.walk_with_candle_left;
-						ani.Play("walk_with_candle_left");
+                        arma.animation.Play("walk_with_candle_left");
 					}
 					else{
 						aniState = AnimationState.walk;
-						ani.Play("walk");
+                        arma.animation.Play("walk");
 					}
 				}
 				break;
