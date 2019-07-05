@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/************************************************
+ * 
+ * 功能：
+ * 顯示不可撿物品面板，以及偵測按鍵即關閉。
+ * 
+ * **********************************************/
 public class UnPickablePanelController : PanelController
 {
-    bool isInteract = false;
+    private bool isInteract = false;
     void Update()
     {
         if (isInteract)

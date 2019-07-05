@@ -7,19 +7,24 @@ public class NPC : MonoBehaviour {
     public enum NpcState { 範圍外, 可以講話, 對話中, 不能講話, 講完話冷卻中 }
     public enum NpcType { item, talk, door }
     public enum ItemType { 可撿, 不可撿 }
+    public enum DoorType { 開啟, 關閉 }
 
     public NpcState state = NpcState.範圍外;
     public NpcType type;
     public ItemType itemType;
+    public DoorType doorType;
 
     public float 冷卻時間 = 2f;
     public string 可撿的物品的名字;
     [TextArea] public string 不可撿的物品的敘述;
+    public bool 是否撿完變不可撿 = false;
+    public bool 是否不撿完變可撿 = false;
 
     public string 門的名字;
     public string 需要的鑰匙名字;
-    public bool 門一開始有沒有鎖;   //true: 有鎖, false: 沒鎖
-    public string 門要傳送到的場景名稱;
+    public Object 門要傳送到的場景;
+    public bool 是否有傳送功能 = true;
+    public GameStateManager.SpawnPoint 傳送地點;
 
     private GameObject player;
 
@@ -29,9 +34,6 @@ public class NPC : MonoBehaviour {
 
     public Sprite 鎖打開;
     public Sprite 鎖鎖起來;
-
-    public ItemQuestion ItemQuestion;
-    public DoorQuestion DoorQuestion;
 
     private Transform 白點TF;
     private SpriteRenderer 白點SP;
@@ -65,8 +67,6 @@ public class NPC : MonoBehaviour {
             鎖SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
         }
         player = GameStateManager.Instance.Player;
-        ItemQuestion = FindObjectOfType<ItemQuestion>();
-        DoorQuestion = FindObjectOfType<DoorQuestion>();
         PickablePanel = FindObjectOfType<PickablePanelController>();
         UnpickablePanel = FindObjectOfType<UnPickablePanelController>();
         OpenDoorPanel = FindObjectOfType<OpenDoorPanelController>();
@@ -96,8 +96,8 @@ public class NPC : MonoBehaviour {
                     else if (type == NpcType.door && SystemVariables.IsDoorStatusExisted(門的名字))
                         鎖SP.sprite = SystemVariables.doorLockOrNot[門的名字] ? 鎖鎖起來 : 鎖打開;
                     else {
-                        SystemVariables.AddDoorStatus(門的名字, 門一開始有沒有鎖);
-                        鎖SP.sprite = 門一開始有沒有鎖 ? 鎖鎖起來 : 鎖打開;
+                        SystemVariables.AddDoorStatus(門的名字, doorType == DoorType.開啟 ? false : true);
+                        鎖SP.sprite = doorType == DoorType.開啟 ? 鎖打開 : 鎖鎖起來;
                     }
                 }
                 else if (type == NpcType.item) {
@@ -122,12 +122,14 @@ public class NPC : MonoBehaviour {
                         面板定位();
                         UnpickablePanel.SetInfo(不可撿的物品的敘述);
                         UnpickablePanel.SetVisible();
+                        if (是否不撿完變可撿)
+                            itemType = ItemType.可撿;
                         return;
                     }
                     SystemVariables.lockMoving = true;
                     if (type == NpcType.item) {
                         PickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字));
-                        ItemQuestion.ShowQuestion(可撿的物品的名字);
+                        PickablePanel.ShowQuestion(可撿的物品的名字);
                     }
                     else if (type == NpcType.talk) {
                         stopDotDotDotAni = true;
@@ -142,6 +144,7 @@ public class NPC : MonoBehaviour {
                                 鎖SP.sprite = 鎖打開;
                                 SystemVariables.AddDoorStatus(門的名字, false);
                                 doorUnlockingAniDone = true;
+                                doorType = DoorType.開啟;
                             }
                             else {
                                 //左右晃動的動畫
@@ -149,9 +152,8 @@ public class NPC : MonoBehaviour {
                                 StartCoroutine(CannotOpenDoorAni());
                             }
                         }
-                        else {  //unlock
-                            DoorQuestion.ShowQuestion(門要傳送到的場景名稱);
-                        }
+                        else if(是否有傳送功能) //unlock
+                            OpenDoorPanel.ShowQuestion(門要傳送到的場景.name, 傳送地點);
                     }
                 }
                 else {
@@ -168,6 +170,8 @@ public class NPC : MonoBehaviour {
                 if (type == NpcType.item && itemType == ItemType.可撿 && !PickablePanel.IsVisible())
                 {
                     StartCoroutine(WaitAndResumeTalk());
+                    if (是否撿完變不可撿)
+                        itemType = ItemType.不可撿;
                 }
                 else if (type == NpcType.item && itemType == ItemType.不可撿)
                 {
@@ -177,6 +181,8 @@ public class NPC : MonoBehaviour {
                     string temp = string.Concat(SystemVariables.Scene, "_", gameObject.name);
                     SystemVariables.AddIntVariable(temp, 1);
                     StartCoroutine(WaitAndResumeTalk());
+                    if (是否不撿完變可撿)
+                        itemType = ItemType.可撿;
                 }
                 else if (type == NpcType.talk && GetComponent<StoryManager>().IsStoryFinish())
                 {
@@ -339,7 +345,7 @@ public class NPC : MonoBehaviour {
         }
         else if (type == NpcType.door)
         {
-            if(門一開始有沒有鎖)
+            if(doorType == DoorType.關閉)
                 Gizmos.color = new Color32(0xE3, 0x00, 0x00, 0x4A);
             else
                 Gizmos.color = new Color32(0x70, 0xE5, 0x00, 0x4A);
