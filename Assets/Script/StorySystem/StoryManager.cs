@@ -15,7 +15,7 @@ public class StoryManager : MonoBehaviour
     public StoryData 劇本;
     List<StoryData.StoryState> stories;
     StoryReader reader;
-    MovementControl moveContol;
+    CharacterControl moveContol;
     OptionControl optionControl;
     OuterScriptControl scriptControl;
 
@@ -24,9 +24,8 @@ public class StoryManager : MonoBehaviour
 
     bool isStoryFinish = false;
     bool PauseLock = true;
-    bool AutoMode = false;
 
-    //TwoF_GameManager GM;
+    GameStateManager GM;
     ClickableRegion clickableRegion;
     public bool 一開始就執行;
 
@@ -43,10 +42,8 @@ public class StoryManager : MonoBehaviour
 
     public void BeginStory(float waitTime = 0)
     {  
-        /*if (GM == null)
-            GM = GameObject.Find("GM").GetComponent<TwoF_GameManager>();
         GM.StartEvent();
-        GM.SetStoryManager(this);*/
+        GM.SetStoryManager(this);
         isStoryFinish = false;
         PauseLock = true;
         StartCoroutine(WaitAndWork(waitTime, "ExecuteState"));
@@ -64,10 +61,8 @@ public class StoryManager : MonoBehaviour
 
     public void StopStory()
     {
-        /*if (GM == null)
-            GM = GameObject.Find("GM").GetComponent<TwoF_GameManager>();
         GM.FinEvent();
-        GM.SetStoryManager(null);*/
+        GM.SetStoryManager(null);
         isStoryFinish = true;
         PauseLock = true;
         nowIndex = listCount;
@@ -95,15 +90,17 @@ public class StoryManager : MonoBehaviour
         if (GetComponent<OptionControl>() == null)
             gameObject.AddComponent<OptionControl>();
         reader = GetComponent<StoryReader>();
-        moveContol = GetComponent<MovementControl>();
+        moveContol = FindObjectOfType<CharacterControl>();
         optionControl = GetComponent<OptionControl>();
         scriptControl = FindObjectOfType<OuterScriptControl>();
+        GM = GameStateManager.Instance;
         listCount = stories.Count;
         if (一開始就執行)
             BeginStory(0.5f);
     }
     private void Start()
     {
+        moveContol = GM.Player.GetComponent<CharacterControl>();
         clickableRegion = FindObjectOfType<ClickableRegion>();
     }
 
@@ -167,7 +164,7 @@ public class StoryManager : MonoBehaviour
         else if (stories[index].state類型 == StoryData.StoryState.type.人物移動)
         {
             reader.ClosePanel();
-            //moveContol.Move(stories[nowIndex].Character, stories[nowIndex].OriPositionX, stories[nowIndex].NewPositionX, stories[nowIndex].Duration);
+            moveContol.AutoWalk(stories[index].Character, stories[index].OriPositionX);
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.分支)
         {

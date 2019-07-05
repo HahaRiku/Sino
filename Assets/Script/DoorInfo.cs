@@ -12,7 +12,6 @@ public class DoorInfo : MonoBehaviour {
 	};
 	[HideInInspector]
 	public HighLightState HLE;
-	public Vector3 nextScenePos;// = new Vector3;
 	
 	//一單位選項字高=40
 	
@@ -20,7 +19,7 @@ public class DoorInfo : MonoBehaviour {
 	public string description;
 	public bool IsLocked;
 	public Object nextScene;	//抓場景，轉成名稱供LoadScene使用
-	public int nextScenePosLabel;
+	public GameStateManager.SpawnPoint nextScenePos;
 	
 	void Start(){
 		HLE = HighLightState.idle;
@@ -57,7 +56,7 @@ public class DoorInfo : MonoBehaviour {
 				ItemState();
 			}
 			else{							//(press Z && openable) -> [open] + [in]
-				Temp_GameManager.transPosSet(nextScenePosLabel);
+				GameStateManager.Instance.黑幕轉場(nextScene.name, nextScenePos);
 				SceneManager.LoadScene(nextScene.name);
 			}
 		}

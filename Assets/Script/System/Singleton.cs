@@ -51,11 +51,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
-    protected virtual void Awake()
-    {
-        m_Instance = this as T;
-    }
-
     private void OnApplicationQuit()
     {
         m_ShuttingDown = true;

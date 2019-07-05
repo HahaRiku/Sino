@@ -11,7 +11,6 @@ public class NPCEditor : Editor {
         EditorGUILayout.Space();
         EditorGUILayout.PropertyField(sO.FindProperty("type"), new GUIContent("NPC種類"));
         EditorGUILayout.Space();
-        EditorGUILayout.PropertyField(sO.FindProperty("player"));
         EditorGUILayout.PropertyField(sO.FindProperty("state"), new GUIContent("目前狀態"));
         
         if (sO.FindProperty("type").enumValueIndex == (int)NPC.NpcType.item)

@@ -21,7 +21,7 @@ public class NPC : MonoBehaviour {
     public bool 門一開始有沒有鎖;   //true: 有鎖, false: 沒鎖
     public string 門要傳送到的場景名稱;
 
-    public GameObject player;
+    private GameObject player;
 
     public Sprite 一個點;
     public Sprite 兩個點;
@@ -33,15 +33,10 @@ public class NPC : MonoBehaviour {
     public ItemQuestion ItemQuestion;
     public DoorQuestion DoorQuestion;
 
-    private Actor actor;
     private Transform 白點TF;
     private SpriteRenderer 白點SP;
     private SpriteRenderer 點點點SP;
     private SpriteRenderer 鎖SP;
-    private bool toggleWithPlayer= false;
-    private bool itemToggleLeft = false;
-    private bool itemToggleRight = false;
-    private bool waitItemQuesDone = false;
     private bool doorUnlockingAniDone = true;
     private bool doorCannotOpenAniDone = true;
     private bool stopDotDotDotAni = true;
@@ -56,7 +51,6 @@ public class NPC : MonoBehaviour {
     private OpenDoorPanelController OpenDoorPanel;
 
     void Start () {
-        actor = GameObject.Find("Actor").GetComponent<Actor>();
         if (type == NpcType.item) {
             白點TF = gameObject.transform.GetChild(0);
             白點TF.localScale = new Vector2(0, 0);
@@ -70,7 +64,7 @@ public class NPC : MonoBehaviour {
         else if (type == NpcType.door) {
             鎖SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
         }
-        player = actor.userCharacter;
+        player = GameStateManager.Instance.Player;
         ItemQuestion = FindObjectOfType<ItemQuestion>();
         DoorQuestion = FindObjectOfType<DoorQuestion>();
         PickablePanel = FindObjectOfType<PickablePanelController>();
@@ -204,7 +198,6 @@ public class NPC : MonoBehaviour {
     {
         Vector2 _range = new Vector2(transform.position.x + Offset - radius, transform.position.x + Offset + radius);
         float x = player.transform.position.x;
-        //Debug.Log(x+" "+ _range.x+" "+ _range.y);
         if (x < _range.x)
             return false;
         if (x > _range.y)
@@ -232,14 +225,13 @@ public class NPC : MonoBehaviour {
 
     void 面板定位()
     {
-        var canvasRT = UnpickablePanel.GetComponentInParent<Canvas>().GetComponent<RectTransform>();
         var screenPos = Camera.main.WorldToViewportPoint(transform.position);
         var targetRT = UnpickablePanel.transform.GetChild(0).GetComponent<RectTransform>();
         UnpickablePanel.GetComponent<RectTransform>().anchorMax = screenPos;
         UnpickablePanel.GetComponent<RectTransform>().anchorMin = screenPos;
 
         float 間距 = 3;
-
+        if(player)
         
 
         //在右上角

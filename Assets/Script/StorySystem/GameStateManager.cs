@@ -17,13 +17,17 @@ public class GameStateManager : Singleton<GameStateManager> {
     public StoryManager ActingStorySystem;
     bool PlayerControlLock = false;
 
-    void Start()
+    void Awake()
     {
         Application.targetFrameRate = 60;
+        Player = GameObject.Find("Sino");
         if (Player == null)
+        {
             Player = Instantiate(Resources.Load("Characters/Sino")) as GameObject;
+            Player.name = "Sino";
+        }
         DontDestroyOnLoad(Player);
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
@@ -49,6 +53,11 @@ public class GameStateManager : Singleton<GameStateManager> {
         PlayerControlLock = false;
     }
 
+    public void OpenBag()
+    {
+        PlayerControlLock = true;
+    }
+
     public void SetStoryManager(StoryManager s)
     {
         ActingStorySystem = s;
@@ -70,14 +79,14 @@ public class GameStateManager : Singleton<GameStateManager> {
     public void 黑幕轉場(string sceneName, SpawnPoint point)
     {
         StartEvent();
-        Player.GetComponent<CharacterControl>().SetPlayerStopMove();
+        Player.GetComponent<CharacterControl>().SetIsPlayerCanControl(false);
         StartCoroutine(Loading(sceneName, transPos[(int)point]));
     }
 
     public void 黑幕轉場(string sceneName, Vector3 point)
     {
         StartEvent();
-        Player.GetComponent<CharacterControl>().SetPlayerStopMove();
+        Player.GetComponent<CharacterControl>().SetIsPlayerCanControl(false);
         StartCoroutine(Loading(sceneName, point));
     }
 

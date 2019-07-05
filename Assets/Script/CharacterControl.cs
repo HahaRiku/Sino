@@ -20,39 +20,36 @@ public class CharacterControl : MonoBehaviour {
 	};
 	private bool IsWalk_ani;
     private DragonBones.Animation ani;
-	
-	//---------------接口---------------
-	
-	public bool IsHoldCandle_ani = false;		//預設為不拿蠟燭，須從外面腳本改動
+
+    private bool controlLock = false;
+    private int running = 0;
+
+    //---------------接口---------------
+
+    public bool IsHoldCandle_ani = false;		//預設為不拿蠟燭，須從外面腳本改動
 	public AnimationState aniState = AnimationState.stand;		//偵測玩家動作
     [Range(0.05f, 0.3f)]
 	public float speed;
     public CharacterObjectAndName[] otherCharactersObjects;
 
-    private bool controlLock = false;
-	
+    public bool IsFinished()
+    {
+        if (running == 0)
+            return true;
+        else
+            return false;
+    }
+
     void Start() {
         ani = GetComponent<UnityArmatureComponent>().armature.animation;
         IsWalk_ani = false;
 		IsHoldCandle_ani = false;
 		aniState = AnimationState.stand;
-		//speed = 0.1f;
     }
 
     void Update () {
-        //if(CharWithItem.actEnable){
-        if (!SystemVariables.lockMoving) {
+        if (!controlLock) {
             if (!(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))) {				//左右鍵非同時按住
-                /*
-				if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)) {	//開始走路
-                    IsWalk_ani = true;
-                    ani.Play("walk");
-                }
-				if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)) {	//開始走路
-                    IsWalk_ani = true;
-                    ani.Play("walk");
-                }*/
-				
                 if (Input.GetKey(KeyCode.RightArrow)) {		//持續向右
 					AnimationController("continuing_right");
                     transform.localPosition = new Vector3(transform.localPosition.x + speed, transform.localPosition.y, transform.localPosition.z);
@@ -73,13 +70,14 @@ public class CharacterControl : MonoBehaviour {
             }
             else {		//按鍵同時按住
                 AnimationController("stand_or_stop");
-				
             }
-            //}
         }
+        else
+            AnimationController("stand_or_stop");
     }
 
     public void AutoWalk(string name, float x) {
+        running++;
         StartCoroutine(WalkLerp(name, x));
     }
 
@@ -100,7 +98,6 @@ public class CharacterControl : MonoBehaviour {
         }
         ani.Play("walk");
         if (tempGameObject != null) {
-            print("123");
             for (float i = transform.position.x; i < x; i += speed) {
                 tempGameObject.transform.localPosition = new Vector3(i, tempGameObject.transform.position.y, tempGameObject.transform.position.z);
                 yield return null;
@@ -110,8 +107,7 @@ public class CharacterControl : MonoBehaviour {
             print("walk name error");
         }
         ani.Play("stand");
-        //dialogComp.SetLineDone(true);		//沒在用
-        //ani.enabled = false;
+        running--;
     }
 	
 	
@@ -171,9 +167,5 @@ public class CharacterControl : MonoBehaviour {
     public void SetIsPlayerCanControl(bool b)
     {
         controlLock = !b;
-    }
-    public void SetPlayerStopMove()
-    {
-        controlLock = true;
     }
 }
