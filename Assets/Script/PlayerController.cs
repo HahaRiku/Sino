@@ -26,12 +26,11 @@ public class PlayerController : MonoBehaviour
     private int running = 0;
 
     //---------------接口---------------
-
+    [HideInInspector]
     public bool IsHoldCandle_ani = false;		//預設為不拿蠟燭，須從外面腳本改動
 	public AnimationState aniState = AnimationState.stand;		//偵測玩家動作
     [Range(0.05f, 0.3f)]
 	public float speed;
-    public CharacterObjectAndName[] otherCharactersObjects;
 
     void Start() {
         arma = GetComponent<UnityArmatureComponent>().armature;
@@ -102,9 +101,9 @@ public class PlayerController : MonoBehaviour
 				
 			case "continuing_left":
 				if (!IsWalk_ani) {
-                    arma.flipX = true;
                     IsWalk_ani = true;
-					if(IsHoldCandle_ani){
+                    arma.flipX = false;
+                    if (IsHoldCandle_ani){
 						aniState = AnimationState.walk_with_candle_left;
                         arma.animation.Play("walk_with_candle_left");
 					}

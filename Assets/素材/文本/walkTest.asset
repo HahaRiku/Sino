@@ -31,6 +31,7 @@ MonoBehaviour:
     Variable: 
     Value: 0
     SceneName: 
+    SpawnPoint: 0
     Options: []
     CharName: 
     Emotion: 
@@ -58,6 +59,7 @@ MonoBehaviour:
     Variable: 
     Value: 0
     SceneName: 
+    SpawnPoint: 0
     Options: []
     CharName: 
     Emotion: 
@@ -85,6 +87,7 @@ MonoBehaviour:
     Variable: 
     Value: 0
     SceneName: 
+    SpawnPoint: 0
     Options: []
     CharName: 
     Emotion: 
@@ -93,7 +96,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
-  - "state\u985E\u578B": 0
+  - "state\u985E\u578B": 10
     "continue\u689D\u4EF6": 0
     Name: 
     Text: 
@@ -112,6 +115,7 @@ MonoBehaviour:
     Variable: 
     Value: 0
     SceneName: 
+    SpawnPoint: 0
     Options: []
     CharName: 
     Emotion: 
