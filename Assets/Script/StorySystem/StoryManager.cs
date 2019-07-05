@@ -15,7 +15,7 @@ public class StoryManager : MonoBehaviour
     public StoryData 劇本;
     List<StoryData.StoryState> stories;
     StoryReader reader;
-    CharacterControl moveContol;
+    ActionController moveContol;
     OptionControl optionControl;
     OuterScriptControl scriptControl;
 
@@ -85,12 +85,12 @@ public class StoryManager : MonoBehaviour
         }
         if (GetComponent<StoryReader>() == null)
             gameObject.AddComponent<StoryReader>();
-        if (GetComponent<MovementControl>() == null)
-            gameObject.AddComponent<MovementControl>();
+        if (GetComponent<ActionController>() == null)
+            gameObject.AddComponent<ActionController>();
         if (GetComponent<OptionControl>() == null)
             gameObject.AddComponent<OptionControl>();
         reader = GetComponent<StoryReader>();
-        moveContol = FindObjectOfType<CharacterControl>();
+        moveContol = GetComponent<ActionController>();
         optionControl = GetComponent<OptionControl>();
         scriptControl = FindObjectOfType<OuterScriptControl>();
         GM = GameStateManager.Instance;
@@ -100,7 +100,6 @@ public class StoryManager : MonoBehaviour
     }
     private void Start()
     {
-        moveContol = GM.Player.GetComponent<CharacterControl>();
         clickableRegion = FindObjectOfType<ClickableRegion>();
     }
 
@@ -164,7 +163,7 @@ public class StoryManager : MonoBehaviour
         else if (stories[index].state類型 == StoryData.StoryState.type.人物移動)
         {
             reader.ClosePanel();
-            moveContol.AutoWalk(stories[index].Character, stories[index].OriPositionX);
+            moveContol.Move(stories[index].Character, stories[index].NewPositionX, stories[index].Duration);
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.分支)
         {
