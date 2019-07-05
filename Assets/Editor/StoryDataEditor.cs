@@ -218,7 +218,7 @@ public class StoryDataEditor:Editor
             EditorGUI.LabelField(arect, "腳本: ", fontStyle);
             arect.x += arect.width;
             arect.xMax = rect.xMax - 20;
-            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Character"), GUIContent.none);
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Class"), GUIContent.none);
             arect.y += arect.height + spacing;
             arect.width = label_w;
             arect.x -= arect.width;
