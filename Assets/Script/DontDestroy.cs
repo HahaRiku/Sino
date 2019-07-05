@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroy : MonoBehaviour {
+public class DontDestroy : Singleton<DontDestroy> {
 
     void Awake() {
         DontDestroyOnLoad(this.gameObject);
