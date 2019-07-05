@@ -492,6 +492,34 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+  - "state\u985E\u578B": 10
+    "continue\u689D\u4EF6": 2
+    Name: "\u5C0F\u5B69"
+    Text: "\u597D\u54E6\u5927\u934B\u934B\uFF0C\u6211\u5728\u9019\u88CF\u7B49\u4F60\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 102900000, guid: f991c02e33a9c3044ab3c7038a507a07, type: 3}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: "\u5206\u652F1\u7D50\u675F"
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
   - "state\u985E\u578B": 7
     "continue\u689D\u4EF6": 2
     Name: "\u5C0F\u5B69"
@@ -595,7 +623,7 @@ MonoBehaviour:
     Variable: 
     Value: 0
     Scene: {fileID: 102900000, guid: e9a48c663a6eeec439efd300c631bdea, type: 3}
-    SpawnPoint: 0
+    SpawnPoint: 1
     Options:
     - Content: 
       JumpTo: 

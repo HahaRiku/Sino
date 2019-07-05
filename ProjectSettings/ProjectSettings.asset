@@ -587,9 +587,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 5ee9cf51-7008-473b-8dc0-e0728d720291
+  cloudProjectId: 0b0efd08-e970-41cb-b51c-04b5224ee9ad
   projectName: Sino
-  organizationId: iamriku
+  organizationId: kopa860506
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

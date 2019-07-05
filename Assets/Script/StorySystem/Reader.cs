@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
@@ -119,3 +120,4 @@ public static class Reader
         return 0;
     }
 }
+#endif

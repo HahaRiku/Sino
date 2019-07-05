@@ -252,7 +252,7 @@ public class NPC : MonoBehaviour {
         //在右上角
         targetRT.pivot = Vector2.zero;
         targetRT.anchoredPosition = new Vector2(間距, 間距);
-
+        /*
         //在右下角
         targetRT.pivot = Vector2.right;
         targetRT.anchoredPosition = new Vector2(間距, -間距);
@@ -263,7 +263,7 @@ public class NPC : MonoBehaviour {
 
         //在左下角
         targetRT.pivot = Vector2.one;
-        targetRT.anchoredPosition = new Vector2(-間距, -間距);
+        targetRT.anchoredPosition = new Vector2(-間距, -間距);*/
 
     }
     private IEnumerator CannotOpenDoorAni()
