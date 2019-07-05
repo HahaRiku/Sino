@@ -14,7 +14,7 @@ public class NPC : MonoBehaviour {
 
     public float 冷卻時間 = 2f;
     public string 可撿的物品的名字;
-    public string 不可撿的物品的敘述;
+    [TextArea] public string 不可撿的物品的敘述;
 
     public string 門的名字;
     public string 需要的鑰匙名字;
@@ -174,6 +174,8 @@ public class NPC : MonoBehaviour {
                     if (UnpickablePanel.IsVisible() && CheckIsPlayerInRange(Radius))
                         return;
                     UnpickablePanel.SetInvisible();
+                    string temp = string.Concat(SystemVariables.Scene, "_", gameObject.name);
+                    SystemVariables.AddIntVariable(temp, 1);
                     StartCoroutine(WaitAndResumeTalk());
                 }
                 else if (type == NpcType.talk && GetComponent<StoryManager>().IsStoryFinish())

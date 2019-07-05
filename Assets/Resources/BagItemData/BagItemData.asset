@@ -16,6 +16,10 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
     desc: "\u7CD6\u679C"
     inBag: 0
+  - name: "\u5C0F\u5B69\u95DC\u5361\u9470\u5319"
+    sprite: {fileID: 21300000, guid: cb93b997abbf65d4db46270b267aeacd, type: 3}
+    desc: "\u4E00\u628A\u9470\u5319\u6389\u5728\u539F\u672C\u624B\u6416\u9234\u7684\u4F4D\u7F6E\u4E0A"
+    inBag: 0
   - name: Starlight
     sprite: {fileID: 21300000, guid: cb93b997abbf65d4db46270b267aeacd, type: 3}
     desc: "\u5C0F\u3055\u306A\u661F\u3092\u6458\u3093\u3060\u306A\u3089"

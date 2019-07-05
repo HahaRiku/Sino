@@ -28,6 +28,7 @@ public class GameStateManager : Singleton<GameStateManager> {
         }
         DontDestroyOnLoad(Player);
         DontDestroyOnLoad(gameObject);
+        SystemVariables.Scene = SceneManager.GetActiveScene().name;
     }
 
     void Update()
