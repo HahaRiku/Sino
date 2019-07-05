@@ -27,7 +27,6 @@ public class GameStateManager : Singleton<GameStateManager> {
             Player.name = "Sino";
         }
         DontDestroyOnLoad(Player);
-        DontDestroyOnLoad(gameObject);
         SystemVariables.Scene = SceneManager.GetActiveScene().name;
     }
 
