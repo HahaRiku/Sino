@@ -34,6 +34,7 @@ public class OptionControl : MonoBehaviour {
     public void ShowOptions(StoryData.StoryState story)
     {  
         _options = story.Options;
+        optionsPanel.SetOptionCount(_options.Length);
         pointer.Initial(_options.Length);
         for (int i = 0;i< _options.Length;i++)
         {

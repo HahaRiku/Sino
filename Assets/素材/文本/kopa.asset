@@ -33,9 +33,15 @@ MonoBehaviour:
     Scene: {fileID: 0}
     SpawnPoint: 0
     Options:
-    - Content: 
+    - Content: 1
       JumpTo: 
-    - Content: 
+    - Content: 2
+      JumpTo: 
+    - Content: 1
+      JumpTo: 
+    - Content: 3
+      JumpTo: 
+    - Content: 4
       JumpTo: 
     CharName: 
     Emotion: 
