@@ -137,7 +137,7 @@ public class BagUI : MonoBehaviour {
                     BagSystem.bagUIDirty = false;
                 }
                 else if (Input.GetKeyDown(KeyCode.B)) {
-                    SystemVariables.lockMoving = true;
+                    FindObjectOfType<GameStateManager>().StartEvent();
                     SystemVariables.lockNPCinteract = true;
                     open = true;
                     currentPage = 0;

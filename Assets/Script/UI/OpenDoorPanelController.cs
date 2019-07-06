@@ -42,6 +42,7 @@ public class OpenDoorPanelController : PanelController
                     //GameStateManager.Instance.黑幕轉場(sceneName, newScenePos);
                 }
                 isInteract = false;
+                SetInvisible();
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) && quesState == QuesState.左)
             {
