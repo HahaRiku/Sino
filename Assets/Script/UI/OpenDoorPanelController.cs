@@ -37,7 +37,9 @@ public class OpenDoorPanelController : PanelController
             {
                 if (quesState == QuesState.左)
                 {
-                    GameStateManager.Instance.黑幕轉場(sceneName, newScenePos);
+
+                    FindObjectOfType<GameStateManager>().黑幕轉場(sceneName, newScenePos);
+                    //GameStateManager.Instance.黑幕轉場(sceneName, newScenePos);
                 }
                 isInteract = false;
             }

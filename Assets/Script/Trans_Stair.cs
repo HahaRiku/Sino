@@ -44,12 +44,14 @@ public class Trans_Stair : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.UpArrow))
                     {
                         done = true;
-                        GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                        FindObjectOfType<GameStateManager>().黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                        //GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
                     }
                     else if (Input.GetKeyDown(KeyCode.DownArrow))
                     {
                         done = true;
-                        GameStateManager.Instance.黑幕轉場(portalList[1].targetScene.name, portalList[1].nextScenePos);
+                        FindObjectOfType<GameStateManager>().黑幕轉場(portalList[1].targetScene.name, portalList[1].nextScenePos);
+                        //GameStateManager.Instance.黑幕轉場(portalList[1].targetScene.name, portalList[1].nextScenePos);
                     }
                     /*else if(Input.GetKeyDown(KeyCode.X)){	//cancel
 						
@@ -65,7 +67,8 @@ public class Trans_Stair : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.UpArrow))
                     {
                         done = true;
-                        GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                        FindObjectOfType<GameStateManager>().黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                        //GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
                     }
                     yield return 0;
                 }
@@ -78,7 +81,8 @@ public class Trans_Stair : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.DownArrow))
                     {
                         done = true;
-                        GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                        FindObjectOfType<GameStateManager>().黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
+                        //GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
                     }
                     yield return 0;
                 }

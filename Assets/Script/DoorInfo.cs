@@ -55,9 +55,10 @@ public class DoorInfo : MonoBehaviour {
 				HLE = HighLightState.describe;
 				ItemState();
 			}
-			else{							//(press Z && openable) -> [open] + [in]
-				GameStateManager.Instance.黑幕轉場(nextScene.name, nextScenePos);
-				SceneManager.LoadScene(nextScene.name);
+			else{                           //(press Z && openable) -> [open] + [in]
+                //GameStateManager.Instance.黑幕轉場(nextScene.name, nextScenePos);
+                FindObjectOfType<GameStateManager>().黑幕轉場(nextScene.name, nextScenePos);
+                SceneManager.LoadScene(nextScene.name);
 			}
 		}
 		else if(Input.GetKeyDown(KeyCode.X) && IsLocked){

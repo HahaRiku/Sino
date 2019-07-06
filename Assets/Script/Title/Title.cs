@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour {
     public enum SelectedButton {
@@ -55,6 +56,10 @@ public class Title : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Z)) {
             if (state == SelectedButton.Exit) {
                 Application.Quit();
+            }
+            else if(state == SelectedButton.Start) {
+                SceneManager.LoadScene("牢房");
+
             }
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow)) {

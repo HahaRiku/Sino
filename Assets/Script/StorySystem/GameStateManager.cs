@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameStateManager : Singleton<GameStateManager> {
+public class GameStateManager : MonoBehaviour {
 
     public enum SceneStatus
     {
@@ -86,6 +86,7 @@ public class GameStateManager : Singleton<GameStateManager> {
     {
         StartEvent();
         StartCoroutine(Loading(sceneName, point));
+        Destroy(Player);
     }
 
     IEnumerator Loading(string sceneName, Vector3 point)
@@ -95,14 +96,15 @@ public class GameStateManager : Singleton<GameStateManager> {
         yield return new WaitUntil(() => blackImg.GetComponent<Image>().color.a == 1);
         //完成淡入
         Player.transform.position = point;
-        AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
+        SceneManager.LoadScene(sceneName);
+        /*AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
 
         //進度條跑完
-        async.allowSceneActivation = true;
+        async.allowSceneActivation = true;*/
         blackImg.GetComponent<Animator>().SetTrigger("FadeOut");
-        yield return new WaitUntil(() => blackImg.GetComponent<Image>().color.a == 0);
+        /*yield return new WaitUntil(() => blackImg.GetComponent<Image>().color.a == 0);
         //完成淡出
         if (ActingStorySystem == null)
-            FinEvent();
+            FinEvent();*/
     }
 }

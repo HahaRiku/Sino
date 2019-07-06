@@ -64,7 +64,8 @@ public class NPC : MonoBehaviour {
         else if (type == NpcType.door) {
             鎖SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
         }
-        player = GameStateManager.Instance.Player;
+        player = FindObjectOfType<GameStateManager>().Player;
+        //player = GameStateManager.Instance.Player;
         PickablePanel = FindObjectOfType<PickablePanelController>();
         UnpickablePanel = FindObjectOfType<UnPickablePanelController>();
         OpenDoorPanel = FindObjectOfType<OpenDoorPanelController>();
@@ -126,7 +127,8 @@ public class NPC : MonoBehaviour {
                             itemType = ItemType.可撿;*/
                         return;
                     }
-                    GameStateManager.Instance.StartEvent();
+                    FindObjectOfType<GameStateManager>().StartEvent();
+                    //GameStateManager.Instance.StartEvent();
                     if (type == NpcType.item) {
                         PickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字));
                         PickablePanel.ShowQuestion(可撿的物品的名字);
@@ -218,7 +220,8 @@ public class NPC : MonoBehaviour {
     IEnumerator WaitAndResumeTalk()
     {
         SystemVariables.lockBag = false;
-        GameStateManager.Instance.FinEvent();
+        FindObjectOfType<GameStateManager>().FinEvent();
+        //GameStateManager.Instance.FinEvent();
         state = NpcState.講完話冷卻中;
         if (type == NpcType.talk)
             yield return new WaitForSeconds(冷卻時間);

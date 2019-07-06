@@ -25,7 +25,7 @@ public class StoryManager : MonoBehaviour
     bool isStoryFinish = false;
     bool PauseLock = true;
 
-    GameStateManager GM;
+    public GameStateManager GM;
     ClickableRegion clickableRegion;
     public bool 一開始就執行;
 
@@ -93,7 +93,7 @@ public class StoryManager : MonoBehaviour
         moveContol = GetComponent<ActionController>();
         optionControl = GetComponent<OptionControl>();
         scriptControl = FindObjectOfType<OuterScriptControl>();
-        GM = GameStateManager.Instance;
+        //GM = FindObjectOfType<GameStateManager>();
         listCount = stories.Count;
         if (一開始就執行)
             BeginStory(0.5f);
@@ -214,7 +214,7 @@ public class StoryManager : MonoBehaviour
                 Debug.LogError("Error：場景 \"" + 場景名 + "\" is not found.");
                 return;
             }*/
-            GameStateManager.Instance.黑幕轉場(場景.name, stories[nowIndex].SpawnPoint);
+            GM.黑幕轉場(場景.name, stories[nowIndex].SpawnPoint);
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.外部腳本)
         {
