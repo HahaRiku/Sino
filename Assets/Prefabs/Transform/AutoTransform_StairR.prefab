@@ -164,12 +164,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324e4c34be5f906469a8c5fd27e27a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneList:
-  - targetScene: {fileID: 102900000, guid: 271841fb61fe0c3449888da2f77dcd09, type: 3}
-    nextScenePosLabel: 5
-  - targetScene: {fileID: 102900000, guid: 88d666172b83d0642ad69141c557586e, type: 3}
-    nextScenePosLabel: 5
-  stairType: 0
+  portalList:
+  - targetScene: {fileID: 0}
+    nextScenePos: 4
+  - targetScene: {fileID: 0}
+    nextScenePos: 4
+  StairType: 0
 --- !u!212 &212039026931047870
 SpriteRenderer:
   m_ObjectHideFlags: 1

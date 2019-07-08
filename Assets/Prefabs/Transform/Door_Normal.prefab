@@ -222,11 +222,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HLE: 0
-  nextScenePos: {x: 0, y: 0, z: 0}
   description: "\u9580\u9396\u8457\u3002"
   IsLocked: 0
   nextScene: {fileID: 102900000, guid: 7ac0acef4b9d75044a0fa031eea3fb85, type: 3}
-  nextScenePosLabel: 2
+  nextScenePos: 1
 --- !u!212 &212065945632695804
 SpriteRenderer:
   m_ObjectHideFlags: 1

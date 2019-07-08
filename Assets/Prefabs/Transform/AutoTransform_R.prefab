@@ -78,4 +78,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: {fileID: 102900000, guid: f42b2168a9542a540a4aac46da332dd5, type: 3}
-  nextScenePosLabel: 2
+  nextScenePos: 1

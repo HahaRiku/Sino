@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44734a90cd5899409c4c60de9763d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NowStatus: 0
+  NowStatus: 1
   Player: {fileID: 0}
   ActingStorySystem: {fileID: 0}
 --- !u!114 &114933665162271624
