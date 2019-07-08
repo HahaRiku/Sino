@@ -180,7 +180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1737306629724298
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +196,22 @@ GameObject:
   - component: {fileID: 114014642223295906}
   m_Layer: 0
   m_Name: Sino
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1743546330347266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4717878389306694}
+  - component: {fileID: 108980973882769434}
+  m_Layer: 0
+  m_Name: Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1788330271209794
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +438,7 @@ Transform:
   - {fileID: 4499976591307372}
   - {fileID: 4529322045050978}
   - {fileID: 4765146928439474}
+  - {fileID: 4717878389306694}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -535,9 +552,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711769919346282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6179787, w: 0.78619486}
+  m_LocalPosition: {x: -0.30420783, y: 1.6408575, z: -0.001}
+  m_LocalScale: {x: 0.9995961, y: 0.99324095, z: 1}
   m_Children: []
   m_Father: {fileID: 4154215589023964}
   m_RootOrder: 1
@@ -548,9 +565,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1921514870268496}
-  m_LocalRotation: {x: 0, y: 0, z: -0.13292855, w: 0.99112564}
-  m_LocalPosition: {x: -0.038721483, y: 1.5602324, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.13399675, w: 0.9909818}
+  m_LocalPosition: {x: -0.034195617, y: 1.5518181, z: 0}
+  m_LocalScale: {x: 0.99217236, y: 0.99941814, z: 1}
   m_Children: []
   m_Father: {fileID: 4154215589023964}
   m_RootOrder: 0
@@ -581,6 +598,19 @@ Transform:
   m_Father: {fileID: 4154215589023964}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4717878389306694
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743546330347266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 2.2, z: -5.46}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4154215589023964}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &4765146928439474
 Transform:
   m_ObjectHideFlags: 1
@@ -1062,7 +1092,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: adf13cabebdce0248a7b194abc4ddd7d, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1419,6 +1449,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 3.14}
   m_EdgeRadius: 0
+--- !u!108 &108980973882769434
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743546330347266}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 0.8666667, b: 0.33333334, a: 1}
+  m_Intensity: 15
+  m_Range: 10
+  m_SpotAngle: 55
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!114 &114014642223295906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1433,7 +1513,6 @@ MonoBehaviour:
   IsHoldCandle_ani: 0
   aniState: 1
   speed: 0.08
-  otherCharactersObjects: []
 --- !u!114 &114508479431280080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1446,7 +1525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNames:
-  - Right_Hand_Candle
   - Right_Upper_Arm
   - Right_Lower_Arm
   - Right_Ankle
@@ -1480,7 +1558,7 @@ MonoBehaviour:
   armatureName: Sino
   isUGUI: 0
   debugDraw: 0
-  animationName: stand
+  animationName: stand_with_candle_left
   _playTimes: 0
   _timeScale: 1.7
   _sortingMode: 0
