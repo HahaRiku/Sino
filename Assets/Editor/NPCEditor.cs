@@ -42,6 +42,7 @@ public class NPCEditor : Editor {
         }
         if (sO.FindProperty("type").enumValueIndex == (int)NPC.NpcType.talk)
         {
+            EditorGUILayout.PropertyField(sO.FindProperty("NPC面向右邊"));
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(sO.FindProperty("冷卻時間"));
             EditorGUILayout.PropertyField(sO.FindProperty("Radius"));

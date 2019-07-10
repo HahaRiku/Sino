@@ -20,6 +20,8 @@ public class NPC : MonoBehaviour {
     public bool 是否撿完變不可撿 = false;
     public bool 是否不撿完變可撿 = false;
 
+    public bool NPC面向右邊 = true;
+
     public string 門的名字;
     public string 需要的鑰匙名字;
     public Object 門要傳送到的場景;
@@ -49,6 +51,8 @@ public class NPC : MonoBehaviour {
     private UnPickablePanelController UnpickablePanel;
     private OpenDoorPanelController OpenDoorPanel;
 
+    private DragonBones.Armature playerArma;
+
     void Start () {
         if (type == NpcType.item) {
             白點TF = gameObject.transform.GetChild(0);
@@ -69,6 +73,7 @@ public class NPC : MonoBehaviour {
         PickablePanel = FindObjectOfType<PickablePanelController>();
         UnpickablePanel = FindObjectOfType<UnPickablePanelController>();
         OpenDoorPanel = FindObjectOfType<OpenDoorPanelController>();
+        playerArma = player.GetComponent<DragonBones.UnityArmatureComponent>().armature;
     }
 
     void Update()
@@ -119,6 +124,19 @@ public class NPC : MonoBehaviour {
                 else if (Input.GetKeyDown(KeyCode.Z)) {
                     state = NpcState.對話中;
                     SystemVariables.lockBag = true;
+
+                    if ((player.transform.position.x - transform.position.x) >= 0) {
+                        //flipX = false -> faceLeft, flipX = true -> faceRight
+                        if (playerArma.flipX) {
+                            playerArma.flipX = false;
+                        }
+                    }
+                    else {
+                        if (!playerArma.flipX) {
+                            playerArma.flipX = true;
+                        }
+                    }
+
                     if (type == NpcType.item && itemType == ItemType.不可撿) {
                         面板定位();
                         UnpickablePanel.SetInfo(不可撿的物品的敘述);
@@ -136,6 +154,20 @@ public class NPC : MonoBehaviour {
                     else if (type == NpcType.talk) {
                         stopDotDotDotAni = true;
                         dotAni.SetBool("Dot", false);
+
+                        if ((player.transform.position.x - transform.position.x) >= 0) {
+                            if (!NPC面向右邊) {
+                                NPC面向右邊 = true;
+                                transform.localScale = new Vector2(-1 * transform.localScale.x, transform.localScale.y);
+                            }
+                        }
+                        else {
+                            if (NPC面向右邊) {
+                                NPC面向右邊 = false;
+                                transform.localScale = new Vector2(-1 * transform.localScale.x, transform.localScale.y);
+                            }
+                        }
+
                         GetComponent<StoryManager>().BeginStory();
                     }
                     else if (type == NpcType.door) {
