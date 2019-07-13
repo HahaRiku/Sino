@@ -28,7 +28,9 @@ public class PickablePanelController : PanelController
         選項L = transform.GetChild(2).GetComponent<Image>();
         選項R = transform.GetChild(3).GetComponent<Image>();
         transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 20;
+        選項L.sprite = 選項底_未選;
         transform.GetChild(3).GetChild(0).GetComponent<Text>().fontSize = 25;
+        選項R.sprite = 選項底_選擇;
     }
     void Update()
     {
@@ -39,6 +41,7 @@ public class PickablePanelController : PanelController
                 if (quesState == QuesState.左)
                 {
                     BagSystem.SetItemInBagOrNot(itemName, true);
+                    FindObjectOfType<BagUI>().GetItemAni(itemName);
                 }
                 SetInvisible();
                 isInteract = false;

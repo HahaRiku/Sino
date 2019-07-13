@@ -15,6 +15,8 @@ public class BagUI : MonoBehaviour {
     public Sprite 有物件的底;
     public GameObject DescriptionPrefab;
     public Sprite 透明的圖;
+    public Sprite 右箭頭;
+    public Sprite 左箭頭;
 
     public struct ElementInPage {
         public string name;
@@ -23,15 +25,15 @@ public class BagUI : MonoBehaviour {
         public bool used;
     }
 
-    private ElementInPage[,] currentBag;
+    private ElementInPage[,] currentBag;    //the items now exactly in bag  //not including all of the items in BagItemData
 
     private Image[] bottomUI = new Image[5];
     private Image[] itemUI = new Image[5];
     private Image[] kuangUI = new Image[5];
+    private Image rightArrow;
+    private Image leftArrow;
     private GameObject itemGroup;
     private CanvasGroup itemGroupCanvasGroup;
-    private GameObject rightArrow;
-    private GameObject leftArrow;
     private CanvasGroup noItemHintCanvasGroup;
     private GameObject itemDescription;
     private CanvasGroup itemDescCanvasGroup;
@@ -49,10 +51,15 @@ public class BagUI : MonoBehaviour {
     private bool openAndCloseAnimationDone = true;
     private RectTransform bagBottom;
     private bool changePageDone = true;
-    private bool changePageMidDone = true;
+    private bool changePageMidDone = true;  //Mid: 換頁時 不透明度變為0的那時候
     private int notYetChangePageKuangAndItsNum = -1;
     private bool readingDescription = false;
     private bool descAniDone = true;
+
+    //從NPC or 在劇情中 拿到物件 背包會打開關掉 顯示該物件的動畫(物件放在最後 動畫結束後才重新整理
+    private bool getItemAniStart = false;
+    private bool getItemAniDone = true;
+    private string getItemAniName;
 
 	// Use this for initialization
 	void Start () {
@@ -65,8 +72,8 @@ public class BagUI : MonoBehaviour {
             itemUI[i] = bottomUI[i].gameObject.transform.GetChild(0).GetComponent<Image>();
             kuangUI[i] = itemUI[i].gameObject.transform.GetChild(0).GetComponent<Image>();
         }
-        rightArrow = itemGroup.transform.GetChild(5).gameObject;
-        leftArrow = itemGroup.transform.GetChild(6).gameObject;
+        rightArrow = itemGroup.transform.GetChild(5).gameObject.GetComponent<Image>();
+        leftArrow = itemGroup.transform.GetChild(6).gameObject.GetComponent<Image>();
 
         itemDescription = gameObject.transform.GetChild(1).gameObject;
         itemDescCanvasGroup = itemDescription.GetComponent<CanvasGroup>();
@@ -95,11 +102,12 @@ public class BagUI : MonoBehaviour {
                 itemIndex += 1;
             }
         }
-        totalPageNum_current = itemIndex / 5 + 1;
+        totalPageNum_current = Mathf.CeilToInt(itemIndex / 5.0f);
+        //print(totalPageNum_current);
         totalItemNum_current = itemIndex;
         pageOneDirty = true;
 
-        print(totalItemNum_current);
+        //print(totalItemNum_current);
 
         bagBottom.localPosition = new Vector2(bagBottom.localPosition.x, 280);
         itemDescCanvasGroup.alpha = 0;
@@ -112,60 +120,76 @@ public class BagUI : MonoBehaviour {
 
         if (openAndCloseAnimationDone) {
             if (!open) {
-                if (BagSystem.bagUIDirty) {
-                    for (int i = 0; i < totalPageNum_allItem; i++) {
-                        for (int j = 0; j < 5; j++) {
-                            currentBag[i, j].used = false;
-                        }
-                    }
+                if (getItemAniStart) {
+                    getItemAniStart = false;
 
-                    int itemIndex = 0;
-                    foreach (BagItem item in BagSystem.data.bagItemList) {
-                        if (item.inBag) {
-                            int pageIndex = itemIndex / 5;
-                            int elementIndex = itemIndex % 5;
-                            currentBag[pageIndex, elementIndex].name = item.name;
-                            currentBag[pageIndex, elementIndex].sprite = item.sprite;
-                            currentBag[pageIndex, elementIndex].desc = item.desc;
-                            currentBag[pageIndex, elementIndex].used = true;
-                            itemIndex += 1;
-                        }
-                    }
-                    totalPageNum_current = itemIndex / 5 + 1;
-                    totalItemNum_current = itemIndex;
-                    pageOneDirty = true;
-                    BagSystem.bagUIDirty = false;
+                    //implemented by coroutine
+                    StartCoroutine(GetItemAnimation(getItemAniName));
+
                 }
-                else if (Input.GetKeyDown(KeyCode.B)) {
-                    FindObjectOfType<GameStateManager>().StartEvent();
-                    SystemVariables.lockNPCinteract = true;
-                    open = true;
-                    currentPage = 0;
-                    currentElement = 0;
-                    if (totalItemNum_current == 0) {
-                        noItemHintCanvasGroup.alpha = 1;
-                        itemGroupCanvasGroup.alpha = 0;
-                    }
-                    else {
-                        noItemHintCanvasGroup.alpha = 0;
-                        itemGroupCanvasGroup.alpha = 1;
-                        print("123");
-                        ChangeKuang(currentElement);
-                        //set 
-
-                        //set image
-                        if (pageOneDirty) {
-                            ChangeItem(0);
+                else if(getItemAniDone) {
+                    if (BagSystem.bagUIDirty) {     //refresh the order of the items in bag  //the order of the items in bagUI is the same as the order in BagItemData
+                        for (int i = 0; i < totalPageNum_allItem; i++) {
+                            for (int j = 0; j < 5; j++) {
+                                currentBag[i, j].used = false;
+                            }
                         }
-                    }
 
-                    //open animation
-                    openAndCloseAnimationDone = false;
-                    //do animation
-                    StartCoroutine(OpenAnimation());
+                        int itemIndex = 0;
+                        foreach (BagItem item in BagSystem.data.bagItemList) {
+                            if (item.inBag) {
+                                int pageIndex = itemIndex / 5;
+                                int elementIndex = itemIndex % 5;
+                                currentBag[pageIndex, elementIndex].name = item.name;
+                                currentBag[pageIndex, elementIndex].sprite = item.sprite;
+                                currentBag[pageIndex, elementIndex].desc = item.desc;
+                                currentBag[pageIndex, elementIndex].used = true;
+                                itemIndex += 1;
+                            }
+                        }
+                        totalPageNum_current = Mathf.CeilToInt(itemIndex / 5.0f);
+                        totalItemNum_current = itemIndex;
+                        pageOneDirty = true;
+                        BagSystem.bagUIDirty = false;
+                    }
+                    else if (Input.GetKeyDown(KeyCode.B) && !SystemVariables.lockBag) {
+                        FindObjectOfType<GameStateManager>().OpenBag();
+                        SystemVariables.lockNPCinteract = true;
+                        open = true;
+                        currentPage = 0;
+                        currentElement = 0;
+                        if (totalItemNum_current == 0) {
+                            noItemHintCanvasGroup.alpha = 1;
+                            itemGroupCanvasGroup.alpha = 0;
+                        }
+                        else {
+                            noItemHintCanvasGroup.alpha = 0;
+                            itemGroupCanvasGroup.alpha = 1;
+                            ChangeKuang(currentElement);
+                            //set 
+
+                            //set image
+                            if (pageOneDirty) {
+                                ChangeItem(0);
+                            }
+                            if (totalPageNum_current == 1) {
+                                rightArrow.sprite = 透明的圖;
+                                leftArrow.sprite = 透明的圖;
+                            }
+                            else {
+                                rightArrow.sprite = 右箭頭;
+                                leftArrow.sprite = 透明的圖;
+                            }
+                        }
+
+                        //open animation
+                        openAndCloseAnimationDone = false;
+                        //do animation
+                        StartCoroutine(OpenAnimation());
+                    }
                 }
             }
-            else if (readingDescription) {
+            else if (readingDescription) {  //bag is open and in reading description status
                 if (descAniDone) {
                     if (Input.GetKeyDown(KeyCode.X)) {
                         readingDescription = false;
@@ -181,6 +205,25 @@ public class BagUI : MonoBehaviour {
                     ChangeKuang(notYetChangePageKuangAndItsNum);
                     //change all itemUI
                     ChangeItem(currentPage);
+                    if (currentPage == 0) {
+                        if (totalPageNum_current == 1) {
+                            rightArrow.sprite = 透明的圖;
+                            leftArrow.sprite = 透明的圖;
+                        }
+                        else {
+                            rightArrow.sprite = 右箭頭;
+                            leftArrow.sprite = 透明的圖;
+                        }
+                    }
+                    else if (currentPage == totalPageNum_current - 1) {
+                        rightArrow.sprite = 透明的圖;
+                        leftArrow.sprite = 左箭頭;
+                    }
+                    else {
+                        rightArrow.sprite = 右箭頭;
+                        leftArrow.sprite = 左箭頭;
+                    }
+                    
                     notYetChangePageKuangAndItsNum = -1;
                 }
 
@@ -252,7 +295,7 @@ public class BagUI : MonoBehaviour {
                     }
                     
                     if (Input.GetKeyDown(KeyCode.B)) {
-                        SystemVariables.lockMoving = false;
+                        FindObjectOfType<GameStateManager>().CloseBag();
                         SystemVariables.lockNPCinteract = false;
                         open = false;
                         StartCoroutine(CloseAnimation());
@@ -279,6 +322,65 @@ public class BagUI : MonoBehaviour {
             yield return null;
         }
         openAndCloseAnimationDone = true;
+    }
+
+    IEnumerator GetItemAnimation(string name) {
+        FindObjectOfType<GameStateManager>().OpenBag();
+        //put the got item into the last of the currentBag
+        int pageIndex = totalItemNum_current / 5;
+        int elementIndex = totalItemNum_current % 5;
+        foreach (BagItem item in BagSystem.data.bagItemList) {
+            if (item.name == name) {
+                if (item.inBag) {
+                    currentBag[pageIndex, elementIndex].name = item.name;
+                    currentBag[pageIndex, elementIndex].sprite = item.sprite;
+                    currentBag[pageIndex, elementIndex].desc = item.desc;
+                    currentBag[pageIndex, elementIndex].used = true;
+                }
+                else {
+                    Debug.Log("得到背包物件" + name + "時，忘了add該物件進去BagSystem");
+                    
+                }
+            }
+        }
+        totalItemNum_current += 1;
+        totalPageNum_current = Mathf.CeilToInt(totalItemNum_current / 5.0f);
+ 
+        //set the page and kuang showed on the bagUI is the last page and the last one
+        noItemHintCanvasGroup.alpha = 0;
+        itemGroupCanvasGroup.alpha = 1;
+        ChangeItem(pageIndex);
+        ChangeKuang(elementIndex);
+        rightArrow.sprite = 透明的圖;
+        if (totalPageNum_current == 1) {
+            leftArrow.sprite = 透明的圖;
+        }
+        else {
+            leftArrow.sprite = 左箭頭;
+        }
+
+        //open
+        openAndCloseAnimationDone = false;
+        for (int i = 280; i >= 165; i -= 5) {
+            bagBottom.localPosition = new Vector2(bagBottom.localPosition.x, i);
+            yield return null;
+        }
+        openAndCloseAnimationDone = true;
+
+        //wait
+        yield return new WaitForSeconds(1.25f);
+
+        //close
+        openAndCloseAnimationDone = false;
+        for (int i = 165; i <= 280; i += 5) {
+            bagBottom.localPosition = new Vector2(bagBottom.localPosition.x, i);
+            yield return null;
+        }
+        openAndCloseAnimationDone = true;
+
+        getItemAniDone = true;
+        
+        FindObjectOfType<GameStateManager>().CloseBag();
     }
 
     IEnumerator ChangePage() {
@@ -310,7 +412,7 @@ public class BagUI : MonoBehaviour {
         descAniDone = true;
     }
 
-    private void ChangeKuang(int index) {
+    private void ChangeKuang(int index) {       //index: 0~4
         for (int i = 0; i < 5; i++) {
             if (i == index) {
                 kuangUI[i].sprite = 框;
@@ -321,7 +423,7 @@ public class BagUI : MonoBehaviour {
         }
     }
 
-    private void ChangeItem(int pageIndex) {
+    private void ChangeItem(int pageIndex) {    //pageIndex : 0~
         for (int i = 0; i < 5; i++) {
             if (currentBag[pageIndex, i].used) {
                 itemUI[i].sprite = currentBag[pageIndex, i].sprite;
@@ -332,5 +434,11 @@ public class BagUI : MonoBehaviour {
                 bottomUI[i].sprite = 透明的圖;
             }
         }
+    }
+
+    public void GetItemAni(string name) {
+        getItemAniStart = true;
+        getItemAniDone = false;
+        getItemAniName = name;
     }
 }

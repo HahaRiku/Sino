@@ -252,7 +252,9 @@ public class NPC : MonoBehaviour {
     IEnumerator WaitAndResumeTalk()
     {
         SystemVariables.lockBag = false;
-        FindObjectOfType<GameStateManager>().FinEvent();
+        if (type != NpcType.item || (type == NpcType.item && itemType == ItemType.不可撿)) {
+            FindObjectOfType<GameStateManager>().FinEvent();
+        }
         //GameStateManager.Instance.FinEvent();
         state = NpcState.講完話冷卻中;
         if (type == NpcType.talk)

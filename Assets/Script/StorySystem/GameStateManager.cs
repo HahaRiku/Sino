@@ -58,6 +58,10 @@ public class GameStateManager : MonoBehaviour {
         PlayerControlLock = true;
     }
 
+    public void CloseBag() {
+        PlayerControlLock = false;
+    }
+
     public void SetStoryManager(StoryManager s)
     {
         ActingStorySystem = s;
