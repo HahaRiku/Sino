@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Sino_Data
   m_EditorClassIdentifier: 
   dataName: Sino
-  dragonBonesJSON: {fileID: 4900000, guid: e385505dfda04ed488b57537df9df5fd, type: 3}
+  dragonBonesJSON: {fileID: 4900000, guid: 00ca34416c5be364191ae68e9f98083a, type: 3}
   textureAtlas:
-  - textureAtlasJSON: {fileID: 4900000, guid: 9ed31c5cb6585cb42ad0d04c7306e135, type: 3}
-    texture: {fileID: 2800000, guid: e16a88555dd9b3340bc627104b1d3b32, type: 3}
+  - textureAtlasJSON: {fileID: 4900000, guid: 9e9ba705495961d40bfaf425efe7d4c3, type: 3}
+    texture: {fileID: 2800000, guid: fa7e54a51400eb441ab356877b64600e, type: 3}
     material: {fileID: 2100000, guid: 2642a585931d768469a881741d782fc4, type: 2}
     uiMaterial: {fileID: 0}
