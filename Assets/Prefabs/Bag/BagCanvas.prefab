@@ -947,6 +947,10 @@ MonoBehaviour:
   DescriptionPrefab: {fileID: 0}
   "\u900F\u660E\u7684\u5716": {fileID: 21300000, guid: adc46b72519e4f24496feac9b7b633aa,
     type: 3}
+  "\u53F3\u7BAD\u982D": {fileID: 21300000, guid: 4b08e4eac3685f34e8ba50b811d30e54,
+    type: 3}
+  "\u5DE6\u7BAD\u982D": {fileID: 21300000, guid: 7e1303c5660be3641ae5630f2450eada,
+    type: 3}
 --- !u!114 &114780794939724016
 MonoBehaviour:
   m_ObjectHideFlags: 1

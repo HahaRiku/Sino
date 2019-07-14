@@ -19,7 +19,7 @@ MonoBehaviour:
   - name: "\u9470\u5319"
     sprite: {fileID: 0}
     desc: "\u4E00\u628A\u9470\u5319\u6389\u5728\u539F\u672C\u624B\u6416\u9234\u7684\u4F4D\u7F6E\u4E0A"
-    inBag: 1
+    inBag: 0
   - name: Starlight
     sprite: {fileID: 21300000, guid: cb93b997abbf65d4db46270b267aeacd, type: 3}
     desc: "\u5C0F\u3055\u306A\u661F\u3092\u6458\u3093\u3060\u306A\u3089"
@@ -47,12 +47,12 @@ MonoBehaviour:
   - name: "\u6E2C\u8A66\u6E2C\u8A66\u6E2C\u8A66"
     sprite: {fileID: 21300000, guid: 128564b0f6c9e474caf861349f0f0a8f, type: 3}
     desc: "\u9019\u53EA\u662F\u6E2C\u8A66\u3002\n\u9019\u53EA\u662F\u6E2C\u8A66\n\u9019\u53EA\u662F\u6E2C\n\u9019\u53EA\u662F\n\u9019\u53EA\n\u9019"
-    inBag: 1
+    inBag: 0
   - name: "\u96FB\u71C8"
     sprite: {fileID: 21300000, guid: 128564b0f6c9e474caf861349f0f0a8f, type: 3}
     desc: "\u4F60\u600E\u9EBC\u628A\u96FB\u71C8\u7D66\u62D4\u4E0B\u4F86\u4E86\uFF1F\uFF1F"
-    inBag: 0
+    inBag: 1
   - name: "\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66"
     sprite: {fileID: 21300000, guid: 128564b0f6c9e474caf861349f0f0a8f, type: 3}
     desc: "\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66"
-    inBag: 1
+    inBag: 0

@@ -73,7 +73,7 @@ public class NPC : MonoBehaviour {
         PickablePanel = FindObjectOfType<PickablePanelController>();
         UnpickablePanel = FindObjectOfType<UnPickablePanelController>();
         OpenDoorPanel = FindObjectOfType<OpenDoorPanelController>();
-        playerArma = player.GetComponent<DragonBones.UnityArmatureComponent>().armature;
+        playerArma = player.transform.GetChild(0).GetComponent<DragonBones.UnityArmatureComponent>().armature;
     }
 
     void Update()

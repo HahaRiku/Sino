@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 	public float speed;
 
     void Start() {
-        arma = GetComponent<UnityArmatureComponent>().armature;
+        arma = transform.GetChild(0).GetComponent<UnityArmatureComponent>().armature;
         IsWalk_ani = false;
 		IsHoldCandle_ani = false;
 		aniState = AnimationState.stand;
