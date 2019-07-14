@@ -40,9 +40,9 @@ public class ActionController : MonoBehaviour {
         if (chara.GetComponent<PlayerController>() != null) {
             var player = chara.GetComponent<PlayerController>();
             if (speed < 0)
-                player.AnimationController("continuing_left");
+                player.AnimationController("walk_left");
             else
-                player.AnimationController("continuing_right");
+                player.AnimationController("walk_right");
         }
         else
         {
@@ -61,7 +61,7 @@ public class ActionController : MonoBehaviour {
             yield return new WaitForFixedUpdate();
         }
         if (chara.GetComponent<PlayerController>() != null)
-            chara.GetComponent<PlayerController>().AnimationController("stand_or_stop");
+            chara.GetComponent<PlayerController>().AnimationController("idle");
         else
         {
             armature.animation.FadeIn("stand", 0.15f);
@@ -80,27 +80,4 @@ public class ActionController : MonoBehaviour {
         }
         running--;
     }
-
-
-	
-	/*
-	public void PlayAudio(GameObject listener, AudioClip audioFile, bool needsWait){
-		//the audiofile can put at "Assets/Resources/"
-		AudioSource auds;
-		if(listener.GetComponent<AudioSource>()){
-			auds = listener.GetComponent<AudioSource>();
-		}
-		else{
-			auds = listener.AddComponent<AudioSource>();
-		}
-		
-		auds.clip = audioFile;
-		
-		if(needsWait){
-			auds.Play();
-		}
-		else{
-			auds.PlayOneShot();
-		}*/
-
 }

@@ -125,6 +125,11 @@ public class PlayerController : MonoBehaviour
     public void SetIsPlayerCanControl(bool b)
     {
         isPlayerCanControl = b;
+        if (!b)
+        {
+            AnimationController("idle");
+            flip = 0;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
