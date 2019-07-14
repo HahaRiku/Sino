@@ -93,7 +93,7 @@ public class StoryManager : MonoBehaviour
         moveContol = GetComponent<ActionController>();
         optionControl = GetComponent<OptionControl>();
         scriptControl = FindObjectOfType<OuterScriptControl>();
-        //GM = FindObjectOfType<GameStateManager>();
+        GM = FindObjectOfType<GameStateManager>();
         listCount = stories.Count;
         if (一開始就執行)
             BeginStory(0.5f);
