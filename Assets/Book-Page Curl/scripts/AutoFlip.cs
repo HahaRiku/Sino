@@ -10,6 +10,7 @@ public class AutoFlip : MonoBehaviour {
     public Book ControledBook;
     public int AnimationFramesCount = 40;
     bool isFlipping = false;
+    public bool toEndIsFlipping = false;
     // Use this for initialization
     void Start () {
         if (!ControledBook)
@@ -24,6 +25,7 @@ public class AutoFlip : MonoBehaviour {
     }
 	public void StartFlipping()
     {
+        toEndIsFlipping = true;
         StartCoroutine(FlipToEnd());
     }
     public void FlipRightPage()
@@ -92,6 +94,7 @@ public class AutoFlip : MonoBehaviour {
                 }
                 break;
         }
+        toEndIsFlipping = false;
     }
     IEnumerator FlipRTL(float xc, float xl, float h, float frameTime, float dx)
     {
