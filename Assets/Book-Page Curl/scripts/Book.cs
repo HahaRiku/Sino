@@ -330,9 +330,9 @@ public class Book : MonoBehaviour {
     public void TweenForward()
     {
         if(mode== FlipMode.RightToLeft)
-        currentCoroutine = StartCoroutine(TweenTo(ebl, 0.15f, () => { Flip(); }));
+        currentCoroutine = StartCoroutine(TweenTo(ebl, 0.01f, () => { Flip(); }));
         else
-        currentCoroutine = StartCoroutine(TweenTo(ebr, 0.15f, () => { Flip(); }));
+        currentCoroutine = StartCoroutine(TweenTo(ebr, 0.01f, () => { Flip(); }));
     }
     void Flip()
     {

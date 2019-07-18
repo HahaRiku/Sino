@@ -193,35 +193,35 @@ Prefab:
       objectReference: {fileID: 264253820}
     - target: {fileID: 22488492, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 339.48053
+      value: 339.3209
       objectReference: {fileID: 0}
     - target: {fileID: 22488492, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 653.68835
+      value: 653.5925
       objectReference: {fileID: 0}
     - target: {fileID: 22437570, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 339.48053
+      value: 339.3209
       objectReference: {fileID: 0}
     - target: {fileID: 22437570, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 653.68835
+      value: 653.5925
       objectReference: {fileID: 0}
     - target: {fileID: 22436914, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 678.96106
+      value: 678.6418
       objectReference: {fileID: 0}
     - target: {fileID: 22436914, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 1128.961
+      value: 1128.6418
       objectReference: {fileID: 0}
     - target: {fileID: 22433904, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 339.48053
+      value: 339.3209
       objectReference: {fileID: 0}
     - target: {fileID: 22433904, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 653.68835
+      value: 653.5925
       objectReference: {fileID: 0}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: background
@@ -542,7 +542,7 @@ MonoBehaviour:
   Mode: 0
   PageFlipTime: 0.05
   TimeBetweenPages: 1
-  DelayBeforeStarting: 0
+  DelayBeforeStarting: 1
   AutoStartFlip: 0
   ControledBook: {fileID: 0}
   AnimationFramesCount: 15
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "\u6309\u5E7E\u79D2\u70BA\u9577\u6309": 0.5
-  "\u9577\u6309\u5E7E\u79D2\u5F8C\u7FFB\u5230\u6700\u524D\u6216\u5F8C": 3
+  "\u9577\u6309\u5E7E\u79D2\u5F8C\u7FFB\u5230\u6700\u524D\u6216\u5F8C": 0
   pressKeyState: 0
   "\u9032\u5EA6\u689DdecreaseDone": 0
 --- !u!1 &1986189804

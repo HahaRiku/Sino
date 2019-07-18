@@ -54,8 +54,9 @@ public class NoteController : MonoBehaviour {
             }
             if ((Time.time - timeCountingStart) >= 按幾秒為長按 + 長按幾秒後翻到最前或後) {
                 autoFlip.Mode = FlipMode.RightToLeft;
-                autoFlip.PageFlipTime = 0.008f;
-                autoFlip.TimeBetweenPages = 0.7f;
+                autoFlip.DelayBeforeStarting = 0;
+                autoFlip.PageFlipTime = 0.01f;
+                autoFlip.TimeBetweenPages = 0.1f;
                 autoFlip.AnimationFramesCount = 5;
                 autoFlip.StartFlipping();
                 pressKeyState = PressKeyState.RightArrowUp;
@@ -65,6 +66,10 @@ public class NoteController : MonoBehaviour {
             else if (Input.GetKeyUp(KeyCode.RightArrow)) {
                 pressKeyState = PressKeyState.RightArrowUp;
                 if ((Time.time - timeCountingStart) < 按幾秒為長按) {
+                    autoFlip.DelayBeforeStarting = 0.2f;
+                    autoFlip.PageFlipTime = 0.01f;
+                    autoFlip.TimeBetweenPages = 0.1f;
+                    autoFlip.AnimationFramesCount = 15;
                     autoFlip.FlipRightPage();
                 }
                 else if((Time.time - timeCountingStart) < 按幾秒為長按 + 長按幾秒後翻到最前或後) {
@@ -80,8 +85,9 @@ public class NoteController : MonoBehaviour {
             }
             if ((Time.time - timeCountingStart) >= 按幾秒為長按 + 長按幾秒後翻到最前或後) {
                 autoFlip.Mode = FlipMode.LeftToRight;
-                autoFlip.PageFlipTime = 0.008f;
-                autoFlip.TimeBetweenPages = 0.7f;
+                autoFlip.DelayBeforeStarting = 0;
+                autoFlip.PageFlipTime = 0.01f;
+                autoFlip.TimeBetweenPages = 0.1f;
                 autoFlip.AnimationFramesCount = 5;
                 autoFlip.StartFlipping();
                 pressKeyState = PressKeyState.LeftArrowUp;
@@ -91,6 +97,10 @@ public class NoteController : MonoBehaviour {
             else if (Input.GetKeyUp(KeyCode.LeftArrow)) {
                 pressKeyState = PressKeyState.LeftArrowUp;
                 if ((Time.time - timeCountingStart) < 按幾秒為長按) {
+                    autoFlip.DelayBeforeStarting = 0.2f;
+                    autoFlip.PageFlipTime = 0.01f;
+                    autoFlip.TimeBetweenPages = 0.1f;
+                    autoFlip.AnimationFramesCount = 15;
                     autoFlip.FlipLeftPage();
                 }
                 else if ((Time.time - timeCountingStart) < 按幾秒為長按 + 長按幾秒後翻到最前或後) {
