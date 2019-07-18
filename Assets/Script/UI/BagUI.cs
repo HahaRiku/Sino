@@ -122,8 +122,10 @@ public class BagUI : MonoBehaviour {
             if (!open) {
                 if (getItemAniStart) {
                     getItemAniStart = false;
+                    SystemVariables.lockNPCinteract = true;
 
                     //implemented by coroutine
+                    getItemAniDone = false;
                     StartCoroutine(GetItemAnimation(getItemAniName));
 
                 }
@@ -396,7 +398,8 @@ public class BagUI : MonoBehaviour {
         openAndCloseAnimationDone = true;
 
         getItemAniDone = true;
-        
+        SystemVariables.lockNPCinteract = false;
+
         FindObjectOfType<GameStateManager>().CloseBag();
     }
 

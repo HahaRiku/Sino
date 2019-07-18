@@ -39,11 +39,11 @@ public class NoteController : MonoBehaviour {
 	void Update () {
 
         if (pressKeyState == PressKeyState.None) {
-            if (Input.GetKeyDown(KeyCode.RightArrow)) {
+            if (controledNote.currentPage <= controledNote.TotalPageCount-4 && Input.GetKeyDown(KeyCode.RightArrow)) {
                 timeCountingStart = Time.time;
                 pressKeyState = PressKeyState.RightArrowDown;
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+            else if (controledNote.currentPage >= 4 && Input.GetKeyDown(KeyCode.LeftArrow)) {
                 timeCountingStart = Time.time;
                 pressKeyState = PressKeyState.LeftArrowDown;
             }
