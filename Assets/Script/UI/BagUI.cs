@@ -194,8 +194,16 @@ public class BagUI : MonoBehaviour {
                     if (Input.GetKeyDown(KeyCode.X)) {
                         readingDescription = false;
 
-                        descAniDone = false;
-                        StartCoroutine(DescriptionClose());
+                        if (currentBag[currentPage, currentElement].name == "地圖") {
+
+                        }
+                        else if (currentBag[currentPage, currentElement].name == "記事本") {
+
+                        }
+                        else {
+                            descAniDone = false;
+                            StartCoroutine(DescriptionClose());
+                        }
                     }
                 }
             }
@@ -284,13 +292,22 @@ public class BagUI : MonoBehaviour {
                             }
                         }
                         else if (Input.GetKeyDown(KeyCode.Z)) {
-                            itemDescImage.sprite = currentBag[currentPage, currentElement].sprite;
-                            itemDescName.text = currentBag[currentPage, currentElement].name;
-                            itemDescD.text = currentBag[currentPage, currentElement].desc;
-
                             readingDescription = true;
-                            descAniDone = false;
-                            StartCoroutine(DescriptionShowUp());
+                            if (currentBag[currentPage, currentElement].name == "地圖") {
+
+                            }
+                            else if (currentBag[currentPage, currentElement].name == "記事本") {
+
+                            }
+                            else {
+                                itemDescImage.sprite = currentBag[currentPage, currentElement].sprite;
+                                itemDescName.text = currentBag[currentPage, currentElement].name;
+                                itemDescD.text = currentBag[currentPage, currentElement].desc;
+
+                                descAniDone = false;
+                                StartCoroutine(DescriptionShowUp());
+                            }
+                            return;
                         }
                     }
                     
