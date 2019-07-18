@@ -213,4 +213,8 @@ public class PlayerController : MonoBehaviour
     {
         nowCollisionStatus = CollisionStatus.none;
     }
+	
+	public void SetPlayerLight(){	//燈光
+		transform.Find("Sino/Spotlight").gameObject.SetActive(IsHoldingCandle);
+	}
 }
