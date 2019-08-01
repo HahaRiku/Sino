@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60c6fdbd9f7d21a4386f846813473c52, type: 3}
-  m_Name: kopa
+  m_Name: Dialog_TalkPrefab
   m_EditorClassIdentifier: 
   StateList:
-  - "state\u985E\u578B": 8
+  - "state\u985E\u578B": 2
     "continue\u689D\u4EF6": 2
     Name: 
     Text: 
@@ -23,7 +23,35 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
-    Flag: re_vase
+    Flag: re_server
+    WhenFlagIs: 1
+    ThanJumpTo: already done
+    ElseJumpTo: 2
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: server
+    Text: hello
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: re_talkprefb
     WhenFlagIs: 1
     ThanJumpTo: 
     ElseJumpTo: 
@@ -32,95 +60,15 @@ MonoBehaviour:
     Value: 0
     Scene: {fileID: 0}
     SpawnPoint: 0
-    Options:
-    - Content: "\u662F"
-      JumpTo: 123
-    - Content: 
-      JumpTo: 
+    Options: []
     CharName: 
     Emotion: 
     Label: 
-    LabelJump: 
-    Class: "\u6211"
-    Parameters: []
-    WaitTime: 0
-  - "state\u985E\u578B": 0
-    "continue\u689D\u4EF6": 1
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    Flag: 
-    WhenFlagIs: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: re_vase
-    Value: 1
-    Scene: {fileID: 0}
-    SpawnPoint: 0
-    Options:
-    - Content: 1
-      JumpTo: 
-    - Content: 2
-      JumpTo: 
-    - Content: 1
-      JumpTo: 
-    - Content: 3
-      JumpTo: 
-    - Content: 4
-      JumpTo: 
-    CharName: 
-    Emotion: 
-    Label: 123
     LabelJump: 
     Class: 
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 3
-    "continue\u689D\u4EF6": 0
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    Flag: 
-    WhenFlagIs: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: re_vase
-    Value: 1
-    Scene: {fileID: 0}
-    SpawnPoint: 0
-    Options:
-    - Content: 1
-      JumpTo: 
-    - Content: 2
-      JumpTo: 
-    - Content: 1
-      JumpTo: 
-    - Content: 3
-      JumpTo: 
-    - Content: 4
-      JumpTo: 
-    CharName: 
-    Emotion: 
-    Label: 
-    LabelJump: 
-    Class: 
-    Parameters: []
-    WaitTime: 0
-  - "state\u985E\u578B": 10
     "continue\u689D\u4EF6": 2
     Name: 
     Text: 
@@ -131,73 +79,25 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
-    Flag: 
-    WhenFlagIs: 0
+    Flag: re_talkprefb
+    WhenFlagIs: 1
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: re_vase
-    Value: 1
-    Scene: {fileID: 102900000, guid: bccfb85773154c743a87f07ae93ff320, type: 3}
-    SpawnPoint: 0
-    Options:
-    - Content: 1
-      JumpTo: 
-    - Content: 2
-      JumpTo: 
-    - Content: 1
-      JumpTo: 
-    - Content: 3
-      JumpTo: 
-    - Content: 4
-      JumpTo: 
-    CharName: 
-    Emotion: 
-    Label: 
-    LabelJump: 123
-    Class: 
-    Parameters: []
-    WaitTime: 0
-  - "state\u985E\u578B": 4
-    "continue\u689D\u4EF6": 0
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    Flag: 
-    WhenFlagIs: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: re_vase
+    Variable: re_server
     Value: 1
     Scene: {fileID: 0}
     SpawnPoint: 0
-    Options:
-    - Content: 1
-      JumpTo: 
-    - Content: 2
-      JumpTo: 
-    - Content: 1
-      JumpTo: 
-    - Content: 3
-      JumpTo: 
-    - Content: 4
-      JumpTo: 
+    Options: []
     CharName: 
     Emotion: 
-    Label: 
+    Label: end
     LabelJump: 
     Class: 
     Parameters: []
     WaitTime: 0
-  - "state\u985E\u578B": 9
-    "continue\u689D\u4EF6": 1
+  - "state\u985E\u578B": 7
+    "continue\u689D\u4EF6": 2
     Name: 
     Text: 
     Image: {fileID: 0}
@@ -207,29 +107,103 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
-    Flag: 
-    WhenFlagIs: 0
+    Flag: re_talkprefb
+    WhenFlagIs: 1
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: re_vase
-    Value: 1
+    Variable: 
+    Value: 0
     Scene: {fileID: 0}
     SpawnPoint: 0
-    Options:
-    - Content: 1
-      JumpTo: 
-    - Content: 2
-      JumpTo: 
-    - Content: 1
-      JumpTo: 
-    - Content: 3
-      JumpTo: 
-    - Content: 4
-      JumpTo: 
+    Options: []
     CharName: 
     Emotion: 
-    Label: 
+    Label: already done
+    LabelJump: end
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: hello
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: re_talkprefb
+    WhenFlagIs: 1
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: already done
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: server
+    Text: hello again
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: re_talkprefb
+    WhenFlagIs: 1
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: already done
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: re_talkprefb
+    WhenFlagIs: 1
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: end
     LabelJump: 
     Class: 
     Parameters: []

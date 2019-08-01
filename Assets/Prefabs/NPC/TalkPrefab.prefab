@@ -140,17 +140,12 @@ MonoBehaviour:
   "\u4E0D\u53EF\u64BF\u7684\u7269\u54C1\u7684\u6558\u8FF0": 
   "\u662F\u5426\u64BF\u5B8C\u8B8A\u4E0D\u53EF\u64BF": 0
   "\u662F\u5426\u4E0D\u64BF\u5B8C\u8B8A\u53EF\u64BF": 0
+  "NPC\u9762\u5411\u53F3\u908A": 1
   "\u9580\u7684\u540D\u5B57": 
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
   "\u9580\u8981\u50B3\u9001\u5230\u7684\u5834\u666F": {fileID: 0}
   "\u662F\u5426\u6709\u50B3\u9001\u529F\u80FD": 1
   "\u50B3\u9001\u5730\u9EDE": 0
-  "\u4E00\u500B\u9EDE": {fileID: 21300000, guid: 35d939e7835acb54581070f427952873,
-    type: 3}
-  "\u5169\u500B\u9EDE": {fileID: 21300000, guid: 9b30f37cd5b9d4b4a8a7b934fe8b5623,
-    type: 3}
-  "\u4E09\u500B\u9EDE": {fileID: 21300000, guid: cf141f16b0fdf0c4a9f62012fe87b50c,
-    type: 3}
   "\u9396\u6253\u958B": {fileID: 0}
   "\u9396\u9396\u8D77\u4F86": {fileID: 0}
   Radius: 1.5
@@ -167,8 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4fb2d9e6e68e4490bc7b40755627e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u5287\u672C": {fileID: 11400000, guid: 6747ef7961f7ebf418b87f32a0c83bd0, type: 2}
+  "\u5287\u672C": {fileID: 0}
   nowIndex: 0
+  GM: {fileID: 0}
   "\u4E00\u958B\u59CB\u5C31\u57F7\u884C": 0
 --- !u!212 &212318175896827470
 SpriteRenderer:
