@@ -6,12 +6,13 @@ using DragonBones;
 public class PlayerController : MonoBehaviour
 {
     private UnityArmatureComponent arma;
-    private UnityArmatureComponent arma2;
+    private ChangeCharacSprite CharacSpriteController;
 
     enum DisplayStatus
     {
         左右,
-        正背
+        正,
+        背
     }
     enum CollisionStatus
     {
@@ -25,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private bool isPlayerCanControl = false;
 
     public bool IsHoldingCandle = false;		//預設為不拿蠟燭，須從外面腳本改動
+    public Light CandleLight;
+    private float candlePosX;
 
     [Range(0.05f, 2f)]
     public float speed = 1; //速度倍率
@@ -33,16 +36,15 @@ public class PlayerController : MonoBehaviour
 
     void Start() {
         arma = transform.GetChild(0).GetComponent<UnityArmatureComponent>();
-        arma2 = transform.GetChild(1).GetComponent<UnityArmatureComponent>();
+        CharacSpriteController = GetComponent<ChangeCharacSprite>();
         transform.GetChild(0).gameObject.SetActive(false);
         transform.GetChild(1).gameObject.SetActive(true);
-        nowDisplayStatus = DisplayStatus.正背;
+        nowDisplayStatus = DisplayStatus.正;
         AnimationController("idle");
     }
 
     void Update () {
         if (isPlayerCanControl) {
-            Debug.Log(arma._armature);
             if (nowCollisionStatus == CollisionStatus.left_collision && Input.GetKey("left"))
             {
                 AnimationController("idle");
@@ -103,8 +105,13 @@ public class PlayerController : MonoBehaviour
                 flip = 0;
             }
             transform.Translate(flip * Vector2.right * speed * _v * Time.deltaTime);
+            if (IsHoldingCandle)
+                MoveCandle(candlePosX);
+
             return;
         }
+        if (IsHoldingCandle)
+            MoveCandle(candlePosX);
     }
 	
 	
@@ -114,79 +121,115 @@ public class PlayerController : MonoBehaviour
             case "idle":
                 if (nowDisplayStatus != DisplayStatus.左右)
                 {
-                    transform.GetChild(0).gameObject.SetActive(true);
-                    transform.GetChild(1).gameObject.SetActive(false);
+                    CharacSpriteController.ChangeBackToDragonBone();
                     nowDisplayStatus = DisplayStatus.左右;
                 }
                 if (arma.animationName == "stand")
                     break;
                 if (!IsHoldingCandle)
+                {
+                    CandleLight.gameObject.SetActive(false);
                     arma.animation.FadeIn("stand", 0.08f);
-                else if (arma.armature.flipX)
-                    arma.animation.FadeIn("stand_with_candle_left", 0.03f);
+                }
                 else
-                    arma.animation.FadeIn("stand_with_candle_right", 0.03f);
+                {
+                    CandleLight.gameObject.SetActive(true);
+                    if (arma.armature.flipX)
+                    {
+                        candlePosX = 0.5f;
+                        arma.animation.FadeIn("stand_with_candle_right", 0.03f);
+                    }
+                    else
+                    {
+                        candlePosX = -0.5f;
+                        arma.animation.FadeIn("stand_with_candle_left", 0.03f);
+                    }
+                }
                 arma.animationName = "stand";
                 break;
             case "walk_right":
                 if (nowDisplayStatus != DisplayStatus.左右)
                 {
-                    transform.GetChild(0).gameObject.SetActive(true);
-                    transform.GetChild(1).gameObject.SetActive(false);
+                    CharacSpriteController.ChangeBackToDragonBone();
                     nowDisplayStatus = DisplayStatus.左右;
                 }
                 arma.armature.flipX = true;
                 if (!IsHoldingCandle)
-                    arma.animation.FadeIn("walk", 0.1f);
+                {
+                    CandleLight.gameObject.SetActive(false);
+                    arma.animation.FadeIn("walk_right", 0.1f);
+                }
                 else
-                    arma.animation.FadeIn("walk_with_candle_left", -1);
+                {
+                    CandleLight.gameObject.SetActive(true);
+                    candlePosX = 0.5f;
+                    arma.animation.FadeIn("walk_with_candle_right", -1);
+                }
                 arma.animationName = "walk";
                 break;
             case "walk_left":
                 if (nowDisplayStatus != DisplayStatus.左右)
                 {
-                    transform.GetChild(0).gameObject.SetActive(true);
-                    transform.GetChild(1).gameObject.SetActive(false);
+                    CharacSpriteController.ChangeBackToDragonBone();
                     nowDisplayStatus = DisplayStatus.左右;
                 }
                 arma.armature.flipX = false;
                 if (!IsHoldingCandle)
-                    arma.animation.FadeIn("walk", 0.1f);
+                {
+                    CandleLight.gameObject.SetActive(false);
+                    arma.animation.FadeIn("walk_left", 0.1f);
+                }
                 else
-                    arma.animation.FadeIn("walk_with_candle_right", -1);
+                {
+                    CandleLight.gameObject.SetActive(true);
+                    candlePosX = -0.5f;
+                    arma.animation.FadeIn("walk_with_candle_left", -1);
+                }
                 arma.animationName = "walk";
                 break;
             case "backward":
                 if (nowDisplayStatus != DisplayStatus.左右)
                 {
-                    transform.GetChild(0).gameObject.SetActive(true);
-                    transform.GetChild(1).gameObject.SetActive(false);
+                    CharacSpriteController.ChangeBackToDragonBone();
                     nowDisplayStatus = DisplayStatus.左右;
                 }
+                CandleLight.gameObject.SetActive(false);
                 arma.animation.FadeIn("backward", 0.08f, 1);
                 arma.animationName = "backward";
                 break;
             case "front_side":
-                if (nowDisplayStatus != DisplayStatus.正背)
+                if (nowDisplayStatus != DisplayStatus.正)
                 {
-                    transform.GetChild(0).gameObject.SetActive(false);
-                    transform.GetChild(1).gameObject.SetActive(true);
-                    nowDisplayStatus = DisplayStatus.正背;
+                    if (!IsHoldingCandle)
+                    {
+                        CandleLight.gameObject.SetActive(false);
+                        CharacSpriteController.ChangeSprite(0);
+                    }
+                    else
+                    {
+                        CandleLight.gameObject.SetActive(true);
+                        candlePosX = -0.1f;
+                        CharacSpriteController.ChangeSprite(1);
+                    }
+                    nowDisplayStatus = DisplayStatus.正;
                 }
-                arma2.animation.FadeIn("front_side");
-                arma2.animationName = "front_side";
-                arma2.armatureName = "Sino(正反)";
                 break;
             case "reverse_side":
-                if (nowDisplayStatus != DisplayStatus.正背)
+                if (nowDisplayStatus != DisplayStatus.背)
                 {
-                    transform.GetChild(0).gameObject.SetActive(false);
-                    transform.GetChild(1).gameObject.SetActive(true);
-                    nowDisplayStatus = DisplayStatus.正背;
+                    if (!IsHoldingCandle)
+                    {
+                        CandleLight.gameObject.SetActive(false);
+                        CharacSpriteController.ChangeSprite(2);
+                    }
+                    else
+                    {
+                        CandleLight.gameObject.SetActive(true);
+                        candlePosX = 0.1f;
+                        CharacSpriteController.ChangeSprite(3);
+                    }
+                    nowDisplayStatus = DisplayStatus.背;
                 }
-                arma2.animation.FadeIn("reverse_side");
-                arma2.animationName = "reverse_side";
-                arma2.armatureName = "Sino(正反)";
                 break;
             default:
                 break;
@@ -217,4 +260,11 @@ public class PlayerController : MonoBehaviour
 	public void SetPlayerLight(){	//燈光
 		transform.Find("Sino/Spotlight").gameObject.SetActive(IsHoldingCandle);
 	}
+
+    private void MoveCandle(float targetPosX)
+    {
+        float _speed = 10;
+        float step = _speed * Time.deltaTime;
+        CandleLight.transform.localPosition = new Vector3(Mathf.Lerp(CandleLight.transform.localPosition.x, targetPosX, step), 2.2f, -5.46f);//插值算法也可以
+    }
 }

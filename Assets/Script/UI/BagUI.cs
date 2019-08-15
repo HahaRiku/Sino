@@ -61,6 +61,8 @@ public class BagUI : MonoBehaviour {
     private bool getItemAniDone = true;
     private string getItemAniName;
 
+    private NoteController noteController;
+
 	// Use this for initialization
 	void Start () {
         bagBottom = gameObject.transform.GetChild(0).gameObject.GetComponent<RectTransform>();
@@ -113,6 +115,9 @@ public class BagUI : MonoBehaviour {
         itemDescCanvasGroup.alpha = 0;
         noItemHintCanvasGroup.alpha = 1;
 
+        GameObject NoteCanvas;
+        NoteCanvas = GameObject.Find("/NoteCanvas");
+        noteController = NoteCanvas.transform.GetChild(1).GetComponent<NoteController>();
     }
 	
 	// Update is called once per frame
@@ -154,7 +159,7 @@ public class BagUI : MonoBehaviour {
                         pageOneDirty = true;
                         BagSystem.bagUIDirty = false;
                     }
-                    else if (Input.GetKeyDown(KeyCode.B) && !SystemVariables.lockBag) {
+                    else if (!readingDescription && Input.GetKeyDown(KeyCode.B) && !SystemVariables.lockBag) {
                         FindObjectOfType<GameStateManager>().OpenBag();
                         SystemVariables.lockNPCinteract = true;
                         open = true;
@@ -197,10 +202,16 @@ public class BagUI : MonoBehaviour {
                         readingDescription = false;
 
                         if (currentBag[currentPage, currentElement].name == "地圖") {
+                            FindObjectOfType<GameStateManager>().CloseBag();
+                            SystemVariables.lockNPCinteract = false;
+                            open = false;
 
                         }
                         else if (currentBag[currentPage, currentElement].name == "記事本") {
-
+                            FindObjectOfType<GameStateManager>().CloseBag();
+                            SystemVariables.lockNPCinteract = false;
+                            open = false;
+                            noteController.CloseNote();
                         }
                         else {
                             descAniDone = false;
@@ -297,9 +308,11 @@ public class BagUI : MonoBehaviour {
                             readingDescription = true;
                             if (currentBag[currentPage, currentElement].name == "地圖") {
 
+                                StartCoroutine(CloseAnimation());
                             }
                             else if (currentBag[currentPage, currentElement].name == "記事本") {
-
+                                noteController.OpenNote();
+                                StartCoroutine(CloseAnimation());
                             }
                             else {
                                 itemDescImage.sprite = currentBag[currentPage, currentElement].sprite;

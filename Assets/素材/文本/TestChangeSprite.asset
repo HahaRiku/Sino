@@ -208,3 +208,31 @@ MonoBehaviour:
     Class: testChangeBackToDB
     Parameters: []
     WaitTime: 0
+  - "state\u985E\u578B": 5
+    "continue\u689D\u4EF6": 1
+    Name: 123
+    Text: 456
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: {fileID: 0}
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: testChangeBackToDB
+    Parameters: []
+    WaitTime: 0
