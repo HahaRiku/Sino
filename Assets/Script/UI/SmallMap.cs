@@ -11,7 +11,7 @@ public class SmallMap : MonoBehaviour {
 	public GameObject mapUI;
 	public Sprite[] floorImage;
 	
-	private GameStateManager GSM;
+	private GameObject GM;
 	private GameObject[] playerPlaceImage;
 	private bool currentShowState,lastShowState;
 	private string currentSceneName;
@@ -33,22 +33,23 @@ public class SmallMap : MonoBehaviour {
 		playerPlaceImage[1] = mapUI.transform.GetChild(3).gameObject;
 		playerPlaceImage[2] = mapUI.transform.GetChild(4).gameObject;
 		playerPlaceImage[3] = mapUI.transform.GetChild(5).gameObject;//.gameObject.GetComponent<Image>();
-		GSM = GameObject.Find("GM").GetComponent<GameStateManager>();
+		
 	}
 	
 	void Start(){
 		//***以下3個值不該在這裡初始化
 		currentShowState = false;
 		lastShowState = false;
-		currentSceneName = SceneManager.GetActiveScene().name;
+		currentSceneName = SystemVariables.Scene;
+		GM = GameObject.Find("GM");
 		
-		StartCoroutine(SmallMapShow());
+		SmallMapUpdate();
+		StartCoroutine(SmallMapShow());		
 	}
 	
-	
-	void Update () {
-		
-		if(GSM.NowStatus == GameStateManager.SceneStatus.自由探索){
+	void Update () {		
+		if(currentSceneName != SystemVariables.Scene){GM = GameObject.Find("GM");}
+		if(GM.GetComponent<GameStateManager>().NowStatus == GameStateManager.SceneStatus.自由探索){
 			currentShowState = true;
 		}
 		else{currentShowState = false;}
@@ -58,15 +59,13 @@ public class SmallMap : MonoBehaviour {
 			if(currentShowState){
 				if(lastShowState){
 					//Update current player place					
-					if(currentSceneName != SceneManager.GetActiveScene().name){
+					if(currentSceneName != SystemVariables.Scene){
 						SmallMapUpdate();}
-					yield return null;
 				}
 				else{
 					//Open map
 					mapUI.SetActive(true);
 					lastShowState = currentShowState;
-					yield return null;
 				}
 			}
 			else{
@@ -74,12 +73,14 @@ public class SmallMap : MonoBehaviour {
 					//Close map
 					mapUI.SetActive(false);
 					lastShowState = currentShowState;
-					yield return null;
 				}	
-			}			
+			}
+			yield return null;
 		}
 	}
 	private void SmallMapUpdate(){		
+		currentSceneName = SystemVariables.Scene;
+		
 		//Floor name
 		switch(currentSceneName.Substring(0,2)){
 			case "1F":
@@ -103,8 +104,9 @@ public class SmallMap : MonoBehaviour {
 			default:break;
 		}
 		
-		//Player place
+		//Player place		
 		if(currentSceneName[currentSceneName.Length -1] == '梯'){
+			playerPlaceImage[1].SetActive(false);			
 			switch(currentSceneName[currentSceneName.Length -3]){
 				case '左':
 					playerPlaceImage[2].SetActive(true);
@@ -116,6 +118,10 @@ public class SmallMap : MonoBehaviour {
 			}
 		}
 		else{
+			playerPlaceImage[2].SetActive(false);
+			playerPlaceImage[3].SetActive(false);
+			playerPlaceImage[1].SetActive(true);
+			
 			switch(currentSceneName[currentSceneName.Length -1]){
 				case '1':
 					playerPlaceImage[1].transform.localPosition = playerPlace[0];
@@ -138,7 +144,6 @@ public class SmallMap : MonoBehaviour {
 				default:break;
 			}
 		}
-		currentSceneName = SceneManager.GetActiveScene().name;
 	}
 	
 }
