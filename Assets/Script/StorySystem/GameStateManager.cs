@@ -70,12 +70,12 @@ public class GameStateManager : MonoBehaviour {
     //==================轉場控制====================
 
     public static Vector3[] transPos = {
-        new Vector3(5.5f, -4.07f, 0),
-        new Vector3(-5.5f, -4.07f, 0),
-        new Vector3(0, -4.07f, 0),
-        new Vector3(-2.3f, -4.07f, 0),
-        new Vector3(-1.5f, -4.07f, 0),
-        new Vector3(1.5f, -4.07f, 0)
+        new Vector3(5.5f, -3.2f, 0),
+        new Vector3(-5.5f, -3.2f, 0),
+        new Vector3(0, -3.2f, 0),
+        new Vector3(-2.3f, -3.2f, 0),
+        new Vector3(-1.5f, -3.2f, 0),
+        new Vector3(1.5f, -3.2f, 0)
     };
 
     public enum SpawnPoint { 右側, 左側, 中間, 中間偏左, 樓梯左側, 樓梯右側}

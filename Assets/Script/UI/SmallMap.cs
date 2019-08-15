@@ -23,8 +23,7 @@ public class SmallMap : MonoBehaviour {
         new Vector3(-28f, -9.8f, 0),
         new Vector3(-28f, 85.3f, 0),
 		new Vector3(-28f, 179f, 0)
-    };
-	
+    };	
 	
 	void Awake(){
 		
