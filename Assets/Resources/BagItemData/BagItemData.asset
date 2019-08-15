@@ -15,7 +15,7 @@ MonoBehaviour:
   - name: "\u8A18\u4E8B\u672C"
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
     desc: "\u8A18\u4E8B\u672C"
-    inBag: 0
+    inBag: 1
   - name: "\u5730\u5716"
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
     desc: "\u5730\u5716"
