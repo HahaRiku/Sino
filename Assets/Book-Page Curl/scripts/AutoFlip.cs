@@ -80,14 +80,14 @@ public class AutoFlip : MonoBehaviour {
         switch (Mode)
         {
             case FlipMode.RightToLeft:
-                while (ControledBook.currentPage < ControledBook.TotalPageCount)
+                while (ControledBook.currentPage < ControledBook.TotalPageCount-2)
                 {
                     StartCoroutine(FlipRTL(xc, xl, h, frameTime, dx));
                     yield return new WaitForSeconds(TimeBetweenPages);
                 }
                 break;
             case FlipMode.LeftToRight:
-                while (ControledBook.currentPage > 0)
+                while (ControledBook.currentPage > 2)
                 {
                     StartCoroutine(FlipLTR(xc, xl, h, frameTime, dx));
                     yield return new WaitForSeconds(TimeBetweenPages);

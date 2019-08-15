@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923a37ddccc93b546b03cfead7500afc, type: 3}
+  m_Name: NotePagesData
+  m_EditorClassIdentifier: 
+  notePagesList:
+  - sprites:
+    - {fileID: 21300000, guid: 9f1ddd79b2fa5444b9f0150b809a8dd0, type: 3}
+    - {fileID: 21300000, guid: fca57dd61c151c649adcbc7ba39e71bb, type: 3}
+    - {fileID: 21300000, guid: b85050c83db242e4eafba8f57eb350d9, type: 3}
+  - sprites:
+    - {fileID: 21300000, guid: b0c18c676ab4d4343adc234472e1d618, type: 3}
+    - {fileID: 21300000, guid: 86cccff4f962a034c841b8a741b9d50b, type: 3}
+    - {fileID: 21300000, guid: 9ad9c7be1dcdd6d45ab6e643fc600a88, type: 3}
+  - sprites:
+    - {fileID: 0}
+    - {fileID: 0}
+  - sprites:
+    - {fileID: 0}
+    - {fileID: 0}
