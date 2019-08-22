@@ -8,8 +8,8 @@ public class GameStateManager : MonoBehaviour {
 
     public enum SceneStatus
     {
-        演出中,
-        自由探索
+        自由探索,
+		演出中
     };
     //指向目前玩家可以使用角色 null情況代表演出中
     public SceneStatus NowStatus;
