@@ -161,7 +161,6 @@ public class BagUI : MonoBehaviour {
                     }
                     else if (!readingDescription && Input.GetKeyDown(KeyCode.B) && !SystemVariables.lockBag) {
                         FindObjectOfType<GameStateManager>().OpenBag();
-                        SystemVariables.lockNPCinteract = true;
                         open = true;
                         currentPage = 0;
                         currentElement = 0;
@@ -328,7 +327,6 @@ public class BagUI : MonoBehaviour {
                     
                     if (Input.GetKeyDown(KeyCode.B)) {
                         FindObjectOfType<GameStateManager>().CloseBag();
-                        SystemVariables.lockNPCinteract = false;
                         open = false;
                         StartCoroutine(CloseAnimation());
 

@@ -56,10 +56,26 @@ public class GameStateManager : MonoBehaviour {
     public void OpenBag()
     {
         PlayerControlLock = true;
+        SystemVariables.lockNPCinteract = true;
+        SystemVariables.lockMenu = true;
     }
 
     public void CloseBag() {
         PlayerControlLock = false;
+        SystemVariables.lockNPCinteract = false;
+        SystemVariables.lockMenu = false;
+    }
+
+    public void OpenMenu() {
+        PlayerControlLock = true;
+        SystemVariables.lockNPCinteract = true;
+        SystemVariables.lockBag = true;
+    }
+
+    public void CloseMenu() {
+        PlayerControlLock = false;
+        SystemVariables.lockNPCinteract = false;
+        SystemVariables.lockBag = false;
     }
 
     public void SetStoryManager(StoryManager s)
