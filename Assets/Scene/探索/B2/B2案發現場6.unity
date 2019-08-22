@@ -228,7 +228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1919600463553752, guid: 047748c55921db6498e202a34cbcfd69, type: 2}
       propertyPath: m_Name
-      value: ToB2-6
+      value: "ToB2\u7262\u623F\u8D70\u5ECA6"
       objectReference: {fileID: 0}
     - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
         type: 2}
@@ -260,6 +260,11 @@ Prefab:
         type: 2}
       propertyPath: nextScenePos
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114598453084158562, guid: 047748c55921db6498e202a34cbcfd69,
+        type: 2}
+      propertyPath: targetSceneName
+      value: "B2\u7262\u623F\u8D70\u5ECA6"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 047748c55921db6498e202a34cbcfd69, type: 2}

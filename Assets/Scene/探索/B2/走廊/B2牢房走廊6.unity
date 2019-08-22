@@ -392,6 +392,11 @@ Prefab:
       value: 
       objectReference: {fileID: 102900000, guid: 936d8f1c98513194b8d0507edb0af79b,
         type: 3}
+    - target: {fileID: 114950270417242736, guid: 6fca2977269b2434a9243a4f3b09f06c,
+        type: 2}
+      propertyPath: targetSceneName
+      value: "B2\u7262\u623F\u8D70\u5ECA5"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fca2977269b2434a9243a4f3b09f06c, type: 2}
   m_IsPrefabParent: 0
@@ -7471,6 +7476,11 @@ Prefab:
       value: 
       objectReference: {fileID: 102900000, guid: ba67fcb7f5d380941b369f53796c4d72,
         type: 3}
+    - target: {fileID: 114671547356018226, guid: fa9f041dac0ed4e4b9e4c1c96fe2bc9c,
+        type: 2}
+      propertyPath: targetSceneName
+      value: "B2\u5DE6\u6A13\u68AF"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa9f041dac0ed4e4b9e4c1c96fe2bc9c, type: 2}
   m_IsPrefabParent: 0
@@ -7613,6 +7623,11 @@ Prefab:
         type: 2}
       propertyPath: Radius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114819655278318818, guid: e0bec132ea7c3fb44840b1fde2630d83,
+        type: 2}
+      propertyPath: "\u9580\u8981\u50B3\u9001\u5230\u7684\u5834\u666F\u540D\u5B57"
+      value: "B2\u6848\u767C\u73FE\u58346"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0bec132ea7c3fb44840b1fde2630d83, type: 2}

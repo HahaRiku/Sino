@@ -25,6 +25,7 @@ public class NPC : MonoBehaviour {
     public string 門的名字;
     public string 需要的鑰匙名字;
     public Object 門要傳送到的場景;
+	public string 門要傳送到的場景名字;
     public bool 是否有傳送功能 = true;
     public GameStateManager.SpawnPoint 傳送地點;
 
@@ -160,7 +161,7 @@ public class NPC : MonoBehaviour {
                                 StartCoroutine(CannotOpenDoorAni());
                         }
                         else if(是否有傳送功能) //unlock
-                            OpenDoorPanel.ShowQuestion(門要傳送到的場景.name, 傳送地點);
+                            OpenDoorPanel.ShowQuestion(門要傳送到的場景名字, 傳送地點);
                     }
                 }
                 else {

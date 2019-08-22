@@ -482,6 +482,11 @@ Prefab:
       propertyPath: nextScenePos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114950270417242736, guid: 6fca2977269b2434a9243a4f3b09f06c,
+        type: 2}
+      propertyPath: targetSceneName
+      value: "B3\u8D70\u5ECA6"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fca2977269b2434a9243a4f3b09f06c, type: 2}
   m_IsPrefabParent: 0
@@ -614,6 +619,11 @@ Prefab:
         type: 2}
       propertyPath: portalList.Array.data[1].nextScenePos
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114638674318020536, guid: 0679702b6358cfa4597dd5a83eee2cea,
+        type: 2}
+      propertyPath: portalList.Array.data[0].targetSceneName
+      value: "B2\u5DE6\u6A13\u68AF"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0679702b6358cfa4597dd5a83eee2cea, type: 2}

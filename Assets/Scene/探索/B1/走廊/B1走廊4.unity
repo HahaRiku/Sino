@@ -7507,7 +7507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1145643259831444, guid: fa9f041dac0ed4e4b9e4c1c96fe2bc9c, type: 2}
       propertyPath: m_Name
-      value: ToB1-5
+      value: "ToB1\u7262\u623F\u8D70\u5ECA5"
       objectReference: {fileID: 0}
     - target: {fileID: 114671547356018226, guid: fa9f041dac0ed4e4b9e4c1c96fe2bc9c,
         type: 2}
@@ -7515,6 +7515,11 @@ Prefab:
       value: 
       objectReference: {fileID: 102900000, guid: d4b932ac56db64746b04d33c4feeaa5d,
         type: 3}
+    - target: {fileID: 114671547356018226, guid: fa9f041dac0ed4e4b9e4c1c96fe2bc9c,
+        type: 2}
+      propertyPath: targetSceneName
+      value: "B1\u7262\u623F\u8D70\u5ECA5"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa9f041dac0ed4e4b9e4c1c96fe2bc9c, type: 2}
   m_IsPrefabParent: 0
@@ -7564,7 +7569,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1469327379019276, guid: 6fca2977269b2434a9243a4f3b09f06c, type: 2}
       propertyPath: m_Name
-      value: ToB1-3
+      value: "ToB1\u8D70\u5ECA3"
       objectReference: {fileID: 0}
     - target: {fileID: 114950270417242736, guid: 6fca2977269b2434a9243a4f3b09f06c,
         type: 2}
@@ -7572,6 +7577,11 @@ Prefab:
       value: 
       objectReference: {fileID: 102900000, guid: 7211175c1ca5ccf44af6712f5db39535,
         type: 3}
+    - target: {fileID: 114950270417242736, guid: 6fca2977269b2434a9243a4f3b09f06c,
+        type: 2}
+      propertyPath: targetSceneName
+      value: "B1\u8D70\u5ECA3"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fca2977269b2434a9243a4f3b09f06c, type: 2}
   m_IsPrefabParent: 0

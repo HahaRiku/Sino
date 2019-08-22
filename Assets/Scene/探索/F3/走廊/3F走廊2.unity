@@ -389,7 +389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1469327379019276, guid: 6fca2977269b2434a9243a4f3b09f06c, type: 2}
       propertyPath: m_Name
-      value: To3F-1
+      value: "To3F\u8D70\u5ECA1"
       objectReference: {fileID: 0}
     - target: {fileID: 114950270417242736, guid: 6fca2977269b2434a9243a4f3b09f06c,
         type: 2}
@@ -397,6 +397,11 @@ Prefab:
       value: 
       objectReference: {fileID: 102900000, guid: 61c1ec9b2106aa340bd0f02e62eec6ba,
         type: 3}
+    - target: {fileID: 114950270417242736, guid: 6fca2977269b2434a9243a4f3b09f06c,
+        type: 2}
+      propertyPath: targetSceneName
+      value: "3F\u8D70\u5ECA1"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fca2977269b2434a9243a4f3b09f06c, type: 2}
   m_IsPrefabParent: 0
@@ -715,6 +720,16 @@ Prefab:
         type: 2}
       propertyPath: "\u50B3\u9001\u5730\u9EDE"
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114819655278318818, guid: e0bec132ea7c3fb44840b1fde2630d83,
+        type: 2}
+      propertyPath: "\u662F\u5426\u6709\u50B3\u9001\u529F\u80FD"
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114819655278318818, guid: e0bec132ea7c3fb44840b1fde2630d83,
+        type: 2}
+      propertyPath: "\u9580\u8981\u50B3\u9001\u5230\u7684\u5834\u666F\u540D\u5B57"
+      value: "3F\u7948\u79B1\u5BA4_\u7121\u80CC\u666F2"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0bec132ea7c3fb44840b1fde2630d83, type: 2}

@@ -167,6 +167,11 @@ Prefab:
       propertyPath: "\u50B3\u9001\u5730\u9EDE"
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114819655278318818, guid: e0bec132ea7c3fb44840b1fde2630d83,
+        type: 2}
+      propertyPath: "\u9580\u8981\u50B3\u9001\u5230\u7684\u5834\u666F\u540D\u5B57"
+      value: "B1\u9152\u7A961"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0bec132ea7c3fb44840b1fde2630d83, type: 2}
   m_IsPrefabParent: 0
@@ -383,6 +388,11 @@ Prefab:
       value: 
       objectReference: {fileID: 102900000, guid: 271841fb61fe0c3449888da2f77dcd09,
         type: 3}
+    - target: {fileID: 114950270417242736, guid: 6fca2977269b2434a9243a4f3b09f06c,
+        type: 2}
+      propertyPath: targetSceneName
+      value: "B1\u53F3\u6A13\u68AF"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fca2977269b2434a9243a4f3b09f06c, type: 2}
   m_IsPrefabParent: 0
@@ -780,7 +790,7 @@ GameObject:
   - component: {fileID: 2090706947}
   - component: {fileID: 2090706946}
   m_Layer: 0
-  m_Name: ToB1-2
+  m_Name: "ToB1\u8D70\u5ECA2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -825,4 +835,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: {fileID: 102900000, guid: a15cd665dba96d840a584bf145f17822, type: 3}
+  targetSceneName: "B1\u8D70\u5ECA2"
   nextScenePos: 0
