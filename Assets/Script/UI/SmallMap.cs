@@ -28,10 +28,10 @@ public class SmallMap : MonoBehaviour {
 	void Awake(){
 		
 		playerPlaceImage = new GameObject[4];
-		playerPlaceImage[0] = mapUI.transform.GetChild(2).gameObject;
-		playerPlaceImage[1] = mapUI.transform.GetChild(3).gameObject;
-		playerPlaceImage[2] = mapUI.transform.GetChild(4).gameObject;
-		playerPlaceImage[3] = mapUI.transform.GetChild(5).gameObject;//.gameObject.GetComponent<Image>();
+		playerPlaceImage[0] = mapUI.transform.GetChild(1).gameObject;
+		playerPlaceImage[1] = mapUI.transform.GetChild(2).gameObject;
+		playerPlaceImage[2] = mapUI.transform.GetChild(3).gameObject;
+		playerPlaceImage[3] = mapUI.transform.GetChild(4).gameObject;//.gameObject.GetComponent<Image>();
 		
 	}
 	
