@@ -10,6 +10,7 @@ public class SmallMap : MonoBehaviour {
 	
 	public GameObject mapUI;
 	public Sprite[] floorImage;
+	public GameObject ani_mapShowUpY, ani_mapShowDownY;
 	
 	private GameObject GM;
 	private GameObject[] playerPlaceImage;
@@ -23,7 +24,7 @@ public class SmallMap : MonoBehaviour {
         new Vector3(-28f, -9.8f, 0),
         new Vector3(-28f, 85.3f, 0),
 		new Vector3(-28f, 179f, 0)
-    };	
+    };
 	
 	void Awake(){
 		
@@ -43,10 +44,10 @@ public class SmallMap : MonoBehaviour {
 		GM = GameObject.Find("GM");
 		
 		SmallMapUpdate();
-		StartCoroutine(SmallMapShow());		
+		StartCoroutine(SmallMapShow());
 	}
 	
-	void Update () {		
+	void Update () {
 		if(currentSceneName != SystemVariables.Scene){GM = GameObject.Find("GM");}
 		if(GM.GetComponent<GameStateManager>().NowStatus == GameStateManager.SceneStatus.自由探索){
 			currentShowState = true;
@@ -57,27 +58,34 @@ public class SmallMap : MonoBehaviour {
 		while(true){
 			if(currentShowState){
 				if(lastShowState){
-					//Update current player place					
+					//Update current player place
 					if(currentSceneName != SystemVariables.Scene){
 						SmallMapUpdate();}
 				}
 				else{
 					//Open map
+					
 					mapUI.SetActive(true);
+					//Debug.Log(mapUI.transform.parent.gameObject.name);
+					//mapUI.transform.parent.position = Vector3.MoveTowards(mapUI.transform.parent.position, ani_mapShowUpY.transform.position, 0.5f);
+					
 					lastShowState = currentShowState;
 				}
 			}
 			else{
 				if(lastShowState){
 					//Close map
+					
 					mapUI.SetActive(false);
+					//Debug.Log(mapUI.transform.parent.gameObject.name);
+					//mapUI.transform.parent.position = Vector3.MoveTowards(mapUI.transform.parent.position, ani_mapShowUpY.transform.position, 0.5f);
 					lastShowState = currentShowState;
-				}	
+				}
 			}
 			yield return null;
 		}
 	}
-	private void SmallMapUpdate(){		
+	private void SmallMapUpdate(){
 		currentSceneName = SystemVariables.Scene;
 		
 		//Floor name
@@ -103,9 +111,9 @@ public class SmallMap : MonoBehaviour {
 			default:break;
 		}
 		
-		//Player place		
+		//Player place
 		if(currentSceneName[currentSceneName.Length -1] == '梯'){
-			playerPlaceImage[1].SetActive(false);			
+			playerPlaceImage[1].SetActive(false);
 			switch(currentSceneName[currentSceneName.Length -3]){
 				case '左':
 					playerPlaceImage[2].SetActive(true);
