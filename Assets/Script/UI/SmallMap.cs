@@ -65,10 +65,9 @@ public class SmallMap : MonoBehaviour {
 				else{
 					//Open map
 					
-					mapUI.SetActive(true);
+					//mapUI.SetActive(true);
 					//Debug.Log(mapUI.transform.parent.gameObject.name);
-					//mapUI.transform.parent.position = Vector3.MoveTowards(mapUI.transform.parent.position, ani_mapShowUpY.transform.position, 0.5f);
-					
+					StartCoroutine(SmallMapShowAnimation(true));
 					lastShowState = currentShowState;
 				}
 			}
@@ -76,15 +75,30 @@ public class SmallMap : MonoBehaviour {
 				if(lastShowState){
 					//Close map
 					
-					mapUI.SetActive(false);
+					//mapUI.SetActive(false);
 					//Debug.Log(mapUI.transform.parent.gameObject.name);
-					//mapUI.transform.parent.position = Vector3.MoveTowards(mapUI.transform.parent.position, ani_mapShowUpY.transform.position, 0.5f);
+					StartCoroutine(SmallMapShowAnimation(false));
 					lastShowState = currentShowState;
 				}
 			}
 			yield return null;
 		}
 	}
+	private IEnumerator SmallMapShowAnimation(bool IsUp){
+		if(IsUp){
+			while(Vector3.Distance(ani_mapShowUpY.transform.position, mapUI.transform.parent.position) >= 3.0f){
+				mapUI.transform.parent.position = Vector3.MoveTowards(mapUI.transform.parent.position, ani_mapShowUpY.transform.position, 3.0f);
+				yield return new WaitForFixedUpdate();
+			}
+		}
+		else{
+			while(Vector3.Distance(ani_mapShowDownY.transform.position, mapUI.transform.parent.position) >= 3.0f){
+				mapUI.transform.parent.position = Vector3.MoveTowards(mapUI.transform.parent.position, ani_mapShowDownY.transform.position, 3.0f);
+				yield return new WaitForFixedUpdate();
+			}
+		}
+	}
+	
 	private void SmallMapUpdate(){
 		currentSceneName = SystemVariables.Scene;
 		
