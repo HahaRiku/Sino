@@ -58,6 +58,7 @@ public class NPCEditor : Editor {
             if (sO.FindProperty("是否有傳送功能").boolValue)
             {
                 EditorGUILayout.PropertyField(sO.FindProperty("門要傳送到的場景"));
+                EditorGUILayout.PropertyField(sO.FindProperty("門要傳送到的場景名字"));
                 EditorGUILayout.PropertyField(sO.FindProperty("傳送地點"));
             }
             EditorGUILayout.Space();
