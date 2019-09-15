@@ -26,10 +26,12 @@ public class Title : MonoBehaviour {
     private SelectedButton state;
     private bool stateChanged ;
     private int bg_index;
+    private bool changingBG = false;
 
 	// Use this for initialization
 	void Start () {
-        bg_index = 0;
+        bg_index = 1;
+        背景_內SpriteComp.sprite = 背景_內[0];
         state = SelectedButton.Start;
         if (state == SelectedButton.Start) {
             buttonImageComp[0].sprite = buttonSprites[0].selected;
@@ -50,7 +52,10 @@ public class Title : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        StartCoroutine(ChangeBG());
+        if (!changingBG) {
+            changingBG = true;
+            StartCoroutine(ChangeBG());
+        }
 
 
         if (Input.GetKeyDown(KeyCode.Z)) {
@@ -114,6 +119,7 @@ public class Title : MonoBehaviour {
         if (bg_index == 背景_內.Length) {
             bg_index = 0;
         }
+        changingBG = false;
     }
 
     /*public void ChangeState(SelectedButton s) {
