@@ -18,12 +18,12 @@ public class SmallMap : MonoBehaviour {
 	private string currentSceneName;
 	
 	private Vector3[] playerPlace = {
-        new Vector3(-28f, -296f, 0),
-        new Vector3(-28f, -201.1f, 0),
-        new Vector3(-28f, -108.3f, 0),
-        new Vector3(-28f, -9.8f, 0),
-        new Vector3(-28f, 85.3f, 0),
-		new Vector3(-28f, 179f, 0)
+        new Vector3(-21.5f, -339.6f, 0),
+        new Vector3(-22.6f, -224.9f, 0),
+        new Vector3(-22.6f, -114.3f, 0),
+        new Vector3(-19.1f, 12.1f, 0),
+        new Vector3(-23.1f, 131.1f, 0),
+		new Vector3(-26.6f, 238.2f, 0)
     };
 	
 	void Awake(){
