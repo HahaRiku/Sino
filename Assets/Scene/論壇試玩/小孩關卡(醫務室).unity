@@ -979,7 +979,7 @@ Prefab:
     - target: {fileID: 224763313474460652, guid: 80900dd1b71b80f43ac5a52792bc4c76,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 224763313474460652, guid: 80900dd1b71b80f43ac5a52792bc4c76,
         type: 2}
@@ -989,7 +989,7 @@ Prefab:
     - target: {fileID: 224763313474460652, guid: 80900dd1b71b80f43ac5a52792bc4c76,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 50.000004
       objectReference: {fileID: 0}
     - target: {fileID: 224931835241933462, guid: 80900dd1b71b80f43ac5a52792bc4c76,
         type: 2}
@@ -1009,7 +1009,7 @@ Prefab:
     - target: {fileID: 224931835241933462, guid: 80900dd1b71b80f43ac5a52792bc4c76,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 224931835241933462, guid: 80900dd1b71b80f43ac5a52792bc4c76,
         type: 2}
@@ -1019,7 +1019,7 @@ Prefab:
     - target: {fileID: 224931835241933462, guid: 80900dd1b71b80f43ac5a52792bc4c76,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 50.000004
       objectReference: {fileID: 0}
     - target: {fileID: 225252214945471382, guid: 80900dd1b71b80f43ac5a52792bc4c76,
         type: 2}
@@ -1062,39 +1062,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "\u6AA2\u67E5\u7684\u5E8F\u5217":
-  - "\u8981\u4F7F\u7528\u54EA\u7A2E\u5224\u65B7": 0
-    "\u8B8A\u6578\u540D": "\u5C0F\u5B69\u95DC\u5361(\u91AB\u52D9\u5BA4)_\u5E8A"
-    "\u5982\u679C\u4E0A\u9762\u7684\u8B8A\u6578\u70BA\u591A\u5C11\u624D\u8A2D\u7F6E": 1
-    "\u9053\u5177\u540D\u7A31": 
-    "\u9053\u5177\u662F\u5426\u5728\u80CC\u5305": 0
-    "\u8981\u8A2D\u5B9AActive\u7684\u7269\u4EF6": {fileID: 1117542693}
-    "Active\u7684\u503C": 0
-  - "\u8981\u4F7F\u7528\u54EA\u7A2E\u5224\u65B7": 0
-    "\u8B8A\u6578\u540D": "\u5C0F\u5B69\u95DC\u5361(\u91AB\u52D9\u5BA4)_\u5E8A"
-    "\u5982\u679C\u4E0A\u9762\u7684\u8B8A\u6578\u70BA\u591A\u5C11\u624D\u8A2D\u7F6E": 1
-    "\u9053\u5177\u540D\u7A31": 
-    "\u9053\u5177\u662F\u5426\u5728\u80CC\u5305": 0
-    "\u8981\u8A2D\u5B9AActive\u7684\u7269\u4EF6": {fileID: 1935095575}
-    "Active\u7684\u503C": 1
   - "\u8981\u4F7F\u7528\u54EA\u7A2E\u5224\u65B7": 1
     "\u8B8A\u6578\u540D": 
     "\u5982\u679C\u4E0A\u9762\u7684\u8B8A\u6578\u70BA\u591A\u5C11\u624D\u8A2D\u7F6E": 0
     "\u9053\u5177\u540D\u7A31": "\u9470\u5319"
     "\u9053\u5177\u662F\u5426\u5728\u80CC\u5305": 1
-    "\u8981\u8A2D\u5B9AActive\u7684\u7269\u4EF6": {fileID: 1935095575}
+    "\u8981\u8A2D\u5B9AActive\u7684\u7269\u4EF6": {fileID: 1117542693}
     "Active\u7684\u503C": 0
-  - "\u8981\u4F7F\u7528\u54EA\u7A2E\u5224\u65B7": 0
-    "\u8B8A\u6578\u540D": "\u5C0F\u5B69\u95DC\u5361(\u91AB\u52D9\u5BA4)_\u684C\u5B50"
-    "\u5982\u679C\u4E0A\u9762\u7684\u8B8A\u6578\u70BA\u591A\u5C11\u624D\u8A2D\u7F6E": 1
-    "\u9053\u5177\u540D\u7A31": 
-    "\u9053\u5177\u662F\u5426\u5728\u80CC\u5305": 0
+  - "\u8981\u4F7F\u7528\u54EA\u7A2E\u5224\u65B7": 1
+    "\u8B8A\u6578\u540D": 
+    "\u5982\u679C\u4E0A\u9762\u7684\u8B8A\u6578\u70BA\u591A\u5C11\u624D\u8A2D\u7F6E": 0
+    "\u9053\u5177\u540D\u7A31": "\u9470\u5319"
+    "\u9053\u5177\u662F\u5426\u5728\u80CC\u5305": 1
     "\u8981\u8A2D\u5B9AActive\u7684\u7269\u4EF6": {fileID: 91688307}
     "Active\u7684\u503C": 0
-  - "\u8981\u4F7F\u7528\u54EA\u7A2E\u5224\u65B7": 0
-    "\u8B8A\u6578\u540D": "\u5C0F\u5B69\u95DC\u5361(\u91AB\u52D9\u5BA4)_\u684C\u5B50"
-    "\u5982\u679C\u4E0A\u9762\u7684\u8B8A\u6578\u70BA\u591A\u5C11\u624D\u8A2D\u7F6E": 1
-    "\u9053\u5177\u540D\u7A31": 
-    "\u9053\u5177\u662F\u5426\u5728\u80CC\u5305": 0
+  - "\u8981\u4F7F\u7528\u54EA\u7A2E\u5224\u65B7": 1
+    "\u8B8A\u6578\u540D": 
+    "\u5982\u679C\u4E0A\u9762\u7684\u8B8A\u6578\u70BA\u591A\u5C11\u624D\u8A2D\u7F6E": 0
+    "\u9053\u5177\u540D\u7A31": "\u9470\u5319"
+    "\u9053\u5177\u662F\u5426\u5728\u80CC\u5305": 1
     "\u8981\u8A2D\u5B9AActive\u7684\u7269\u4EF6": {fileID: 1167895506}
     "Active\u7684\u503C": 1
   - "\u8981\u4F7F\u7528\u54EA\u7A2E\u5224\u65B7": 0
@@ -3468,11 +3454,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a989ec52297141d4b960572557abf0f4, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1935095575 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1767136364479110, guid: a989ec52297141d4b960572557abf0f4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1935095574}
 --- !u!1001 &1987806331
 Prefab:
   m_ObjectHideFlags: 0
