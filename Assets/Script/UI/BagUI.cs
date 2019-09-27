@@ -123,7 +123,7 @@ public class BagUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (openAndCloseAnimationDone) {
+        if (openAndCloseAnimationDone && SystemVariables.Scene != "title") {
             if (!open) {
                 if (getItemAniStart) {
                     getItemAniStart = false;
@@ -410,6 +410,7 @@ public class BagUI : MonoBehaviour {
 
         getItemAniDone = true;
         SystemVariables.lockNPCinteract = false;
+        print("release");
 
         FindObjectOfType<GameStateManager>().CloseBag();
     }

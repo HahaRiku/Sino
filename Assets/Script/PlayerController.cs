@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private int flip = 0;
 
     void Start() {
+        
         arma = transform.GetChild(0).GetComponent<UnityArmatureComponent>();
         CharacSpriteController = GetComponent<ChangeCharacSprite>();
         transform.GetChild(0).gameObject.SetActive(false);
@@ -44,6 +45,9 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update () {
+        if (SystemVariables.Scene == "title") {
+            Destroy(gameObject);
+        }
         if (isPlayerCanControl) {
             if (nowCollisionStatus == CollisionStatus.left_collision && Input.GetKey("left"))
             {

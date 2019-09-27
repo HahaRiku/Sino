@@ -227,6 +227,7 @@ public class NPC : MonoBehaviour {
             GM.FinEvent();
         }
         state = NpcState.講完話冷卻中;
+        
         if (type == NpcType.talk)
             yield return new WaitForSeconds(冷卻時間);
         else

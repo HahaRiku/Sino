@@ -49,10 +49,13 @@ public class SmallMap : MonoBehaviour {
 	
 	void Update () {
 		if(currentSceneName != SystemVariables.Scene){GM = GameObject.Find("GM");}
-		if(GM.GetComponent<GameStateManager>().NowStatus == GameStateManager.SceneStatus.自由探索){
-			currentShowState = true;
-		}
-		else{currentShowState = false;}
+        if (GM != null) {
+            if (GM.GetComponent<GameStateManager>().NowStatus == GameStateManager.SceneStatus.自由探索) {
+                currentShowState = true;
+            }
+            else { currentShowState = false; }
+        }
+        
 	}
 	private IEnumerator SmallMapShow(){
 		while(true){

@@ -24,7 +24,6 @@ public class Title : MonoBehaviour {
     public SpriteRenderer 背景_內SpriteComp;
 
     private SelectedButton state;
-    private bool stateChanged ;
     private int bg_index;
     private bool changingBG = false;
 
@@ -48,6 +47,7 @@ public class Title : MonoBehaviour {
             buttonImageComp[1].sprite = buttonSprites[1].notSelected;
             buttonImageComp[2].sprite = buttonSprites[2].selected;
         }
+        SystemVariables.Scene = SceneManager.GetActiveScene().name;
     }
 	
 	// Update is called once per frame
@@ -122,8 +122,7 @@ public class Title : MonoBehaviour {
         changingBG = false;
     }
 
-    /*public void ChangeState(SelectedButton s) {
-        state = s;
-        stateChanged = true;
-    }*/
+    void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode) {
+        
+    }
 }

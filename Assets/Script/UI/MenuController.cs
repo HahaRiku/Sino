@@ -82,7 +82,7 @@ public class MenuController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (MenuAniDone) {
-            if (!open) {
+            if (!open && SystemVariables.Scene != "title") {
                 if (!SystemVariables.lockMenu && Input.GetKeyDown(KeyCode.Escape)) {
                     state = State.繼續遊戲;
                     繼續遊戲img.sprite = 繼續遊戲_選取;
@@ -110,6 +110,7 @@ public class MenuController : MonoBehaviour {
                     else if (Input.GetKeyDown(KeyCode.Z)) {
                         //need to auto save
                         if (quesType == QuesType.返回標題) {
+                            ResetMenu();
                             SceneManager.LoadScene("title");
                         }
                         else if (quesType == QuesType.離開遊戲) {
@@ -251,6 +252,15 @@ public class MenuController : MonoBehaviour {
             question.alpha = i;
             yield return null;
         }
+        MenuAniDone = true;
+    }
+
+    void ResetMenu() {
+        state = State.繼續遊戲;
+        open = false;
+        Main.transform.localPosition = new Vector2(0, 660);
+        blackBG.alpha = 0;
+        question.alpha = 0;
         MenuAniDone = true;
     }
 }
