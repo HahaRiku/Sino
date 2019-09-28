@@ -275,6 +275,7 @@ public class StoryDataEditor:Editor
         menu.AddItem(new GUIContent("新增標籤設立"), false, AddLabelSetting);
         menu.AddItem(new GUIContent("新增標籤跳轉"), false, AddLabelJumping);
         menu.AddSeparator("");
+        menu.AddItem(new GUIContent("新增轉場"), false, AddTransition);
         menu.AddItem(new GUIContent("新增等待時間"), false, AddWaitTime);
         menu.AddItem(new GUIContent("新增外部腳本"), false, AddOuterScript);
         menu.DropDown(buttonRect);
@@ -407,7 +408,17 @@ public class StoryDataEditor:Editor
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(target);
     }
-
+    void AddTransition()
+    {
+        var index = list.serializedProperty.arraySize;
+        list.serializedProperty.arraySize++;
+        list.index = index;
+        var element = list.serializedProperty.GetArrayElementAtIndex(index);
+        element.FindPropertyRelative("state類型").enumValueIndex = 10;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 1;
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
+    }
     void AddOption(int stateListIndex, int arrayNewIndex)
     {
         var element = serializedObject.FindProperty("StateList").GetArrayElementAtIndex(stateListIndex);

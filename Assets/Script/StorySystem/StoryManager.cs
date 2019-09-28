@@ -208,13 +208,13 @@ public class StoryManager : MonoBehaviour
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.轉換場景)
         {
-            var 場景 = stories[nowIndex].Scene;
-            /*if (!Application.CanStreamedLevelBeLoaded(場景名))
+            var 場景名 = stories[nowIndex].Scene;
+            if (!Application.CanStreamedLevelBeLoaded(場景名))
             {
                 Debug.LogError("Error：場景 \"" + 場景名 + "\" is not found.");
                 return;
-            }*/
-            GM.黑幕轉場(場景.name, stories[nowIndex].SpawnPoint);
+            }
+            GM.黑幕轉場(場景名, stories[nowIndex].SpawnPoint);
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.外部腳本)
         {
