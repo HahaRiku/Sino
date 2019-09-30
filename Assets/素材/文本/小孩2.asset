@@ -30,7 +30,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: Q
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -58,7 +58,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -86,7 +86,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -114,7 +114,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x14\x01"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -142,7 +142,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "U\x01"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -170,7 +170,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -198,7 +198,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -226,7 +226,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x18\x02"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -254,7 +254,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "Y\x02"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -282,7 +282,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -310,7 +310,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -338,7 +338,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x1C\x03"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -366,7 +366,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "]\x03"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -394,7 +394,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -422,7 +422,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -450,7 +450,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: " \x04"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -478,7 +478,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 102900000, guid: f991c02e33a9c3044ab3c7038a507a07, type: 3}
+    Scene: GG
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -510,7 +510,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -538,7 +538,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -566,7 +566,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "2\x05"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -594,7 +594,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "s\x05"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -626,7 +626,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -658,7 +658,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\t\x06"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -690,7 +690,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "T\x06"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -718,7 +718,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -746,7 +746,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -774,7 +774,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x17\a"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -802,7 +802,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "X\a"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -830,7 +830,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -858,7 +858,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -886,7 +886,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\e\b"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -914,7 +914,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\\\b"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -942,7 +942,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -970,7 +970,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -1002,7 +1002,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: ")\t"
     SpawnPoint: 0
     Options:
     - Content: 
@@ -1034,7 +1034,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "t\t"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -1066,7 +1066,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -1098,7 +1098,10 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: '
+
+
+'
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -1130,7 +1133,9 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 'U
+
+'
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -1162,7 +1167,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"

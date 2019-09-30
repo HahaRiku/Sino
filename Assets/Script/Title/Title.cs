@@ -63,7 +63,7 @@ public class Title : MonoBehaviour {
                 Application.Quit();
             }
             else if(state == SelectedButton.Start) {
-                SceneManager.LoadScene("牢房");
+                SceneManager.LoadScene("B3牢房4");
 
             }
         }

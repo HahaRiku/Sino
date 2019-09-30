@@ -30,7 +30,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: Q
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -58,7 +58,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -86,7 +86,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -114,7 +114,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x14\x01"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -142,7 +142,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "U\x01"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -170,7 +170,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -198,7 +198,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -226,7 +226,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x18\x02"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -254,7 +254,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "Y\x02"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -282,7 +282,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -310,7 +310,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -338,7 +338,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x1C\x03"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -366,7 +366,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "]\x03"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -394,7 +394,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u62D2\u7D55"
@@ -426,7 +426,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -454,7 +454,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "*\x04"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -482,7 +482,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "k\x04"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -510,7 +510,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 102900000, guid: f991c02e33a9c3044ab3c7038a507a07, type: 3}
+    Scene: GG
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -538,7 +538,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -566,7 +566,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "2\x05"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -594,7 +594,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "s\x05"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -622,7 +622,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 102900000, guid: e9a48c663a6eeec439efd300c631bdea, type: 3}
+    Scene: "B1\u5C0F\u5B69\u95DC\u5361(\u91AB\u52D9\u5BA4)3"
     SpawnPoint: 1
     Options:
     - Content: 
@@ -660,7 +660,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x12\x06"
     SpawnPoint: 0
     Options: []
     CharName: 
