@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5649d0c7727c447b2161ca02a326ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreFab: {fileID: 1746384798148822, guid: 30a6a35767bdcf243b66b912abcf564f, type: 2}
+  PreFab: {fileID: 1089814033345566, guid: 30a6a35767bdcf243b66b912abcf564f, type: 2}
   clone: {fileID: 0}
 --- !u!114 &114590842293368014
 MonoBehaviour:
