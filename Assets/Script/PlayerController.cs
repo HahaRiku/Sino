@@ -236,6 +236,7 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             default:
+                Debug.Log("動作錯誤");
                 break;
         }
 	}
