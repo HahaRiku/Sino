@@ -30,7 +30,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: Q
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -58,7 +58,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -86,7 +86,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -118,7 +118,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x1E\x01"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -146,7 +146,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "_\x01"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -174,7 +174,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -206,7 +206,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -221,7 +221,7 @@ MonoBehaviour:
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 1
-    "continue\u689D\u4EF6": 0
+    "continue\u689D\u4EF6": 1
     Name: 
     Text: 
     Image: {fileID: 0}
@@ -238,7 +238,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "6\x02"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -270,7 +270,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -302,7 +302,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -334,7 +334,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x17\x03"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -366,7 +366,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "b\x03"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -398,7 +398,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -430,7 +430,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -462,7 +462,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "C\x04"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -477,7 +477,7 @@ MonoBehaviour:
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 8
-    "continue\u689D\u4EF6": 2
+    "continue\u689D\u4EF6": 1
     Name: "\u9E1A\u9D61"
     Text: "\u7B28\u86CB\u5728\u9470\u5319\u624B\u4E0A\uFF01\u9470\u5319\u5728\u7B28\u86CB\u624B\u4E0A\uFF01"
     Image: {fileID: 0}
@@ -494,7 +494,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -526,7 +526,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -538,6 +538,38 @@ MonoBehaviour:
     Label: "\u554F\u9E1A\u9D61\u5148\u751F\u8981\u4EC0\u9EBC"
     LabelJump: 
     Class: "\u7372\u5F97\u9053\u5177\uFF1A\u9470\u5319"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 7
+    "continue\u689D\u4EF6": 2
+    Name: "\u5B88\u885B"
+    Text: "\u8AB0\u5728\u90A3\u88E1\uFF1F\uFF01\uFF01 \r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u5E2D\u8AFE"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: "\u554F\u9E1A\u9D61\u5148\u751F\u8981\u4EC0\u9EBC"
+    - Content: 
+      JumpTo: 
+    CharName: "\u5B88\u885B"
+    Emotion: "\u9A5A\u5606\u865F"
+    Label: end
+    LabelJump: end
+    Class: GAME OVER
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 6
@@ -558,7 +590,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "$\x05"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -590,7 +622,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "o\x05"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -622,7 +654,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -654,7 +686,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x05\x06"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -686,7 +718,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "P\x06"
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -718,7 +750,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -750,7 +782,7 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options:
     - Content: "\u662F"
@@ -760,6 +792,38 @@ MonoBehaviour:
     CharName: "\u5B88\u885B"
     Emotion: "\u9A5A\u5606\u865F"
     Label: "\u4E0D\u554F\u9E1A\u9D61\u5148\u751F\u8981\u4EC0\u9EBC"
+    LabelJump: 
+    Class: GAME OVER
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: "\u5B88\u885B"
+    Text: "\u8AB0\u5728\u90A3\u88E1\uFF1F\uFF01\uFF01 \r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u5E2D\u8AFE"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: "\u554F\u9E1A\u9D61\u5148\u751F\u8981\u4EC0\u9EBC"
+    - Content: 
+      JumpTo: 
+    CharName: "\u5B88\u885B"
+    Emotion: "\u9A5A\u5606\u865F"
+    Label: end
     LabelJump: 
     Class: GAME OVER
     Parameters: []
