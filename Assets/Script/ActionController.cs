@@ -39,12 +39,6 @@ public class ActionController : MonoBehaviour {
         float time = 0, speed = (fin - ori) / duration;
         if (chara.GetComponent<PlayerController>() != null) {
             var player = chara.GetComponent<PlayerController>();
-            if(!player) {
-                Debug.Log("123");
-            }
-            else {
-                Debug.Log("456");
-            }
             if (speed < 0)
                 player.AnimationController("walk_left");
             else
