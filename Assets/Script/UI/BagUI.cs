@@ -473,4 +473,8 @@ public class BagUI : MonoBehaviour {
         getItemAniDone = false;
         getItemAniName = name;
     }
+
+    public void SetItemInBag(string itemName) {
+        BagSystem.SetItemInBagOrNot(itemName, true);
+    }
 }

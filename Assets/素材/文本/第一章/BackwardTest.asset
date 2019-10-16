@@ -12,47 +12,19 @@ MonoBehaviour:
   m_Name: BackwardTest
   m_EditorClassIdentifier: 
   StateList:
-  - "state\u985E\u578B": 8
-    "continue\u689D\u4EF6": 2
+  - "state\u985E\u578B": 1
+    "continue\u689D\u4EF6": 1
     Name: 
     Text: 
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    Flag: re_server
-    WhenFlagIs: 1
-    ThanJumpTo: already done
-    ElseJumpTo: 2
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: Q
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: 
-    LabelJump: 
-    Class: "\u5E2D\u8AFE\u9000\u5F8C\u4E00\u6B65"
-    Parameters: []
-    WaitTime: 0
-  - "state\u985E\u578B": 6
-    "continue\u689D\u4EF6": 2
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    Flag: re_talkprefb
-    WhenFlagIs: 1
+    Character: Sino
+    OriPositionX: 2
+    NewPositionX: 1
+    Duration: 2
+    Flag: 
+    WhenFlagIs: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -63,7 +35,7 @@ MonoBehaviour:
     Options: []
     CharName: 
     Emotion: 
-    Label: end
+    Label: 
     LabelJump: 
     Class: 
     Parameters: []

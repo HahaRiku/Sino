@@ -45,12 +45,14 @@ public class GameStateManager : MonoBehaviour {
     {
         NowStatus = SceneStatus.演出中;
         PlayerControlLock = true;
+        SystemVariables.lockBag = true;
     }
        
     public void FinEvent()
     {
         NowStatus = SceneStatus.自由探索;
         PlayerControlLock = false;
+        SystemVariables.lockBag = false;
     }
 
     public void OpenBag()

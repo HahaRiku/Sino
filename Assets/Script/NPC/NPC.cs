@@ -344,4 +344,14 @@ public class NPC : MonoBehaviour {
             Gizmos.DrawCube(pos, new Vector3(region_width, cHeight, 1.0f));
         }
     }
+
+    public void SetThisDoorLock(bool l) {
+        SystemVariables.AddDoorStatus(門的名字, l);
+        if(l) {
+            doorType = DoorType.關閉;
+        }
+        else {
+            doorType = DoorType.開啟;
+        }
+    }
 }

@@ -88,10 +88,10 @@ public class StoryDataEditor:Editor
             arect.y += arect.height + spacing;
             arect.width = label_w;
             arect.x -= arect.width;
-            EditorGUI.LabelField(arect, "x原點: ", fontStyle);
+            EditorGUI.LabelField(arect, "x終點: ", fontStyle);
             arect.x += arect.width;
             arect.xMax = rect.xMax - 20;
-            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("OriPositionX"), GUIContent.none);
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("NewPositionX"), GUIContent.none);
             arect.y += arect.height + spacing;
             arect.width = label_w;
             arect.x -= arect.width;
