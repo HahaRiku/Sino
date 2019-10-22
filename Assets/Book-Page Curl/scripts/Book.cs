@@ -88,8 +88,8 @@ public class Book : MonoBehaviour {
         RightNextContent = RightNext.gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
         LeftNext.sprite = leftPage;
         RightNext.sprite = rightPage;
-        Left.sprite = leftPage;
-        Right.sprite = rightPage;
+        Left.sprite = rightPage;
+        Right.sprite = leftPage;
         UpdateSprites();
 
         Vector3 globalsb = BookPanel.transform.position + new Vector3(0, -pageHeight / 2);

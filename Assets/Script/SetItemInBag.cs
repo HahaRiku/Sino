@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SetItemInBag : MonoBehaviour {
 
-    public string ItemName;
-
-    public void SetInBag() {
-        BagSystem.SetItemInBagOrNot(ItemName, true);
+    public void SetItemInBagFunc(string itemName) {
+        BagSystem.SetItemInBagOrNot(itemName, true);
     }
 
+    public void GetItemAni(string itemName) {
+        FindObjectOfType<BagUI>().GetItemAni(itemName);
+    }
 }
