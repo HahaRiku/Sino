@@ -15,16 +15,18 @@ public class CameraMoving : MonoBehaviour {
     }
     public Coordinate[] setPositions;
     public MovingData[] movingData;
+    public AnimationCurve[] x_aniCurve;
+    public AnimationCurve[] y_aniCurve;
 
-    // Use this for initialization
-    void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
+    private bool wiggleStart = false;
+    private int wiggleIndex;
+    private float wiggleStartTime = 0;
+
+    void Update() {
+        if(wiggleStart) {
+            wiggleStartTime = Time.time;
+        }
+    }
 
     public void SetCameraPosition(int positionIndex) {
         transform.localPosition = new Vector3(setPositions[positionIndex].x, setPositions[positionIndex].y, transform.localPosition.z);
@@ -35,8 +37,12 @@ public class CameraMoving : MonoBehaviour {
             movingData[movingDataIndex].destinationPosition.y, movingData[movingDataIndex].movingTimeInSeconds * 60));
     }
 
+    public void Wiggle(int wiggleCurveIndex) {
+        wiggleStart = true;
+        wiggleIndex = wiggleCurveIndex;
+    }
+
     IEnumerator Moving(float start_x, float start_y, float d_x, float d_y, float frames) {
-        print("Moving");
         if (start_x < d_x) {
             if (start_y < d_y) {
                 for(float i = start_x, j = start_y; i < d_x || j < d_y; i += (d_x-start_x)/frames, j += (d_y-start_y)/frames) {
@@ -92,4 +98,5 @@ public class CameraMoving : MonoBehaviour {
             }
         }
     }
+
 }

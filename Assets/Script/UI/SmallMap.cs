@@ -37,7 +37,6 @@ public class SmallMap : MonoBehaviour {
 	}
 	
 	void Start(){
-		//***以下3個值不該在這裡初始化
 		currentShowState = false;
 		lastShowState = false;
 		currentSceneName = SystemVariables.Scene;
