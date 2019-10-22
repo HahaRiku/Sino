@@ -9,6 +9,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60c6fdbd9f7d21a4386f846813473c52, type: 3}
-  m_Name: StoryData
+  m_Name: "\u6587\u97522-\u4FEE\u5973"
   m_EditorClassIdentifier: 
-  StateList: []
+  StateList:
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u4FEE\u5973"
+    Text: "\u2026\u2026"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
