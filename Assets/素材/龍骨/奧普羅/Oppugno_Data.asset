@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Oppugno_Data
   m_EditorClassIdentifier: 
   dataName: Oppugno
-  dragonBonesJSON: {fileID: 4900000, guid: 4dda04ffff87a0e49b1fbedfdd0b702c, type: 3}
+  dragonBonesJSON: {fileID: 4900000, guid: 02729cdede4d7864cb146c3744d362e2, type: 3}
   textureAtlas:
-  - textureAtlasJSON: {fileID: 4900000, guid: 48d407b0db695e44a815dc14f3f139c1, type: 3}
-    texture: {fileID: 2800000, guid: 0aa46cc80c49130478690f1fe919fef6, type: 3}
+  - textureAtlasJSON: {fileID: 4900000, guid: 7b739335ee991864bb5addac327e5564, type: 3}
+    texture: {fileID: 2800000, guid: 2b196faab71ad0345a562c9618d698b6, type: 3}
     material: {fileID: 2100000, guid: 0b9c1b8bcfc0e894ba63804a470816e5, type: 2}
     uiMaterial: {fileID: 0}
