@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(false);
         transform.GetChild(1).gameObject.SetActive(true);
         nowDisplayStatus = DisplayStatus.正;
-        AnimationController("idle");
+        //AnimationController("idle");
     }
 
     void Update () {
@@ -235,6 +235,16 @@ public class PlayerController : MonoBehaviour
                     nowDisplayStatus = DisplayStatus.背;
                 }
                 break;
+            case "stand_up":
+                if (nowDisplayStatus != DisplayStatus.左右)
+                {
+                    CharacSpriteController.ChangeBackToDragonBone();
+                    nowDisplayStatus = DisplayStatus.左右;
+                }
+                CandleLight.gameObject.SetActive(false);
+                arma.animation.FadeIn("stand_up", 0.08f, 1);
+                arma.animationName = "stand_up";
+                break;
             default:
                 Debug.Log("動作錯誤");
                 break;
@@ -246,7 +256,7 @@ public class PlayerController : MonoBehaviour
         isPlayerCanControl = b;
         if (!b)
         {
-            AnimationController("idle");
+            //AnimationController("idle");
             flip = 0;
         }
     }
