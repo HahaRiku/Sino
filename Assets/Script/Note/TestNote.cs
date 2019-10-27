@@ -34,11 +34,11 @@ public class TestNote : MonoBehaviour {
             NotePagesSystem.NewPage();
             NotePagesSystem.ChangeSprite(2, 0);
         }
-        if (testOpenNote) {
+        if (testOpenNote || Input.GetKeyDown(KeyCode.Q)) {
             testOpenNote = false;
             noteController.OpenNote();
         }
-        if (testCloseNote) {
+        if (testCloseNote || Input.GetKeyDown(KeyCode.Escape)) {
             testCloseNote = false;
             noteController.CloseNote();
         }

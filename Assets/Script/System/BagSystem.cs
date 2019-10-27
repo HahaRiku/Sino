@@ -47,6 +47,16 @@ public static class BagSystem {
         return "";
     }
 
+    public static Sprite ReturnSpriteByName(string n) {
+        foreach(BagItem item in data.bagItemList) {
+            if(n == item.name) {
+                return item.sprite;
+            }
+        }
+        Debug.Log("注意！可撿的物件NPC輸入錯名字：" + n);
+        return null;
+    }
+
     public static bool IsItemInBag(string n) {
         foreach (BagItem item in data.bagItemList) {
             if (n == item.name) {

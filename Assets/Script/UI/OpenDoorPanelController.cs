@@ -73,6 +73,8 @@ public class OpenDoorPanelController : PanelController
         quesState = QuesState.右;
         transform.GetChild(1).GetChild(0).GetComponent<Text>().fontSize = 20;
         transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 25;
+        選項L.sprite = 選項底_未選;
+        選項R.sprite = 選項底_選擇;
 
         SetVisible();
         Invoke("StartInteract", 0.1f);

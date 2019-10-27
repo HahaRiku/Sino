@@ -130,7 +130,7 @@ public class NPC : MonoBehaviour {
                     }
                     GM.StartEvent();
                     if (type == NpcType.item) {
-                        PickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字));
+                        PickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字), BagSystem.ReturnSpriteByName(可撿的物品的名字));
                         PickablePanel.ShowQuestion(可撿的物品的名字);
                     }
                     else if (type == NpcType.talk) {
