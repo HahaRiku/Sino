@@ -18,8 +18,8 @@ public class GameStateManager : MonoBehaviour {
     bool PlayerControlLock = false;
     public struct SmallMap
     {
-        int floor;
-	int corridorPlace;
+        public int floor;
+        public int corridorPlace;
     };
     //小地圖參數，floor=樓層(-3~3)，corridorPlace=走廊位置(1~6)
     public SmallMap SmallMapParameters;

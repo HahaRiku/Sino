@@ -105,7 +105,7 @@ public class SmallMap : MonoBehaviour {
 		currentSceneName = SystemVariables.Scene;
 		
 		//Floor name
-		switch(GM.SmallMapInfo.floor){
+		switch(GM.SmallMapParameters.floor){
 			case 1:
 				playerPlaceImage[0].GetComponent<Image>().sprite = floorImage[0];
 				break;
@@ -128,9 +128,9 @@ public class SmallMap : MonoBehaviour {
 		}
 		
 		//Player place
-		if(GM.SmallMapInfo.corridorPlace == 0 || GM.SmallMapInfo.corridorPlace == 7){
+		if(GM.SmallMapParameters.corridorPlace == 0 || GM.SmallMapParameters.corridorPlace == 7){
 			playerPlaceImage[1].SetActive(false);
-			switch(GM.SmallMapInfo.corridorPlace){
+			switch(GM.SmallMapParameters.corridorPlace){
 				case 0:
 					playerPlaceImage[2].SetActive(true);
 					break;
@@ -145,7 +145,7 @@ public class SmallMap : MonoBehaviour {
 			playerPlaceImage[3].SetActive(false);
 			playerPlaceImage[1].SetActive(true);
 			
-			switch(GM.SmallMapInfo.corridorPlace){
+			switch(GM.SmallMapParameters.corridorPlace){
 				case 1:
 					playerPlaceImage[1].transform.localPosition = playerPlace[0];
 					break;

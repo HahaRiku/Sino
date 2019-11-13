@@ -15,8 +15,8 @@ public class AutoTrans : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(nextScenePos == 7){
-                GameStateManager.targetPos[7].x = freeX;
+        if((int)nextScenePos == 7){
+                GameStateManager.transPos[7].x = freeX;
         }
         FindObjectOfType<GameStateManager>().黑幕轉場(targetSceneName, nextScenePos);
         //GameStateManager.Instance.黑幕轉場(targetScene.name, nextScenePos);
