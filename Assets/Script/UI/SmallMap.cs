@@ -12,7 +12,7 @@ public class SmallMap : MonoBehaviour {
 	public Sprite[] floorImage;
 	public GameObject ani_mapShowUpY, ani_mapShowDownY;
 	
-	private GameStatemManager GM;
+	private GameStateManager GM;
 	private GameObject[] playerPlaceImage;
 	private bool currentShowState,lastShowState;
 	private string currentSceneName;
@@ -40,14 +40,14 @@ public class SmallMap : MonoBehaviour {
 		currentShowState = false;
 		lastShowState = false;
 		currentSceneName = SystemVariables.Scene;
-		GM = GameObject.Find("GM").GetComponent<GameStatemManager>();
+		GM = GameObject.Find("GM").GetComponent<GameStateManager>();
 		
 		SmallMapUpdate();
 		StartCoroutine(SmallMapShow());
 	}
 	
 	void Update () {
-		if(currentSceneName != SystemVariables.Scene){GM = GameObject.Find("GM").GetComponent<GameStatemManager>();}
+		if(currentSceneName != SystemVariables.Scene){GM = GameObject.Find("GM").GetComponent<GameStateManager>();}
         if (GM != null) {
             if (GM.NowStatus == GameStateManager.SceneStatus.自由探索) {
                 currentShowState = true;
@@ -102,6 +102,7 @@ public class SmallMap : MonoBehaviour {
 	}
 	
 	private void SmallMapUpdate(){
+		currentSceneName = SystemVariables.Scene;
 		
 		//Floor name
 		switch(GM.SmallMapInfo.floor){
