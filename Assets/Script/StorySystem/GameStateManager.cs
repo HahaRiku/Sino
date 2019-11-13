@@ -100,10 +100,11 @@ public class GameStateManager : MonoBehaviour {
         new Vector3(0, -3.2f, 0),
         new Vector3(-2.3f, -3.2f, 0),
         new Vector3(-1.5f, -3.2f, 0),
-        new Vector3(1.5f, -3.2f, 0)
+        new Vector3(1.5f, -3.2f, 0),
+        new Vector3(0.0f, -3.2f, 0)
     };
 
-    public enum SpawnPoint { 右側, 左側, 中間, 中間偏左, 樓梯左側, 樓梯右側}
+    public enum SpawnPoint { 右側, 左側, 中間, 中間偏左, 樓梯左側, 樓梯右側, 其他}
 
     public void 黑幕轉場(string sceneName, SpawnPoint point)
     {
