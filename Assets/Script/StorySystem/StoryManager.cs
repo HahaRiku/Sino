@@ -15,6 +15,7 @@ public class StoryManager : MonoBehaviour
     public StoryData 劇本;
     List<StoryData.StoryState> stories;
     StoryReader reader;
+    DialogPanelController dialogPanel;
     ActionController moveContol;
     OptionControl optionControl;
     OuterScriptControl scriptControl;
@@ -90,6 +91,12 @@ public class StoryManager : MonoBehaviour
         if (GetComponent<OptionControl>() == null)
             gameObject.AddComponent<OptionControl>();
         reader = GetComponent<StoryReader>();
+        dialogPanel = FindObjectOfType<DialogPanelController>();
+        if (dialogPanel == null) {
+            Debug.Log("Error: No Dialog has found.");
+            enabled = false;
+            return;
+        }
         moveContol = GetComponent<ActionController>();
         optionControl = GetComponent<OptionControl>();
         scriptControl = FindObjectOfType<OuterScriptControl>();
@@ -162,7 +169,9 @@ public class StoryManager : MonoBehaviour
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.人物移動)
         {
-            reader.ClosePanel();
+            if(dialogPanel.IsVisible()) {
+                reader.ClosePanel();
+            }
             moveContol.Move(stories[index].Character, stories[index].NewPositionX, stories[index].Duration);
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.分支)

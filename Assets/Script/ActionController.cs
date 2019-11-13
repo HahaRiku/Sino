@@ -50,8 +50,8 @@ public class ActionController : MonoBehaviour {
                 armature.armature.flipX = false;
             else
                 armature.armature.flipX = true;
-            armature.animation.FadeIn("walk", 0.15f);
-            armature.animationName = "walk";
+            armature.animation.FadeIn("walk_right_with_coat", 0.15f);
+            armature.animationName = "walk_right_with_coat";
         }
         while (time < duration)
         {
@@ -64,8 +64,8 @@ public class ActionController : MonoBehaviour {
             chara.GetComponent<PlayerController>().AnimationController("idle");
         else
         {
-            armature.animation.FadeIn("stand", 0.15f);
-            armature.animationName = "stand";
+            armature.animation.FadeIn("stand_right_with_coat", 0.15f);
+            armature.animationName = "stand_right_with_coat";
         }
         chara.transform.position = new Vector3(fin, chara.transform.position.y);
         running--;

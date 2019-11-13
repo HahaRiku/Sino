@@ -42,12 +42,12 @@ MonoBehaviour:
     WaitTime: 0
   - "state\u985E\u578B": 5
     "continue\u689D\u4EF6": 1
-    Name: 
-    Text: 
+    Name: "\u5967\u666E\u7F85"
+    Text: "\u6211\u4EC0\u9EBC\u4E5F\u6C92\u770B\u5230\uFF0C\u5FEB\u8D70\u5427\u3002"
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: 
+    Character: "\u91AB\u751F"
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
@@ -62,10 +62,10 @@ MonoBehaviour:
     SpawnPoint: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
-    Emotion: "\u9A5A\u5606\u865F"
+    Emotion: "\u554F\u865F"
     Label: 
     LabelJump: 
-    Class: "\u97F3\u6548 \u8173\u6B65\u8072\u8FEB\u8FD1"
+    Class: "\u97F3\u6548 \u91AB\u751F\u5606\u6C23\u8072"
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 8
@@ -93,9 +93,37 @@ MonoBehaviour:
     Emotion: "\u9A5A\u5606\u865F"
     Label: 
     LabelJump: 
-    Class: "\u9ED1\u5C4F\u8F49\u5834"
+    Class: "\u9ED1\u5C4F\u6253\u958B"
     Parameters: []
     WaitTime: 0
+  - "state\u985E\u578B": 9
+    "continue\u689D\u4EF6": 1
+    Name: "\u5967\u666E\u7F85"
+    Text: "\u6211\u4EC0\u9EBC\u4E5F\u6C92\u770B\u5230\uFF0C\u5FEB\u8D70\u5427\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u91AB\u751F"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    Options: []
+    CharName: "\u5E2D\u8AFE"
+    Emotion: "\u554F\u865F"
+    Label: 
+    LabelJump: 
+    Class: "\u97F3\u6548 \u91AB\u751F\u5606\u6C23\u8072"
+    Parameters: []
+    WaitTime: 1
   - "state\u985E\u578B": 1
     "continue\u689D\u4EF6": 1
     Name: 
@@ -103,10 +131,10 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5E2D\u8AFE"
+    Character: Sino
     OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
+    NewPositionX: 2.5
+    Duration: 1
     Flag: 
     WhenFlagIs: 0
     ThanJumpTo: 
@@ -177,17 +205,17 @@ MonoBehaviour:
     Emotion: "\u9A5A\u5606\u865F"
     Label: 
     LabelJump: 
-    Class: "\u9ED1\u5C4F\u8F49\u5834"
+    Class: "\u91AB\u751F\u51FA\u73FE"
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
-    Name: 
-    Text: 
+    Name: "\u5967\u666E\u7F85"
+    Text: "\u6211\u4EC0\u9EBC\u4E5F\u6C92\u770B\u5230\uFF0C\u5FEB\u8D70\u5427\u3002"
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5E2D\u8AFE"
+    Character: "\u91AB\u751F"
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
@@ -202,10 +230,10 @@ MonoBehaviour:
     SpawnPoint: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
-    Emotion: "\u9A5A\u5606\u865F"
+    Emotion: "\u554F\u865F"
     Label: 
     LabelJump: 
-    Class: "\u91AB\u751F\u51FA\u73FE"
+    Class: "\u9ED1\u5C4F\u95DC\u6389"
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 0
@@ -439,10 +467,10 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u91AB\u751F"
+    Character: Oppugno
     OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
+    NewPositionX: 1
+    Duration: 1
     Flag: 
     WhenFlagIs: 0
     ThanJumpTo: 
