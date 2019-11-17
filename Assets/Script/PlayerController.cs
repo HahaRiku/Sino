@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 1; //速度倍率
     private float _v = 5; //預設每秒x移動距離
     private int flip = 0;
+	public bool GetIsRight(){
+		return arma.armature.flipX;
+	}
 
     void Start() {
         
@@ -51,61 +54,61 @@ public class PlayerController : MonoBehaviour
         if (isPlayerCanControl) {
             if (nowCollisionStatus == CollisionStatus.left_collision && Input.GetKey("left"))
             {
-                AnimationController("idle");
+                AnimationController("idle",GetIsRight());
                 flip = 0;
             }
             if (nowCollisionStatus == CollisionStatus.right_collision && Input.GetKey("right"))
             {
-                AnimationController("idle");
+                AnimationController("idle",GetIsRight());
                 flip = 0;
             }
 
             if (Input.GetKeyDown("left") && nowCollisionStatus != CollisionStatus.left_collision)
             {
-                AnimationController("walk_left");
+                AnimationController("walk_left",GetIsRight());
                 flip = -1;
             }
             else if (Input.GetKeyUp("left"))
             {
                 if (!Input.GetKey("right"))
                 {
-                    AnimationController("idle");
+                    AnimationController("idle",GetIsRight());
                     flip = 0;
                 }
                 else
                 {
-                    AnimationController("walk_right");
+                    AnimationController("walk_right",GetIsRight());
                     flip = 1;
                 }
             }
 
             if (Input.GetKeyDown("right") && nowCollisionStatus != CollisionStatus.right_collision)
             {
-                AnimationController("walk_right");
+                AnimationController("walk_right",GetIsRight());
                 flip = 1;
             }
             else if (Input.GetKeyUp("right"))
             {
                 if (!Input.GetKey("left"))
                 {
-                    AnimationController("idle");
+                    AnimationController("idle",GetIsRight());
                     flip = 0;
                 }
                 else
                 {
-                    AnimationController("walk_left");
+                    AnimationController("walk_left",GetIsRight());
                     flip = -1;
                 }
             }
 
             if(Input.GetKeyDown("up"))
             {
-                AnimationController("reverse_side");
+                AnimationController("reverse_side", GetIsRight());
                 flip = 0;
             }
             if (Input.GetKeyDown("down"))
             {
-                AnimationController("front_side");
+                AnimationController("front_side", GetIsRight());
                 flip = 0;
             }
             transform.Translate(flip * Vector2.right * speed * _v * Time.deltaTime);
@@ -119,8 +122,9 @@ public class PlayerController : MonoBehaviour
     }
 	
 	
-	public void AnimationController(string command){
-        switch (command)
+	public void AnimationController(string command, bool newFlipX){
+        arma.armature.flipX = newFlipX;
+		switch (command)
         {
             case "idle":
                 if (nowDisplayStatus != DisplayStatus.左右)
@@ -256,7 +260,7 @@ public class PlayerController : MonoBehaviour
         isPlayerCanControl = b;
         if (!b)
         {
-            //AnimationController("idle");
+            //AnimationController("idle",GetIsRight());
             flip = 0;
         }
     }

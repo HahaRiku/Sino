@@ -20,6 +20,7 @@ public class DoorInfo : MonoBehaviour {
 	public bool IsLocked;
 	public Object nextScene;	//抓場景，轉成名稱供LoadScene使用
 	public GameStateManager.SpawnPoint nextScenePos;
+	public GameStateManager.Facing facing;
 	
 	void Start(){
 		HLE = HighLightState.idle;
@@ -57,7 +58,7 @@ public class DoorInfo : MonoBehaviour {
 			}
 			else{                           //(press Z && openable) -> [open] + [in]
                 //GameStateManager.Instance.黑幕轉場(nextScene.name, nextScenePos);
-                FindObjectOfType<GameStateManager>().黑幕轉場(nextScene.name, nextScenePos);
+                FindObjectOfType<GameStateManager>().黑幕轉場(nextScene.name, nextScenePos, facing);
                 SceneManager.LoadScene(nextScene.name);
 			}
 		}
