@@ -69,4 +69,13 @@ public static class BagSystem {
         return false;
     }
 
+    public static bool IsItemNameExisted(string n) {
+        foreach(BagItem item in data.bagItemList) {
+            if(n == item.name) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

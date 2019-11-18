@@ -8,7 +8,11 @@ public class SetItemInBag : MonoBehaviour {
         BagSystem.SetItemInBagOrNot(itemName, true);
     }
 
+    public void SetItemNotInBagFunc(string itemName) {
+        BagSystem.SetItemInBagOrNot(itemName, false);
+    }
+
     public void GetItemAni(string itemName) {
-        FindObjectOfType<BagUI>().GetItemAni(itemName);
+        gameObject.GetComponent<BagUI>().GetItemAni(itemName);
     }
 }

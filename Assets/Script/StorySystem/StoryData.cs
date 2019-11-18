@@ -30,8 +30,12 @@ public class StoryData : ScriptableObject
 
         //分支
         //ex: year (2019)、2020、20、19 => jump to state 19
+        public enum BranchCondition { 變數, 物件 }
+        public BranchCondition bCondition;
         public string Flag; 
-        public int WhenFlagIs; 
+        public int WhenFlagIs;
+        public string Item;
+        public bool WhenItemExisted;
         public string ThanJumpTo;
         public string ElseJumpTo;
         public int JustJump;

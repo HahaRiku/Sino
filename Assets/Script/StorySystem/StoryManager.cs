@@ -176,31 +176,57 @@ public class StoryManager : MonoBehaviour
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.分支)
         {
-            var 變數名稱 = stories[nowIndex].Flag.Trim();
-            if (stories[nowIndex].JustJump > 0)
-                ExecuteState(stories[nowIndex].JustJump);
-            else if (!SystemVariables.otherVariables_int.ContainsKey(變數名稱))
-            {
-                Debug.Log("不存在的變數: " + 變數名稱);
-                var ElseState = stories[nowIndex].ElseJumpTo.Trim();
-                if (CheckIsStateID(ElseState))
-                    JumpToStateID(ElseState);
-                else
-                    JumpToLabel(ElseState);
-            }
-            else
-            {
-                var 變數value = SystemVariables.otherVariables_int[變數名稱];
-                string JumpState;
-                if (變數value == stories[nowIndex].WhenFlagIs)
-                    JumpState = stories[nowIndex].ThanJumpTo.Trim();
-                else
-                    JumpState = stories[nowIndex].ElseJumpTo.Trim();
+            if(stories[nowIndex].bCondition == StoryData.StoryState.BranchCondition.變數) {
+                var 變數名稱 = stories[nowIndex].Flag.Trim();
+                if (stories[nowIndex].JustJump > 0)
+                    ExecuteState(stories[nowIndex].JustJump);
+                else if (!SystemVariables.otherVariables_int.ContainsKey(變數名稱)) {
+                    Debug.Log("不存在的變數: " + 變數名稱);
+                    var ElseState = stories[nowIndex].ElseJumpTo.Trim();
+                    if (CheckIsStateID(ElseState))
+                        JumpToStateID(ElseState);
+                    else
+                        JumpToLabel(ElseState);
+                }
+                else {
+                    var 變數value = SystemVariables.otherVariables_int[變數名稱];
+                    string JumpState;
+                    if (變數value == stories[nowIndex].WhenFlagIs)
+                        JumpState = stories[nowIndex].ThanJumpTo.Trim();
+                    else
+                        JumpState = stories[nowIndex].ElseJumpTo.Trim();
 
-                if (CheckIsStateID(JumpState))
-                    JumpToStateID(JumpState);
-                else
-                    JumpToLabel(JumpState);
+                    if (CheckIsStateID(JumpState))
+                        JumpToStateID(JumpState);
+                    else
+                        JumpToLabel(JumpState);
+                }
+            }
+            else {
+                var 物件名稱 = stories[nowIndex].Item.Trim();
+                if (stories[nowIndex].JustJump > 0)
+                    ExecuteState(stories[nowIndex].JustJump);
+                else if (!BagSystem.IsItemNameExisted(物件名稱)) {
+                    Debug.Log("不存在的物件: " + 物件名稱);
+                    var ElseState = stories[nowIndex].ElseJumpTo.Trim();
+                    if (CheckIsStateID(ElseState))
+                        JumpToStateID(ElseState);
+                    else
+                        JumpToLabel(ElseState);
+                }
+                else {
+                    var 物件存在與否 = BagSystem.IsItemInBag(物件名稱);
+                    string JumpState;
+                    if (物件存在與否 == stories[nowIndex].WhenItemExisted)
+                        JumpState = stories[nowIndex].ThanJumpTo.Trim();
+                    else
+                        JumpState = stories[nowIndex].ElseJumpTo.Trim();
+
+                    if (CheckIsStateID(JumpState))
+                        JumpToStateID(JumpState);
+                    else
+                        JumpToLabel(JumpState);
+                }
             }
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.指派變數)
