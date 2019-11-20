@@ -11,4 +11,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c6fdbd9f7d21a4386f846813473c52, type: 3}
   m_Name: "\u6587\u97522-\u8389\u8389"
   m_EditorClassIdentifier: 
-  StateList: []
+  StateList:
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u8389\u8389"
+    Text: "\u5C31\u5148\u653E\u904E\u4F60\u4E00\u6B21\uFF0C\u4E0D\u904E\u4F60\u8981\u662F\u6562\u7834\u58DE\u4FEE\u5973\u59CA\u59CA\u7684\u82B1\u5712\u2026\r\n\u6211\u7D55\u5C0D\u9952\u4E0D\u4E86\u4F60\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    Flag: 
+    WhenFlagIs: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0

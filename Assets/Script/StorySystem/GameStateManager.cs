@@ -16,6 +16,13 @@ public class GameStateManager : MonoBehaviour {
     public GameObject Player;
     public StoryManager ActingStorySystem;
     bool PlayerControlLock = false;
+    public struct SmallMap
+    {
+        public int floor;
+        public int corridorPlace;
+    };
+    //小地圖參數，floor=樓層(-3~3)，corridorPlace=走廊位置(1~6)
+    public SmallMap SmallMapParameters;
 
     void Awake()
     {
@@ -93,31 +100,37 @@ public class GameStateManager : MonoBehaviour {
         new Vector3(0, -3.2f, 0),
         new Vector3(-2.3f, -3.2f, 0),
         new Vector3(-1.5f, -3.2f, 0),
-        new Vector3(1.5f, -3.2f, 0)
+        new Vector3(1.5f, -3.2f, 0),
+        new Vector3(0.0f, -3.2f, 0)
     };
 
-    public enum SpawnPoint { 右側, 左側, 中間, 中間偏左, 樓梯左側, 樓梯右側}
+    public enum SpawnPoint { 右側, 左側, 中間, 中間偏左, 樓梯左側, 樓梯右側, 其他}
+	public enum Facing { 保留, 左, 右, 反向}
 
-    public void 黑幕轉場(string sceneName, SpawnPoint point)
+    public void 黑幕轉場(string sceneName, SpawnPoint point, Facing facing)
     {
         StartEvent();
-        StartCoroutine(Loading(sceneName, transPos[(int)point]));
+        StartCoroutine(Loading(sceneName, transPos[(int)point], facing));
     }
 
-    public void 黑幕轉場(string sceneName, Vector3 point)
+    public void 黑幕轉場(string sceneName, Vector3 point, Facing facing)
     {
         StartEvent();
-        StartCoroutine(Loading(sceneName, point));
+        StartCoroutine(Loading(sceneName, point, facing));
         Destroy(Player);
     }
 
-    IEnumerator Loading(string sceneName, Vector3 point)
+    IEnumerator Loading(string sceneName, Vector3 point, Facing facing)
     {
         GameObject blackImg = GameObject.Find("Canvas/Black");
         blackImg.GetComponent<Animator>().SetTrigger("FadeIn");
         yield return new WaitUntil(() => blackImg.GetComponent<Image>().color.a == 1);
         //完成淡入
         Player.transform.position = point;
+		PlayerController playerScript = Player.GetComponent<PlayerController>();
+		if(facing == Facing.左){playerScript.AnimationController("idle", false) ;}
+		else if(facing == Facing.右){playerScript.AnimationController("idle", true);}
+		else if(facing == Facing.反向){playerScript.AnimationController("idle", !playerScript.GetIsRight());}
         SceneManager.LoadScene(sceneName);
         /*AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
 

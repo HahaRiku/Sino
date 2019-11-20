@@ -18,13 +18,21 @@ public class CameraMoving : MonoBehaviour {
     public AnimationCurve[] x_aniCurve;
     public AnimationCurve[] y_aniCurve;
 
-    private bool wiggleStart = false;
+    private bool wiggle = false;
     private int wiggleIndex;
     private float wiggleStartTime = 0;
+    private float wiggleEndTime;
 
     void Update() {
-        if(wiggleStart) {
-            wiggleStartTime = Time.time;
+        if(wiggle) {
+            float nowTime = Time.time - wiggleStartTime;
+            if (nowTime > wiggleEndTime) {
+                wiggle = false;
+                transform.localPosition = new Vector3(x_aniCurve[wiggleIndex][x_aniCurve[wiggleIndex].length - 1].value, y_aniCurve[wiggleIndex][y_aniCurve[wiggleIndex].length - 1].value, transform.localPosition.z);
+            }
+            else {
+                transform.localPosition = new Vector3(x_aniCurve[wiggleIndex].Evaluate(nowTime), y_aniCurve[wiggleIndex].Evaluate(nowTime), transform.localPosition.z);
+            }
         }
     }
 
@@ -38,8 +46,10 @@ public class CameraMoving : MonoBehaviour {
     }
 
     public void Wiggle(int wiggleCurveIndex) {
-        wiggleStart = true;
+        wiggle = true;
+        wiggleStartTime = Time.time;
         wiggleIndex = wiggleCurveIndex;
+        wiggleEndTime = x_aniCurve[wiggleIndex][x_aniCurve[wiggleIndex].length - 1].time;
     }
 
     IEnumerator Moving(float start_x, float start_y, float d_x, float d_y, float frames) {
