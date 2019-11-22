@@ -6,23 +6,19 @@ public class BGM: MonoBehaviour
 {
 	public AudioClip[] soundaffect;
 	AudioSource audioSource;
-	public bool start,maxmusic;
-	public bool minmusic,change;
-	public float waitTime = 0.01f;
-    public float timer = 0.0f;
-	public float inspentTime = 5;
-	public float outspentTime = 5;
+	private bool maxmusic, minmusic;
+	private float curveTime = 0f,curveAmount,timer = 0.0f,inspentTime = 5, outspentTime = 5,waitTime = 0.01f,Curvetime = 1;
+	public AnimationCurve Curve;
 
 	void Start () 
 	{
-		audioSource = GetComponent<AudioSource>();	
-		start=false;
+		audioSource = GetComponent<AudioSource>();
 		minmusic=false;
 		maxmusic=false;
-		change=false;
+		audioSource.loop = true;
 	}
 
-	public void Play1(int getmusic)
+	public void SoundPlay(int getmusic)
 	{
 		audioSource.clip = soundaffect[getmusic] ;
 		audioSource.Play();
@@ -40,38 +36,41 @@ public class BGM: MonoBehaviour
 		maxmusic = true;
 	}
 
-	public void switching(int getmusic)
+	public void switching(int changemusic)
 	{
 		audioSource.Pause();
-		audioSource.clip = soundaffect[getmusic] ;
+		audioSource.clip = soundaffect[changemusic] ;
 		audioSource.Play();
 	}
 
-	public void switchingEX(int getmusic)
+	public void SoundPAUSE()
 	{
-		change=true;
+		audioSource.Pause();
 	}
-	
+
+	public void StartCurve(int CurveTime){
+		StartCoroutine( Animationcurve());
+		Curvetime=CurveTime;
+	}
+
+	IEnumerator  Animationcurve()
+	{
+		curveTime = 0f;
+		curveAmount = Curve.Evaluate (curveTime);
+
+        while (curveTime< Curve[Curve.length -1].time) {
+        
+            curveTime +=Time.deltaTime/Curvetime;
+            curveAmount = Curve.Evaluate (curveTime);
+
+            audioSource.volume=curveAmount; 
+			
+            yield return null;
+        }
+    }
 	
 	void Update () 
 	{
-		if(start)
-		{
-			Play1(0);
-			start=false;
-		}
-
-		if(change)
-		{
-			minmusic = true;
-			if(audioSource.volume <= 0f)
-			{
-				switching(1);
-				change=false;
-				maxmusic = true;
-			}
-		}
-
 		if(minmusic)
 		{
 			timer += Time.deltaTime;
