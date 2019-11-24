@@ -141,5 +141,6 @@ public class GameStateManager : MonoBehaviour {
         //完成淡出
         if (ActingStorySystem == null)
             FinEvent();*/
+		
     }
 }

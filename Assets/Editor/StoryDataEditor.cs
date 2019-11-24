@@ -265,16 +265,34 @@ public class StoryDataEditor:Editor
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 10)
         {
             EditorGUI.LabelField(arect, "場景: ", fontStyle);
-            arect.x += arect.width;
-            arect.xMax = rect.xMax - 20;
-            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Scene"), GUIContent.none);
-            arect.y += arect.height + spacing;
-            arect.width = label_w;
-            arect.x -= arect.width;
-            EditorGUI.LabelField(arect, "人物位置: ", fontStyle);
-            arect.x += arect.width;
-            arect.xMax = rect.xMax - 20;
-            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("SpawnPoint"), GUIContent.none);
+			arect.x += arect.width;
+			arect.xMax = rect.xMax - 20;
+			EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Scene"), GUIContent.none);
+			arect.y += arect.height + spacing;
+			arect.width = label_w;
+			arect.x -= arect.width;
+			EditorGUI.LabelField(arect, "人物位置: ", fontStyle);
+			arect.x += arect.width;
+			arect.xMax = rect.xMax - 20;
+			EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("SpawnPoint"), GUIContent.none);
+
+			if(serElem.FindPropertyRelative("SpawnPoint").enumValueIndex == 6){
+				arect.y += arect.height + spacing;
+				arect.width = label_w;
+				arect.x -= arect.width;
+				EditorGUI.LabelField(arect, "人物X位置: ", fontStyle);
+				arect.x += arect.width;
+				arect.xMax = rect.xMax - 20;
+				EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("SpawnPointFreeX"), GUIContent.none);
+			}
+			arect.y += arect.height + spacing;
+			arect.width = label_w;
+			arect.x -= arect.width;
+			EditorGUI.LabelField(arect, "人物面向: ", fontStyle);
+			arect.x += arect.width;
+			arect.xMax = rect.xMax - 20;
+			EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Facing"), GUIContent.none);
+
         }
         EditorGUI.indentLevel--;
         /*if (GUI.Button(buttonRect, "-"))
