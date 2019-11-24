@@ -15,27 +15,27 @@ MonoBehaviour:
   - name: "\u8A18\u4E8B\u672C"
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
     desc: "\u8A18\u4E8B\u672C"
-    inBag: 1
+    inBag: 0
   - name: "\u5730\u5716"
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
     desc: "\u5730\u5716"
     inBag: 0
   - name: "\u7CD6\u679C"
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
-    desc: "\u7CD6\u679C"
-    inBag: 0
+    desc: "\u5C31\u662F\u4E00\u9846\u7CD6\u679C\u3002"
+    inBag: 1
   - name: "\u9470\u5319"
-    sprite: {fileID: 0}
-    desc: "\u4E00\u628A\u9470\u5319\u6389\u5728\u539F\u672C\u624B\u6416\u9234\u7684\u4F4D\u7F6E\u4E0A"
-    inBag: 0
-  - name: Starlight
-    sprite: {fileID: 21300000, guid: cb93b997abbf65d4db46270b267aeacd, type: 3}
-    desc: "\u5C0F\u3055\u306A\u661F\u3092\u6458\u3093\u3060\u306A\u3089"
-    inBag: 0
-  - name: "\u30B9\u30BF\u30A1\u30E9\u30A4\u30C8"
+    sprite: {fileID: 21300000, guid: 93924738335994a4780b494c94567544, type: 3}
+    desc: "\u4E00\u628A\u9470\u5319\u6389\u5728\u539F\u672C\u624B\u6416\u9234\u7684\u4F4D\u7F6E\u4E0A\u3002"
+    inBag: 1
+  - name: "\u653E\u5927\u93E1"
     sprite: {fileID: 21300000, guid: d78bb6fddb72d244d9572f2d605e1c57, type: 3}
-    desc: "\u3042\u306A\u305F\u306F\u5C0F\u3055\u306A\u5E78\u305B\u3092\u624B\u306B\u5165\u308C\u308B"
-    inBag: 0
+    desc: "\u4E0D\u6703\u51FA\u5834\u7684\u653E\u5927\u93E1\uFF0C\u5E6BQQ\u3002"
+    inBag: 1
+  - name: "\u767C\u5149\u7684\u653E\u5927\u93E1"
+    sprite: {fileID: 21300000, guid: cb93b997abbf65d4db46270b267aeacd, type: 3}
+    desc: "\u4EC0\u9EBC\uFF1F\u4F60\u8AAA\u653E\u5927\u93E1\u6703\u767C\u5149\uFF1F"
+    inBag: 1
   - name: "\u5C11\u5973\u6B4C\u5287"
     sprite: {fileID: 21300000, guid: 35d939e7835acb54581070f427952873, type: 3}
     desc: "\u5927\u304D\u306A\u661F\u3092\u6458\u3093\u3060\u306A\u3089"
@@ -64,3 +64,15 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 128564b0f6c9e474caf861349f0f0a8f, type: 3}
     desc: "\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66\u6EFF\u7248\u6E2C\u8A66"
     inBag: 0
+  - name: "\u863F\u8514"
+    sprite: {fileID: 21300000, guid: edc4d3a4c4823604f826336204f66066, type: 3}
+    desc: "\u9019\u662F\u4E00\u6839\u863F\u8514\u3002"
+    inBag: 1
+  - name: "\u73A9\u5076"
+    sprite: {fileID: 21300000, guid: f945b750314431946a07f72aa5f2bfa8, type: 3}
+    desc: "\u7F8E\u8853\u5F88\u559C\u6B61\uFF0C\u4F46\u7A0B\u5F0F\u611F\u5230\u5BB3\u6015\u3002"
+    inBag: 0
+  - name: "\u86CB"
+    sprite: {fileID: 21300000, guid: d14bd2f41048e144a845c63aa6dda0db, type: 3}
+    desc: "\u4E00\u9846\u6709\u81C9\u7684\u86CB\u3002\u6015\u3002"
+    inBag: 1

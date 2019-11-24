@@ -103,17 +103,38 @@ public class StoryDataEditor:Editor
         else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 2)
         {
             var half_input_w = Mathf.Max((EditorGUIUtility.currentViewWidth - label_w * 3 / 2 - 180) / 2, 0);
-            EditorGUI.LabelField(arect, "當變數: ", fontStyle);
+            EditorGUI.LabelField(arect, "判斷方式：", fontStyle);
             arect.x += arect.width;
-            arect.width = half_input_w;
-            if (half_input_w < 0) Debug.Log("oops");
-            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Flag"), GUIContent.none);
+            arect.width = 60;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("bCondition"), GUIContent.none);
             arect.x += arect.width;
             arect.width = label_w / 2;
-            EditorGUI.LabelField(arect, "等於", fontStyle);
-            arect.x += arect.width;
-            arect.xMax = rect.xMax - 20;
-            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WhenFlagIs"), GUIContent.none);
+            if(serElem.FindPropertyRelative("bCondition").enumValueIndex == 0) {
+                EditorGUI.LabelField(arect, "當變數: ", fontStyle);
+                arect.x += arect.width + 20;
+                arect.width = half_input_w;
+                if (half_input_w < 0) Debug.Log("oops");
+                EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Flag"), GUIContent.none);
+                arect.x += arect.width;
+                arect.width = label_w / 2;
+                EditorGUI.LabelField(arect, "等於", fontStyle);
+                arect.x += arect.width;
+                arect.xMax = rect.xMax - 20;
+                EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WhenFlagIs"), GUIContent.none);
+            }
+            else {
+                EditorGUI.LabelField(arect, "當物件：", fontStyle);
+                arect.x += arect.width + 20;
+                arect.width = half_input_w;
+                if (half_input_w < 0) Debug.Log("oops");
+                EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Item"), GUIContent.none);
+                arect.x += arect.width - 10;
+                arect.width = label_w / 2 + 35;
+                EditorGUI.LabelField(arect, "是否存在？", fontStyle);
+                arect.x += arect.width;
+                arect.xMax = rect.xMax - 20;
+                EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("WhenItemExisted"), GUIContent.none);
+            }
             arect.y += arect.height + spacing;
             arect.width = label_w;
             arect.x -= arect.width * 3 / 2 + half_input_w;
@@ -321,6 +342,7 @@ public class StoryDataEditor:Editor
         list.index = index;
         var element = list.serializedProperty.GetArrayElementAtIndex(index);
         element.FindPropertyRelative("state類型").enumValueIndex = 2;
+        element.FindPropertyRelative("bConditon").enumValueIndex = 0;
         element.FindPropertyRelative("Flag").stringValue = "";
         element.FindPropertyRelative("WhenFlagIs").intValue = 0;
         element.FindPropertyRelative("JustJump").intValue = 0;

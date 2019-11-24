@@ -130,7 +130,7 @@ public class NPC : MonoBehaviour {
                     }
                     GM.StartEvent();
                     if (type == NpcType.item) {
-                        PickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字));
+                        PickablePanel.SetInfo(可撿的物品的名字, BagSystem.ReturnDescByName(可撿的物品的名字), BagSystem.ReturnSpriteByName(可撿的物品的名字));
                         PickablePanel.ShowQuestion(可撿的物品的名字);
                     }
                     else if (type == NpcType.talk) {
@@ -342,6 +342,16 @@ public class NPC : MonoBehaviour {
             else
                 Gizmos.color = new Color32(0x70, 0xE5, 0x00, 0x4A);
             Gizmos.DrawCube(pos, new Vector3(region_width, cHeight, 1.0f));
+        }
+    }
+
+    public void SetThisDoorLock(bool l) {
+        SystemVariables.AddDoorStatus(門的名字, l);
+        if(l) {
+            doorType = DoorType.關閉;
+        }
+        else {
+            doorType = DoorType.開啟;
         }
     }
 }

@@ -45,9 +45,9 @@ public class BackwardAction : MonoBehaviour {
             var player = chara.GetComponent<PlayerController>();
             
 			if (speed < 0)
-                player.AnimationController("walk_left");
+                player.AnimationController("walk_left", armature.armature.flipX);
             else
-                player.AnimationController("walk_right");
+                player.AnimationController("walk_right", armature.armature.flipX);
 			//player.AnimationController("backward");
 			//Debug.Log("test");
         }
@@ -68,7 +68,7 @@ public class BackwardAction : MonoBehaviour {
             yield return new WaitForFixedUpdate();
         }
         if (chara.GetComponent<PlayerController>() != null)
-            chara.GetComponent<PlayerController>().AnimationController("idle");
+            chara.GetComponent<PlayerController>().AnimationController("idle", armature.armature.flipX);
         else
         {
             armature.animation.FadeIn("stand", 0.15f);

@@ -5,6 +5,8 @@ using UnityEngine;
 public class TestNote : MonoBehaviour {
 
     public bool testGetMission;
+    public bool testGetMission2;
+    public bool testGetMission3;
     public bool testOpenNote;
     public bool testCloseNote;
 
@@ -22,11 +24,21 @@ public class TestNote : MonoBehaviour {
             NotePagesSystem.NewPage();
             NotePagesSystem.ChangeSprite(0, 0);
         }
-        if (testOpenNote) {
+        if(testGetMission2) {
+            testGetMission2 = false;
+            NotePagesSystem.NewPage();
+            NotePagesSystem.ChangeSprite(1, 0);
+        }
+        if(testGetMission3) {
+            testGetMission3 = false;
+            NotePagesSystem.NewPage();
+            NotePagesSystem.ChangeSprite(2, 0);
+        }
+        if (testOpenNote || Input.GetKeyDown(KeyCode.Q)) {
             testOpenNote = false;
             noteController.OpenNote();
         }
-        if (testCloseNote) {
+        if (testCloseNote || Input.GetKeyDown(KeyCode.Escape)) {
             testCloseNote = false;
             noteController.CloseNote();
         }

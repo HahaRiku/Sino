@@ -23,14 +23,17 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    IsFlag: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: Q
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -51,14 +54,17 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    IsFlag: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -79,14 +85,17 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    IsFlag: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -107,14 +116,17 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    IsFlag: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x14\x01"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -135,14 +147,17 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    IsFlag: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "U\x01"
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -163,14 +178,17 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    IsFlag: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -191,14 +209,17 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    IsFlag: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
     Options: []
     CharName: 
@@ -219,14 +240,17 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    IsFlag: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x18\x02"
     SpawnPoint: 0
     Options: []
     CharName: 
