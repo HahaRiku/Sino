@@ -16,6 +16,7 @@ public class GameStateManager : MonoBehaviour {
     public GameObject Player;
     public StoryManager ActingStorySystem;
     bool PlayerControlLock = false;
+    [System.Serializable]
     public struct SmallMap
     {
         public int floor;
