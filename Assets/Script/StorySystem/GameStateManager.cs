@@ -53,6 +53,7 @@ public class GameStateManager : MonoBehaviour {
     {
         NowStatus = SceneStatus.演出中;
         PlayerControlLock = true;
+        Player.GetComponent<PlayerController>().AnimationController("idle");
         SystemVariables.lockBag = true;
     }
        
@@ -118,7 +119,7 @@ public class GameStateManager : MonoBehaviour {
     {
         StartEvent();
         StartCoroutine(Loading(sceneName, point, facing));
-        Destroy(Player);
+        //Destroy(Player);
     }
 
     IEnumerator Loading(string sceneName, Vector3 point, Facing facing)

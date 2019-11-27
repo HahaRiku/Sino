@@ -114,11 +114,6 @@ public class PlayerController : MonoBehaviour
             transform.Translate(flip * Vector2.right * speed * _v * Time.deltaTime);
             if (IsHoldingCandle)
                 MoveCandle(candlePosX);			
-			if (!Input.GetKey("left") && !Input.GetKey("right"))
-            {
-				AnimationController("idle");
-                flip = 0;
-            }
 
             return;
         }

@@ -12,26 +12,31 @@ MonoBehaviour:
   m_Name: BackwardTest
   m_EditorClassIdentifier: 
   StateList:
-  - "state\u985E\u578B": 1
+  - "state\u985E\u578B": 10
     "continue\u689D\u4EF6": 1
     Name: 
     Text: 
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: Sino
-    OriPositionX: 2
-    NewPositionX: 1
-    Duration: 2
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: 
-    SpawnPoint: 0
+    Scene: "B1\u5E2D\u8AFE\u7262\u623F6"
+    SpawnPoint: 6
+    SpawnPointFreeX: -5
+    Facing: 4
     Options: []
     CharName: 
     Emotion: 

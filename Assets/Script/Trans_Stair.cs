@@ -46,14 +46,14 @@ public class Trans_Stair : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.UpArrow))
                     {
                         done = true;
-						if(portalList[0].nextScenePos == GameStateManager.SpawnPoint.其他){	GameStateManager.transPos[7].x = portalList[0].freeX;}
+						//if(portalList[0].nextScenePos == GameStateManager.SpawnPoint.其他){	GameStateManager.transPos[7].x = portalList[0].freeX;}
                         FindObjectOfType<GameStateManager>().黑幕轉場(portalList[0].targetSceneName, portalList[0].nextScenePos, GameStateManager.Facing.反向);
                         //GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
                     }
                     else if (Input.GetKeyDown(KeyCode.DownArrow))
                     {
                         done = true;
-						if(portalList[1].nextScenePos == GameStateManager.SpawnPoint.其他){	GameStateManager.transPos[7].x = portalList[1].freeX;}
+						//if(portalList[1].nextScenePos == GameStateManager.SpawnPoint.其他){	GameStateManager.transPos[7].x = portalList[1].freeX;}
                         FindObjectOfType<GameStateManager>().黑幕轉場(portalList[1].targetSceneName, portalList[1].nextScenePos, GameStateManager.Facing.反向);
                         //GameStateManager.Instance.黑幕轉場(portalList[1].targetScene.name, portalList[1].nextScenePos);
                     }
@@ -71,7 +71,7 @@ public class Trans_Stair : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.UpArrow))
                     {
                         done = true;
-						if(portalList[0].nextScenePos == GameStateManager.SpawnPoint.其他){	GameStateManager.transPos[7].x = portalList[0].freeX;}
+						//if(portalList[0].nextScenePos == GameStateManager.SpawnPoint.其他){	GameStateManager.transPos[7].x = portalList[0].freeX;}
                         FindObjectOfType<GameStateManager>().黑幕轉場(portalList[0].targetSceneName, portalList[0].nextScenePos, GameStateManager.Facing.反向);
                         //GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
                     }
@@ -86,7 +86,7 @@ public class Trans_Stair : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.DownArrow))
                     {
                         done = true;
-						if(portalList[0].nextScenePos == GameStateManager.SpawnPoint.其他){	GameStateManager.transPos[7].x = portalList[0].freeX;}
+						//if(portalList[0].nextScenePos == GameStateManager.SpawnPoint.其他){	GameStateManager.transPos[7].x = portalList[0].freeX;}
                         FindObjectOfType<GameStateManager>().黑幕轉場(portalList[0].targetSceneName, portalList[0].nextScenePos, GameStateManager.Facing.反向);
                         //GameStateManager.Instance.黑幕轉場(portalList[0].targetScene.name, portalList[0].nextScenePos);
                     }

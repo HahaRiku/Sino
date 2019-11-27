@@ -378,7 +378,7 @@ Prefab:
         type: 2}
       propertyPath: "\u5287\u672C"
       value: 
-      objectReference: {fileID: 11400000, guid: e0fdd53c281287945979631460526740,
+      objectReference: {fileID: 11400000, guid: 02558f895fff6e941862f59cf0a7d7d2,
         type: 2}
     - target: {fileID: 114416608423154050, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
         type: 2}
@@ -529,24 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83c62498dfe14c49bea8a7efe831b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Events:
-  - Name: "\u5E2D\u8AFE\u9000\u5F8C\u4E00\u6B65"
-    Event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 350216123}
-          m_MethodName: Move
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+  Events: []
 --- !u!1 &894676228
 GameObject:
   m_ObjectHideFlags: 0

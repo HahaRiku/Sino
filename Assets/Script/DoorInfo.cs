@@ -60,9 +60,9 @@ public class DoorInfo : MonoBehaviour {
 			}
 			else{                           //(press Z && openable) -> [open] + [in]
                 //GameStateManager.Instance.黑幕轉場(nextScene.name, nextScenePos);
-				if((int)nextScenePos == 7){
-					GameStateManager.transPos[7].x = freeX;
-				}		
+				//if((int)nextScenePos == 6)
+				//	GameStateManager.transPos[7].x = freeX;
+                //else
 				FindObjectOfType<GameStateManager>().黑幕轉場(nextScene.name, nextScenePos, facing);
                 SceneManager.LoadScene(nextScene.name);
 			}
