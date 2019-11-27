@@ -378,7 +378,7 @@ Prefab:
         type: 2}
       propertyPath: "\u5287\u672C"
       value: 
-      objectReference: {fileID: 11400000, guid: 02558f895fff6e941862f59cf0a7d7d2,
+      objectReference: {fileID: 11400000, guid: e0fdd53c281287945979631460526740,
         type: 2}
     - target: {fileID: 114416608423154050, guid: e4eb6476182dd7c4aa7a63d8bc0fde34,
         type: 2}
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4fb2d9e6e68e4490bc7b40755627e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u5287\u672C": {fileID: 11400000, guid: 6747ef7961f7ebf418b87f32a0c83bd0, type: 2}
+  "\u5287\u672C": {fileID: 11400000, guid: 02558f895fff6e941862f59cf0a7d7d2, type: 2}
   nowIndex: 0
   GM: {fileID: 642761496}
   "\u4E00\u958B\u59CB\u5C31\u57F7\u884C": 0
@@ -530,23 +530,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Events:
-  - Name: "\u6211"
-    Event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1668504045}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
   - Name: "\u5E2D\u8AFE\u9000\u5F8C\u4E00\u6B65"
     Event:
       m_PersistentCalls:
@@ -562,12 +545,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-  - Name: 
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
 --- !u!1 &894676228

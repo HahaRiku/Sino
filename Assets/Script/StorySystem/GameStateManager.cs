@@ -106,7 +106,7 @@ public class GameStateManager : MonoBehaviour {
     };
 
     public enum SpawnPoint { 右側, 左側, 中間, 中間偏左, 樓梯左側, 樓梯右側, 其他}
-	public enum Facing { 保留, 左, 右, 反向}
+	public enum Facing { 保留, 左, 右, 反向, 前, 後}
 
     public void 黑幕轉場(string sceneName, SpawnPoint point, Facing facing)
     {
@@ -130,8 +130,10 @@ public class GameStateManager : MonoBehaviour {
         Player.transform.position = point;
 		PlayerController playerScript = Player.GetComponent<PlayerController>();
 		if(facing == Facing.左){playerScript.AnimationController("idle", false) ;}
-		else if(facing == Facing.右){playerScript.AnimationController("idle", true);}
-		else if(facing == Facing.反向){playerScript.AnimationController("idle", !playerScript.GetIsRight());}
+		else if(facing == Facing.右){playerScript.AnimationController("idle", true); }
+        else if (facing == Facing.前) { playerScript.AnimationController("front_side"); }
+        else if (facing == Facing.後) { playerScript.AnimationController("reverse_side"); }
+        else if(facing == Facing.反向){playerScript.AnimationController("idle", !playerScript.GetIsRight());}
         SceneManager.LoadScene(sceneName);
         /*AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
 

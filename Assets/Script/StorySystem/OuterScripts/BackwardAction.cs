@@ -20,45 +20,35 @@ public class BackwardAction : MonoBehaviour {
     }
     public void Move()      //要移動就call這個funct
     {
-        string charaName = "Sino";
-		float finX = 5.0f;
-		float duration = 1.0f;
+		float duration = 0.5f;
 		
 		running++;
-        var chara = GameObject.Find(charaName);
+        var chara = FindObjectOfType<GameStateManager>().Player;
         if (chara)
-            StartCoroutine(MoveTo(GameObject.Find(charaName), finX, duration));
+            StartCoroutine(MoveTo(chara, duration));
         else
         {
             StartCoroutine(Wait(duration));
-            if (charaName.Trim() != "")
-                Debug.LogWarning("Warning: 人物移動 \"" + charaName + "\" is not found!");
+            Debug.LogWarning("Warning: 人物移動 \"" + chara.name + "\" is not found!");
         }
     }
-    IEnumerator MoveTo(GameObject chara, float fin, float duration)
+    IEnumerator MoveTo(GameObject chara, float duration)
     {
         float ori = chara.transform.position.x;
+        float length = 0.5f;//change this***************************
         chara.transform.position = new Vector3(ori, chara.transform.position.y);
         var armature = chara.GetComponentInChildren<UnityArmatureComponent>();
-        float time = 0, speed = (fin - ori) / duration;
+        float time = 0, speed = length / duration;
         if (chara.GetComponent<PlayerController>() != null) {
             var player = chara.GetComponent<PlayerController>();
-            
-			if (speed < 0)
-                player.AnimationController("walk_left", armature.armature.flipX);
-            else
-                player.AnimationController("walk_right", armature.armature.flipX);
-			//player.AnimationController("backward");
-			//Debug.Log("test");
-        }
-        else
-        {
-            if (speed < 0)
-                armature.armature.flipX = false;
-            else
-                armature.armature.flipX = true;
-            armature.animation.FadeIn("walk", 0.15f);
-            armature.animationName = "walk";
+
+            if (player.GetIsRight()) {
+                length = -length;
+                speed = -speed;
+            }
+                
+            player.AnimationController("backward");
+
         }
         while (time < duration)
         {
@@ -67,14 +57,15 @@ public class BackwardAction : MonoBehaviour {
             chara.transform.Translate(Vector2.right * speed * Time.fixedDeltaTime);
             yield return new WaitForFixedUpdate();
         }
+        print("fjgd");
         if (chara.GetComponent<PlayerController>() != null)
-            chara.GetComponent<PlayerController>().AnimationController("idle", armature.armature.flipX);
+            chara.GetComponent<PlayerController>().AnimationController("idle");
         else
         {
             armature.animation.FadeIn("stand", 0.15f);
             armature.animationName = "stand";
         }
-        chara.transform.position = new Vector3(fin, chara.transform.position.y);
+        chara.transform.position = new Vector3(ori + length, chara.transform.position.y);
         running--;
     }
     IEnumerator Wait(float duration)
