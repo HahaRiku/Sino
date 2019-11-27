@@ -17,13 +17,13 @@ public class SmallMap : MonoBehaviour {
 	private bool currentShowState,lastShowState;
 	private string currentSceneName;
 	
-	private Vector3[] playerPlace = {
-        new Vector3(-21.5f, -339.6f, 0),
-        new Vector3(-22.6f, -224.9f, 0),
-        new Vector3(-22.6f, -114.3f, 0),
-        new Vector3(-19.1f, 12.1f, 0),
-        new Vector3(-23.1f, 131.1f, 0),
-		new Vector3(-26.6f, 238.2f, 0)
+	private Vector2[] playerPlace = {
+		new Vector2(-26.6f, 238.2f),
+        new Vector2(-23.1f, 131.1f),
+        new Vector2(-19.1f, 12.1f),
+        new Vector2(-22.6f, -114.3f),
+        new Vector2(-22.6f, -224.9f),
+        new Vector2(-21.5f, -339.6f)
     };
 	
 	void Awake(){
@@ -103,69 +103,22 @@ public class SmallMap : MonoBehaviour {
 	
 	private void SmallMapUpdate(){
 		currentSceneName = SystemVariables.Scene;
-		
-		//Floor name
-		switch(GM.SmallMapParameters.floor){
-			case 1:
-				playerPlaceImage[0].GetComponent<Image>().sprite = floorImage[0];
-				break;
-			case 2:
-				playerPlaceImage[0].GetComponent<Image>().sprite = floorImage[1];
-				break;
-			case 3:
-				playerPlaceImage[0].GetComponent<Image>().sprite = floorImage[2];
-				break;
-			case -1:
-				playerPlaceImage[0].GetComponent<Image>().sprite = floorImage[3];
-				break;
-			case -2:
-				playerPlaceImage[0].GetComponent<Image>().sprite = floorImage[4];
-				break;
-			case -3:
-				playerPlaceImage[0].GetComponent<Image>().sprite = floorImage[5];
-				break;
-			default:break;
-		}
+        playerPlaceImage[0].GetComponent<Image>().sprite = floorImage[(int)GM.第幾層];
 		
 		//Player place
-		if(GM.SmallMapParameters.corridorPlace == 0 || GM.SmallMapParameters.corridorPlace == 7){
-			playerPlaceImage[1].SetActive(false);
-			switch(GM.SmallMapParameters.corridorPlace){
-				case 0:
-					playerPlaceImage[2].SetActive(true);
-					break;
-				case 7:
-					playerPlaceImage[3].SetActive(true);
-					break;
-				default:break;
-			}
+		if((int)GM.從左邊數來第幾個 == 0){
+            playerPlaceImage[1].SetActive(false);
+            playerPlaceImage[2].SetActive(true);
 		}
+        else if((int)GM.從左邊數來第幾個 == 7) {
+            playerPlaceImage[1].SetActive(false);
+            playerPlaceImage[3].SetActive(true);
+        }
 		else{
 			playerPlaceImage[2].SetActive(false);
 			playerPlaceImage[3].SetActive(false);
 			playerPlaceImage[1].SetActive(true);
-			
-			switch(GM.SmallMapParameters.corridorPlace){
-				case 1:
-					playerPlaceImage[1].transform.localPosition = playerPlace[0];
-					break;
-				case 2:
-					playerPlaceImage[1].transform.localPosition = playerPlace[1];
-					break;
-				case 3:
-					playerPlaceImage[1].transform.localPosition = playerPlace[2];
-					break;
-				case 4:
-					playerPlaceImage[1].transform.localPosition = playerPlace[3];
-					break;
-				case 5:
-					playerPlaceImage[1].transform.localPosition = playerPlace[4];
-					break;
-				case 6:
-					playerPlaceImage[1].transform.localPosition = playerPlace[5];
-					break;
-				default:break;
-			}
+			playerPlaceImage[1].transform.localPosition = playerPlace[(int)GM.從左邊數來第幾個 - 1];
 		}
 	}
 	

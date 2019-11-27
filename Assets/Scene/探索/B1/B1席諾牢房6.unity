@@ -147,6 +147,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114735891566460118, guid: 4f7ccde78f8300f448e1bbc1c4437c99,
+        type: 2}
+      propertyPath: "\u7B2C\u5E7E\u5C64"
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735891566460118, guid: 4f7ccde78f8300f448e1bbc1c4437c99,
+        type: 2}
+      propertyPath: "\u5F9E\u5DE6\u908A\u6578\u4F86\u7B2C\u5E7E\u500B"
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f7ccde78f8300f448e1bbc1c4437c99, type: 2}
   m_IsPrefabParent: 0
@@ -268,7 +278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888d795994f671b4092dc7d5aa2328a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  setPositions: []
+  movingData: []
+  x_aniCurve: []
+  y_aniCurve: []
 --- !u!81 &428276726
 AudioListener:
   m_ObjectHideFlags: 0

@@ -16,14 +16,14 @@ public class GameStateManager : MonoBehaviour {
     public GameObject Player;
     public StoryManager ActingStorySystem;
     bool PlayerControlLock = false;
-    [System.Serializable]
-    public struct SmallMap
-    {
-        public int floor;
-        public int corridorPlace;
-    };
-    //小地圖參數，floor=樓層(-3~3)，corridorPlace=走廊位置(1~6)
-    public SmallMap SmallMapParameters;
+
+    //小地圖參數，floor=樓層(-3~3)，corridorPlace=走廊位置 左到右(0~7)
+    
+    public enum Floor { 地下三樓, 地下二樓, 地下一樓, 一樓, 二樓, 三樓}
+    public enum PosIndex { 一, 二, 三, 四, 五, 六, 七, 八 }
+    [Space(10)]
+    public Floor 第幾層;
+    public PosIndex 從左邊數來第幾個;
 
     void Awake()
     {
