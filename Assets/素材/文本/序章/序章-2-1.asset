@@ -23,8 +23,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -51,8 +54,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -79,8 +85,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -107,8 +116,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -135,8 +147,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -163,8 +178,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -191,8 +209,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -219,8 +240,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -247,8 +271,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -275,8 +302,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -303,8 +333,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -331,8 +364,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -359,8 +395,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -387,8 +426,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -415,8 +457,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -443,8 +488,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -471,8 +519,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -485,7 +536,7 @@ MonoBehaviour:
     Emotion: "\u9A5A\u5606\u865F"
     Label: 
     LabelJump: 
-    Class: "\u9ED1\u983B\u8F49\u5834"
+    Class: "\u9ED1\u5C4F\u8F49\u5834"
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 9
@@ -499,8 +550,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -527,8 +581,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -555,8 +612,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -583,8 +643,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -611,8 +674,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -639,8 +705,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -667,8 +736,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -695,8 +767,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -723,8 +798,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -751,8 +829,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -779,8 +860,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -807,8 +891,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -835,8 +922,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -863,8 +953,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -891,8 +984,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -919,8 +1015,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -947,8 +1046,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
