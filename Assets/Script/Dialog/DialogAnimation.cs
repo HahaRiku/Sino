@@ -21,6 +21,7 @@ public class DialogAnimation : MonoBehaviour
         StartCoroutine(CloseAnim());
     }
 
+    bool muxLock;
     IEnumerator anim1()
     {
         float timer = 0, orginY = 0.0f, finalY = -0.5f, totalTime = 0.5f, interval = 0.2f, y, alpha;
@@ -105,6 +106,9 @@ public class DialogAnimation : MonoBehaviour
 
     IEnumerator OpenAnim()
     {
+        while (muxLock)
+        { yield return new WaitForSeconds(0.5f); }
+        muxLock = true;
         float timer = 0, orginY = 0.0f, finalY = -0.5f, totalTime = 0.5f, interval = 0.2f, y, alpha;
         float waitBackTime = 1.0f;
         while (timer < totalTime)
@@ -118,15 +122,19 @@ public class DialogAnimation : MonoBehaviour
                 對話框.alpha = alpha;
                 人物.alpha = alpha;
             }
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return 0;
         }
         Camera.main.transform.position = new Vector3(0, finalY, -10);
         對話框.alpha = 1;
         人物.alpha = 1;
+        muxLock = false;
     }
 
     IEnumerator CloseAnim()
     {
+        while (muxLock)
+        { yield return new WaitForSeconds(0.5f); }
+        muxLock = true;
         float timer = 0, orginY = 0.0f, finalY = -0.5f, totalTime = 0.5f, interval = 0.2f, y, alpha;
         while (timer < totalTime)
         {
@@ -139,10 +147,11 @@ public class DialogAnimation : MonoBehaviour
                 對話框.alpha = 1 - alpha;
                 人物.alpha = 1 - alpha;
             }
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return 0;
         }
         Camera.main.transform.position = new Vector3(0, orginY, -10);
         對話框.alpha = 0;
         人物.alpha = 0;
+        muxLock = false;
     }
 }
