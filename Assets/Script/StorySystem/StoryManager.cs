@@ -249,7 +249,11 @@ public class StoryManager : MonoBehaviour
                 Debug.LogError("Error：場景 \"" + 場景名 + "\" is not found.");
                 return;
             }
-            GM.黑幕轉場(場景名, stories[nowIndex].SpawnPoint, GameStateManager.Facing.保留);
+            if ((int)stories[nowIndex].SpawnPoint == 6) {
+                GM.黑幕轉場(場景名, new Vector3(stories[nowIndex].SpawnPointFreeX, -3.2f, 0), stories[nowIndex].Facing);
+            }
+            else
+                GM.黑幕轉場(場景名, stories[nowIndex].SpawnPoint, stories[nowIndex].Facing);
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.外部腳本)
         {

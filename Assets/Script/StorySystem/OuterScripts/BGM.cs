@@ -6,97 +6,103 @@ public class BGM: MonoBehaviour
 {
 	public AudioClip[] soundaffect;
 	AudioSource audioSource;
-	public bool start,maxmusic;
-	public bool minmusic,change;
-	public float waitTime = 0.01f;
-    public float timer = 0.0f;
-	public float inspentTime = 5;
-	public float outspentTime = 5;
+	private float curveTime = 0f,curveAmount;
+	public AnimationCurve Curve = new AnimationCurve();
+	private AnimationCurve EZCurve = AnimationCurve.EaseInOut(0/*timeStart*/,1/*valueStart*/,1/*timeEnd*/,0/*valueEnd*/);  
 
 	void Start () 
 	{
-		audioSource = GetComponent<AudioSource>();	
-		start=false;
-		minmusic=false;
-		maxmusic=false;
-		change=false;
+		audioSource = GetComponent<AudioSource>();
+		audioSource.loop = true;
 	}
 
-	public void Play1(int getmusic)
+	public void SoundPlay(int getmusic)
 	{
 		audioSource.clip = soundaffect[getmusic] ;
 		audioSource.Play();
 	}
 
-	public void musicOut(int outspendTime)
-	{
-		outspentTime = outspendTime;
-		minmusic = true;
-	}
-
-	public void musicIn(int inspendTime)
-	{
-		inspentTime = inspendTime;
-		maxmusic = true;
-	}
-
-	public void switching(int getmusic)
+	public void switching(int changemusic)
 	{
 		audioSource.Pause();
-		audioSource.clip = soundaffect[getmusic] ;
+		audioSource.clip = soundaffect[changemusic] ;
 		audioSource.Play();
 	}
 
-	public void switchingEX(int getmusic)
+	public void SoundPAUSE()
 	{
-		change=true;
+		audioSource.Pause();
 	}
-	
-	
+
+	public void StartCurve(int CurveTime){
+		StartCoroutine( Animationcurve(CurveTime));
+	}
+
+	public void EasyInOut(int EZCurveTime){
+
+		if (audioSource.volume >= 0.9f)
+		{
+			StartCoroutine( OutAnimationcurve(EZCurveTime));
+		}
+		else if (audioSource.volume <= 0.1f)
+		{
+			StartCoroutine(InAnimationcurve(EZCurveTime));
+		}
+
+	}
+
+	IEnumerator  Animationcurve(float Curvetime)
+	{
+		curveTime = 0f;
+		curveAmount = Curve.Evaluate (curveTime);
+
+        while (curveTime< Curvetime) {
+        
+            curveTime +=Time.deltaTime;
+            curveAmount = Curve.Evaluate (curveTime/Curvetime);
+
+            audioSource.volume=curveAmount; 
+			
+            yield return null;
+        }
+    }
+
+	IEnumerator InAnimationcurve(float Curvetime)
+	{
+		curveTime = 0f;
+		curveAmount = EZCurve.Evaluate(curveTime);
+
+		while (curveTime < Curvetime)
+		{
+
+			curveTime += Time.deltaTime;
+			curveAmount = 1-EZCurve.Evaluate(curveTime / Curvetime);
+
+			audioSource.volume = curveAmount;
+
+			yield return null;
+		}
+	}
+
+	IEnumerator OutAnimationcurve(float Curvetime)
+	{
+		curveTime = 0f;
+		curveAmount = EZCurve.Evaluate(curveTime);
+
+		while (curveTime < Curvetime)
+		{
+
+			curveTime += Time.deltaTime;
+			curveAmount = EZCurve.Evaluate(curveTime / Curvetime);
+
+			audioSource.volume = curveAmount;
+
+			yield return null;
+		}
+	}
+
 	void Update () 
 	{
-		if(start)
-		{
-			Play1(0);
-			start=false;
-		}
 
-		if(change)
-		{
-			minmusic = true;
-			if(audioSource.volume <= 0f)
-			{
-				switching(1);
-				change=false;
-				maxmusic = true;
-			}
-		}
-
-		if(minmusic)
-		{
-			timer += Time.deltaTime;
-			if (timer > waitTime)
-			{	
-				audioSource.volume -= 1/outspentTime/100;
-				timer = 0;
-			}
-			if (audioSource.volume <= 0f)
-			{
-				minmusic=false;
-			}
-		}
-		else if (maxmusic)
-		{
-			timer += Time.deltaTime;
-			if (timer > waitTime)
-			{
-				audioSource.volume += 1/inspentTime/100;
-				timer = 0;
-			}
-			if (audioSource.volume >= 1f)
-			{
-				maxmusic=false;
-			}
-		}
 	}
 }

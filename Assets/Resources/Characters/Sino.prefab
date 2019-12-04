@@ -297,7 +297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1877255735900010
 GameObject:
   m_ObjectHideFlags: 1
@@ -314,7 +314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1891278446316456
 GameObject:
   m_ObjectHideFlags: 1
@@ -464,9 +464,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1839617623339406}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6209862, w: 0.78382146}
-  m_LocalPosition: {x: 0, y: 0, z: -0.001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.5773727, w: 0.8164807}
+  m_LocalPosition: {x: -0.30378336, y: 1.678808, z: -0.001}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 4763344099519512}
   m_RootOrder: 1
@@ -620,9 +620,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1919051746568388}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7377935, w: 0.6750265}
-  m_LocalPosition: {x: -1.9926282, y: 0.10652296, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.18213476, w: 0.98327357}
+  m_LocalPosition: {x: -0.042580478, y: 1.564459, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4763344099519512}
   m_RootOrder: 0
@@ -633,9 +633,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1877255735900010}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6076366, w: 0.7942152}
-  m_LocalPosition: {x: 0, y: 0, z: -0.016}
-  m_LocalScale: {x: 0.9999998, y: 1.0000002, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6359067, w: 0.77176595}
+  m_LocalPosition: {x: -0.32589778, y: 1.5639663, z: -0.016}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4763344099519512}
   m_RootOrder: 16
@@ -1023,7 +1023,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2642a585931d768469a881741d782fc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1151,7 +1151,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2642a585931d768469a881741d782fc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1662,7 +1662,7 @@ MonoBehaviour:
   armatureName: Sino
   isUGUI: 0
   debugDraw: 0
-  animationName: lean
+  animationName: stand
   _playTimes: 0
   _timeScale: 1
   _sortingMode: 0

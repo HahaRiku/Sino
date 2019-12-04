@@ -15,10 +15,11 @@ public class AutoTrans : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if((int)nextScenePos == 7){
-            GameStateManager.transPos[7].x = freeX;
+        if((int)nextScenePos == 6){
+            FindObjectOfType<GameStateManager>().黑幕轉場(targetSceneName, new Vector3(freeX, -3.2f, 0), GameStateManager.Facing.保留);
         }		
-        FindObjectOfType<GameStateManager>().黑幕轉場(targetSceneName, nextScenePos, GameStateManager.Facing.保留);
+        else
+            FindObjectOfType<GameStateManager>().黑幕轉場(targetSceneName, nextScenePos, GameStateManager.Facing.保留);
         //GameStateManager.Instance.黑幕轉場(targetScene.name, nextScenePos);
     }
 }

@@ -54,66 +54,66 @@ public class PlayerController : MonoBehaviour
         if (isPlayerCanControl) {
             if (nowCollisionStatus == CollisionStatus.left_collision && Input.GetKey("left"))
             {
-                AnimationController("idle",GetIsRight());
+                AnimationController("idle");
                 flip = 0;
             }
             if (nowCollisionStatus == CollisionStatus.right_collision && Input.GetKey("right"))
             {
-                AnimationController("idle",GetIsRight());
+                AnimationController("idle");
                 flip = 0;
             }
 
             if (Input.GetKeyDown("left") && nowCollisionStatus != CollisionStatus.left_collision)
             {
-                AnimationController("walk_left",GetIsRight());
+                AnimationController("walk_left");
                 flip = -1;
             }
             else if (Input.GetKeyUp("left"))
             {
                 if (!Input.GetKey("right"))
                 {
-                    AnimationController("idle",GetIsRight());
+                    AnimationController("idle");
                     flip = 0;
                 }
                 else
                 {
-                    AnimationController("walk_right",GetIsRight());
+                    AnimationController("walk_right");
                     flip = 1;
                 }
             }
 
             if (Input.GetKeyDown("right") && nowCollisionStatus != CollisionStatus.right_collision)
             {
-                AnimationController("walk_right",GetIsRight());
+                AnimationController("walk_right");
                 flip = 1;
             }
             else if (Input.GetKeyUp("right"))
             {
                 if (!Input.GetKey("left"))
                 {
-                    AnimationController("idle",GetIsRight());
+                    AnimationController("idle");
                     flip = 0;
                 }
                 else
                 {
-                    AnimationController("walk_left",GetIsRight());
+                    AnimationController("walk_left");
                     flip = -1;
                 }
             }
 
             if(Input.GetKeyDown("up"))
             {
-                AnimationController("reverse_side", GetIsRight());
+                AnimationController("reverse_side");
                 flip = 0;
             }
             if (Input.GetKeyDown("down"))
             {
-                AnimationController("front_side", GetIsRight());
+                AnimationController("front_side");
                 flip = 0;
             }
             transform.Translate(flip * Vector2.right * speed * _v * Time.deltaTime);
             if (IsHoldingCandle)
-                MoveCandle(candlePosX);
+                MoveCandle(candlePosX);			
 
             return;
         }
@@ -122,8 +122,9 @@ public class PlayerController : MonoBehaviour
     }
 	
 	
-	public void AnimationController(string command, bool newFlipX){
-        arma.armature.flipX = newFlipX;
+	public void AnimationController(string command, bool? newFlipX = null){
+        if (newFlipX != null)
+            arma.armature.flipX = newFlipX == true ? true : false;
 		switch (command)
         {
             case "idle":
@@ -202,7 +203,7 @@ public class PlayerController : MonoBehaviour
                     nowDisplayStatus = DisplayStatus.左右;
                 }
                 CandleLight.gameObject.SetActive(false);
-                arma.animation.FadeIn("backward", 0.08f, 1);
+                arma.animation.FadeIn("backward", 0.08f);
                 arma.animationName = "backward";
                 break;
             case "front_side":
@@ -260,7 +261,7 @@ public class PlayerController : MonoBehaviour
         isPlayerCanControl = b;
         if (!b)
         {
-            //AnimationController("idle",GetIsRight());
+            //AnimationController("idle");
             flip = 0;
         }
     }

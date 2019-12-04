@@ -47,6 +47,9 @@ public class StoryData : ScriptableObject
         //轉換場景
         public string Scene;
         public GameStateManager.SpawnPoint SpawnPoint;
+		public float SpawnPointFreeX;
+		public GameStateManager.Facing Facing;
+
 
         //選項
         public SelectOption[] Options = new SelectOption[2];

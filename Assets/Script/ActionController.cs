@@ -40,9 +40,9 @@ public class ActionController : MonoBehaviour {
         if (chara.GetComponent<PlayerController>() != null) {
             var player = chara.GetComponent<PlayerController>();
             if (speed < 0)
-                player.AnimationController("walk_left", armature.armature.flipX);
+                player.AnimationController("walk_left");
             else
-                player.AnimationController("walk_right", armature.armature.flipX);
+                player.AnimationController("walk_right");
         }
         else
         {
@@ -61,7 +61,7 @@ public class ActionController : MonoBehaviour {
             yield return new WaitForFixedUpdate();
         }
         if (chara.GetComponent<PlayerController>() != null)
-            chara.GetComponent<PlayerController>().AnimationController("idle", armature.armature.flipX);
+            chara.GetComponent<PlayerController>().AnimationController("idle");
         else
         {
             armature.animation.FadeIn("stand_right_with_coat", 0.15f);

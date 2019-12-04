@@ -16,13 +16,14 @@ public class GameStateManager : MonoBehaviour {
     public GameObject Player;
     public StoryManager ActingStorySystem;
     bool PlayerControlLock = false;
-    public struct SmallMap
-    {
-        public int floor;
-        public int corridorPlace;
-    };
-    //小地圖參數，floor=樓層(-3~3)，corridorPlace=走廊位置(1~6)
-    public SmallMap SmallMapParameters;
+
+    //小地圖參數，floor=樓層(-3~3)，corridorPlace=走廊位置 左到右(0~7)
+    
+    public enum Floor { 地下三樓, 地下二樓, 地下一樓, 一樓, 二樓, 三樓}
+    public enum PosIndex { 一, 二, 三, 四, 五, 六, 七, 八 }
+    [Space(10)]
+    public Floor 第幾層;
+    public PosIndex 從左邊數來第幾個;
 
     void Awake()
     {
@@ -52,6 +53,7 @@ public class GameStateManager : MonoBehaviour {
     {
         NowStatus = SceneStatus.演出中;
         PlayerControlLock = true;
+        Player.GetComponent<PlayerController>().AnimationController("idle");
         SystemVariables.lockBag = true;
     }
        
@@ -105,7 +107,7 @@ public class GameStateManager : MonoBehaviour {
     };
 
     public enum SpawnPoint { 右側, 左側, 中間, 中間偏左, 樓梯左側, 樓梯右側, 其他}
-	public enum Facing { 保留, 左, 右, 反向}
+	public enum Facing { 保留, 左, 右, 反向, 前, 後}
 
     public void 黑幕轉場(string sceneName, SpawnPoint point, Facing facing)
     {
@@ -117,7 +119,7 @@ public class GameStateManager : MonoBehaviour {
     {
         StartEvent();
         StartCoroutine(Loading(sceneName, point, facing));
-        Destroy(Player);
+        //Destroy(Player);
     }
 
     IEnumerator Loading(string sceneName, Vector3 point, Facing facing)
@@ -129,8 +131,10 @@ public class GameStateManager : MonoBehaviour {
         Player.transform.position = point;
 		PlayerController playerScript = Player.GetComponent<PlayerController>();
 		if(facing == Facing.左){playerScript.AnimationController("idle", false) ;}
-		else if(facing == Facing.右){playerScript.AnimationController("idle", true);}
-		else if(facing == Facing.反向){playerScript.AnimationController("idle", !playerScript.GetIsRight());}
+		else if(facing == Facing.右){playerScript.AnimationController("idle", true); }
+        else if (facing == Facing.前) { playerScript.AnimationController("front_side"); }
+        else if (facing == Facing.後) { playerScript.AnimationController("reverse_side"); }
+        else if(facing == Facing.反向){playerScript.AnimationController("idle", !playerScript.GetIsRight());}
         SceneManager.LoadScene(sceneName);
         /*AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
 
@@ -141,5 +145,6 @@ public class GameStateManager : MonoBehaviour {
         //完成淡出
         if (ActingStorySystem == null)
             FinEvent();*/
+		
     }
 }
