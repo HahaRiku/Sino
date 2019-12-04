@@ -121,10 +121,21 @@ public class PlayerController : MonoBehaviour
             MoveCandle(candlePosX);
     }
 	
-	
-	public void AnimationController(string command, bool? newFlipX = null){
-        if (newFlipX != null)
-            arma.armature.flipX = newFlipX == true ? true : false;
+	public void 面向(bool b)
+    {
+        arma.armature.flipX = b;
+    }
+
+    public void 面向(GameObject go)
+    {
+        if (go.transform.position.x > transform.position.x)
+            arma.armature.flipX = true;
+        else if (go.transform.position.x < transform.position.x)
+            arma.armature.flipX = false;
+    }
+
+    public void AnimationController(string command)
+    {
 		switch (command)
         {
             case "idle":

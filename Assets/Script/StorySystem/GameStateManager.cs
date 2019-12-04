@@ -53,7 +53,6 @@ public class GameStateManager : MonoBehaviour {
     {
         NowStatus = SceneStatus.演出中;
         PlayerControlLock = true;
-        Player.GetComponent<PlayerController>().AnimationController("idle");
         SystemVariables.lockBag = true;
     }
        
@@ -130,11 +129,29 @@ public class GameStateManager : MonoBehaviour {
         //完成淡入
         Player.transform.position = point;
 		PlayerController playerScript = Player.GetComponent<PlayerController>();
-		if(facing == Facing.左){playerScript.AnimationController("idle", false) ;}
-		else if(facing == Facing.右){playerScript.AnimationController("idle", true); }
-        else if (facing == Facing.前) { playerScript.AnimationController("front_side"); }
-        else if (facing == Facing.後) { playerScript.AnimationController("reverse_side"); }
-        else if(facing == Facing.反向){playerScript.AnimationController("idle", !playerScript.GetIsRight());}
+        if (facing == Facing.左)
+        {
+            playerScript.AnimationController("idle");
+            playerScript.面向(false);
+        }
+        else if (facing == Facing.右)
+        {
+            playerScript.AnimationController("idle");
+            playerScript.面向(true);
+        }
+        else if (facing == Facing.前)
+        {
+            playerScript.AnimationController("front_side");
+        }
+        else if (facing == Facing.後)
+        {
+            playerScript.AnimationController("reverse_side");
+        }
+        else if (facing == Facing.反向)
+        {
+            playerScript.AnimationController("idle");
+            playerScript.面向(!playerScript.GetIsRight());
+        }
         SceneManager.LoadScene(sceneName);
         /*AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
 
