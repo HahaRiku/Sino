@@ -52,8 +52,16 @@ public class StoryReader : MonoBehaviour
         charIndex = 0;
         if (!dialogPanel.IsVisible())
             dialogPanel.SetVisible();
-        NameText.text = story.Name;
-        currentString = story.Text;
+        if (story.Name.Trim() == "")
+        {
+            NameText.text = "";
+            currentString = story.Text;
+        }
+        else
+        {
+            NameText.text = story.Name;
+            currentString = "\n" + story.Text;
+        }
         isReadStory = true;
     }
     public void ClosePanel()
