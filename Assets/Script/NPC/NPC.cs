@@ -94,10 +94,10 @@ public class NPC : MonoBehaviour {
                         白點TF.localScale = new Vector2(temp * 2.25f, temp * 2.25f);
                         白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp);
                     }
-                    else if (type == NpcType.door && SystemVariables.IsDoorStatusExisted(門的名字))
-                        鎖SP.sprite = SystemVariables.doorLockOrNot[門的名字] ? 鎖鎖起來 : 鎖打開;
+                    else if (type == NpcType.door && SystemVariables.IsLockStatusExisted(門的名字))
+                        鎖SP.sprite = SystemVariables.lockLockOrNot[門的名字] ? 鎖鎖起來 : 鎖打開;
                     else {
-                        SystemVariables.AddDoorStatus(門的名字, doorType == DoorType.開啟 ? false : true);
+                        SystemVariables.AddLockStatus(門的名字, doorType == DoorType.開啟 ? false : true);
                         鎖SP.sprite = doorType == DoorType.開啟 ? 鎖打開 : 鎖鎖起來;
                     }
                 }
@@ -151,10 +151,10 @@ public class NPC : MonoBehaviour {
                         GetComponent<StoryManager>().BeginStory();
                     }
                     else if (type == NpcType.door) {
-                        if (SystemVariables.doorLockOrNot[門的名字]) {  //lock
+                        if (SystemVariables.lockLockOrNot[門的名字]) {  //lock
                             if (BagSystem.IsItemInBag(需要的鑰匙名字)) {
                                 鎖SP.sprite = 鎖打開;
-                                SystemVariables.AddDoorStatus(門的名字, false);                
+                                SystemVariables.AddLockStatus(門的名字, false);                
                                 doorType = DoorType.開啟;
                             }
                             else  //左右晃動的動畫                            
@@ -345,8 +345,8 @@ public class NPC : MonoBehaviour {
         }
     }
 
-    public void SetThisDoorLock(bool l) {
-        SystemVariables.AddDoorStatus(門的名字, l);
+    public void SetThisLockLock(bool l) {
+        SystemVariables.AddLockStatus(門的名字, l);
         if(l) {
             doorType = DoorType.關閉;
         }
