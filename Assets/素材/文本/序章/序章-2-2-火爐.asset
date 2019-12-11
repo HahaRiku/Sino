@@ -1,0 +1,269 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c6fdbd9f7d21a4386f846813473c52, type: 3}
+  m_Name: "\u5E8F\u7AE0-2-2-\u706B\u7210"
+  m_EditorClassIdentifier: 
+  StateList:
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u662F\u5426\u8981\u9EDE\u4EAE\u71ED\u53F0\uFF1F\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: "\x14\x01"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u5E2D\u8AFE\u80CC\u9762\u7AD9\u7ACB"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 4
+    "continue\u689D\u4EF6": 0
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u5148\u628A\u860B\u679C\u8207\u7389\u7C73\u6E05\u6D17\u4E00\u4E0B\uFF0C\u82B1\u751F\u5148\u7F6E\u65BC\u4E00\u65C1\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: "\x14\x01"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: "\u9EDE\u4EAE\u71ED\u53F0"
+    - Content: "\u5426"
+      JumpTo: "\u4E0D\u9EDE\u71ED\u53F0"
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u5E2D\u8AFE\u80CC\u9762\u7AD9\u7ACB"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u5148\u628A\u860B\u679C\u8207\u7389\u7C73\u6E05\u6D17\u4E00\u4E0B\uFF0C\u82B1\u751F\u5148\u7F6E\u65BC\u4E00\u65C1\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: "\x14\x01"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: "\u9EDE\u4EAE\u71ED\u53F0"
+    LabelJump: 
+    Class: "\u5E2D\u8AFE\u80CC\u9762\u7AD9\u7ACB"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u5148\u628A\u860B\u679C\u8207\u7389\u7C73\u6E05\u6D17\u4E00\u4E0B\uFF0C\u82B1\u751F\u5148\u7F6E\u65BC\u4E00\u65C1\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: "\x14\x01"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: 
+    Class: "\u9EDE\u71C8\u5F8C\uFF1A\u5E2D\u8AFE\u4EAE+\u53EF\u96E2\u958B\u5EDA\u623F"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 7
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u5148\u628A\u860B\u679C\u8207\u7389\u7C73\u6E05\u6D17\u4E00\u4E0B\uFF0C\u82B1\u751F\u5148\u7F6E\u65BC\u4E00\u65C1\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: "\x14\x01"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: end
+    Class: "\u5E2D\u8AFE\u80CC\u9762\u7AD9\u7ACB"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u5148\u628A\u860B\u679C\u8207\u7389\u7C73\u6E05\u6D17\u4E00\u4E0B\uFF0C\u82B1\u751F\u5148\u7F6E\u65BC\u4E00\u65C1\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: "\x14\x01"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: "\u4E0D\u9EDE\u71ED\u53F0"
+    LabelJump: 
+    Class: "\u5E2D\u8AFE\u80CC\u9762\u7AD9\u7ACB"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u5148\u628A\u860B\u679C\u8207\u7389\u7C73\u6E05\u6D17\u4E00\u4E0B\uFF0C\u82B1\u751F\u5148\u7F6E\u65BC\u4E00\u65C1\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: "\x14\x01"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: 
+    Class: "\u5E2D\u8AFE\u80CC\u9762\u7AD9\u7ACB"
+    Parameters: []
+    WaitTime: 0

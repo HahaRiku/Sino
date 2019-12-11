@@ -35,6 +35,8 @@ MonoBehaviour:
     Value: 0
     Scene: Q
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -66,8 +68,10 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u9A5A\u5606\u865F"
     Label: 
     LabelJump: 
@@ -97,6 +101,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -128,6 +134,8 @@ MonoBehaviour:
     Value: 0
     Scene: "\x14\x01"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -159,6 +167,8 @@ MonoBehaviour:
     Value: 0
     Scene: "U\x01"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -190,6 +200,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -221,6 +233,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -252,6 +266,8 @@ MonoBehaviour:
     Value: 0
     Scene: "\x18\x02"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -283,6 +299,8 @@ MonoBehaviour:
     Value: 0
     Scene: "Y\x02"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -314,6 +332,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -329,7 +349,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5E2D\u8AFE"
+    Character: Sino
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
@@ -345,6 +365,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -376,6 +398,8 @@ MonoBehaviour:
     Value: 0
     Scene: "\x1C\x03"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -391,7 +415,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5E2D\u8AFE"
+    Character: Sino
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
@@ -407,6 +431,8 @@ MonoBehaviour:
     Value: 0
     Scene: "]\x03"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -438,6 +464,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -469,6 +497,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -500,6 +530,8 @@ MonoBehaviour:
     Value: 0
     Scene: " \x04"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -531,6 +563,8 @@ MonoBehaviour:
     Value: 0
     Scene: "a\x04"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -562,6 +596,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -593,6 +629,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -624,6 +662,8 @@ MonoBehaviour:
     Value: 0
     Scene: "$\x05"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -655,8 +695,10 @@ MonoBehaviour:
     Value: 0
     Scene: "e\x05"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u522A\u7BC0\u865F"
     Label: 
     LabelJump: 
@@ -686,6 +728,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -717,6 +761,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -748,6 +794,8 @@ MonoBehaviour:
     Value: 0
     Scene: "(\x06"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -779,6 +827,8 @@ MonoBehaviour:
     Value: 0
     Scene: "i\x06"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -810,6 +860,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -841,6 +893,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -872,6 +926,8 @@ MonoBehaviour:
     Value: 0
     Scene: ",\a"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -903,6 +959,8 @@ MonoBehaviour:
     Value: 0
     Scene: "m\a"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -934,6 +992,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -965,8 +1025,10 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u522A\u7BC0\u865F"
     Label: 
     LabelJump: 
@@ -996,6 +1058,8 @@ MonoBehaviour:
     Value: 0
     Scene: "0\b"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -1027,6 +1091,8 @@ MonoBehaviour:
     Value: 0
     Scene: "q\b"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -1058,10 +1124,45 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
     Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 1
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u98DF\u6750\u90FD\u5728\u5EDA\u623F\u88E1\uFF0C\u5C31\u8ACB\u60A8\u5148\u5E6B\u6211\u62FF<color=#D29035FF><b>\u860B\u679C</b></color>\u3001<color=#D29035FF><b>\u7389\u7C73</b></color>\u548C<color=#D29035FF><b>\u82B1\u751F</b></color>\u4F86\u5427\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: "\u5E2D\u8AFE"
+    Emotion: "\u522A\u7BC0\u865F"
+    Label: end
     LabelJump: 
     Class: 
     Parameters: []
