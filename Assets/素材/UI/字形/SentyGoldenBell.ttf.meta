@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 94ed9fd232faed640881eb95d437c912
+timeCreated: 1576064393
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Senty Golden Bell ?????
+  fontNames:
+  - Senty Golden Bell ?????
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8e831bf461fe2d7428ca96fc3ce6addb
+timeCreated: 1576681582
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HanaMinA
+  fontNames:
+  - HanaMinA
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

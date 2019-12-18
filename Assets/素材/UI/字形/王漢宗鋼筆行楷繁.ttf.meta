@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 30ef4fe05fcc8ad41afddc4399525e0e
+timeCreated: 1576062772
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 15
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HanWangGB06
+  fontNames:
+  - HanWangGB06
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
