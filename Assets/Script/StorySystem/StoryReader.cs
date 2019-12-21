@@ -22,6 +22,8 @@ public class StoryReader : MonoBehaviour
 
     string currentString;
     int charIndex;
+    int charIndex_Write;
+    bool tagFlag;
 
     bool isReadStory = false;
     bool isForceFinish = false;
@@ -50,6 +52,8 @@ public class StoryReader : MonoBehaviour
         isForceFinish = false;
         DialogText.text = "";
         charIndex = 0;
+        charIndex_Write = 0;
+        tagFlag = false;
         if (!dialogPanel.IsVisible())
             dialogPanel.SetVisible();
         if (story.Name.Trim() == "")
@@ -97,8 +101,16 @@ public class StoryReader : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= intervalTime)
             {
-                if (charIndex > 0 && charIndex % 27 == 0)
+                if (charIndex_Write > 0 && charIndex_Write % 27 == 0)
                     DialogText.text += "\n";
+
+                if (currentString[charIndex] == '<')
+                    tagFlag = true;
+                else if (currentString[charIndex] == '>' )
+                    tagFlag = false;
+                if (!tagFlag && currentString[charIndex] != '>')                    
+                    charIndex_Write++;
+
                 DialogText.text += currentString[charIndex++];
                 timer = 0;
             }
