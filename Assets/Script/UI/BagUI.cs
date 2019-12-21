@@ -477,4 +477,8 @@ public class BagUI : MonoBehaviour {
     public void SetItemInBag(string itemName) {
         BagSystem.SetItemInBagOrNot(itemName, true);
     }
+
+    public bool IsGetItemAniDone() {
+        return getItemAniDone;
+    }
 }

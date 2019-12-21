@@ -17,7 +17,7 @@ public static class SystemVariables {
     public static Dictionary<string, int> otherVariables_int = new Dictionary<string, int>();
 
     [SerializeField]
-    public static Dictionary<string, bool> doorLockOrNot = new Dictionary<string, bool>();      //string放門的名字, bool放是否鎖著
+    public static Dictionary<string, bool> lockLockOrNot = new Dictionary<string, bool>();      //string放門的名字, bool放是否鎖著
 
     public static void AddIntVariable(string varName, int varValue) {
         if (otherVariables_int.ContainsKey(varName)) {
@@ -28,12 +28,12 @@ public static class SystemVariables {
         }
     }
 
-    public static void AddDoorStatus(string varName, bool varValue) {
-        if (doorLockOrNot.ContainsKey(varName)) {
-            doorLockOrNot[varName] = varValue;
+    public static void AddLockStatus(string varName, bool varValue) {
+        if (lockLockOrNot.ContainsKey(varName)) {
+            lockLockOrNot[varName] = varValue;
         }
         else {
-            doorLockOrNot.Add(varName, varValue);
+            lockLockOrNot.Add(varName, varValue);
         }
     }
 
@@ -43,9 +43,9 @@ public static class SystemVariables {
         }
     }
 
-    public static void RemoveDoorStatus(string varName) {
-        if (doorLockOrNot.ContainsKey(varName)) {
-            doorLockOrNot.Remove(varName);
+    public static void RemoveLockStatus(string varName) {
+        if (lockLockOrNot.ContainsKey(varName)) {
+            lockLockOrNot.Remove(varName);
         }
     }
 
@@ -53,16 +53,16 @@ public static class SystemVariables {
         return otherVariables_int.ContainsKey(varName);
     }
 
-    public static bool IsDoorStatusExisted(string varName) {
-        return doorLockOrNot.ContainsKey(varName);
+    public static bool IsLockStatusExisted(string varName) {
+        return lockLockOrNot.ContainsKey(varName);
     }
 
     public static void FlushIntVariables() {
         otherVariables_int.Clear();
     }
 
-    public static void FlushDoorStatus() {
-        doorLockOrNot.Clear();
+    public static void FlushLockStatus() {
+        lockLockOrNot.Clear();
     }
 
 }
@@ -73,8 +73,8 @@ public static class Init {
         //SceneDescInit.Init();
         SystemVariables.startGameTime = (Int64)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
         SystemVariables.FlushIntVariables();
-        SystemVariables.FlushDoorStatus();
-        //BagSystem.ResetItemsInBag();
+        SystemVariables.FlushLockStatus();
+        BagSystem.ResetItemsInBag();
         NotePagesSystem.ResetNotePages();
     }
 }

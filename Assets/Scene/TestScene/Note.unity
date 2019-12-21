@@ -3849,42 +3849,47 @@ Prefab:
     - target: {fileID: 224182779355059228, guid: 9a47635096604ff4b926c22f8005ebe8,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 316.8511
+      value: 317.4459
       objectReference: {fileID: 0}
     - target: {fileID: 224182779355059228, guid: 9a47635096604ff4b926c22f8005ebe8,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 640.11066
+      value: 640.4675
       objectReference: {fileID: 0}
     - target: {fileID: 224745124150257202, guid: 9a47635096604ff4b926c22f8005ebe8,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 316.8511
+      value: 317.4459
       objectReference: {fileID: 0}
     - target: {fileID: 224745124150257202, guid: 9a47635096604ff4b926c22f8005ebe8,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 640.11066
+      value: 640.4675
       objectReference: {fileID: 0}
     - target: {fileID: 224258629137267510, guid: 9a47635096604ff4b926c22f8005ebe8,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 633.7022
+      value: 634.8918
       objectReference: {fileID: 0}
     - target: {fileID: 224258629137267510, guid: 9a47635096604ff4b926c22f8005ebe8,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 1083.7021
+      value: 1084.8918
       objectReference: {fileID: 0}
     - target: {fileID: 224424935541392192, guid: 9a47635096604ff4b926c22f8005ebe8,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 316.8511
+      value: 317.4459
       objectReference: {fileID: 0}
     - target: {fileID: 224424935541392192, guid: 9a47635096604ff4b926c22f8005ebe8,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 640.11066
+      value: 640.4675
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223177922847112, guid: 9a47635096604ff4b926c22f8005ebe8,
+        type: 2}
+      propertyPath: testGetMission
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a47635096604ff4b926c22f8005ebe8, type: 2}
