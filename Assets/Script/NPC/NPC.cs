@@ -7,16 +7,16 @@ public class NPC : MonoBehaviour {
     public enum NpcState { 範圍外, 可以講話, 對話中, 不能講話, 講完話冷卻中 }
     public enum NpcTriggerType { 白點, 點點點, 鎖, 碰觸觸發 }
     public enum NpcDoingType { 可撿物件, 不可撿物件, 故事系統, 傳送 }
-    //public enum NpcType { item, talk, door }
-    /*public enum ItemType { 可撿, 不可撿 }
-    public enum DoorType { 開啟, 關閉 }*/
+    public enum NpcType { item, talk, door }
+    public enum ItemType { 可撿, 不可撿 }
+    public enum DoorType { 開啟, 關閉 }
 
     public NpcState state = NpcState.範圍外;
     public NpcTriggerType triggerType;
     public NpcDoingType doingType;
-    //public NpcType type;
-    /*public ItemType itemType;
-    public DoorType doorType;*/
+    public NpcType type;
+    public ItemType itemType;
+    public DoorType doorType;
 
     public float 冷卻時間 = 2f;
     public string 可撿的物品的名字;
