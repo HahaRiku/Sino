@@ -17,14 +17,9 @@ public class NPCTrigger : MonoBehaviour {
     public enum TriggerType { 白點, 點點點, 鎖, 碰觸, 耳朵 }
     public enum NpcState { 範圍外, 可以講話, 對話中, 不能講話, 講完話冷卻中 }
     public enum LockStatus { 沒鎖, 有鎖 }
-    public enum NPCCondition { 無, 變數, 背包物件存在與否}
     public enum WhenNPCEnd { 換到其他NPC, 關掉, 不改變}
 
-    public NPCCondition NPC運作條件;
-    public string conditionVarName;
-    public int conditionVarValue;
-    public string conditionItemName;
-    public bool conditionItemExisted;
+    public List<NPC運作條件Element> NPC運作條件List = new List<NPC運作條件Element>();
     private bool conditionTrue = true;
 
     public TriggerType type;
@@ -48,6 +43,7 @@ public class NPCTrigger : MonoBehaviour {
 
     public WhenNPCEnd 門鎖解鎖後;
     public WhenNPCEnd 撿取了物件後;
+    public WhenNPCEnd 故事系統後;
     public GameObject 切換後的NPC;
 
     private Transform 白點TF;
@@ -67,6 +63,7 @@ public class NPCTrigger : MonoBehaviour {
 
     private bool doThingsOnLock = false;
     public bool 撿了物品 { get; set; }
+    public bool functionList最後是做故事系統 { get; set; }
 
 
     void OnEnable() {
@@ -91,64 +88,60 @@ public class NPCTrigger : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if(NPC運作條件 == NPCCondition.變數) {
-            if(SystemVariables.otherVariables_int[conditionVarName] == conditionVarValue) {
-                conditionTrue = true;
+        conditionTrue = true;
+        foreach(NPC運作條件Element npce in NPC運作條件List) {
+            if (npce.NPC運作條件 == NPC運作條件Element.NPCCondition.變數) {
+                if (SystemVariables.otherVariables_int[npce.條件變數名稱] != npce.條件變數值) {
+                    conditionTrue = false;
+                }
             }
-            else {
-                conditionTrue = false;
+            else if (npce.NPC運作條件 != NPC運作條件Element.NPCCondition.背包物件存在與否) {
+                if (BagSystem.IsItemInBag(npce.條件物件名稱) == npce.條件物件存在與否) {
+                    conditionTrue = false;
+                }
             }
-        }
-        else if(NPC運作條件 == NPCCondition.背包物件存在與否) {
-            if(BagSystem.IsItemInBag(conditionItemName) == conditionItemExisted) {
-                conditionTrue = true;
-            }
-            else {
-                conditionTrue = false;
-            }
-        }
-        else {
-            conditionTrue = true;
         }
 
-        if (conditionTrue && !SystemVariables.lockNPCinteract) {
+        if (!SystemVariables.lockNPCinteract) {
             if (state == NpcState.不能講話) {
                 return;
             }
             if (state == NpcState.範圍外) {
-                if (CheckIsPlayerInRange(Radius)) {
-                    state = NpcState.可以講話;
-                    if (type == TriggerType.點點點) {
-                        dotAni.SetBool("Dot", true);
-                    }
-                    else if (type == TriggerType.耳朵) {
-                        earAni.SetBool("Ear", true);
+                if(conditionTrue) {
+                    if (CheckIsPlayerInRange(Radius)) {
+                        state = NpcState.可以講話;
+                        if (type == TriggerType.點點點) {
+                            dotAni.SetBool("Dot", true);
+                        }
+                        else if (type == TriggerType.耳朵) {
+                            earAni.SetBool("Ear", true);
+                        }
+                        else if (type == TriggerType.白點) {
+                            float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius - Mathf.Abs(player.transform.position.x - transform.position.x))    //various part
+                                + (1.0f / (Radius + HintRaius + 白點亮度差距)) * (HintRaius + 白點亮度差距);    //another triangle part
+                            白點TF.localScale = new Vector2(temp * 2.25f, temp * 2.25f);
+                            白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp);
+                        }
+                        else if (type == TriggerType.鎖 && SystemVariables.IsLockStatusExisted(鎖的名字))
+                            鎖SP.sprite = SystemVariables.lockLockOrNot[鎖的名字] ? 鎖鎖起來 : 鎖打開;
+                        else {
+                            SystemVariables.AddLockStatus(鎖的名字, (lockStatus == LockStatus.沒鎖) ? false : true);
+                            鎖SP.sprite = (lockStatus == LockStatus.沒鎖) ? 鎖打開 : 鎖鎖起來;
+                        }
                     }
                     else if (type == TriggerType.白點) {
-                        float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius - Mathf.Abs(player.transform.position.x - transform.position.x))    //various part
-                            + (1.0f / (Radius + HintRaius + 白點亮度差距)) * (HintRaius + 白點亮度差距);    //another triangle part
-                        白點TF.localScale = new Vector2(temp * 2.25f, temp * 2.25f);
-                        白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp);
+                        float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius + HintRaius - Mathf.Abs(player.transform.position.x - transform.position.x));
+                        白點TF.localScale = CheckIsPlayerInRange(HintRaius) ? new Vector2(temp * 2.25f, temp * 2.25f) : new Vector2(0, 0);
+                        白點SP.color = CheckIsPlayerInRange(HintRaius) ? new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp) :
+                            new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, 0);
                     }
-                    else if (type == TriggerType.鎖 && SystemVariables.IsLockStatusExisted(鎖的名字))
-                        鎖SP.sprite = SystemVariables.lockLockOrNot[鎖的名字] ? 鎖鎖起來 : 鎖打開;
-                    else {
-                        SystemVariables.AddLockStatus(鎖的名字, (lockStatus == LockStatus.沒鎖) ? false : true);
-                        鎖SP.sprite = (lockStatus == LockStatus.沒鎖) ? 鎖打開 : 鎖鎖起來;
-                    }
+                    else if (type == TriggerType.點點點)
+                        dotAni.SetBool("Dot", false);
+                    else if (type == TriggerType.耳朵)
+                        earAni.SetBool("Ear", false);
+                    else if (type == TriggerType.鎖)
+                        鎖SP.sprite = null;
                 }
-                else if (type == TriggerType.白點) {
-                    float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius + HintRaius - Mathf.Abs(player.transform.position.x - transform.position.x));
-                    白點TF.localScale = CheckIsPlayerInRange(HintRaius) ? new Vector2(temp * 2.25f, temp * 2.25f) : new Vector2(0, 0);
-                    白點SP.color = CheckIsPlayerInRange(HintRaius) ? new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp) :
-                        new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, 0);
-                }
-                else if (type == TriggerType.點點點)
-                    dotAni.SetBool("Dot", false);
-                else if (type == TriggerType.耳朵)
-                    earAni.SetBool("Ear", false);
-                else if (type == TriggerType.鎖)
-                    鎖SP.sprite = null;
             }
             else if (state == NpcState.可以講話) {
                 if (!CheckIsPlayerInRange(Radius))
@@ -278,6 +271,15 @@ public class NPCTrigger : MonoBehaviour {
                 gameObject.SetActive(false);
             }
         }
+        else if(functionList最後是做故事系統) {
+            if(故事系統後 == WhenNPCEnd.換到其他NPC) {
+                gameObject.SetActive(false);
+                切換後的NPC.SetActive(true);
+            }
+            else if(故事系統後 == WhenNPCEnd.關掉) {
+                gameObject.SetActive(false);
+            }
+        }
         /*if (type != NpcType.item || (type == NpcType.item && itemType == ItemType.不可撿)) {
             GM.FinEvent();
         }
@@ -303,6 +305,8 @@ public class NPCTrigger : MonoBehaviour {
         白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, 0);
         dotAni.SetBool("Dot", false);
         earAni.SetBool("Ear", false);
+        functionList最後是做故事系統 = false;
+        撿了物品 = false;
         鎖SP.sprite = null;
         if (type == TriggerType.鎖) {
             if (SystemVariables.IsLockStatusExisted(鎖的名字)) {
@@ -310,4 +314,14 @@ public class NPCTrigger : MonoBehaviour {
             }
         }
     }
+}
+
+[System.Serializable]
+public class NPC運作條件Element {
+    public enum NPCCondition { 無, 變數, 背包物件存在與否 }
+    public NPCCondition NPC運作條件;
+    public string 條件變數名稱;
+    public int 條件變數值;
+    public string 條件物件名稱;
+    public bool 條件物件存在與否;
 }

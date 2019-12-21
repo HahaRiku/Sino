@@ -85,6 +85,7 @@ public class NPCFunction : MonoBehaviour {
                         ExecuteFunctionElement();
                     }
                     else {
+                        trigger.functionList最後是做故事系統 = true;
                         execute = false;
                         functionDone = true;
                         GM.FinEvent();
