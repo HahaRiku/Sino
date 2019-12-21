@@ -35,6 +35,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -70,6 +72,8 @@ MonoBehaviour:
     Value: 0
     Scene: Q
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -105,6 +109,8 @@ MonoBehaviour:
     Value: 0
     Scene: "2\x01"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -140,6 +146,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -175,6 +183,8 @@ MonoBehaviour:
     Value: 0
     Scene: "}\x01"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -206,6 +216,45 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: end
+    Class: "\u5E2D\u8AFE\u8F49\u8EAB"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: "\u5B88\u885B"
+    Text: "\u8AB0\u5728\u90A3\u88E1\uFF1F\uFF01\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -241,6 +290,8 @@ MonoBehaviour:
     Value: 0
     Scene: "\t\x02"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -276,6 +327,8 @@ MonoBehaviour:
     Value: 0
     Scene: "T\x02"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -311,16 +364,55 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
     - Content: "\u5426"
       JumpTo: 
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u9A5A\u5606\u865F"
     Label: "\u4E0D\u554F\u9E1A\u9D61\u5148\u751F\u8981\u4EC0\u9EBC"
     LabelJump: 
     Class: 
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: "\u5B88\u885B"
+    Text: "\u8AB0\u5728\u90A3\u88E1\uFF1F\uFF01\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: end
+    Class: "\u9E1A\u9D61\u505C\u6B62\u8DF3"
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 8
@@ -346,6 +438,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -381,6 +475,8 @@ MonoBehaviour:
     Value: 0
     Scene: "5\x03"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -416,6 +512,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -451,6 +549,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -486,6 +586,8 @@ MonoBehaviour:
     Value: 0
     Scene: "\x16\x04"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -521,6 +623,8 @@ MonoBehaviour:
     Value: 0
     Scene: "a\x04"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -536,7 +640,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5E2D\u8AFE"
+    Character: Sino
     OriPositionX: 5
     NewPositionX: 0
     Duration: 1
@@ -552,6 +656,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -587,6 +693,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -618,6 +726,8 @@ MonoBehaviour:
     Value: 0
     Scene: ".\x05"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: "\u5B89\u64AB\u9E1A\u9D61"
@@ -653,6 +763,8 @@ MonoBehaviour:
     Value: 0
     Scene: "y\x05"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -672,7 +784,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5E2D\u8AFE"
+    Character: Sino
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
@@ -688,6 +800,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -723,6 +837,8 @@ MonoBehaviour:
     Value: 0
     Scene: "\x0F\x06"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -756,8 +872,47 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: end
+    Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: "\u5B88\u885B"
+    Text: "\u8AB0\u5728\u90A3\u88E1\uFF1F\uFF01\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
     Scene: "Z\x06"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -793,6 +948,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -828,6 +985,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -863,6 +1022,8 @@ MonoBehaviour:
     Value: 0
     Scene: ";\a"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -898,6 +1059,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -933,6 +1096,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -968,12 +1133,14 @@ MonoBehaviour:
     Value: 0
     Scene: "\x1C\b"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
     - Content: "\u5426"
       JumpTo: 
-    CharName: "\u5B88\u885B"
+    CharName: Guard
     Emotion: "\u554F\u865F"
     Label: "\u4E0D\u554F\u9E1A\u9D61\u5148\u751F\u8981\u4EC0\u9EBC"
     LabelJump: 
@@ -1003,6 +1170,8 @@ MonoBehaviour:
     Value: 0
     Scene: "g\b"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -1038,6 +1207,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
@@ -1073,6 +1244,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u662F"
       JumpTo: 
