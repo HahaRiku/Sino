@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class NPCFunction : MonoBehaviour {
     public FunctionElement[] functionList;
@@ -96,33 +97,37 @@ public class NPCFunction : MonoBehaviour {
     void 面板定位() {
         var screenPos = Camera.main.WorldToViewportPoint(transform.position);
         var targetRT = UnpickablePanel.transform.GetChild(0).GetComponent<RectTransform>();
+        var targetText = UnpickablePanel.transform.GetChild(0).GetChild(2).GetComponent<Text>();
         UnpickablePanel.GetComponent<RectTransform>().anchorMax = screenPos;
         UnpickablePanel.GetComponent<RectTransform>().anchorMin = screenPos;
 
         float 間距 = 3;
         if (screenPos.x < 0.5) {
             if (screenPos.y > 0.55) {
-                //在右下角
-                targetRT.pivot = Vector2.right;
+                //在左上角
+                targetRT.pivot = Vector2.up;
                 targetRT.anchoredPosition = new Vector2(間距, -間距);
-                print("test");
+                targetText.alignment = TextAnchor.UpperLeft;
             }
             else {
-                //在右上角
+                //在左下角
                 targetRT.pivot = Vector2.zero;
                 targetRT.anchoredPosition = new Vector2(間距, 間距);
+                targetText.alignment = TextAnchor.LowerLeft;
             }
         }
         else if (screenPos.x >= 0.5) {
             if (screenPos.y > 0.55) {
-                //在左下角
+                //在右上角
                 targetRT.pivot = Vector2.one;
                 targetRT.anchoredPosition = new Vector2(-間距, -間距);
+                targetText.alignment = TextAnchor.UpperRight;
             }
             else {
-                //在左上角
-                targetRT.pivot = Vector2.up;
+                //在右下角
+                targetRT.pivot = Vector2.right;
                 targetRT.anchoredPosition = new Vector2(-間距, 間距);
+                targetText.alignment = TextAnchor.LowerRight;
             }
         }
     }
@@ -137,6 +142,7 @@ public class NPCFunction : MonoBehaviour {
     void ExecuteFunctionElement() {
         GM.StartEvent();
         if (functionList[functionElementIndex].type == FunctionElement.FunctionType.不可撿物件) {
+            GM.FinEvent();
             面板定位();
             UnpickablePanel.SetInfo(functionList[functionElementIndex].不可撿的物品的敘述);
             UnpickablePanel.SetVisible();

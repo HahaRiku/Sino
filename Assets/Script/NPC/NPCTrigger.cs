@@ -299,18 +299,12 @@ public class NPCTrigger : MonoBehaviour {
 
     private void Initialization() {
         doThingsOnLock = false;
-        if (type == TriggerType.白點) {
-            白點TF.localScale = new Vector2(0, 0);
-            白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, 0);
-        }
-        else if(type == TriggerType.點點點) {
-            dotAni.SetBool("Dot", false);
-        }
-        else if(type == TriggerType.耳朵) {
-            earAni.SetBool("Ear", false);
-        }
-        else if (type == TriggerType.鎖) {
-            鎖SP.sprite = null;
+        白點TF.localScale = new Vector2(0, 0);
+        白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, 0);
+        dotAni.SetBool("Dot", false);
+        earAni.SetBool("Ear", false);
+        鎖SP.sprite = null;
+        if (type == TriggerType.鎖) {
             if (SystemVariables.IsLockStatusExisted(鎖的名字)) {
                 lockStatus = SystemVariables.lockLockOrNot[鎖的名字] ? LockStatus.有鎖 : LockStatus.沒鎖;
             }
