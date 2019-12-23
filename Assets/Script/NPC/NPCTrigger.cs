@@ -29,7 +29,7 @@ public class NPCTrigger : MonoBehaviour {
     public bool NPC面向右邊 = true;
     public bool NPC對話後是否要面向席諾 = true;
 
-    public float 冷卻時間 = 2f;
+    public float 冷卻時間 = 0.1f;
 
     public string 鎖的名字;
     public string 需要的鑰匙名字;
@@ -91,13 +91,21 @@ public class NPCTrigger : MonoBehaviour {
         conditionTrue = true;
         foreach(NPC運作條件Element npce in NPC運作條件List) {
             if (npce.NPC運作條件 == NPC運作條件Element.NPCCondition.變數) {
-                if (SystemVariables.otherVariables_int[npce.條件變數名稱] != npce.條件變數值) {
+                if(!SystemVariables.IsIntVariableExisted(npce.條件變數名稱)) {
                     conditionTrue = false;
+                    break;
+                }
+                else {
+                    if (SystemVariables.otherVariables_int[npce.條件變數名稱] != npce.條件變數值) {
+                        conditionTrue = false;
+                        break;
+                    }
                 }
             }
-            else if (npce.NPC運作條件 != NPC運作條件Element.NPCCondition.背包物件存在與否) {
-                if (BagSystem.IsItemInBag(npce.條件物件名稱) == npce.條件物件存在與否) {
+            else if (npce.NPC運作條件 == NPC運作條件Element.NPCCondition.背包物件存在與否) {
+                if (BagSystem.IsItemInBag(npce.條件物件名稱) != npce.條件物件存在與否) {
                     conditionTrue = false;
+                    break;
                 }
             }
         }
@@ -107,7 +115,7 @@ public class NPCTrigger : MonoBehaviour {
                 return;
             }
             if (state == NpcState.範圍外) {
-                if(conditionTrue) {
+                if(conditionTrue && !SystemVariables.lockOtherNPC) {
                     if (CheckIsPlayerInRange(Radius)) {
                         state = NpcState.可以講話;
                         if (type == TriggerType.點點點) {
@@ -253,6 +261,7 @@ public class NPCTrigger : MonoBehaviour {
 
     IEnumerator WaitAndResumeTalk() {
         SystemVariables.lockBag = false;
+        Initialization();
         if (doThingsOnLock && !SystemVariables.lockLockOrNot[鎖的名字]) {
             if (門鎖解鎖後 == WhenNPCEnd.換到其他NPC) {
                 gameObject.SetActive(false);
@@ -280,23 +289,10 @@ public class NPCTrigger : MonoBehaviour {
                 gameObject.SetActive(false);
             }
         }
-        /*if (type != NpcType.item || (type == NpcType.item && itemType == ItemType.不可撿)) {
-            GM.FinEvent();
-        }
-        state = NpcState.講完話冷卻中;
 
-        if (type == NpcType.talk)
-            yield return new WaitForSeconds(冷卻時間);
-        else
-            yield return new WaitForSeconds(0.1f);
-        if (type == NpcType.door && doorType == DoorType.開啟) {
-            string temp = string.Concat(SystemVariables.Scene, "_", gameObject.name);
-            SystemVariables.AddIntVariable(temp, 1);
-        }
-        state = NpcState.可以講話;*/
         yield return new WaitForSeconds(冷卻時間);
         
-        state = NpcState.可以講話;
+        state = NpcState.範圍外;
     }
 
     private void Initialization() {

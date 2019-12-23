@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: "\u5E8F\u7AE0-4"
   m_EditorClassIdentifier: 
   StateList:
-  - "state\u985E\u578B": 0
-    "continue\u689D\u4EF6": 0
-    Name: "\u9E1A\u9D61"
-    Text: "\u7B28\u86CB\uFF01\u7B28\u86CB\uFF01\u7B28\u86CB\uFF01"
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
@@ -23,8 +23,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -32,11 +35,13 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
     Label: 
     LabelJump: 
-    Class: 
+    Class: "To\u7D50\u675F\u8A66\u73A9\u7248"
     Parameters: []
     WaitTime: 0

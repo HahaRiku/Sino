@@ -47,7 +47,7 @@ public class SmallMap : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(currentSceneName != SystemVariables.Scene){GM = GameObject.Find("GM").GetComponent<GameStateManager>();}
+		if(currentSceneName != SystemVariables.Scene && SceneManager.GetActiveScene().name != "title") {GM = GameObject.Find("GM").GetComponent<GameStateManager>();}
         if (GM != null) {
             if (GM.NowStatus == GameStateManager.SceneStatus.自由探索) {
                 currentShowState = true;

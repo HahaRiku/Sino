@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Title : MonoBehaviour {
     public enum SelectedButton {
@@ -63,8 +64,12 @@ public class Title : MonoBehaviour {
                 Application.Quit();
             }
             else if(state == SelectedButton.Start) {
-                SceneManager.LoadScene("B3牢房4");
-
+                SceneManager.LoadScene("序章-1");
+                SystemVariables.startGameTime = (Int64)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+                SystemVariables.FlushIntVariables();
+                SystemVariables.FlushLockStatus();
+                BagSystem.ResetItemsInBag();
+                NotePagesSystem.ResetNotePages();
             }
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow)) {
