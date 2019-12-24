@@ -294,6 +294,16 @@ public class NPCTrigger : MonoBehaviour {
         
         state = NpcState.範圍外;
     }
+    void OnDrawGizmos()
+    {
+        float cHeight = 12;
+
+        Vector3 pos = new Vector3(transform.position.x + Offset, Camera.main.transform.position.y, 0);
+        float region_width = Radius * 2.0f;
+
+        Gizmos.color = new Color32(0x00, 0xC8, 0xE5, 0x4A);
+        Gizmos.DrawCube(pos, new Vector3(region_width, cHeight, 1.0f));
+    }
 
     private void Initialization() {
         doThingsOnLock = false;
