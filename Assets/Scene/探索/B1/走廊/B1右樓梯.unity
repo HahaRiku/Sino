@@ -214,7 +214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888d795994f671b4092dc7d5aa2328a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  setPositions: []
+  movingData: []
+  x_aniCurve: []
+  y_aniCurve: []
 --- !u!81 &375151082
 AudioListener:
   m_ObjectHideFlags: 0
@@ -397,11 +400,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 928207019}
     m_Modifications:
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: portalList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4214220497556508, guid: a5823042f29e1da4cb9bd36a689459fe, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -437,50 +435,6 @@ Prefab:
     - target: {fileID: 1289030539493416, guid: a5823042f29e1da4cb9bd36a689459fe, type: 2}
       propertyPath: m_Name
       value: "To1F\u53F3\u6A13&B2F\u53F3\u6A13\u68AF"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: sceneList.Array.data[0].targetScene
-      value: 
-      objectReference: {fileID: 102900000, guid: fce8e433b9fb7eb49a66b961503cd6de,
-        type: 3}
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: sceneList.Array.data[1].targetScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 27dc58cb1abd812488129991746e1d36,
-        type: 3}
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: portalList.Array.data[0].targetScene
-      value: 
-      objectReference: {fileID: 102900000, guid: fce8e433b9fb7eb49a66b961503cd6de,
-        type: 3}
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: portalList.Array.data[1].targetScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 27dc58cb1abd812488129991746e1d36,
-        type: 3}
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: portalList.Array.data[0].nextScenePos
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: portalList.Array.data[1].nextScenePos
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: portalList.Array.data[0].targetSceneName
-      value: "1F\u53F3\u6A13\u68AF"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114847569137469904, guid: a5823042f29e1da4cb9bd36a689459fe,
-        type: 2}
-      propertyPath: portalList.Array.data[1].targetSceneName
-      value: "B2\u53F3\u6A13\u68AF"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5823042f29e1da4cb9bd36a689459fe, type: 2}

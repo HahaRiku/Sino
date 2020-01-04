@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isPlayerCanControl = false;
 
-    public bool IsHoldingCandle = false;		//預設為不拿蠟燭，須從外面腳本改動
+    public bool IsHoldingCandle { get; set; }		//預設為不拿蠟燭，須從外面腳本改動
     public Light CandleLight;
     private float candlePosX;
 

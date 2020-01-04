@@ -12,165 +12,10 @@ MonoBehaviour:
   m_Name: testCameraMoving
   m_EditorClassIdentifier: 
   StateList:
-  - "state\u985E\u578B": 9
-    "continue\u689D\u4EF6": 1
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    bCondition: 0
-    Flag: 
-    WhenFlagIs: 0
-    Item: 
-    WhenItemExisted: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: 
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: 
-    LabelJump: 
-    Class: CameraMoving
-    Parameters: []
-    WaitTime: 2
-  - "state\u985E\u578B": 8
-    "continue\u689D\u4EF6": 2
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    bCondition: 0
-    Flag: 
-    WhenFlagIs: 0
-    Item: 
-    WhenItemExisted: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: 
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: 
-    LabelJump: 
-    Class: CameraMoving
-    Parameters: []
-    WaitTime: 2
-  - "state\u985E\u578B": 9
-    "continue\u689D\u4EF6": 1
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    bCondition: 0
-    Flag: 
-    WhenFlagIs: 0
-    Item: 
-    WhenItemExisted: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: 
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: 
-    LabelJump: 
-    Class: CameraMoving
-    Parameters: []
-    WaitTime: 5
-  - "state\u985E\u578B": 2
-    "continue\u689D\u4EF6": 2
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    bCondition: 1
-    Flag: 
-    WhenFlagIs: 0
-    Item: "\u7CD6\u679C"
-    WhenItemExisted: 0
-    ThanJumpTo: "\u7CD6\u679C\u5B58\u5728"
-    ElseJumpTo: "\u7CD6\u679C\u4E0D\u5B58\u5728"
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: 
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: 
-    LabelJump: 
-    Class: CameraMoving
-    Parameters: []
-    WaitTime: 5
-  - "state\u985E\u578B": 6
-    "continue\u689D\u4EF6": 2
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    bCondition: 1
-    Flag: 
-    WhenFlagIs: 0
-    Item: 
-    WhenItemExisted: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: 
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: "\u7CD6\u679C\u5B58\u5728"
-    LabelJump: 
-    Class: CameraMoving
-    Parameters: []
-    WaitTime: 5
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 123
-    Text: 123456
+    Text: 123123
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
@@ -178,7 +23,7 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
-    bCondition: 1
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
     Item: 
@@ -195,75 +40,13 @@ MonoBehaviour:
     Emotion: 
     Label: 
     LabelJump: 
-    Class: CameraMoving
+    Class: 
     Parameters: []
-    WaitTime: 5
-  - "state\u985E\u578B": 7
-    "continue\u689D\u4EF6": 2
-    Name: 456
-    Text: 456789
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    bCondition: 1
-    Flag: 
-    WhenFlagIs: 0
-    Item: 
-    WhenItemExisted: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: 
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: "\u7CD6\u679C\u4E0D\u5B58\u5728"
-    LabelJump: End
-    Class: CameraMoving
-    Parameters: []
-    WaitTime: 5
-  - "state\u985E\u578B": 6
-    "continue\u689D\u4EF6": 2
-    Name: 
-    Text: 
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    bCondition: 1
-    Flag: 
-    WhenFlagIs: 0
-    Item: 
-    WhenItemExisted: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: 
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: "\u7CD6\u679C\u4E0D\u5B58\u5728"
-    LabelJump: 
-    Class: CameraMoving
-    Parameters: []
-    WaitTime: 5
+    WaitTime: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 456
-    Text: 456789
+    Text: 456456
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
@@ -271,7 +54,7 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
-    bCondition: 1
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
     Item: 
@@ -286,39 +69,8 @@ MonoBehaviour:
     Options: []
     CharName: 
     Emotion: 
-    Label: "\u7CD6\u679C\u4E0D\u5B58\u5728"
+    Label: 
     LabelJump: 
-    Class: CameraMoving
+    Class: 
     Parameters: []
-    WaitTime: 5
-  - "state\u985E\u578B": 6
-    "continue\u689D\u4EF6": 2
-    Name: 456
-    Text: 456789
-    Image: {fileID: 0}
-    Location: {x: 0, y: 0}
-    IsFlip: 0
-    Character: 
-    OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
-    bCondition: 1
-    Flag: 
-    WhenFlagIs: 0
-    Item: 
-    WhenItemExisted: 0
-    ThanJumpTo: 
-    ElseJumpTo: 
-    JustJump: 0
-    Variable: 
-    Value: 0
-    Scene: 
-    SpawnPoint: 0
-    Options: []
-    CharName: 
-    Emotion: 
-    Label: End
-    LabelJump: 
-    Class: CameraMoving
-    Parameters: []
-    WaitTime: 5
+    WaitTime: 0

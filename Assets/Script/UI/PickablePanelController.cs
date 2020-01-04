@@ -74,7 +74,9 @@ public class PickablePanelController : PanelController
         //根據變數得知物品以及NPC是誰
         quesState = QuesState.右;
         transform.GetChild(2).GetChild(0).GetComponent<Text>().fontSize = 20;
+        選項L.sprite = 選項底_未選;
         transform.GetChild(3).GetChild(0).GetComponent<Text>().fontSize = 25;
+        選項R.sprite = 選項底_選擇;
 
         SetVisible();
         Invoke("StartInteract", 0.1f);

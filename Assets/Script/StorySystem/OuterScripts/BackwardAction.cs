@@ -57,7 +57,6 @@ public class BackwardAction : MonoBehaviour {
             chara.transform.Translate(Vector2.right * speed * Time.fixedDeltaTime);
             yield return new WaitForFixedUpdate();
         }
-        print("fjgd");
         if (chara.GetComponent<PlayerController>() != null)
             chara.GetComponent<PlayerController>().AnimationController("idle");
         else
