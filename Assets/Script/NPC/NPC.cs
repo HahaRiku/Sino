@@ -37,13 +37,13 @@ public class NPC : MonoBehaviour {
 
     public Sprite 鎖打開;
     public Sprite 鎖鎖起來;
-
-    private Transform 白點TF;
+    
+    /*private Transform 白點TF;
     private SpriteRenderer 白點SP;
     private SpriteRenderer 點點點SP;
     private SpriteRenderer 鎖SP;
-    private float 白點亮度差距 = 0.8f;
-    private Animator dotAni;
+    private float 白點亮度差距 = 0.8f;*/
+    private Animator ChildAni;
 
     public float Radius = 1.5f;
     public float HintRaius = 2.0f;
@@ -57,7 +57,7 @@ public class NPC : MonoBehaviour {
     private DragonBones.Armature playerArma;
 
     void Start () {
-        if (type == NpcType.item) {
+        /*if (type == NpcType.item) {
             白點TF = gameObject.transform.GetChild(0);
             白點TF.localScale = new Vector2(0, 0);
             白點SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -65,17 +65,18 @@ public class NPC : MonoBehaviour {
         }
         else if (type == NpcType.talk) {
             點點點SP = gameObject.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
-            dotAni = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+            ChildAni = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
         }
         else if (type == NpcType.door) {
             鎖SP = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
-        }
+        }*/
         GM = FindObjectOfType<GameStateManager>();
         PickablePanel = FindObjectOfType<PickablePanelController>();
         UnpickablePanel = FindObjectOfType<UnPickablePanelController>();
         OpenDoorPanel = FindObjectOfType<OpenDoorPanelController>();
         player = GM.Player;
         playerArma = player.transform.GetChild(0).GetComponent<DragonBones.UnityArmatureComponent>().armature;
+        ChildAni = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -90,31 +91,36 @@ public class NPC : MonoBehaviour {
                 if (CheckIsPlayerInRange(Radius)) {
                     state = NpcState.可以講話;
                     if (type == NpcType.talk) {
-                        dotAni.SetBool("Dot", true);
+                        //dotAni.SetBool("Dot", true);
+                        ChildAni.SetBool("play", true);
                     }
                     else if (type == NpcType.item) {
-                        float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius - Mathf.Abs(player.transform.position.x - transform.position.x))    //various part
+                        /*float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius - Mathf.Abs(player.transform.position.x - transform.position.x))    //various part
                             + (1.0f / (Radius + HintRaius + 白點亮度差距)) * (HintRaius + 白點亮度差距);    //another triangle part
-                        白點TF.localScale = new Vector2(temp * 2.25f, temp * 2.25f);
-                        白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp);
+                        白點TF.localScale = new Vector2(temp * 1f, temp * 1f);
+                        白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp);*/
+                        ChildAni.SetBool("play", true);
                     }
                     else if (type == NpcType.door && SystemVariables.IsLockStatusExisted(門的名字))
-                        鎖SP.sprite = SystemVariables.lockLockOrNot[門的名字] ? 鎖鎖起來 : 鎖打開;
+                        /*鎖SP.sprite = SystemVariables.lockLockOrNot[門的名字] ? 鎖鎖起來 : 鎖打開;*/
+                        ChildAni.SetBool("play", true);
                     else {
                         SystemVariables.AddLockStatus(門的名字, doorType == DoorType.開啟 ? false : true);
-                        鎖SP.sprite = doorType == DoorType.開啟 ? 鎖打開 : 鎖鎖起來;
+                        /*鎖SP.sprite = doorType == DoorType.開啟 ? 鎖打開 : 鎖鎖起來;*/
+                        ChildAni.SetBool("play", true);
                     }
                 }
                 else if (type == NpcType.item) {
-                    float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius + HintRaius - Mathf.Abs(player.transform.position.x - transform.position.x));
+                    /*float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius + HintRaius - Mathf.Abs(player.transform.position.x - transform.position.x));
                     白點TF.localScale = CheckIsPlayerInRange(HintRaius) ? new Vector2(temp * 2.25f, temp * 2.25f) : new Vector2(0, 0);
                     白點SP.color = CheckIsPlayerInRange(HintRaius) ? new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp) :  
-                        new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, 0);
+                        new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, 0);*/
+                    ChildAni.SetBool("play", false);
                 }
                 else if (type == NpcType.talk)
-                    dotAni.SetBool("Dot", false);
+                    ChildAni.SetBool("play", false); //dotAni.SetBool("Dot", false);
                 else if (type == NpcType.door)
-                    鎖SP.sprite = null;
+                    ChildAni.SetBool("play", false);  //鎖SP.sprite = null;
             }
             else if (state == NpcState.可以講話)
             {
@@ -138,7 +144,7 @@ public class NPC : MonoBehaviour {
                         PickablePanel.ShowQuestion(可撿的物品的名字);
                     }
                     else if (type == NpcType.talk) {
-                        dotAni.SetBool("Dot", false);
+                        ChildAni.SetBool("play", false); //dotAni.SetBool("Dot", false);
                         //席諾面向
                         if ((player.transform.position.x - transform.position.x) >= 0) {
                             if (!NPC面向右邊) {
@@ -157,25 +163,25 @@ public class NPC : MonoBehaviour {
                     else if (type == NpcType.door) {
                         if (SystemVariables.lockLockOrNot[門的名字]) {  //lock
                             if (BagSystem.IsItemInBag(需要的鑰匙名字)) {
-                                鎖SP.sprite = 鎖打開;
+                                ChildAni.SetBool("play", false); //鎖SP.sprite = 鎖打開;
                                 SystemVariables.AddLockStatus(門的名字, false);                
                                 doorType = DoorType.開啟;
                             }
                             else  //左右晃動的動畫                            
-                                StartCoroutine(CannotOpenDoorAni());
+                                ChildAni.SetTrigger("play"); // StartCoroutine(CannotOpenDoorAni());
                         }
                         else if(是否有傳送功能) //unlock
                             OpenDoorPanel.ShowQuestion(門要傳送到的場景名字, 傳送地點);
                     }
                 }
-                else {
-                    if (type == NpcType.item) {
-                        float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius - Mathf.Abs(player.transform.position.x - transform.position.x))    //various part
-                                + (1.0f / (Radius + HintRaius + 白點亮度差距)) * (HintRaius + 白點亮度差距);    //another triangle part
-                        白點TF.localScale = new Vector2(temp * 2.25f, temp * 2.25f);
-                        白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp);
-                    }
-                }
+                //else {
+                //    if (type == NpcType.item) {
+                //        float temp = (1.0f / (Radius + HintRaius + 白點亮度差距)) * (Radius - Mathf.Abs(player.transform.position.x - transform.position.x))    //various part
+                //                + (1.0f / (Radius + HintRaius + 白點亮度差距)) * (HintRaius + 白點亮度差距);    //another triangle part
+                //        白點TF.localScale = new Vector2(temp * 1f, temp * 1f); ///原先是乘2.25
+                //        白點SP.color = new Color(白點SP.color.r, 白點SP.color.g, 白點SP.color.b, temp);
+                //    }
+                //}
             }
             else if (state == NpcState.對話中)
             {
@@ -282,7 +288,7 @@ public class NPC : MonoBehaviour {
             }
         }
     }
-    private IEnumerator CannotOpenDoorAni()
+    /*private IEnumerator CannotOpenDoorAni()
     {
         for (float i = 0; i >= -0.3f; i -= 0.1f)
         {
@@ -315,7 +321,7 @@ public class NPC : MonoBehaviour {
             鎖SP.gameObject.transform.localPosition = new Vector2(i, 鎖SP.gameObject.transform.localPosition.y);
             yield return null;
         }
-    }
+    }*/
 
     void OnDrawGizmos()
     {
