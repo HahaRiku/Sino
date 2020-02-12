@@ -273,7 +273,7 @@ MonoBehaviour:
     Emotion: 
     Label: 
     LabelJump: 
-    Class: "\u9ED1\u983B\u8F49\u5834"
+    Class: "\u9ED1\u5E55\u6DE1\u5165"
     Parameters: []
     WaitTime: 0
   - "state\u985E\u578B": 9
@@ -309,6 +309,39 @@ MonoBehaviour:
     Class: "\u9ED1\u983B\u8F49\u5834"
     Parameters: []
     WaitTime: 2
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u8A18\u5F97\u8981\u5148\u5728\u65C1\u908A\u7684<color=#D29035FF><b>\u706B\u7210</b></color>\u5C07\u881F\u71ED\u9EDE\u8457\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: " \x04"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u9ED1\u5E55\u6DE1\u51FA"
+    Parameters: []
+    WaitTime: 2
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u8001\u50D5\u4EBA"
@@ -340,6 +373,39 @@ MonoBehaviour:
     Label: 
     LabelJump: 
     Class: "\u9ED1\u983B\u8F49\u5834"
+    Parameters: []
+    WaitTime: 2
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u8A18\u5F97\u8981\u5148\u5728\u65C1\u908A\u7684<color=#D29035FF><b>\u706B\u7210</b></color>\u5C07\u881F\u71ED\u9EDE\u8457\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u5E8F\u7AE0-2_Stove"
+    Value: 1
+    Scene: " \x04"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u5931\u53BB\u860B\u679C\u82B1\u751F\u7389\u7C73"
     Parameters: []
     WaitTime: 2
   - "state\u985E\u578B": 8
@@ -561,6 +627,72 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
+    Scene: " \x04"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u7372\u5F97\u9053\u5177\uFF1A\u300C\u9EC3\u91D1\u5957\u9910\uFF1F\uFF01\u300D"
+    Parameters: []
+    WaitTime: 2
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u8A18\u5F97\u8981\u5148\u5728\u65C1\u908A\u7684<color=#D29035FF><b>\u706B\u7210</b></color>\u5C07\u881F\u71ED\u9EDE\u8457\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u5E8F\u7AE0-2_Stove"
+    Value: 1
+    Scene: " \x04"
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u7372\u5F97\u9053\u5177\uFF1A\u300C\u9EC3\u91D1\u5957\u9910\uFF1F\uFF01\u300D"
+    Parameters: []
+    WaitTime: 2
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: "\u8001\u50D5\u4EBA"
+    Text: "\u8A18\u5F97\u8981\u5148\u5728\u65C1\u908A\u7684<color=#D29035FF><b>\u706B\u7210</b></color>\u5C07\u881F\u71ED\u9EDE\u8457\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u5E8F\u7AE0-2_Food"
+    Value: 2
     Scene: " \x04"
     SpawnPoint: 0
     SpawnPointFreeX: 0

@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c6fdbd9f7d21a4386f846813473c52, type: 3}
+  m_Name: "\u5E8F\u7AE0-1\u9E1A\u9D612"
+  m_EditorClassIdentifier: 
+  StateList:
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u9E1A\u9D61\u62CD\u7FC5"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u9E1A\u9D61"
+    Text: "\u98DF\u7269\u98DF\u7269\uFF01<color=#D29035FF><b>\u9EC3\u91D1\u5957\u9910</b></color>\uFF01\n<color=#D29035FF><b>\u9EC3\u91D1</b></color>\uFF01<color=#D29035FF><b>\u5957\u9910</b></color>\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u9E1A\u9D61\u62CD\u7FC5"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u9E1A\u9D61"
+    Text: "\u7B28\u86CB\u7B28\u86CB\uFF01\u4F60\u9019\u500B\u7B28\u86CB\uFF01\r\n<color=#D29035FF><b>\u5EDA\u623F\u5EDA\u623F</b></color>\uFF01<color=#D29035FF>\u5EDA\u623F</b></color>\uFF01\u6A13\u4E0A\uFF01\u6A13\u4E0A\u7684<color=#D29035FF>\u5EDA\u623F</b></color>\uFF01\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: "\u9E1A\u9D61"
+    Text: "\u98DF\u7269\u98DF\u7269\uFF01<color=#D29035FF><b>\u9EC3\u91D1\u5957\u9910</b></color>\uFF01\n<color=#D29035FF><b>\u9EC3\u91D1</b></color>\uFF01<color=#D29035FF><b>\u5957\u9910</b></color>\uFF01"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
+    Parameters: []
+    WaitTime: 0

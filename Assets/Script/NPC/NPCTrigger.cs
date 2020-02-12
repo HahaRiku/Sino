@@ -30,7 +30,7 @@ public class NPCTrigger : MonoBehaviour {
     public bool NPC面向右邊 = true;
     public bool NPC對話後是否要面向席諾 = true;
 
-    public float 冷卻時間 = 2f;
+    public float 冷卻時間 = 0.1f;
 
     public string 鎖的名字;
     public string 需要的鑰匙名字;
@@ -56,9 +56,11 @@ public class NPCTrigger : MonoBehaviour {
 
     void Start() {
         function = GetComponent<NPCFunction>();
-        animator = GetComponentInChildren<Animator>();
-        if (animator == null)
-            animator = gameObject.AddComponent<Animator>();
+        if(type != TriggerType.碰觸) {
+            animator = transform.GetChild(0).GetComponent<Animator>();
+            if (animator == null)
+                animator = gameObject.AddComponent<Animator>();
+        }
         GM = FindObjectOfType<GameStateManager>();
         player = GM.Player;
         playerArma = player.transform.GetChild(0).GetComponent<DragonBones.UnityArmatureComponent>().armature;
@@ -83,15 +85,24 @@ public class NPCTrigger : MonoBehaviour {
     }
 
     void Update() {
-        foreach(NPC運作條件Element npce in NPC運作條件List) {
+        conditionTrue = true;
+        foreach (NPC運作條件Element npce in NPC運作條件List) {
             if (npce.NPC運作條件 == NPC運作條件Element.NPCCondition.變數) {
-                if (SystemVariables.otherVariables_int[npce.條件變數名稱] != npce.條件變數值) {
-                    return;
+                if (!SystemVariables.IsIntVariableExisted(npce.條件變數名稱)) {
+                    conditionTrue = false;
+                    break;
+                }
+                else {
+                    if (SystemVariables.otherVariables_int[npce.條件變數名稱] != npce.條件變數值) {
+                        conditionTrue = false;
+                        break;
+                    }
                 }
             }
             else if (npce.NPC運作條件 == NPC運作條件Element.NPCCondition.背包物件存在與否) {
-                if (BagSystem.IsItemInBag(npce.條件物件名稱) == npce.條件物件存在與否) {
-                    return;
+                if (BagSystem.IsItemInBag(npce.條件物件名稱) != npce.條件物件存在與否) {
+                    conditionTrue = false;
+                    break;
                 }
             }
         }
@@ -101,12 +112,15 @@ public class NPCTrigger : MonoBehaviour {
                 return;
             }
             if (state == NpcState.範圍外) {
-                if (CheckIsPlayerInRange(Radius)) {
-                    state = NpcState.可以講話;
-                    animator.SetBool("play", true);
+                if (conditionTrue && !SystemVariables.lockOtherNPC) {
+                    if (CheckIsPlayerInRange(Radius)) {
+                        state = NpcState.可以講話;
+                        if(type != TriggerType.碰觸)
+                            animator.SetBool("play", true);
+                    }
+                    else if (type != TriggerType.碰觸)
+                        animator.SetBool("play", false);
                 }
-                else
-                    animator.SetBool("play", false);
             }
             else if (state == NpcState.可以講話) {
                 if (!CheckIsPlayerInRange(Radius))
@@ -119,8 +133,7 @@ public class NPCTrigger : MonoBehaviour {
                 }
                 else if (Input.GetKeyDown(KeyCode.Z)) {
                     if (type == TriggerType.鎖 && SystemVariables.lockLockOrNot[鎖的名字]) {
-                        if (BagSystem.IsItemInBag(需要的鑰匙名字))
-                        {
+                        if (BagSystem.IsItemInBag(需要的鑰匙名字)) {
                             animator.SetTrigger("unlock");
                             animator.SetBool("locked", false);
                             SystemVariables.AddLockStatus(鎖的名字, false);
@@ -135,8 +148,8 @@ public class NPCTrigger : MonoBehaviour {
                     GM.StartEvent();
                     //flipX = false -> faceLeft, flipX = true -> faceRight
                     playerArma.flipX = (player.transform.position.x - transform.position.x) >= 0 ? false : true;
-                    
-                    if(NPC對話後是否要面向席諾) {
+
+                    if (NPC對話後是否要面向席諾) {
                         if ((player.transform.position.x - transform.position.x) >= 0) {
                             if (!NPC面向右邊) {
                                 NPC面向右邊 = true;
@@ -154,8 +167,7 @@ public class NPCTrigger : MonoBehaviour {
                 }
             }
             else if (state == NpcState.對話中) {
-                if (function.IsFunctionDone())
-                {
+                if (function.IsFunctionDone()) {
                     GM.FinEvent();
                     state = NpcState.講完話冷卻中;
                     StartCoroutine(WaitAndResumeTalk());
@@ -205,7 +217,17 @@ public class NPCTrigger : MonoBehaviour {
         }
         yield return new WaitForSeconds(冷卻時間);
         
-        state = NpcState.可以講話;
+        state = NpcState.範圍外;
+    }
+    void OnDrawGizmos()
+    {
+        float cHeight = 12;
+
+        Vector3 pos = new Vector3(transform.position.x + Offset, Camera.main.transform.position.y, 0);
+        float region_width = Radius * 2.0f;
+
+        Gizmos.color = new Color32(0x00, 0xC8, 0xE5, 0x4A);
+        Gizmos.DrawCube(pos, new Vector3(region_width, cHeight, 1.0f));
     }
 }
 

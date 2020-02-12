@@ -54,6 +54,7 @@ public class GameStateManager : MonoBehaviour {
         NowStatus = SceneStatus.演出中;
         PlayerControlLock = true;
         SystemVariables.lockBag = true;
+        SystemVariables.lockOtherNPC = true;
     }
        
     public void FinEvent()
@@ -61,6 +62,7 @@ public class GameStateManager : MonoBehaviour {
         NowStatus = SceneStatus.自由探索;
         PlayerControlLock = false;
         SystemVariables.lockBag = false;
+        SystemVariables.lockOtherNPC = false;
     }
 
     public void OpenBag()

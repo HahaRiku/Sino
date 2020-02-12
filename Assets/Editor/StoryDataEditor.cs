@@ -360,7 +360,7 @@ public class StoryDataEditor:Editor
         list.index = index;
         var element = list.serializedProperty.GetArrayElementAtIndex(index);
         element.FindPropertyRelative("state類型").enumValueIndex = 2;
-        element.FindPropertyRelative("bConditon").enumValueIndex = 0;
+        element.FindPropertyRelative("bCondition").enumValueIndex = 0;
         element.FindPropertyRelative("Flag").stringValue = "";
         element.FindPropertyRelative("WhenFlagIs").intValue = 0;
         element.FindPropertyRelative("JustJump").intValue = 0;

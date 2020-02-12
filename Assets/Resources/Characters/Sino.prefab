@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 61489812605900090}
   - component: {fileID: 50060511056752564}
   - component: {fileID: 114016176622605842}
+  - component: {fileID: 114445783134678758}
   m_Layer: 0
   m_Name: Sino
   m_TagString: player
@@ -464,9 +465,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1839617623339406}
-  m_LocalRotation: {x: 0, y: 0, z: 0.5773727, w: 0.8164807}
-  m_LocalPosition: {x: -0.30378336, y: 1.678808, z: -0.001}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.5413192, w: 0.84081715}
+  m_LocalPosition: {x: -0.3016801, y: 1.7056042, z: -0.001}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_Children: []
   m_Father: {fileID: 4763344099519512}
   m_RootOrder: 1
@@ -620,8 +621,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1919051746568388}
-  m_LocalRotation: {x: 0, y: 0, z: -0.18213476, w: 0.98327357}
-  m_LocalPosition: {x: -0.042580478, y: 1.564459, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.22472316, w: 0.97442263}
+  m_LocalPosition: {x: -0.05140144, y: 1.5689908, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4763344099519512}
@@ -633,9 +634,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1877255735900010}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6359067, w: 0.77176595}
-  m_LocalPosition: {x: -0.32589778, y: 1.5639663, z: -0.016}
-  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.62199277, w: 0.783023}
+  m_LocalPosition: {x: -0.32020158, y: 1.566891, z: -0.016}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4763344099519512}
   m_RootOrder: 16
@@ -699,7 +700,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1908735448907694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.2, z: 0}
+  m_LocalPosition: {x: -5.4, y: -3.2, z: 0}
   m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
   m_Children:
   - {fileID: 4763344099519512}
@@ -1647,6 +1648,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6266329097c450a4db01a6dcf8207f62, type: 3}
   - {fileID: 21300000, guid: 8bad9a976366b6446925069d1e3917f5, type: 3}
   "\u5982\u679C\u6709DragonBone": {fileID: 1260492046789048}
+--- !u!114 &114445783134678758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1908735448907694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3525c6dcea563ba42a54d352a211f93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114595291563481176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1683,7 +1695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f48c272aa359c46a968520faf19dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsHoldingCandle: 0
   CandleLight: {fileID: 108445951314404814}
   speed: 0.87
 --- !u!114 &114917946496847068
@@ -1748,7 +1759,7 @@ SpriteRenderer:
   m_SortingLayerID: -1153198279
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 225a1055892e6e6479e8b53e0e798aff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6266329097c450a4db01a6dcf8207f62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
