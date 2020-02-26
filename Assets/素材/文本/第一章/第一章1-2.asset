@@ -14,6 +14,39 @@ MonoBehaviour:
   StateList:
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
+    Name: "\u5967\u666E\u7F85"
+    Text: "\u6211\u4EC0\u9EBC\u4E5F\u6C92\u770B\u5230\uFF0C\u5FEB\u8D70\u5427\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u91AB\u751F"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: "\u5E2D\u8AFE"
+    Emotion: "\u554F\u865F"
+    Label: 
+    LabelJump: 
+    Class: "\u7372\u5F97 \u9053\u5177\uFF1A\u4E7E\u6DE8\u7684\u6BDB\u5DFE"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
     Name: 
     Text: 
     Image: {fileID: 0}
@@ -23,8 +56,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -32,6 +68,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -51,8 +89,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -60,6 +101,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u554F\u865F"
@@ -79,8 +122,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -88,6 +134,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -107,8 +155,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -116,6 +167,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u554F\u865F"
@@ -135,8 +188,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 2.5
     Duration: 1
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -144,6 +200,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -163,8 +221,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -172,6 +233,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -191,8 +254,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -200,6 +266,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -219,8 +287,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -228,6 +299,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u554F\u865F"
@@ -247,8 +320,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -256,6 +332,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -275,8 +353,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -284,6 +365,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -303,8 +386,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -312,6 +398,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -331,8 +419,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -340,6 +431,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u9A5A\u5606\u865F"
@@ -359,8 +452,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -368,6 +464,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u9A5A\u5606\u865F"
@@ -387,8 +485,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -396,6 +497,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u9A5A\u5606\u865F"
@@ -415,8 +518,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -424,6 +530,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u9A5A\u5606\u865F"
@@ -443,8 +551,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -452,6 +563,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u9A5A\u5606\u865F"
@@ -471,8 +584,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 1
     Duration: 1
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -480,6 +596,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u9A5A\u5606\u865F"
@@ -499,8 +617,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -508,6 +629,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u554F\u865F"
@@ -527,8 +650,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -536,6 +662,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u554F\u865F"
@@ -555,8 +683,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -564,6 +695,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -583,8 +716,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -592,6 +728,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -611,8 +749,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -620,6 +761,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -639,8 +782,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -648,6 +794,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -667,8 +815,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -676,6 +827,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -695,8 +848,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -704,6 +860,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -723,8 +881,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -732,6 +893,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -751,8 +914,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -760,6 +926,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -779,8 +947,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -788,6 +959,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u7169\u8E81"
@@ -807,8 +980,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -816,6 +992,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u7169\u8E81"
@@ -835,8 +1013,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -844,6 +1025,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u7169\u8E81"
@@ -863,8 +1046,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -872,6 +1058,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u7169\u8E81"
@@ -891,8 +1079,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -900,6 +1091,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -919,8 +1112,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -928,6 +1124,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -947,8 +1145,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -956,6 +1157,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -975,8 +1178,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -984,6 +1190,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -1003,8 +1211,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -1012,6 +1223,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -1031,8 +1244,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -1040,6 +1256,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u522A\u7BC0\u865F"
@@ -1059,8 +1277,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -1068,6 +1289,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u7169\u8E81"
@@ -1087,8 +1310,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -1096,6 +1322,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u7169\u8E81"
@@ -1115,8 +1343,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -1124,6 +1355,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u7169\u8E81"
@@ -1143,8 +1376,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -1152,6 +1388,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u91AB\u751F"
     Emotion: "\u7169\u8E81"
@@ -1171,8 +1409,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -1180,6 +1421,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u554F\u865F"
@@ -1199,8 +1442,11 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
@@ -1208,6 +1454,8 @@ MonoBehaviour:
     Value: 0
     Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: "\u5E2D\u8AFE"
     Emotion: "\u554F\u865F"
