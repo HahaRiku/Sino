@@ -86,14 +86,23 @@ public class Saving : MonoBehaviour
         ShadowLTR.rectTransform.sizeDelta = new Vector2(scaledPageWidth, scaledPageHeight + scaledPageWidth * 0.6f);
         NextPageClip.rectTransform.sizeDelta = new Vector2(scaledPageWidth, scaledPageHeight + scaledPageWidth * 0.6f);
 
-        GameObject.Find("Save 1").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 2").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 2) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 3").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 3) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 4").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 4) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 5").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 5) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 6").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 6) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 7").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 7) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 8").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 8) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        if (CurrentpageNumber==0)
+        {
+            GameObject.Find("Save1").GetComponentInChildren<Text>().text = "<i>Auto Save\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+            //GameObject.Find("Canvas/LeftNext/L-arrow").GetComponent<Image>().enabled = false;
+        }
+        else
+        {
+            GameObject.Find("Save1").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 0) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+            //GameObject.Find("Canvas/LeftNext/L-arrow").GetComponent<Image>().enabled = true;
+        }
+        GameObject.Find("Save2").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save3").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 2) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save4").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 3) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save5").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 4) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save6").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 5) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save7").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 6) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save8").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 7) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
     }
     public Vector3 transformPoint(Vector3 global)
     {
@@ -114,14 +123,23 @@ public class Saving : MonoBehaviour
     public void FlipPages()
     {
         CurrentpageNumber = currentPage;
-        GameObject.Find("Save 1").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 2").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 2) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 3").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 3) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 4").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 4) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 5").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 5) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 6").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 6) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 7").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 7) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        GameObject.Find("Save 8").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 8) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        if (CurrentpageNumber == 0)
+        {
+            GameObject.Find("Save1").GetComponentInChildren<Text>().text = "<i>Auto Save\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+           // GameObject.Find("Canvas/LeftNext/L-arrow").GetComponent<Image>().enabled = false;
+        }
+        else
+        {
+            GameObject.Find("Save1").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 0) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+           // GameObject.Find("Canvas/LeftNext/L-arrow").GetComponent<Image>().enabled = true;
+        }
+        GameObject.Find("Save2").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save3").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 2) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save4").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 3) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save5").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 4) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save6").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 5) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save7").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 6) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        GameObject.Find("Save8").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 7) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
     }
 
     public void UpdateBook()
