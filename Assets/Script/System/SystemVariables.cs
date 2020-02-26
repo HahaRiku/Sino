@@ -12,6 +12,7 @@ public static class SystemVariables {
     public static bool lockNPCinteract = false;
     public static bool lockBag = false;
     public static bool lockMenu = false;
+    public static bool lockOtherNPC = false;
 
     [SerializeField]
     public static Dictionary<string, int> otherVariables_int = new Dictionary<string, int>();

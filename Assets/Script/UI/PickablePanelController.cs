@@ -44,8 +44,6 @@ public class PickablePanelController : PanelController
                     FindObjectOfType<BagUI>().GetItemAni(itemName);
                     SystemVariables.lockBag = false;
                 }
-                else
-                    FindObjectOfType<GameStateManager>().FinEvent();
                 SetInvisible();
                 isInteract = false;
             }

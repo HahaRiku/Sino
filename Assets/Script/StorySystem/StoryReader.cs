@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 public class StoryReader : MonoBehaviour
 {
@@ -23,7 +25,13 @@ public class StoryReader : MonoBehaviour
     string currentString;
     int charIndex;
     int charIndex_Write;
-    bool tagFlag;
+
+    //tag檢索
+    private List<string> tagList;
+    Dictionary<string, string> tagDict = new Dictionary<string, string>() {
+        { "<color=#([0-9A-Z]{8})>","</color>"},    { "<b>","</b>"}
+    };
+
 
     bool isReadStory = false;
     bool isForceFinish = false;
@@ -53,7 +61,7 @@ public class StoryReader : MonoBehaviour
         DialogText.text = "";
         charIndex = 0;
         charIndex_Write = 0;
-        tagFlag = false;
+        tagList = new List<string>();
         if (!dialogPanel.IsVisible())
             dialogPanel.SetVisible();
         if (story.Name.Trim() == "")
@@ -104,14 +112,71 @@ public class StoryReader : MonoBehaviour
                 if (charIndex_Write > 0 && charIndex_Write % 27 == 0)
                     DialogText.text += "\n";
 
-                if (currentString[charIndex] == '<')
-                    tagFlag = true;
-                else if (currentString[charIndex] == '>' )
-                    tagFlag = false;
-                if (!tagFlag && currentString[charIndex] != '>')                    
-                    charIndex_Write++;
+                //<tag deal>
+                if (currentString[charIndex] == '<')    //遇到tag => 讀入整串tag
+                {
+                    int tagIndex;
+                    for (tagIndex = charIndex; currentString[tagIndex] != '>' && tagIndex < currentString.Length; tagIndex++) ; //找tag字串的結尾
+                    if (currentString[tagIndex] == '>')    //找到完整tag =>
+                    {
+                        string tag = currentString.Substring(charIndex, tagIndex - charIndex+1);    //存Tag字串
+                        if (tag[1] == '/' && tagDict.ContainsValue(tag))  //字串==endTag => 比對對稱tag
+                        {
+                            bool error = true;
+                            for(int i = 0; i < tagList.Count; i++)
+                            {
+                                //tagList有值 = tag[endTag] => tag和endTag對稱 => pop掉對稱tag
+                                if ( Regex.IsMatch(tagList[i], tagDict.FirstOrDefault(x => x.Value == tag).Key) )  
+                                {
+                                    error = false;
+                                    tagList.Remove(tagList[i]); //pop掉tag
+                                    charIndex = tagIndex;   //更新讀入index
+                                    i = tagList.Count;
+                                }
+                            }
+                            if (error) { Debug.LogError("Error: tag不對稱"); } //endTag > tag => ERROR Message
+                            //</endTag>
+                        }
+                        else   //字串==新tag => 加入tagList
+                        {
+                            tagList.Add(tag);
+                            charIndex = tagIndex;   //更新讀入index
+                            //</新tag>
+                        }
+                    }
+                    else if (tagIndex == currentString.Length) //有 '<' && 沒有 '>' 的情況
+                    {
+                        //Debug.LogError("Error: tag錯誤");   // or 正常字串
+                    }
+                }
 
-                DialogText.text += currentString[charIndex++];
+                //輸入
+                if (currentString[charIndex] != '>')    //非處理tag
+                {
+                    charIndex_Write++;
+                    //if (tagList.Any())  //若有tag被啟用(tagList中有tag)，在所有輸入字前加上<tag>
+                    //{
+                        foreach (string tl in tagList)
+                        {
+                            DialogText.text += tl;
+                            //Debug.Log(charIndex);
+                        }
+                    //}
+                    DialogText.text += currentString[charIndex++];
+                    //if (tagList.Any())  //若有tag被啟用(tagList中有tag)，在所有輸入字尾加上</tag>
+                    //{
+                    for (int i = tagList.Count - 1; i >= 0; i--)
+                    {
+                        string temp = tagDict.FirstOrDefault(x => Regex.IsMatch(tagList[i], x.Key)).Value;
+                        Debug.Log(temp);
+                        DialogText.text += temp;
+                    }
+                    //}
+                }
+                else  //處理完tag的情況 => 不輸入當前字元(='>')
+                    charIndex++;
+                // </tag deal>
+                
                 timer = 0;
             }
         }

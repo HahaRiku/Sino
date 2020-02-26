@@ -13,6 +13,6 @@ public class SetItemInBag : MonoBehaviour {
     }
 
     public void GetItemAni(string itemName) {
-        gameObject.GetComponent<BagUI>().GetItemAni(itemName);
+        FindObjectOfType<BagUI>().GetItemAni(itemName);
     }
 }
