@@ -45,6 +45,11 @@ public class GameStateManager : MonoBehaviour {
             Player.GetComponent<PlayerController>().SetIsPlayerCanControl(!PlayerControlLock);
             SystemVariables.lockMoving = PlayerControlLock;
         }
+		if (Input.GetAxis ("Accelerate") > 0)
+			Time.timeScale = 2;
+		else
+			Time.timeScale = 1;
+			
     }
 
     //==================狀態控制====================

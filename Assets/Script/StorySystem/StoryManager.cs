@@ -324,7 +324,7 @@ public class StoryManager : MonoBehaviour
     IEnumerator Wait(float waitTime)
     {
         isWaiting++;
-        yield return new WaitForSecondsRealtime(waitTime);
+		yield return new WaitForSecondsRealtime (waitTime * Time.timeScale);
         isWaiting--;
     }
 
