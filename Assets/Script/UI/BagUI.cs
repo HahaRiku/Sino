@@ -35,11 +35,15 @@ public class BagUI : MonoBehaviour {
     private GameObject itemGroup;
     private CanvasGroup itemGroupCanvasGroup;
     private CanvasGroup noItemHintCanvasGroup;
-    private GameObject itemDescription;
+    private GameObject itemDescription_WithoutPressZ;
+    private GameObject itemDescription_WithPressZ;
     private CanvasGroup itemDescCanvasGroup;
-    private Image itemDescImage;
-    private Text itemDescName;
-    private Text itemDescD;
+    private Image itemDescImage_WithoutPressZ;
+    private Image itemDescImage_WithPressZ;
+    private Text itemDescName_WithoutPressZ;
+    private Text itemDescName_WithPressZ;
+    private Text itemDescD_WithoutPressZ;
+    private Text itemDescD_WithPressZ;
     private int nowAccessBagIndex = 0;
     private int totalPageNum_allItem;   //1~
     private int totalPageNum_current;   //1~
@@ -55,11 +59,13 @@ public class BagUI : MonoBehaviour {
     private int notYetChangePageKuangAndItsNum = -1;
     private bool readingDescription = false;
     private bool descAniDone = true;
+    private bool isMapOrNote = false;
 
     //從NPC or 在劇情中 拿到物件 背包會打開關掉 顯示該物件的動畫(物件放在最後 動畫結束後才重新整理
     private bool getItemAniStart = false;
     private bool getItemAniDone = true;
     private string getItemAniName;
+    private bool closingMapOrNote = false;
 
     private NoteController noteController;
 
@@ -77,11 +83,17 @@ public class BagUI : MonoBehaviour {
         rightArrow = itemGroup.transform.GetChild(5).gameObject.GetComponent<Image>();
         leftArrow = itemGroup.transform.GetChild(6).gameObject.GetComponent<Image>();
 
-        itemDescription = gameObject.transform.GetChild(1).gameObject;
-        itemDescCanvasGroup = itemDescription.GetComponent<CanvasGroup>();
-        itemDescImage = itemDescription.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Image>();
-        itemDescName = itemDescription.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
-        itemDescD = itemDescription.transform.GetChild(0).GetChild(2).gameObject.GetComponent<Text>();
+        itemDescCanvasGroup = transform.GetChild(1).GetComponent<CanvasGroup>();
+
+        itemDescription_WithoutPressZ = gameObject.transform.GetChild(1).GetChild(0).gameObject;
+        itemDescImage_WithoutPressZ = itemDescription_WithoutPressZ.transform.GetChild(0).gameObject.GetComponent<Image>();
+        itemDescName_WithoutPressZ = itemDescription_WithoutPressZ.transform.GetChild(1).gameObject.GetComponent<Text>();
+        itemDescD_WithoutPressZ = itemDescription_WithoutPressZ.transform.GetChild(2).gameObject.GetComponent<Text>();
+
+        itemDescription_WithPressZ = gameObject.transform.GetChild(1).GetChild(1).gameObject;
+        itemDescImage_WithPressZ = itemDescription_WithPressZ.transform.GetChild(0).gameObject.GetComponent<Image>();
+        itemDescName_WithPressZ = itemDescription_WithPressZ.transform.GetChild(1).gameObject.GetComponent<Text>();
+        itemDescD_WithPressZ = itemDescription_WithPressZ.transform.GetChild(2).gameObject.GetComponent<Text>();
 
         totalPageNum_allItem = BagSystem.data.bagItemList.Count / 5 + 1;
         currentBag = new ElementInPage[totalPageNum_allItem, 5];
@@ -195,27 +207,45 @@ public class BagUI : MonoBehaviour {
                     }
                 }
             }
-            else if (readingDescription) {  //bag is open and in reading description status
-                if (descAniDone) {
-                    if (Input.GetKeyDown(KeyCode.X)) {
-                        readingDescription = false;
-
-                        if (currentBag[currentPage, currentElement].name == "地圖") {
-                            FindObjectOfType<GameStateManager>().CloseBag();
-                            SystemVariables.lockNPCinteract = false;
-                            open = false;
-
-                        }
-                        else if (currentBag[currentPage, currentElement].name == "記事本") {
-                            FindObjectOfType<GameStateManager>().CloseBag();
-                            SystemVariables.lockNPCinteract = false;
-                            open = false;
-                            noteController.CloseNote();
+            else if(isMapOrNote) {
+                if(!closingMapOrNote && noteController.GetOpen()) {
+                    if(Input.GetKeyDown(KeyCode.X)) {
+                        if(currentBag[currentPage, currentElement].name == "地圖") {
+                            //close map
                         }
                         else {
-                            descAniDone = false;
-                            StartCoroutine(DescriptionClose());
+                            noteController.CloseNote();
                         }
+                        closingMapOrNote = true;
+                    }
+                }
+                else if(closingMapOrNote && !noteController.GetOpen()) {
+                    isMapOrNote = false;
+                    closingMapOrNote = false;
+                    readingDescription = false;
+                    StartCoroutine(OpenAnimation());
+                }
+            }
+            else if (readingDescription) {  //bag is open and in reading description status
+                if (descAniDone) {
+                    if((currentBag[currentPage, currentElement].name == "地圖" || currentBag[currentPage, currentElement].name == "記事本") && Input.GetKeyDown(KeyCode.Z)) {
+                        if(currentBag[currentPage, currentElement].name == "地圖") {
+                            //open map
+                            Debug.Log("Open Map");
+                        }
+                        else {
+                            noteController.OpenNote();
+                            Debug.Log("Open Note");
+                        }
+                        StartCoroutine(CloseAnimation());
+                        StartCoroutine(DescriptionClose());
+                        isMapOrNote = true;
+                    }
+                    else if (Input.GetKeyDown(KeyCode.X)) {
+                        readingDescription = false;
+
+                        descAniDone = false;
+                        StartCoroutine(DescriptionClose());
                     }
                 }
             }
@@ -305,22 +335,25 @@ public class BagUI : MonoBehaviour {
                         }
                         else if (Input.GetKeyDown(KeyCode.Z)) {
                             readingDescription = true;
-                            if (currentBag[currentPage, currentElement].name == "地圖") {
 
-                                StartCoroutine(CloseAnimation());
-                            }
-                            else if (currentBag[currentPage, currentElement].name == "記事本") {
-                                noteController.OpenNote();
-                                StartCoroutine(CloseAnimation());
+                            if(currentBag[currentPage, currentElement].name == "地圖" || currentBag[currentPage, currentElement].name == "記事本") {
+                                itemDescImage_WithPressZ.sprite = currentBag[currentPage, currentElement].sprite;
+                                itemDescName_WithPressZ.text = currentBag[currentPage, currentElement].name;
+                                itemDescD_WithPressZ.text = currentBag[currentPage, currentElement].desc;
+                                itemDescription_WithPressZ.SetActive(true);
+                                itemDescription_WithoutPressZ.SetActive(false);
                             }
                             else {
-                                itemDescImage.sprite = currentBag[currentPage, currentElement].sprite;
-                                itemDescName.text = currentBag[currentPage, currentElement].name;
-                                itemDescD.text = currentBag[currentPage, currentElement].desc;
-
-                                descAniDone = false;
-                                StartCoroutine(DescriptionShowUp());
+                                Debug.Log("testtestestestest");
+                                itemDescImage_WithoutPressZ.sprite = currentBag[currentPage, currentElement].sprite;
+                                itemDescName_WithoutPressZ.text = currentBag[currentPage, currentElement].name;
+                                itemDescD_WithoutPressZ.text = currentBag[currentPage, currentElement].desc;
+                                itemDescription_WithPressZ.SetActive(false);
+                                itemDescription_WithoutPressZ.SetActive(true);
                             }
+
+                            descAniDone = false;
+                            StartCoroutine(DescriptionShowUp());
                             return;
                         }
                     }

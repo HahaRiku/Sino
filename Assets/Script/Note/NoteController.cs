@@ -143,12 +143,21 @@ public class NoteController : MonoBehaviour {
     }
 
     public void OpenNote() {
-        open = true;
         NoteOpenAni.SetInteger("Open", 1);
+        StartCoroutine(WaitOpenAndCloseAnimation(true, 5));
     }
 
     public void CloseNote() {
-        open = false;
         NoteOpenAni.SetInteger("Open", -1);
+        StartCoroutine(WaitOpenAndCloseAnimation(false, 2));
+    }
+
+    private IEnumerator WaitOpenAndCloseAnimation(bool b, float seconds) {
+        yield return new WaitForSeconds(seconds);
+        open = b;
+    }
+
+    public bool GetOpen() {
+        return open;
     }
 }
