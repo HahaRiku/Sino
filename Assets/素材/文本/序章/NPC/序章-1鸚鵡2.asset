@@ -81,7 +81,7 @@ MonoBehaviour:
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
-    Text: "\u7B28\u86CB\u7B28\u86CB\uFF01\u4F60\u9019\u500B\u7B28\u86CB\uFF01\r\n<color=#D29035FF><b>\u5EDA\u623F\u5EDA\u623F</b></color>\uFF01<color=#D29035FF>\u5EDA\u623F</b></color>\uFF01\u6A13\u4E0A\uFF01\u6A13\u4E0A\u7684<color=#D29035FF>\u5EDA\u623F</b></color>\uFF01\r\n"
+    Text: "\u7B28\u86CB\u7B28\u86CB\uFF01\u4F60\u9019\u500B\u7B28\u86CB\uFF01\r\n<color=#D29035FF><b>\u5EDA\u623F\u5EDA\u623F</b></color>\uFF01<color=#D29035FF><b>\u5EDA\u623F</b></color>\uFF01\u6A13\u4E0A\uFF01\u6A13\u4E0A\u7684<color=#D29035FF><b>\u5EDA\u623F</b></color>\uFF01"
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0

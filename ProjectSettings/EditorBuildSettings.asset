@@ -168,14 +168,14 @@ EditorBuildSettings:
     path: "Assets/Scene/\u8AD6\u58C7\u8A66\u73A9/End.unity"
     guid: 7d7f1ddd70e29ef489159e9575708870
   - enabled: 1
-    path: "Assets/Scene/\u5287\u60C5/\u5E8F\u7AE0-1.unity"
+    path: "Assets/Scene/\u5287\u60C5/\u5E8F\u7AE0/\u5E8F\u7AE0-1.unity"
     guid: 097cfbf645b99304ebcd52522dab3666
   - enabled: 1
-    path: "Assets/Scene/\u5287\u60C5/\u5E8F\u7AE0-2.unity"
+    path: "Assets/Scene/\u5287\u60C5/\u5E8F\u7AE0/\u5E8F\u7AE0-2.unity"
     guid: 8b81c150804f5d247bcd179563ecf84a
   - enabled: 1
-    path: "Assets/Scene/\u5287\u60C5/\u5E8F\u7AE0-3.unity"
+    path: "Assets/Scene/\u5287\u60C5/\u5E8F\u7AE0/\u5E8F\u7AE0-3.unity"
     guid: e9f80dc9fb1ea394c9efe54f0af95025
   - enabled: 1
-    path: "Assets/Scene/\u5287\u60C5/\u5E8F\u7AE0-4.unity"
+    path: "Assets/Scene/\u5287\u60C5/\u5E8F\u7AE0/\u5E8F\u7AE0-4.unity"
     guid: 7d63293a34a75544592e03e96a398ffe

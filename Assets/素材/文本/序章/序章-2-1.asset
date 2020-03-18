@@ -55,7 +55,7 @@ MonoBehaviour:
     Character: Sino
     OriPositionX: 0
     NewPositionX: -3.76
-    Duration: 0.2
+    Duration: 0.5
     bCondition: 0
     Flag: 
     WhenFlagIs: 0
