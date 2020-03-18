@@ -126,12 +126,10 @@ public class Saving : MonoBehaviour
         if (CurrentpageNumber == 0)
         {
             GameObject.Find("Save1").GetComponentInChildren<Text>().text = "<i>Auto Save\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-           // GameObject.Find("Canvas/LeftNext/L-arrow").GetComponent<Image>().enabled = false;
         }
         else
         {
             GameObject.Find("Save1").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 0) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-           // GameObject.Find("Canvas/LeftNext/L-arrow").GetComponent<Image>().enabled = true;
         }
         GameObject.Find("Save2").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         GameObject.Find("Save3").GetComponentInChildren<Text>().text = "<i>#" + (CurrentpageNumber * 4 + 2) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";

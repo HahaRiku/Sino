@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using UnityEngine.UI;
 [RequireComponent(typeof(Saving))]
@@ -12,9 +13,9 @@ public class Newflip : MonoBehaviour
     public bool AutoStartFlip = true;
     public Saving ControledBook;
     public int AnimationFramesCount = 40,chossenFile=0;
-    private int  rightpageNumber = 0, leftpageNumber = 0;
-    bool isFlipping = false;
-    public Text f1text,ht1;
+    private int  rightpageNumber = 0, leftpageNumber = 0,chossenTrueFile = 0;
+    bool isFlipping = false,isSaving = false;
+    public Text f1text,ht1,saveYN;
     public Text f2text,ht2;
     public Text f3text,ht3;
     public Text f4text,ht4;
@@ -22,6 +23,8 @@ public class Newflip : MonoBehaviour
     public Text f6text;
     public Text f7text;
     public Text f8text;
+    public Animator SavingCheck;
+
 
     // Use this for initialization
     void Start()
@@ -37,13 +40,13 @@ public class Newflip : MonoBehaviour
         Pen6.enabled = false;
         Pen7.enabled = false;
         Pen8.enabled = false;
+        saveYN.text = "是否覆蓋此檔案?";
         chossenFile = 0;
         if (!ControledBook)
             ControledBook = GetComponent<Saving>();
         if (AutoStartFlip)
             StartFlipping();
         ControledBook.OnFlip.AddListener(new UnityEngine.Events.UnityAction(PageFlipped));
-
     }
     void PageFlipped()
     {
@@ -103,7 +106,7 @@ public class Newflip : MonoBehaviour
         GameObject.Find("Save7").GetComponentInChildren<Text>().text = "<i>#" + ((ControledBook.currentPage + 2) * 4 + 6) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         GameObject.Find("Save8").GetComponentInChildren<Text>().text = "<i>#" + ((ControledBook.currentPage + 2) * 4 + 7) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         f1text.text = "<i>#" + ((ControledBook.currentPage + 2) * 4 + 0) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        f2text.text = "<i>#" + ((ControledBook.currentPage + 2) * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        //f2text.text = "<i>#" + ((ControledBook.currentPage + 2) * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         f3text.text = "<i>#" + ((ControledBook.currentPage + 2) * 4 + 2) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         f4text.text = "<i>#" + ((ControledBook.currentPage + 2) * 4 + 3) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         f5text.text = "<i>#" + ((ControledBook.currentPage + 0) * 4 + 4) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
@@ -138,11 +141,11 @@ public class Newflip : MonoBehaviour
         {
             GameObject.Find("Save1").GetComponentInChildren<Text>().text = "<i>#" + ((ControledBook.currentPage - 2) * 4 + 0) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         }
-        GameObject.Find("Save2").GetComponentInChildren<Text>().text = "<i>#" + ((ControledBook.currentPage - 2) * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        //GameObject.Find("Save2").GetComponentInChildren<Text>().text = "<i>#" + ((ControledBook.currentPage - 2) * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         GameObject.Find("Save3").GetComponentInChildren<Text>().text = "<i>#" + ((ControledBook.currentPage - 2) * 4 + 2) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         GameObject.Find("Save4").GetComponentInChildren<Text>().text = "<i>#" + ((ControledBook.currentPage - 2) * 4 + 3) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         f1text.text = "<i>#" + ((ControledBook.currentPage + 0) * 4 + 0) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
-        f2text.text = "<i>#" + ((ControledBook.currentPage + 0) * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
+        //f2text.text = "<i>#" + ((ControledBook.currentPage + 0) * 4 + 1) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         f3text.text = "<i>#" + ((ControledBook.currentPage + 0) * 4 + 2) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         f4text.text = "<i>#" + ((ControledBook.currentPage + 0) * 4 + 3) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
         f5text.text = "<i>#" + ((ControledBook.currentPage - 2) * 4 + 4) + "\n\t主人房\n <size=15>2020/11/11 00:00</size></i>";
@@ -231,8 +234,10 @@ public class Newflip : MonoBehaviour
 
     void Update()
     {
-        if (isFlipping==false)
-            {
+        chossenTrueFile = ControledBook.currentPage * 4 + chossenFile;
+
+        if (isFlipping == false)
+        {
             Pen1.enabled = false;
             Pen2.enabled = false;
             Pen3.enabled = false;
@@ -241,7 +246,8 @@ public class Newflip : MonoBehaviour
             Pen6.enabled = false;
             Pen7.enabled = false;
             Pen8.enabled = false;
-            switch(chossenFile)
+            saveYN.text = "是否覆蓋 <i>檔案" + chossenTrueFile + "</i> ?";
+            switch (chossenFile)
             {
                 case 0:
                     Pen1.enabled = true;
@@ -298,16 +304,38 @@ public class Newflip : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            FlipRightPage();
-            //GetComponent<Animator>(pen).Stop();
+            if (isFlipping) return;
+            if (isSaving) return;
+            if (ControledBook.currentPage == 4)
+            {
+                return;
+            }
+            if (chossenFile == 0 || chossenFile == 1 || chossenFile == 2 || chossenFile == 3)
+            {
+                chossenFile += 4;
+            }
+            else
+            {
+                FlipRightPage();
+            }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            FlipLeftPage();
+            if (isFlipping) return;
+            if (isSaving) return;
+            if (chossenFile == 4 || chossenFile == 5 || chossenFile == 6 || chossenFile == 7)
+            {
+                chossenFile -= 4;
+            }
+            else
+            {
+                FlipLeftPage();
+            }
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (isFlipping) return;
+            if (isSaving) return;
             if (chossenFile == 0)
             {
                 if (ControledBook.currentPage == 0)
@@ -319,7 +347,7 @@ public class Newflip : MonoBehaviour
                     chossenFile = 7;
                     FlipLeftPage();
                 }
-                
+
             }
             else
             {
@@ -329,6 +357,7 @@ public class Newflip : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (isFlipping) return;
+            if (isSaving) return;
             if (chossenFile == 3)
             {
                 if (ControledBook.currentPage == 4)
@@ -353,5 +382,27 @@ public class Newflip : MonoBehaviour
                 chossenFile++;
             }
         }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if(isSaving==false)
+            {
+                isSaving = true;
+                SavingCheck.SetBool("OPENorCLOSE", true);
+            }
+            else
+            {
+                SavingCheck.SetBool("OPENorCLOSE", false);
+                StartCoroutine(Wait02s());
+                
+            }
+        }
+    }
+
+    IEnumerator Wait02s()
+    {
+        yield return new WaitForSeconds(0.3f);
+        isSaving = false;
     }
 }
+
+//Debug.Log(DateTime.Now.ToString("yyyy/MM/dd") + " " + DateTime.Now.ToString("HH:mm"));
