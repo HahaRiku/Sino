@@ -72,9 +72,9 @@ MonoBehaviour:
     Facing: 0
     Options:
     - Content: "\u662F"
-      JumpTo: 
+      JumpTo: "\u51FA\u9580"
     - Content: "\u5426"
-      JumpTo: 
+      JumpTo: "\u4E0D\u51FA\u9580"
     CharName: 
     Emotion: 
     Label: 
@@ -230,6 +230,43 @@ MonoBehaviour:
     Class: "\u9ED1\u5C4F\u8F49\u5834"
     Parameters: []
     WaitTime: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u5916\u9762\u4F3C\u4E4E\u6C92\u6709\u4EBA\u3002\r\n\u8981\u4E0D\u8981\u51FA\u9580\uFF1F"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: CH1_Flo
+    Value: 2
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
   - "state\u985E\u578B": 10
     "continue\u689D\u4EF6": 1
     Name: 
@@ -251,10 +288,10 @@ MonoBehaviour:
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: 
-    SpawnPoint: 0
+    Scene: "\u7B2C\u4E00\u7AE02"
+    SpawnPoint: 2
     SpawnPointFreeX: 0
-    Facing: 0
+    Facing: 1
     Options:
     - Content: "\u662F"
       JumpTo: 
