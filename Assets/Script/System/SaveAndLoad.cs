@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.IO;
 
 [System.Serializable]
 public class SavedData {
@@ -14,9 +15,9 @@ public class SavedData {
 
 }
 
-public class SaveAndLoad {
+public static class SaveAndLoad {
 
-    public void Save(int id) {
+    public static void Save(int id) {
         string savedFileName = id.ToString();
         string scene = SystemVariables.Scene;
         long playedTime = SystemVariables.PlayedTime;
@@ -33,6 +34,12 @@ public class SaveAndLoad {
         };
 
         string data = JsonUtility.ToJson(SavedD, false);
+
+        string fileName = "save" + id + ".json";
+        Debug.Log(id);
+        StreamWriter file = new StreamWriter(Path.Combine("Assets/SavedData", fileName));
+        file.Write(data);
+        file.Close();
     }
 
 }

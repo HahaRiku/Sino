@@ -94,8 +94,8 @@ MonoBehaviour:
       "\u623F\u9593\u985E\u578B": 1
       "\u8D70\u5ECA\u5834\u666F\u540D\u7A31": "1F\u8D70\u5ECA5"
       "\u623F\u9593\u5834\u666F\u540D\u7A31_\u5982\u679C\u6709": "1F_5_\u82B1\u5712&\u5893\u5712"
-      "\u9032\u53BB\u904E\u4E86": 1
-      "\u8D70\u904E": 1
+      "\u9032\u53BB\u904E\u4E86": 0
+      "\u8D70\u904E": 0
       "\u623F\u9593\u5DE6\u908A\u754CPos": 0.28
       icon: {fileID: 21300000, guid: edc4d3a4c4823604f826336204f66066, type: 3}
     - "\u5F9E\u5DE6\u6578\u4F86\u7B2C\u5E7E\u9593": 3
