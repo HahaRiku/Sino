@@ -1300,7 +1300,7 @@ MonoBehaviour:
     Parameters: []
     WaitTime: 0.5
   - "state\u985E\u578B": 10
-    "continue\u689D\u4EF6": 2
+    "continue\u689D\u4EF6": 1
     Name: "\uFF1F\uFF1F\uFF1F"
     Text: "\u597D\u5427\uFF0C\u90A3\u6211\u5011\u4ECA\u5929\u5C31\u4E00\u8D77\u53BB\u627E\u2014\u2014"
     Image: {fileID: 0}

@@ -153,7 +153,9 @@ public class NPCFunction : MonoBehaviour {
             OpenDoorPanel.ShowQuestion(functionList[functionElementIndex].要傳送到的場景名字, functionList[functionElementIndex].傳送地點);
         }
         else if (functionList[functionElementIndex].type == FunctionElement.FunctionType.故事系統) {
-            GetComponent<StoryManager>().劇本 = functionList[functionElementIndex].劇本;
+            Debug.Log("1");
+	    GetComponent<StoryManager>().劇本 = functionList[functionElementIndex].劇本;
+	    Debug.Log(GetComponent<StoryManager>().劇本.StateList.Count);
             GetComponent<StoryManager>().BeginStory();
         }
     }

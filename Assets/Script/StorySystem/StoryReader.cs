@@ -29,7 +29,8 @@ public class StoryReader : MonoBehaviour
     //tag檢索
     private List<string> tagList;
     Dictionary<string, string> tagDict = new Dictionary<string, string>() {
-        { "<color=#([0-9A-Z]{8})>","</color>"},    { "<b>","</b>"}
+        { "<color=#([0-9A-Z]{8})>","</color>"},    { "<b>","</b>"},
+        { "<size=#([0-9]+)>","</size>"}
     };
 
 

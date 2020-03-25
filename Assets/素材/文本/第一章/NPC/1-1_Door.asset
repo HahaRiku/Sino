@@ -250,7 +250,7 @@ MonoBehaviour:
     ElseJumpTo: 
     JustJump: 0
     Variable: CH1_Flo
-    Value: 2
+    Value: 3
     Scene: 
     SpawnPoint: 0
     SpawnPointFreeX: 0

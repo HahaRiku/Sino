@@ -10,6 +10,7 @@ public class WakeUpAnimation : MonoBehaviour {
     public float gapBetweenFrame = 0.008f;
 
     public bool start = false;
+    public bool startBlur = false;
 
     private Image blurBase;
 
@@ -24,6 +25,10 @@ public class WakeUpAnimation : MonoBehaviour {
             start = false;
             StartCoroutine(BlurAnimation());
         }
+        if (startBlur) {
+            startBlur = false;
+            StartCoroutine(AntiBlurAnimation());
+        }
 	}
 
     IEnumerator BlurAnimation() {
@@ -33,8 +38,21 @@ public class WakeUpAnimation : MonoBehaviour {
         }
         blurBase.material.SetFloat("_Size", 0);
     }
+    IEnumerator AntiBlurAnimation() {
+        for (float i = minValue; i <= maxValue; i += gapBetweenFrame) {
+            blurBase.material.SetFloat("_Size", i);
+            yield return null;
+        }
+        blurBase.material.SetFloat("_Size", 0);
+    }
 
     public void StartWakeUpAnimation() {
         start = true;
     }
+
+    public void StartBlurAnimation() {
+        startBlur = true;
+    }
+
+
 }
