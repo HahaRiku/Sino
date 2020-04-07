@@ -24,6 +24,7 @@ public class MapGradient : MonoBehaviour {
 
     private void Start() {
         mat = GetComponent<Image>().material;
+        mat.SetColorArray("_GradientColors", new Color[] { Color.white, Color.white, Color.white, Color.white });
     }
 
     private void Update() {
@@ -34,7 +35,7 @@ public class MapGradient : MonoBehaviour {
         if(mat!=null) {
             mat.SetFloat("_GradientCount", gradients.Length);
             mat.SetFloat("bias", gradientBias);
-            Color[] colors = new Color[gradients.Length + 1];
+            Color[] colors = new Color[4];
             float[] positions = new float[gradients.Length];
             colors[0] = leftColor;
             for(int i = 0; i < gradients.Length; i++) {

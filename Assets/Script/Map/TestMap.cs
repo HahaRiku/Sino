@@ -5,8 +5,11 @@ using UnityEngine;
 public class TestMap : MonoBehaviour {
     public bool openMap;
     public bool closeMap;
-    public bool 走過F1左二;
-    public bool 走進F1左二房間;
+    public bool 走過B2右一;
+    public bool 走進B2右一房間;
+    public bool 走過F2左一;
+    public bool 走進F2左一房間;
+    public bool 走過F2左一樓梯;
 
     private MapController mapController;
 
@@ -25,13 +28,25 @@ public class TestMap : MonoBehaviour {
             closeMap = false;
             mapController.CloseMap();
         }
-        else if(走過F1左二) {
-            走過F1左二 = false;
-            MapSystem.SetPassedBy("1F走廊5", Floor.FloorType.F1);
+        else if(走過B2右一) {
+            走過B2右一 = false;
+            MapSystem.SetPassedBy("B2牢房走廊1", Floor.FloorType.B2);
         }
-        else if(走進F1左二房間) {
-            走進F1左二房間 = false;
-            MapSystem.SetEnteredTheRoom("1F_5_花園&墓園", Floor.FloorType.F1);
+        else if(走進B2右一房間) {
+            走進B2右一房間 = false;
+            MapSystem.SetEnteredTheRoom("B2_1_文青牢房", Floor.FloorType.B2);
         }
-	}
+        else if (走過F2左一) {
+            走過F2左一 = false;
+            MapSystem.SetPassedBy("2F走廊6", Floor.FloorType.F2);
+        }
+        else if (走進F2左一房間) {
+            走進F2左一房間 = false;
+            MapSystem.SetEnteredTheRoom("2F_6_僕人房", Floor.FloorType.F2);
+        }
+        else if(走過F2左一樓梯) {
+            走過F2左一樓梯 = false;
+            MapSystem.SetPassedBy("2F左樓梯", Floor.FloorType.F2);
+        }
+    }
 }
