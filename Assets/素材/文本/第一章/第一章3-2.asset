@@ -19,7 +19,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5E2D\u8AFE"
+    Character: Sino
     OriPositionX: 0
     NewPositionX: -4.2
     Duration: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u91AB\u751F"
+    Character: Oppugno
     OriPositionX: 0
     NewPositionX: 1.18
     Duration: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
     SpawnPointFreeX: 0
     Facing: 0
     Options: []
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u522A\u7BC0\u865F"
     Label: 
     LabelJump: 
@@ -217,7 +217,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5E2D\u8AFE"
+    Character: Sino
     OriPositionX: 0
     NewPositionX: -4.87
     Duration: 0.5

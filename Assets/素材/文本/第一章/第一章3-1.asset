@@ -71,7 +71,7 @@ MonoBehaviour:
     SpawnPointFreeX: 0
     Facing: 0
     Options: []
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u6C34\u6EF4"
     Label: 
     LabelJump: 
@@ -203,7 +203,7 @@ MonoBehaviour:
     SpawnPointFreeX: 0
     Facing: 0
     Options: []
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u522A\u7BC0\u865F"
     Label: 
     LabelJump: 
@@ -269,7 +269,7 @@ MonoBehaviour:
     SpawnPointFreeX: 0
     Facing: 0
     Options: []
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u7169\u8E81"
     Label: 
     LabelJump: 
@@ -368,7 +368,7 @@ MonoBehaviour:
     SpawnPointFreeX: 0
     Facing: 0
     Options: []
-    CharName: "\u5E2D\u8AFE"
+    CharName: Sino
     Emotion: "\u9A5A\u5606\u865F"
     Label: 
     LabelJump: 
@@ -448,7 +448,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5967\u666E\u7F85"
+    Character: Oppugno
     OriPositionX: 0
     NewPositionX: 4.12
     Duration: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5967\u666E\u7F85"
+    Character: Oppugno
     OriPositionX: 0
     NewPositionX: -0.15
     Duration: 0
@@ -679,7 +679,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5967\u666E\u7F85"
+    Character: Oppugno
     OriPositionX: 0
     NewPositionX: 4.12
     Duration: 0

@@ -1131,7 +1131,7 @@ MonoBehaviour:
     Emotion: 
     Label: 
     LabelJump: 
-    Class: "\u9ED1\u5C4F"
+    Class: "\u9ED1\u5C4F\u6253\u958B"
     Parameters: []
     WaitTime: 0.5
   - "state\u985E\u578B": 8
