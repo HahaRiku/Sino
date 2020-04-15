@@ -113,6 +113,8 @@ MonoBehaviour:
   NowStatus: 0
   Player: {fileID: 0}
   ActingStorySystem: {fileID: 0}
+  "\u7B2C\u5E7E\u5C64": 0
+  "\u5F9E\u5DE6\u908A\u6578\u4F86\u7B2C\u5E7E\u500B": 0
 --- !u!114 &114737578560672244
 MonoBehaviour:
   m_ObjectHideFlags: 1
