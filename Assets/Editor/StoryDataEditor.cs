@@ -292,7 +292,13 @@ public class StoryDataEditor:Editor
 			arect.x += arect.width;
 			arect.xMax = rect.xMax - 20;
 			EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Facing"), GUIContent.none);
-
+        }
+        else if (serElem.FindPropertyRelative("state類型").enumValueIndex == 11)
+        {
+            EditorGUI.LabelField(arect, "攝影機：", fontStyle);
+            arect.x += arect.width;
+            arect.xMax = rect.xMax - 20;
+            EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("Mode"), GUIContent.none);
         }
         EditorGUI.indentLevel--;
         /*if (GUI.Button(buttonRect, "-"))
@@ -316,6 +322,7 @@ public class StoryDataEditor:Editor
         menu.AddSeparator("");
         menu.AddItem(new GUIContent("新增轉場"), false, AddTransition);
         menu.AddItem(new GUIContent("新增等待時間"), false, AddWaitTime);
+        menu.AddItem(new GUIContent("新增鏡頭轉換"), false, AddCameraMode);
         menu.AddItem(new GUIContent("新增外部腳本"), false, AddOuterScript);
         menu.DropDown(buttonRect);
     }
@@ -468,6 +475,17 @@ public class StoryDataEditor:Editor
     {
         var element = serializedObject.FindProperty("StateList").GetArrayElementAtIndex(stateListIndex);
         element.FindPropertyRelative("Options").DeleteArrayElementAtIndex(arrayNewIndex);
+    }
+    void AddCameraMode()
+    {
+        var index = list.serializedProperty.arraySize;
+        list.serializedProperty.arraySize++;
+        list.index = index;
+        var element = list.serializedProperty.GetArrayElementAtIndex(index);
+        element.FindPropertyRelative("state類型").enumValueIndex = 11;
+        element.FindPropertyRelative("continue條件").enumValueIndex = 2;
+        serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(target);
     }
     void Delete(int index)
     {

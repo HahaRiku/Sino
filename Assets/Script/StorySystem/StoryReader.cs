@@ -37,6 +37,7 @@ public class StoryReader : MonoBehaviour
     bool isReadStory = false;
     bool isForceFinish = false;
     bool isFinish = false;
+    bool isMoveCamera = false;
 
     void OnEnable()
     {
@@ -55,6 +56,10 @@ public class StoryReader : MonoBehaviour
     {
         return !isReadStory;
     }
+    public void ToMoveCameraNextTime()
+    {
+        isMoveCamera = true;
+    }
     public void StartTyping(StoryData.StoryState story)
     {
         isFinish = false;
@@ -64,7 +69,10 @@ public class StoryReader : MonoBehaviour
         charIndex_Write = 0;
         tagList = new List<string>();
         if (!dialogPanel.IsVisible())
-            dialogPanel.SetVisible();
+        {
+            dialogPanel.SetVisible(isMoveCamera);
+            isMoveCamera = false;
+        }
         if (story.Name.Trim() == "")
         {
             NameText.text = "";
@@ -79,7 +87,8 @@ public class StoryReader : MonoBehaviour
     }
     public void ClosePanel()
     {
-        dialogPanel.SetInvisible();
+        dialogPanel.SetInvisible(isMoveCamera);
+        isMoveCamera = false;
     }
     void Update()
     {

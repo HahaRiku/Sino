@@ -10,20 +10,20 @@ public class DialogPanelController : MonoBehaviour
     {
         return _v;
     }
-    public void SetInvisible()
+    public void SetInvisible(bool isMoveCamera)
     {
         //GetComponent<CanvasGroup>().alpha = 0;
         GetComponent<CanvasGroup>().interactable = false;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
-        GetComponent<DialogAnimation>().StartCloseAnim();
+        GetComponent<DialogAnimation>().StartClosePanelAnim(isMoveCamera);
         _v = false;
     }
-    public void SetVisible()
+    public void SetVisible(bool isMoveCamera)
     {
         //GetComponent<CanvasGroup>().alpha = 1;
         GetComponent<CanvasGroup>().interactable = true;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-        GetComponent<DialogAnimation>().StartOpenAnim();
+        GetComponent<DialogAnimation>().StartOpenPanelAnim(isMoveCamera);
         _v = true;
     }
 }

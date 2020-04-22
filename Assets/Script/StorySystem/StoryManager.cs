@@ -34,6 +34,8 @@ public class StoryManager : MonoBehaviour
 
     float _timer = 0; //快跳模式下，state跳轉計時器
     float _waitTime = 0.2f; //快跳模式下，state跳轉所需等待時間
+
+    bool isMovieMode = false;
     protected StoryManager() { }
 
     public bool IsStoryFinish()
@@ -165,22 +167,27 @@ public class StoryManager : MonoBehaviour
         nowIndex = index;
         if (stories[index].state類型 == StoryData.StoryState.type.故事對話)
         {
+            if (index < listCount - 1 && stories[index + 1].state類型 == StoryData.StoryState.type.鏡頭模式 && stories[nowIndex].Mode == StoryData.StoryState.CameraMode.下降)
+                reader.ToMoveCameraNextTime();
             reader.StartTyping(stories[nowIndex]);
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.人物移動)
         {
-            if(dialogPanel.IsVisible()) {
+            if (dialogPanel.IsVisible())
+            {
                 reader.ClosePanel();
             }
             moveContol.Move(stories[index].Character, stories[index].NewPositionX, stories[index].Duration);
         }
         else if (stories[index].state類型 == StoryData.StoryState.type.分支)
         {
-            if(stories[nowIndex].bCondition == StoryData.StoryState.BranchCondition.變數) {
+            if (stories[nowIndex].bCondition == StoryData.StoryState.BranchCondition.變數)
+            {
                 var 變數名稱 = stories[nowIndex].Flag.Trim();
                 if (stories[nowIndex].JustJump > 0)
                     ExecuteState(stories[nowIndex].JustJump);
-                else if (!SystemVariables.otherVariables_int.ContainsKey(變數名稱)) {
+                else if (!SystemVariables.otherVariables_int.ContainsKey(變數名稱))
+                {
                     Debug.Log("不存在的變數: " + 變數名稱);
                     var ElseState = stories[nowIndex].ElseJumpTo.Trim();
                     if (CheckIsStateID(ElseState))
@@ -188,7 +195,8 @@ public class StoryManager : MonoBehaviour
                     else
                         JumpToLabel(ElseState);
                 }
-                else {
+                else
+                {
                     var 變數value = SystemVariables.otherVariables_int[變數名稱];
                     string JumpState;
                     if (變數value == stories[nowIndex].WhenFlagIs)
@@ -202,11 +210,13 @@ public class StoryManager : MonoBehaviour
                         JumpToLabel(JumpState);
                 }
             }
-            else {
+            else
+            {
                 var 物件名稱 = stories[nowIndex].Item.Trim();
                 if (stories[nowIndex].JustJump > 0)
                     ExecuteState(stories[nowIndex].JustJump);
-                else if (!BagSystem.IsItemNameExisted(物件名稱)) {
+                else if (!BagSystem.IsItemNameExisted(物件名稱))
+                {
                     Debug.Log("不存在的物件: " + 物件名稱);
                     var ElseState = stories[nowIndex].ElseJumpTo.Trim();
                     if (CheckIsStateID(ElseState))
@@ -214,7 +224,8 @@ public class StoryManager : MonoBehaviour
                     else
                         JumpToLabel(ElseState);
                 }
-                else {
+                else
+                {
                     var 物件存在與否 = BagSystem.IsItemInBag(物件名稱);
                     string JumpState;
                     if (物件存在與否 == stories[nowIndex].WhenItemExisted)
@@ -249,7 +260,8 @@ public class StoryManager : MonoBehaviour
                 Debug.LogError("Error：場景 \"" + 場景名 + "\" is not found.");
                 return;
             }
-            if ((int)stories[nowIndex].SpawnPoint == 6) {
+            if ((int)stories[nowIndex].SpawnPoint == 6)
+            {
                 GM.黑幕轉場(場景名, new Vector3(stories[nowIndex].SpawnPointFreeX, -3.2f, 0), stories[nowIndex].Facing);
             }
             else
@@ -269,6 +281,29 @@ public class StoryManager : MonoBehaviour
         else if (stories[index].state類型 == StoryData.StoryState.type.出現選項)
         {
             optionControl.ShowOptions(stories[nowIndex]);
+        }
+        else if (stories[index].state類型 == StoryData.StoryState.type.鏡頭模式)
+        {
+            if (index < listCount - 1 && stories[index + 1].state類型 == StoryData.StoryState.type.故事對話 && stories[nowIndex].Mode == StoryData.StoryState.CameraMode.上移)
+                reader.ToMoveCameraNextTime();
+            else if (dialogPanel.IsVisible() && stories[nowIndex].Mode == StoryData.StoryState.CameraMode.下降)
+                reader.ToMoveCameraNextTime();
+            else if (stories[nowIndex].Mode == StoryData.StoryState.CameraMode.上移)
+                dialogPanel.GetComponent<DialogAnimation>().StartMovieOpeningAnim();
+            else if (stories[nowIndex].Mode == StoryData.StoryState.CameraMode.下降 && stories[index - 1].state類型 != StoryData.StoryState.type.故事對話)
+                dialogPanel.GetComponent<DialogAnimation>().StartMovieEndingAnim();
+            /*if (stories[nowIndex].Mode == StoryData.StoryState.CameraMode.上移)
+            {
+                if (stories[index + 1].state類型 == StoryData.StoryState.type.故事對話)
+                    reader.SetMode(true);
+                else
+                    dialogPanel.GetComponent<DialogAnimation>().StartMovieOpeningAnim();
+            }
+            else if (stories[nowIndex].Mode == StoryData.StoryState.CameraMode.下降)
+            {
+                if (stories[index + 1].state類型 == StoryData.StoryState.type.故事對話)
+                    dialogPanel.GetComponent<DialogAnimation>().StartMovieEndingAnim();
+            }*/
         }
     }
     IEnumerator WaitAndWork(float waitTime, string funcName)
