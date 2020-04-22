@@ -101,7 +101,7 @@ MonoBehaviour:
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: CH1_Flo
+    Variable: "CH1-1_\u958B\u71C8\u5426"
     Value: 0
     Scene: 
     SpawnPoint: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
     Variable: "\u7B2C\u4E00\u7AE01-1_GG"
     Value: 0
     Scene: "\u7B2C\u4E00\u7AE02"
-    SpawnPoint: 0
+    SpawnPoint: 2
     SpawnPointFreeX: 0
     Facing: 0
     Options: []

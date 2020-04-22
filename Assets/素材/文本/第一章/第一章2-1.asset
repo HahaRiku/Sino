@@ -24,7 +24,7 @@ MonoBehaviour:
     NewPositionX: 0
     Duration: 0
     bCondition: 0
-    Flag: CH1_Flo
+    Flag: "CH1_\u958B\u71C8\u5426"
     WhenFlagIs: 0
     Item: 
     WhenItemExisted: 0
@@ -1421,7 +1421,7 @@ MonoBehaviour:
     Value: 0
     Scene: "\u7B2C\u4E00\u7AE03"
     SpawnPoint: 6
-    SpawnPointFreeX: 2.65
+    SpawnPointFreeX: -2
     Facing: 1
     Options: []
     CharName: 

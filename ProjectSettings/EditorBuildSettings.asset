@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/Scene/\u63A2\u7D22/B1/\u8D70\u5ECA/B1\u8D70\u5ECA2.unity"
     guid: a15cd665dba96d840a584bf145f17822
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scene/\u63A2\u7D22/B1/\u8D70\u5ECA/B1\u8D70\u5ECA3.unity"
     guid: 7211175c1ca5ccf44af6712f5db39535
   - enabled: 0

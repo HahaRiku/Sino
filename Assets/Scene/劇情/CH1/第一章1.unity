@@ -419,8 +419,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "NPC\u904B\u4F5C\u689D\u4EF6List":
   - "NPC\u904B\u4F5C\u689D\u4EF6": 1
-    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": CH1_Flo
-    "\u689D\u4EF6\u8B8A\u6578\u503C": 2
+    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": "CH1-1_\u958B\u71C8\u5426"
+    "\u689D\u4EF6\u8B8A\u6578\u503C": 1
     "\u689D\u4EF6\u7269\u4EF6\u540D\u7A31": 
     "\u689D\u4EF6\u7269\u4EF6\u5B58\u5728\u8207\u5426": 1
   type: 0
@@ -645,8 +645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "NPC\u904B\u4F5C\u689D\u4EF6List":
   - "NPC\u904B\u4F5C\u689D\u4EF6": 1
-    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": CH1_Flo
-    "\u689D\u4EF6\u8B8A\u6578\u503C": 2
+    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": "CH1-1_\u958B\u71C8\u5426"
+    "\u689D\u4EF6\u8B8A\u6578\u503C": 1
     "\u689D\u4EF6\u7269\u4EF6\u540D\u7A31": 
     "\u689D\u4EF6\u7269\u4EF6\u5B58\u5728\u8207\u5426": 1
   type: 0
@@ -1042,6 +1042,16 @@ Prefab:
     - target: {fileID: 4035611698499784, guid: 4f7ccde78f8300f448e1bbc1c4437c99, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735891566460118, guid: 4f7ccde78f8300f448e1bbc1c4437c99,
+        type: 2}
+      propertyPath: "\u7B2C\u5E7E\u5C64"
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735891566460118, guid: 4f7ccde78f8300f448e1bbc1c4437c99,
+        type: 2}
+      propertyPath: "\u5F9E\u5DE6\u908A\u6578\u4F86\u7B2C\u5E7E\u500B"
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f7ccde78f8300f448e1bbc1c4437c99, type: 2}
@@ -5016,8 +5026,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "NPC\u904B\u4F5C\u689D\u4EF6List":
   - "NPC\u904B\u4F5C\u689D\u4EF6": 1
-    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": CH1_Flo
-    "\u689D\u4EF6\u8B8A\u6578\u503C": 2
+    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": "CH1-1_\u958B\u71C8\u5426"
+    "\u689D\u4EF6\u8B8A\u6578\u503C": 1
     "\u689D\u4EF6\u7269\u4EF6\u540D\u7A31": 
     "\u689D\u4EF6\u7269\u4EF6\u5B58\u5728\u8207\u5426": 1
   type: 2
@@ -5269,8 +5279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "NPC\u904B\u4F5C\u689D\u4EF6List":
   - "NPC\u904B\u4F5C\u689D\u4EF6": 1
-    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": CH1_Flo
-    "\u689D\u4EF6\u8B8A\u6578\u503C": 2
+    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": "CH1-1_\u958B\u71C8\u5426"
+    "\u689D\u4EF6\u8B8A\u6578\u503C": 1
     "\u689D\u4EF6\u7269\u4EF6\u540D\u7A31": 
     "\u689D\u4EF6\u7269\u4EF6\u5B58\u5728\u8207\u5426": 1
   type: 0
@@ -9132,8 +9142,8 @@ MonoBehaviour:
     "\u50B3\u9001\u5730\u9EDE": 0
     "\u5287\u672C": {fileID: 0}
   - type: 2
-    "\u53EF\u64BF\u7684\u7269\u54C1\u7684\u540D\u5B57": 
-    "\u4E0D\u53EF\u64BF\u7684\u7269\u54C1\u7684\u6558\u8FF0": 
+    "\u53EF\u64BF\u7684\u7269\u54C1\u7684\u540D\u5B57": "\u6BDB\u5DFE"
+    "\u4E0D\u53EF\u64BF\u7684\u7269\u54C1\u7684\u6558\u8FF0": "\u6BDB\u5DFE"
     "\u8981\u50B3\u9001\u5230\u7684\u5834\u666F\u540D\u5B57": 
     "\u50B3\u9001\u5730\u9EDE": 0
     "\u5287\u672C": {fileID: 11400000, guid: a2953d48de34a634ea8fa6bac1ee2feb, type: 2}
@@ -9151,7 +9161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "NPC\u904B\u4F5C\u689D\u4EF6List":
   - "NPC\u904B\u4F5C\u689D\u4EF6": 1
-    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": CH1_Flo
+    "\u689D\u4EF6\u8B8A\u6578\u540D\u7A31": "CH1_\u958B\u71C8\u5426"
     "\u689D\u4EF6\u8B8A\u6578\u503C": 0
     "\u689D\u4EF6\u7269\u4EF6\u540D\u7A31": "\u6BDB\u5DFE"
     "\u689D\u4EF6\u7269\u4EF6\u5B58\u5728\u8207\u5426": 0
