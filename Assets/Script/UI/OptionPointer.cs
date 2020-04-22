@@ -23,7 +23,7 @@ public class OptionPointer : MonoBehaviour
             else
                 optionsPanel.GetChild(i).gameObject.SetActive(false);
         }
-        _index = 0;
+        SetSelectedIndex(0); //每當開啟選項，預設選擇第一個
     }
     public void PointerUp()
     {
@@ -44,5 +44,13 @@ public class OptionPointer : MonoBehaviour
     public int GetSelectedIndex()
     {
         return _index;
+    }
+
+    public void SetSelectedIndex(int index)
+    {
+        _index = index;
+        GetComponent<RectTransform>().anchoredPosition =
+            new Vector2(GetComponent<RectTransform>().anchoredPosition.x,
+            optionsPanel.GetChild(_index).GetComponent<RectTransform>().anchoredPosition.y);
     }
 }

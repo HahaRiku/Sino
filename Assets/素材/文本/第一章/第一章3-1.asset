@@ -541,6 +541,39 @@ MonoBehaviour:
     Parameters: []
     WaitTime: 1
   - "state\u985E\u578B": 1
+    "continue\u689D\u4EF6": 2
+    Name: "\u5967\u666E\u7F85"
+    Text: "\u6709\u4EC0\u9EBC\u9700\u8981\u7684\u8A71\uFF0C\u53EF\u4EE5\u56DE\u4F86\u627E\u6211\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: -2
+    Duration: 0.01
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: "\u5E2D\u8AFE"
+    Emotion: "\u9A5A\u5606\u865F"
+    Label: 
+    LabelJump: 
+    Class: "\u81EA\u52D5\u5B58\u6A94"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 1
     "continue\u689D\u4EF6": 1
     Name: 
     Text: 
@@ -672,17 +705,17 @@ MonoBehaviour:
     Class: "\u7372\u5F97\u9053\u5177 \u92FC\u7B46\u8207\u8A18\u4E8B\u672C"
     Parameters: []
     WaitTime: 0
-  - "state\u985E\u578B": 8
-    "continue\u689D\u4EF6": 2
+  - "state\u985E\u578B": 1
+    "continue\u689D\u4EF6": 1
     Name: "\u5967\u666E\u7F85"
     Text: "\u6709\u4EC0\u9EBC\u9700\u8981\u7684\u8A71\uFF0C\u53EF\u4EE5\u56DE\u4F86\u627E\u6211\u3002"
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: "\u5967\u666E\u7F85"
+    Character: Oppugno
     OriPositionX: 0
-    NewPositionX: 0
-    Duration: 0
+    NewPositionX: 3.49
+    Duration: 1
     bCondition: 0
     Flag: 
     WhenFlagIs: 0
@@ -705,17 +738,50 @@ MonoBehaviour:
     Class: "\u81EA\u52D5\u5B58\u6A94"
     Parameters: []
     WaitTime: 0
-  - "state\u985E\u578B": 1
-    "continue\u689D\u4EF6": 1
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
     Name: "\u5967\u666E\u7F85"
     Text: "\u6709\u4EC0\u9EBC\u9700\u8981\u7684\u8A71\uFF0C\u53EF\u4EE5\u56DE\u4F86\u627E\u6211\u3002"
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0
-    Character: Oppugno
+    Character: "\u5967\u666E\u7F85"
     OriPositionX: 0
-    NewPositionX: 3.49
-    Duration: 1
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "CH1-3_\u5C0D\u8A71\u5426"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: "\u5E2D\u8AFE"
+    Emotion: "\u9A5A\u5606\u865F"
+    Label: 
+    LabelJump: 
+    Class: "\u81EA\u52D5\u5B58\u6A94"
+    Parameters: []
+    WaitTime: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: "\u5967\u666E\u7F85"
+    Text: "\u6709\u4EC0\u9EBC\u9700\u8981\u7684\u8A71\uFF0C\u53EF\u4EE5\u56DE\u4F86\u627E\u6211\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: "\u5967\u666E\u7F85"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
     bCondition: 0
     Flag: 
     WhenFlagIs: 0
