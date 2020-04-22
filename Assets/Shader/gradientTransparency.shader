@@ -17,7 +17,7 @@ Shader "Custom/gradientTransparency" {
 			sampler2D _MainTex;
 			float bias;
 			float _GradientCount = 3;
-			fixed4 _GradientColors[4];
+			fixed4 _GradientColors[5];
 			float _GradientPositions[4];
 
 			struct appdata_f

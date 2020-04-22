@@ -208,10 +208,11 @@ public class BagUI : MonoBehaviour {
                 }
             }
             else if(isMapOrNote) {
-                if(!closingMapOrNote && noteController.GetOpen()) {
+                if(!closingMapOrNote && (noteController.GetOpen() || FindObjectOfType<MapController>().GetOpen())) {
                     if(Input.GetKeyDown(KeyCode.X)) {
                         if(currentBag[currentPage, currentElement].name == "地圖") {
                             //close map
+                            FindObjectOfType<MapController>().CloseMap();
                         }
                         else {
                             noteController.CloseNote();
@@ -231,6 +232,7 @@ public class BagUI : MonoBehaviour {
                     if((currentBag[currentPage, currentElement].name == "地圖" || currentBag[currentPage, currentElement].name == "記事本") && Input.GetKeyDown(KeyCode.Z)) {
                         if(currentBag[currentPage, currentElement].name == "地圖") {
                             //open map
+                            FindObjectOfType<MapController>().OpenMap();
                             Debug.Log("Open Map");
                         }
                         else {

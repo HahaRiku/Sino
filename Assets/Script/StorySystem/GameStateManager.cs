@@ -165,10 +165,9 @@ public class GameStateManager : MonoBehaviour {
         //進度條跑完
         async.allowSceneActivation = true;*/
         blackImg.GetComponent<Animator>().SetTrigger("FadeOut");
-        /*yield return new WaitUntil(() => blackImg.GetComponent<Image>().color.a == 0);
+        /*yield return new WaitUntil(() => blackImg.GetComponent<Image>().color.a == 0);*/
         //完成淡出
-        if (ActingStorySystem == null)
-            FinEvent();*/
-		
+
+        FinEvent();
     }
 }

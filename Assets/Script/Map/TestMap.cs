@@ -10,6 +10,7 @@ public class TestMap : MonoBehaviour {
     public bool 走過F2左一;
     public bool 走進F2左一房間;
     public bool 走過F2左一樓梯;
+    public bool test;
 
     private MapController mapController;
 

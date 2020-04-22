@@ -75,7 +75,8 @@ public static class Init {
         SystemVariables.startGameTime = (Int64)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
         SystemVariables.FlushIntVariables();
         SystemVariables.FlushLockStatus();
-        BagSystem.ResetItemsInBag();
+        //BagSystem.ResetItemsInBag();
+        MapSystem.Flush();
         NotePagesSystem.ResetNotePages();
     }
 }

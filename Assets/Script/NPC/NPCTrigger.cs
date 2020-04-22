@@ -38,9 +38,9 @@ public class NPCTrigger : MonoBehaviour {
     public float Radius = 1.5f;
     public float Offset = 0;
 
-    public WhenNPCEnd 門鎖解鎖後;
-    public WhenNPCEnd 撿取了物件後;
-    public WhenNPCEnd 故事系統後;
+    public WhenNPCEnd 門鎖解鎖後 = WhenNPCEnd.不改變;
+    public WhenNPCEnd 撿取了物件後 = WhenNPCEnd.不改變;
+    public WhenNPCEnd 故事系統後 = WhenNPCEnd.不改變;
     public GameObject 切換後的NPC;
 
     private NPCFunction function;
@@ -55,6 +55,9 @@ public class NPCTrigger : MonoBehaviour {
     public bool functionList最後是做故事系統 { get; set; }
 
     void Start() {
+        門鎖解鎖後 = WhenNPCEnd.不改變;
+        撿取了物件後 = WhenNPCEnd.不改變;
+        故事系統後 = WhenNPCEnd.不改變;
         function = GetComponent<NPCFunction>();
         if(type != TriggerType.碰觸) {
             animator = transform.GetChild(0).GetComponent<Animator>();

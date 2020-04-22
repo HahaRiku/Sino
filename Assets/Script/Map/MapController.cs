@@ -67,7 +67,7 @@ public class MapController : MonoBehaviour {
                 bool[] floorLeftWalked = new bool[6];
                 bool[] floorRightWalked = new bool[6];
                 foreach (Floor f in MapSystem.data.floors) {
-                    bool[] walked = new bool[f.rooms.Length];
+                    bool[] walked = new bool[(f.樓層 == Floor.FloorType.F3) ? f.rooms.Length - 1 : f.rooms.Length - 2];
                     
                     foreach(Room r in f.rooms) {    //換每間的icon 和 記錄走過 以算gradient
                         //判定走過: 動gradient
@@ -167,7 +167,7 @@ public class MapController : MonoBehaviour {
                                 MapGradient.GradientInfo[] temp = new MapGradient.GradientInfo[floors[(int)f.樓層].mapGradient.gradients.Length + 1];
                                 MapGradient.GradientInfo tempG;
                                 tempG.color = new Color(1, 1, 1, 0);
-                                tempG.position = f.rooms[i + 1].房間左邊界Pos / 3;
+                                tempG.position = f.rooms[i + 1].房間左邊界Pos / 3.0f;
                                 temp[0] = tempG;
                                 for(int j = 1; j < floors[(int)f.樓層].mapGradient.gradients.Length + 1; j++) {
                                     temp[j] = floors[(int)f.樓層].mapGradient.gradients[j - 1];
@@ -182,7 +182,7 @@ public class MapController : MonoBehaviour {
                                 MapGradient.GradientInfo[] temp = new MapGradient.GradientInfo[floors[(int)f.樓層].mapGradient.gradients.Length + 1];
                                 MapGradient.GradientInfo tempG;
                                 tempG.color = new Color(1, 1, 1, 1);
-                                tempG.position = f.rooms[i].房間左邊界Pos + (1 - f.rooms[i].房間左邊界Pos) / 3;
+                                tempG.position = f.rooms[i].房間左邊界Pos + (1 - f.rooms[i].房間左邊界Pos) / 3.0f;
                                 for(int j = 0; j < floors[(int)f.樓層].mapGradient.gradients.Length; j++) {
                                     temp[j] = floors[(int)f.樓層].mapGradient.gradients[j];
                                 }
@@ -192,6 +192,7 @@ public class MapController : MonoBehaviour {
                         }
                     }
                 }
+
                 for(int i = 0; i < 6; i++) {
                     if(floorWalked[i]) {
                         floors[i].floorNum.sprite = MapSystem.data.floors[i].floorNum;
@@ -254,4 +255,7 @@ public class MapController : MonoBehaviour {
         }
     }
     
+    public bool GetOpen() {
+        return open;
+    }
 }
