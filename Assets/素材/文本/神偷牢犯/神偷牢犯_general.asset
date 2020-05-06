@@ -11,4 +11,1858 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c6fdbd9f7d21a4386f846813473c52, type: 3}
   m_Name: "\u795E\u5077\u7262\u72AF_general"
   m_EditorClassIdentifier: 
-  StateList: []
+  StateList:
+  - "state\u985E\u578B": 2
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: Start
+    ElseJumpTo: end
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u5C0F\u670B\u53CB\uFF01\u90A3\u908A\u7684\u5C0F\u5B69\uFF01\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u4F60\u7B49\u7B49\uFF0C\u6211\u6709\u4E8B\u60C5\u60F3\u8981\u62DC\u8A17\u4F60\uFF01\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 1
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 1.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: SinoFaceUp
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 9
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0.5
+    Mode: 0
+  - "state\u985E\u578B": 5
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u554F\u865F"
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u4EC0\u9EBC\uFF1F\u4F60\u6709\u5225\u7684\u4E8B\u60C5\u8981\u505A\uFF1F\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u54E6\u54E6\uFF0C\u662F\u60F3\u8981\u5C0B\u627E\u4EC0\u9EBC\u6D88\u606F\u554A\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u90A3\u4F60\u5C31\u66F4\u61C9\u8A72\u807D\u6211\u7684\u4E86\uFF01\n\u5728\u9019\u500B\u5730\u65B9\uFF0C\u6211\u638C\u63E1\u7684\u60C5\u5831\u4E0D\u8AAA\u662F\u7B2C\u4E00\uFF0C\n\u4E5F\u662F\u6578\u4E00\u6578\u4E8C\u4E86\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u53EA\u8981\u4F60\u5E6B\u6211\u4E00\u500B\u5C0F\u5FD9\uFF0C\n\u6211\u5C31\u77E5\u7121\u4E0D\u8A00\uFF0C\u8A00\u7121\u4E0D\u76E1\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: 
+    Emotion: 
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 5
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: "\u72AF\u4EBA\uFF1A\u53EA\u8981\u4F60\u5E6B\u6211\u4E00\u500B\u5C0F\u5FD9\uFF0C\r\n
+      \          \u6211\u5C31\u77E5\u7121\u4E0D\u8A00\uFF0C\u8A00\u7121\u4E0D\u76E1\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 1
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: "\u72AF\u4EBA\uFF1A\u53EA\u8981\u4F60\u5E6B\u6211\u4E00\u500B\u5C0F\u5FD9\uFF0C\r\n
+      \          \u6211\u5C31\u77E5\u7121\u4E0D\u8A00\uFF0C\u8A00\u7121\u4E0D\u76E1\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u4F60\u5C45\u7136\u4E0D\u76F8\u4FE1\uFF1F\uFF01\uFF01\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u5225\u770B\u6211\u73FE\u5728\u5728\u9019\u88E1\u6DF7\u7684\u9019\u9EBC\u6158\n\u60F3\u7576\u5E74\u672C\u59D1\u5A18\u53EF\u662F\u5927\u540D\u9F0E\u9F0E\u7684\u795E\u5077\uFF01\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u72AF\u4EBA\uFF1A\u4F60\u5C45\u7136\u4E0D\u76F8\u4FE1\uFF1F\uFF01\uFF01\r\n\u72AF\u4EBA\uFF1A\u5225\u770B\u6211\u73FE\u5728\u5728\u9019\u88E1\u6DF7\u7684\u9019\u9EBC\u6158\r\n
+      \         \u60F3\u7576\u5E74\u672C\u59D1\u5A18\u53EF\u662F\u5927\u540D\u9F0E\u9F0E\u7684\u795E\u5077\uFF01\r\n<\u5E2D\u8AFE\u8F49\u7232\u80CC\u9762\uFF08\u9762\u56AE\u7262\u623F\uFF09\r\n\u72AF\u4EBA\uFF1A\u53EF\u60DC\u4E00\u62DB\u4E0D\u614E......\r\n
+      \           \u5728\u5077\u57CE\u5821\u4E3B\u4EBA\u7684\u73CD\u73E0\u9805\u934A\u7684\u6642\u5019\uFF0C\u88AB\u6293\u4F4F\u4E86\u3002\r\n<\u5606\u606F\u97F3\u6548\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: SinoFaceUp
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u53EF\u60DC\u4E00\u62DB\u4E0D\u614E......\n\u5728\u5077\u57CE\u5821\u4E3B\u4EBA\u7684\u73CD\u73E0\u9805\u934A\u7684\u6642\u5019\uFF0C\u88AB\u6293\u4F4F\u4E86\u3002\r\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u72AF\u4EBA\uFF1A\u4F60\u5C45\u7136\u4E0D\u76F8\u4FE1\uFF1F\uFF01\uFF01\r\n\u72AF\u4EBA\uFF1A\u5225\u770B\u6211\u73FE\u5728\u5728\u9019\u88E1\u6DF7\u7684\u9019\u9EBC\u6158\r\n
+      \         \u60F3\u7576\u5E74\u672C\u59D1\u5A18\u53EF\u662F\u5927\u540D\u9F0E\u9F0E\u7684\u795E\u5077\uFF01\r\n<\u5E2D\u8AFE\u8F49\u7232\u80CC\u9762\uFF08\u9762\u56AE\u7262\u623F\uFF09\r\n\u72AF\u4EBA\uFF1A\u53EF\u60DC\u4E00\u62DB\u4E0D\u614E......\r\n
+      \           \u5728\u5077\u57CE\u5821\u4E3B\u4EBA\u7684\u73CD\u73E0\u9805\u934A\u7684\u6642\u5019\uFF0C\u88AB\u6293\u4F4F\u4E86\u3002\r\n<\u5606\u606F\u97F3\u6548\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: SE sigh
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u9019\u9EBC\u591A\u5E74\u904E\u53BB\u4E86\uFF0C\u6211\u9084\u662F\u4E0D\u80FD\u91CB\u61F7\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u73FE\u5728\u6211\u552F\u4E00\u7684\u5FC3\u9858\uFF01\n\u5C31\u662F\u80FD\u518D\u770B\u770B\u90A3\u500B\u73CD\u73E0\u9805\u934A\u9577\u4EC0\u9EBC\u6A23\u5B50\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u4F60\u8981\u662F\u80FD\u628A\u90A3\u500B\u62FF\u4F86\u7D66\u6211\uFF0C\n\u4F60\u60F3\u554F\u4EC0\u9EBC\u6211\u90FD\u544A\u8A34\u4F60\u54E6~\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 5
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: "<\u5E2D\u8AFE\u982D\u4E0A\u51FA\u73FE\u522A\u7BC0\u865F\uFF0C\u522A\u7BC0\u865F\u6D88\u5931\r\n\u72AF\u4EBA\uFF1A\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\r\n
+      \          \u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "<\u5E2D\u8AFE\u982D\u4E0A\u51FA\u73FE\u522A\u7BC0\u865F\uFF0C\u522A\u7BC0\u865F\u6D88\u5931\r\n\u72AF\u4EBA\uFF1A\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\r\n
+      \          \u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: SE Serious
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 2
+    Name: "\u72AF\u4EBA"
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??\n\u600E\u9EBD\u53EF\u80FD\uFF01\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\n\u65E2\u7136\u9019\u6A23......\n\u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 5
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Cri
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 5
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Cri
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u6C42\u4F60\u4E86QAQ\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: 
+    Text: "\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 4
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: "\u62D2\u7D55"
+    - Content: "\u540C\u610F"
+      JumpTo: "\u540C\u610F"
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: "\u62D2\u7D55"
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u597D\u5427\u3002\n\u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: "\u795E\u5077_start"
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options: []
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: Start
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: "\u540C\u610F"
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: "\u540C\u610F"
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_start"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 7
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: "\u540C\u610F"
+    LabelJump: end
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: "\u540C\u610F"
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u597D~\n\u5C31\u9019\u9EBC\u8AAA\u5B9A\u4E86\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u9019\u662F\u57CE\u4E3B\u81E5\u623F\u7684\u9470\u5319\uFF0C\n\u6211\u7576\u521D\u53EF\u662F\u8CBB\u4E86\u5343\u8F9B\u842C\u82E6\u624D\u62FF\u5230\u7684\u5462\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: "\u7372\u5F97\u9053\u5177 \u57CE\u4E3B\u623F\u9470\u5319 "
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u6839\u64DA\u6211\u7E1D\u5BC6\u7684\u63A8\u6E2C\uFF0C\n\u90A3\u689D\u73CD\u73E0\u9805\u93C8\u80AF\u5B9A\u5728\u57CE\u4E3B\u81E5\u623F\u3002\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 5
+    "continue\u689D\u4EF6": 1
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u4EC0\u9EBD\uFF0C\u5C0F\u9B3C\uFF1F\n\u9019\u624D\u4E0D\u662F\u4EC0\u9EBD\u96A8\u96A8\u4FBF\u4FBF\u5C31\u80FD\u77E5\u9053\u7684\u6D88\u606F\uFF0C\n\u662F\u6A5F\u667A\u7684\u795E\u5077\u5927\u4EBA\uFF0C\u6211\uFF0C\u624D\u80FD\u63A8\u6572\u51FA\u4F86\u7684\uFF01\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u7B97\u4E86\uFF0C\u4E0D\u548C\u4F60\u8A08\u8F03\u3002\r\n\u57CE\u4E3B\u81E5\u623F\u5C31\u5728\u4E09\u6A13\uFF0C\u61C9\u8A72\u883B\u597D\u627E\u7684\u5427\u3002"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\r\u5269\u4E0B\u7684\uFF0C\u5C31\u4EA4\u7D66\u4F60\u4E86\uFF01\r"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 0
+    "continue\u689D\u4EF6": 0
+    Name: "\u72AF\u4EBA"
+    Text: "\u8ACB\u4E00\u5B9A\u8981\u6EFF\u8DB3\u6211\u7684\u5FC3\u9858\u554A~\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: "\u540C\u610F"
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_start"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: "\u8A18\u4E8B\u672C\u66F4\u65B0 \u795E\u50771  "
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 6
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u4F60\u8AAC\u6C92\u6709\u5438\u5F15\u529B??<\u56B4\u8085\u7684\u97F3\u6A02\uFF1F\n\u600E\u9EBD\u53EF\u80FD\uFF01\r\n\u72AF\u4EBA\uFF1A\u4F60\u96E3\u9053\u4E0D\u60F3\u77E5\u9053\u6211\u6709\u4EC0\u9EBD\u60C5\u5831\u55CE\uFF01\r\n
+      \          \u65E2\u7136\u9019\u6A23......\r\n           \u6211\u53EA\u80FD\u4F7F\u51FA\u6BBA\u624B\u9427\u4F86\u4E86\uFF01\r\n<\u522A\u7BC0\u865F\uFF0C\u7DAD\u6301\u5169\u79D2\r\n\u72AF\u4EBA\uFF1A\u6C42\u4F60\u4E86QAQ\r\n\r\n\u662F\u5426\u540C\u610F\u795E\u5077\u5927\u4EBA\uFF08\uFF1F\uFF09\u7684\u8ACB\u6C42\r\n\u2192\u62D2\u7D55\r\n\u72AF\u4EBA\uFF1A\u597D\u5427\u3002\r\n
+      \          \u65E2\u7136\u4F60\u4E0D\u540C\u610F\uFF0C\u5C31\u4E0D\u8981\u51FA\u73FE\u5728\u6211\u9762\u524D\u4E86\u3002\r\n\u72AF\u4EBA\uFF1A\u4F60\u8D70\u5427\uFF01\u4E0D\u7136\u6211\u5C31\u8981\u751F\u6C23\u4E86\u3002\r\n\r\n"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: Sino
+    OriPositionX: 0
+    NewPositionX: 1.5
+    Duration: 0.5
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u795E\u5077_catchTask"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u62D2\u7D55"
+      JumpTo: 
+    - Content: "\u540C\u610F"
+      JumpTo: 
+    CharName: Sino
+    Emotion: "\u522A\u7BC0\u865F "
+    Label: end
+    LabelJump: 
+    Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
