@@ -13,6 +13,7 @@ public static class SystemVariables {
     public static bool lockBag = false;
     public static bool lockMenu = false;
     public static bool lockOtherNPC = false;
+    public static float playerX = 0;
 
     [SerializeField]
     public static Dictionary<string, int> otherVariables_int = new Dictionary<string, int>();
@@ -75,7 +76,7 @@ public static class Init {
         SystemVariables.startGameTime = (Int64)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
         SystemVariables.FlushIntVariables();
         SystemVariables.FlushLockStatus();
-        //BagSystem.ResetItemsInBag();
+        BagSystem.ResetItemsInBag();
         MapSystem.Flush();
         NotePagesSystem.ResetNotePages();
     }
