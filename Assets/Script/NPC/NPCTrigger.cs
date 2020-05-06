@@ -18,7 +18,6 @@ public class NPCTrigger : MonoBehaviour {
     public enum TriggerType { 白點, 點點點, 鎖, 碰觸, 耳朵 }
     public enum NpcState { 範圍外, 可以講話, 對話中, 不能講話, 講完話冷卻中 }
     public enum LockStatus { 沒鎖, 有鎖 }
-    public enum WhenNPCEnd { 換到其他NPC, 關掉, 不改變}
 
     public List<NPC運作條件Element> NPC運作條件List = new List<NPC運作條件Element>();
     private bool conditionTrue = true;
@@ -38,11 +37,6 @@ public class NPCTrigger : MonoBehaviour {
     public float Radius = 1.5f;
     public float Offset = 0;
 
-    public WhenNPCEnd 門鎖解鎖後 = WhenNPCEnd.不改變;
-    public WhenNPCEnd 撿取了物件後 = WhenNPCEnd.不改變;
-    public WhenNPCEnd 故事系統後 = WhenNPCEnd.不改變;
-    public GameObject 切換後的NPC;
-
     private NPCFunction function;
     private GameStateManager GM;
     private GameObject player;
@@ -55,9 +49,6 @@ public class NPCTrigger : MonoBehaviour {
     public bool functionList最後是做故事系統 { get; set; }
 
     void Start() {
-        門鎖解鎖後 = WhenNPCEnd.不改變;
-        撿取了物件後 = WhenNPCEnd.不改變;
-        故事系統後 = WhenNPCEnd.不改變;
         function = GetComponent<NPCFunction>();
         if(type != TriggerType.碰觸) {
             animator = transform.GetChild(0).GetComponent<Animator>();
@@ -191,35 +182,7 @@ public class NPCTrigger : MonoBehaviour {
 
     IEnumerator WaitAndResumeTalk() {
         SystemVariables.lockBag = false;
-        if (!animator.GetBool("locked")) {
-            if (門鎖解鎖後 == WhenNPCEnd.換到其他NPC) {
-                gameObject.SetActive(false);
-                切換後的NPC.SetActive(true);
-            }
-            else if (門鎖解鎖後 == WhenNPCEnd.關掉) {
-                gameObject.SetActive(false);
-            }
-        }
-        else if (撿了物品) {
-            if (撿取了物件後 == WhenNPCEnd.換到其他NPC) {
-                gameObject.SetActive(false);
-                切換後的NPC.SetActive(true);
-            }
-            else if (撿取了物件後 == WhenNPCEnd.關掉) {
-                gameObject.SetActive(false);
-            }
-        }
-        else if(functionList最後是做故事系統) {
-            if(故事系統後 == WhenNPCEnd.換到其他NPC) {
-                gameObject.SetActive(false);
-                切換後的NPC.SetActive(true);
-            }
-            else if(故事系統後 == WhenNPCEnd.關掉) {
-                gameObject.SetActive(false);
-            }
-        }
         yield return new WaitForSeconds(冷卻時間);
-        
         state = NpcState.範圍外;
     }
     void OnDrawGizmos()
