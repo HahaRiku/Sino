@@ -30,7 +30,7 @@ public class StoryReader : MonoBehaviour
     private List<string> tagList;
     Dictionary<string, string> tagDict = new Dictionary<string, string>() {
         { "<color=#([0-9A-Z]{8})>","</color>"},    { "<b>","</b>"},
-        { "<size=#([0-9]+)>","</size>"}
+        { "<size=([0-9]+)>","</size>"}
     };
 
 
