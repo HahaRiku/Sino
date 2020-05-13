@@ -20,14 +20,13 @@ public class Newflip : MonoBehaviour
 
     private string room = "醫護室",DateAndTime = "00:00:00";
 
-
     // Use this for initialization
     void Start()
     {
+        SaveAndLoad.Save(0);
         pic.enabled = false;
         Larrow.enabled = false;
         Rarrow.enabled = true;
-        pens_out();
         refresh();
         Title.enabled = false;
         SaveLoad.enabled = true;
@@ -385,8 +384,8 @@ public class Newflip : MonoBehaviour
                 }
                 isSaving = true;
                 opening = true;
-                chossenTrueFile = ControledBook.currentPage * 4 + chossenFile - 1;
                 YN = 0;
+                chossenTrueFile = ControledBook.currentPage * 4 + chossenFile - 1;
                 refresh();
                 SavingCheck.SetBool("OPENorCLOSE", true);
                 StartCoroutine(Wait1s(1));
@@ -397,12 +396,13 @@ public class Newflip : MonoBehaviour
                 {
                     if(S0L1 == 0)
                     {
-                        
+                        SaveAndLoad.Save(chossenTrueFile);
                         ChangeFileName();
                     }
                     else
                     {
-
+                        SaveAndLoad.Load(chossenTrueFile);
+                        ChangeFileName();
                     }
                 }
                 else
@@ -439,61 +439,61 @@ public class Newflip : MonoBehaviour
             switch (chossenTrueFile)
             {
                 case 0:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = nA;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = nA;
                     break;
                 case 1:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n1;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n1;
                     break;
                 case 2:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n2;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n2;
                     break;
                 case 3:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n3;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n3;
                     break;
                 case 4:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n4;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n4;
                     break;
                 case 5:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n5;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n5;
                     break;
                 case 6:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n6;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n6;
                     break;
                 case 7:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n7;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n7;
                     break;
                 case 8:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n8;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n8;
                     break;
                 case 9:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n9;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n9;
                     break;
                 case 10:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n10;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n10;
                     break;
                 case 11:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n11;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n11;
                     break;
                 case 12:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n12;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n12;
                     break;
                 case 13:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n13;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n13;
                     break;
                 case 14:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n14;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n14;
                     break;
                 case 15:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n15;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n15;
                     break;
                 case 16:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n16;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n16;
                     break;
                 case 17:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n17;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n17;
                     break;
                 case 18:
-                    GameObject.Find("Text").GetComponent<Image>().sprite = n18;
+                    GameObject.Find("CoverText").GetComponent<Image>().sprite = n18;
                     break;
             }
             if (chossenTrueFile == 0)

@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Events;
+
+
 [ExecuteInEditMode]
 public class Saving : MonoBehaviour
 {
@@ -90,7 +92,7 @@ public class Saving : MonoBehaviour
         NextPageClip.rectTransform.sizeDelta = new Vector2(scaledPageWidth, scaledPageHeight + scaledPageWidth * 0.6f);
 
         //內文初始化
-        if (CurrentpageNumber==0)
+            if (CurrentpageNumber==0)
         {
             GameObject.Find("Save2").GetComponentInChildren<Text>().text = "<i>Auto Save\n\t" + room + "\n <size=15>遊玩時長:" + DateAndTime + "</size></i>";
         }

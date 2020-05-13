@@ -49,6 +49,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -86,6 +87,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 1
     "continue\u689D\u4EF6": 1
     Name: 
@@ -119,6 +121,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -152,6 +155,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u5B88\u885B"
@@ -185,6 +189,7 @@ MonoBehaviour:
     Class: "\u5B88\u885B\u7AD9\u8D77"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -218,6 +223,7 @@ MonoBehaviour:
     Class: "\u5B88\u885B\u7AD9\u8D77"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -251,6 +257,7 @@ MonoBehaviour:
     Class: "\u5B88\u885B\u7AD9\u8D77"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -284,6 +291,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -317,6 +325,7 @@ MonoBehaviour:
     Class: "\u5B88\u885B\u7AD9\u8D77"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -350,6 +359,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -383,6 +393,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 9
     "continue\u689D\u4EF6": 1
     Name: "\u5B88\u885B"
@@ -416,6 +427,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -449,6 +461,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -482,6 +495,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -515,6 +529,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -548,6 +563,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -581,6 +597,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -614,6 +631,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -647,6 +665,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -680,6 +699,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -713,6 +733,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u539F\u5730\u8DF3"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -746,6 +767,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -779,6 +801,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -812,6 +835,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -845,6 +869,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: 
@@ -878,6 +903,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -911,6 +937,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: 
@@ -944,6 +971,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -977,6 +1005,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -1010,6 +1039,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -1043,6 +1073,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1076,6 +1107,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1109,6 +1141,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1142,6 +1175,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5B88\u885B"
@@ -1175,6 +1209,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1208,6 +1243,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -1241,6 +1277,7 @@ MonoBehaviour:
     Class: "\u9ED1\u5E55\u6DE1\u5165"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 9
     "continue\u689D\u4EF6": 1
     Name: "\u9E1A\u9D61"
@@ -1274,6 +1311,7 @@ MonoBehaviour:
     Class: "\u9ED1\u5E55\u6DE1\u51FA"
     Parameters: []
     WaitTime: 0.5
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -1307,6 +1345,7 @@ MonoBehaviour:
     Class: "\u5B88\u885B\u6D88\u5931"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 9
     "continue\u689D\u4EF6": 1
     Name: 
@@ -1344,6 +1383,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 0.5
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -1377,6 +1417,7 @@ MonoBehaviour:
     Class: "\u9ED1\u5E55\u6DE1\u51FA"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 9
     "continue\u689D\u4EF6": 1
     Name: "\u9E1A\u9D61"
@@ -1410,6 +1451,7 @@ MonoBehaviour:
     Class: "\u9ED1\u5E55\u6DE1\u51FA"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -1443,6 +1485,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1476,6 +1519,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 1
     "continue\u689D\u4EF6": 1
     Name: 
@@ -1509,6 +1553,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1542,6 +1587,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1575,6 +1621,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1608,6 +1655,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1641,6 +1689,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1678,6 +1727,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 4
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1715,6 +1765,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1752,6 +1803,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1789,6 +1841,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1826,6 +1879,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 7
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1863,6 +1917,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1900,6 +1955,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -1937,6 +1993,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1974,6 +2031,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -2011,6 +2069,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -2048,3 +2107,4 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u8F49\u5411"
     Parameters: []
     WaitTime: 1
+    Mode: 0

@@ -4,23 +4,6 @@ using UnityEngine;
 using System;
 using System.IO;
 
-[System.Serializable]
-public class SavedData {
-
-    public string scene;
-    public long playedTime;
-    public long systemTime;
-    public float playerX;
-    public string globalVariables_int;
-    public string lockStatus;
-    public bool lockMoving;
-    public bool lockNpcInteract;
-    public bool lockBag;
-    public bool lockMenu;
-    public bool lockOtherNpc;
-
-}
-
 public static class SaveAndLoad {
 
     public static void Save(int id) {
@@ -79,4 +62,21 @@ public static class SaveAndLoad {
 
         return loadData;
     }
+}
+
+[System.Serializable]
+public class SavedData {
+
+    public string scene;
+    public long playedTime;
+    public long systemTime;
+    public float playerX;
+    public string globalVariables_int;
+    public string lockStatus;
+    public bool lockMoving;
+    public bool lockNpcInteract;
+    public bool lockBag;
+    public bool lockMenu;
+    public bool lockOtherNpc;
+
 }

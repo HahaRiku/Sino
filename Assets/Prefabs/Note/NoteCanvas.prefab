@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114337292263498444}
   - component: {fileID: 114012971983010398}
   - component: {fileID: 114780722525164182}
-  - component: {fileID: 114223177922847112}
   m_Layer: 5
   m_Name: Book
   m_TagString: Untagged
@@ -472,23 +471,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114223177922847112
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1008463615239958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6107771b15fdcd148af70e5e8966b4c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  testGetMission: 0
-  testGetMission2: 0
-  testGetMission3: 0
-  testOpenNote: 0
-  testCloseNote: 0
-  noteController: {fileID: 114780722525164182}
 --- !u!114 &114303940235648468
 MonoBehaviour:
   m_ObjectHideFlags: 1
