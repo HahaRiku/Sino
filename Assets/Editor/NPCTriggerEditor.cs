@@ -43,7 +43,7 @@ public class NPCTriggerEditor : Editor
         serElem.FindPropertyRelative("NPC運作條件").enumValueIndex = (int)(NPC運作條件Element.NPCCondition)EditorGUI.EnumPopup(arect, (NPC運作條件Element.NPCCondition)serElem.FindPropertyRelative("NPC運作條件").enumValueIndex);
         arect.x -= label_w;
         arect.y += arect.height + spacing;
-        if (serElem.FindPropertyRelative("NPC運作條件").enumValueIndex == 0)
+        if (serElem.FindPropertyRelative("NPC運作條件").enumValueIndex == 1)
         {
             arect.width = label_w;
             EditorGUI.LabelField(arect, "變數名稱: ");
@@ -58,7 +58,7 @@ public class NPCTriggerEditor : Editor
             arect.width = input_w;
             EditorGUI.PropertyField(arect, serElem.FindPropertyRelative("條件變數值"), new GUIContent(""));
         }
-        else if (serElem.FindPropertyRelative("NPC運作條件").enumValueIndex == 1)
+        else if (serElem.FindPropertyRelative("NPC運作條件").enumValueIndex == 2)
         {
             arect.width = label_w;
             EditorGUI.LabelField(arect, "物件名稱: ");

@@ -39,6 +39,9 @@ public class NPCFunction : MonoBehaviour {
                 UnpickablePanel.SetInvisible();
                 string temp = string.Concat(SystemVariables.Scene, "_", gameObject.name);
                 SystemVariables.AddIntVariable(temp, 1);
+                if(functionList[functionElementIndex].不可撿結束後是否要設置變數) {
+                    SystemVariables.AddIntVariable(functionList[functionElementIndex].變數名稱, functionList[functionElementIndex].值);
+                }
                 execute = false;
                 functionDone = true;
                 GM.FinEvent();
@@ -171,6 +174,9 @@ public class FunctionElement {
 
     public string 可撿的物品的名字;
     [TextArea] public string 不可撿的物品的敘述;
+    public bool 不可撿結束後是否要設置變數;
+    public string 變數名稱;
+    public int 值;
     public string 要傳送到的場景名字;
     public GameStateManager.SpawnPoint 傳送地點;
     public StoryData 劇本;

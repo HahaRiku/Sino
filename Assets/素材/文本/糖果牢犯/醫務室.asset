@@ -23,15 +23,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: Q
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -40,6 +45,7 @@ MonoBehaviour:
     Class: "\u986F\u793A\u4E0A\u534A\u90E8\u5206\u7684\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -51,15 +57,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -68,6 +79,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -79,15 +91,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -96,6 +113,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -107,15 +125,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x14\x01"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -124,6 +147,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -135,15 +159,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "U\x01"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -152,6 +181,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -163,15 +193,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -180,6 +215,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -191,15 +227,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -208,6 +249,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -219,15 +261,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x18\x02"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -236,6 +283,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -247,15 +295,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "Y\x02"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -264,6 +317,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -275,15 +329,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -292,6 +351,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: 
@@ -303,15 +363,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -320,6 +385,7 @@ MonoBehaviour:
     Class: "\u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -331,15 +397,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\x1C\x03"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -348,6 +419,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -359,15 +431,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "]\x03"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -376,6 +453,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -387,15 +465,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -404,6 +487,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -415,15 +499,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -432,6 +521,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -443,15 +533,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: " \x04"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -460,6 +555,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -471,15 +567,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "a\x04"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -488,6 +589,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -499,15 +601,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -516,6 +623,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -527,15 +635,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -544,6 +657,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -555,15 +669,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "$\x05"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -572,6 +691,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -583,15 +703,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "e\x05"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -600,6 +725,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -611,15 +737,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -628,6 +759,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -640,15 +772,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -657,6 +794,7 @@ MonoBehaviour:
     Class: 
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: 
@@ -668,15 +806,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "(\x06"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -685,6 +828,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 4
     "continue\u689D\u4EF6": 0
     Name: 
@@ -696,15 +840,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "i\x06"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 1
@@ -723,6 +872,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -734,15 +884,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -761,6 +916,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -772,15 +928,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Variable: "\u7CD6\u679C_\u74F6\u5B50\u9078\u64C7"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: "\x1D\a"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -799,6 +960,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 7
     "continue\u689D\u4EF6": 2
     Name: 
@@ -810,15 +972,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: "w\a"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -837,6 +1004,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -848,15 +1016,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -875,6 +1048,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -886,15 +1060,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Variable: "\u7CD6\u679C_\u74F6\u5B50\u9078\u64C7"
     Value: 2
-    Scene: {fileID: 0}
+    Scene: "+\b"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -913,6 +1092,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 7
     "continue\u689D\u4EF6": 2
     Name: 
@@ -924,15 +1104,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -951,6 +1136,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -962,15 +1148,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -989,6 +1180,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1000,15 +1192,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Variable: "\u7CD6\u679C_\u74F6\u5B50\u9078\u64C7"
     Value: 3
-    Scene: {fileID: 0}
+    Scene: "9\t"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1027,6 +1224,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 7
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1038,15 +1236,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1065,6 +1268,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1076,15 +1280,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1103,6 +1312,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1114,15 +1324,22 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Variable: "\u7CD6\u679C_\u74F6\u5B50\u9078\u64C7"
     Value: 4
-    Scene: {fileID: 0}
+    Scene: 'G
+
+'
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1141,6 +1358,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 7
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1152,15 +1370,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1179,6 +1402,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1190,15 +1414,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1217,6 +1446,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1228,15 +1458,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: "\u74F6\u5B50\u9078\u64C7"
+    Variable: "\u7CD6\u679C_\u74F6\u5B50\u9078\u64C7"
     Value: 5
-    Scene: {fileID: 0}
+    Scene: "U\v"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1255,6 +1490,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 6
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1266,15 +1502,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1293,6 +1534,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1305,15 +1547,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: 
     Value: 0
-    Scene: {fileID: 0}
+    Scene: "\t\f"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options: []
     CharName: 
     Emotion: 
@@ -1322,6 +1569,7 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1333,15 +1581,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
     Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
     Value: 1
-    Scene: {fileID: 0}
+    Scene: "J\f"
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1360,6 +1613,7 @@ MonoBehaviour:
     Class: End
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 3
     "continue\u689D\u4EF6": 2
     Name: 
@@ -1371,15 +1625,20 @@ MonoBehaviour:
     OriPositionX: 0
     NewPositionX: 0
     Duration: 0
+    bCondition: 0
     Flag: 
     WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
     ThanJumpTo: 
     ElseJumpTo: 
     JustJump: 0
-    Variable: "\u53EF\u8FD4\u56DE\u7262\u623F"
-    Value: 1
-    Scene: {fileID: 0}
+    Variable: "\u7CD6\u679C\u95DC\u5361"
+    Value: 4
+    Scene: 
     SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
     Options:
     - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
       JumpTo: 
@@ -1398,3 +1657,48 @@ MonoBehaviour:
     Class: "\u95DC\u6389\u4FE1"
     Parameters: []
     WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 3
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: 
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: " \u986F\u793A\u4E0B\u534A\u90E8\u5206\u7684\u4FE1"
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: "\u91AB\u52D9\u5BA4\u7684\u9580\u80FD\u4E0D\u80FD\u89F8\u767C"
+    Value: 1
+    Scene: 
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u7B2C\u4E00\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E8C\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E09\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u56DB\u500B\u74F6\u5B50"
+      JumpTo: 
+    - Content: "\u7B2C\u4E94\u500B\u74F6\u5B50"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: 
+    LabelJump: 
+    Class: "\u95DC\u6389\u4FE1"
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
