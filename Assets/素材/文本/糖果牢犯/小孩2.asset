@@ -12,6 +12,46 @@ MonoBehaviour:
   m_Name: "\u5C0F\u5B692"
   m_EditorClassIdentifier: 
   StateList:
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u5F97\u5230\u9053\u5177\uFF1A\u4E00\u5F35\u5BEB\u6709\u7DAB\u7D22\u7684\u7D19\u689D"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 'U
+
+'
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: end
+    Class: "\u62FF\u5B8C\u7CD6\u679C\u56DE\u4F86\u8AAA\u8A71"
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u5C0F\u5B69"
@@ -1692,6 +1732,46 @@ MonoBehaviour:
     Label: end
     LabelJump: end
     Class: 
+    Parameters: []
+    WaitTime: 0
+    Mode: 0
+  - "state\u985E\u578B": 8
+    "continue\u689D\u4EF6": 2
+    Name: 
+    Text: "\u5F97\u5230\u9053\u5177\uFF1A\u4E00\u5F35\u5BEB\u6709\u7DAB\u7D22\u7684\u7D19\u689D"
+    Image: {fileID: 0}
+    Location: {x: 0, y: 0}
+    IsFlip: 0
+    Character: 
+    OriPositionX: 0
+    NewPositionX: 0
+    Duration: 0
+    bCondition: 0
+    Flag: 
+    WhenFlagIs: 0
+    Item: 
+    WhenItemExisted: 0
+    ThanJumpTo: 
+    ElseJumpTo: 
+    JustJump: 0
+    Variable: 
+    Value: 0
+    Scene: 'U
+
+'
+    SpawnPoint: 0
+    SpawnPointFreeX: 0
+    Facing: 0
+    Options:
+    - Content: "\u662F"
+      JumpTo: 
+    - Content: "\u5426"
+      JumpTo: 
+    CharName: 
+    Emotion: 
+    Label: end
+    LabelJump: end
+    Class: "\u62FF\u5B8C\u7CD6\u679C\u56DE\u4F86\u7D50\u675F\u8AAA\u8A71"
     Parameters: []
     WaitTime: 0
     Mode: 0

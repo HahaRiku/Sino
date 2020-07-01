@@ -41,6 +41,7 @@ public class NPCTrigger : MonoBehaviour {
     private GameStateManager GM;
     private GameObject player;
     private Animator animator;
+    private SpriteRenderer sr;
 
     private DragonBones.Armature playerArma;
 
@@ -76,6 +77,9 @@ public class NPCTrigger : MonoBehaviour {
                 animator.SetBool("locked", b);
             }
         }
+        /*if(GetComponent<SpriteRenderer>()) {
+            sr = GetComponent<SpriteRenderer>();
+        }*/
     }
 
     void Update() {
@@ -100,6 +104,15 @@ public class NPCTrigger : MonoBehaviour {
                 }
             }
         }
+
+        /*if(sr) {
+            if (!conditionTrue) {
+                sr.enabled = false;
+            }
+            else {
+                sr.enabled = true;
+            }
+        }*/
 
         if (!SystemVariables.lockNPCinteract) {
             if (state == NpcState.不能講話) {
