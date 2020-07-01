@@ -24,7 +24,7 @@ MonoBehaviour:
     NewPositionX: 0
     Duration: 0
     bCondition: 0
-    Flag: "\u795E\u5077_catchTask"
+    Flag: "B2\u7262\u623F\u8D70\u5ECA4_0"
     WhenFlagIs: 0
     Item: 
     WhenItemExisted: 0
@@ -184,8 +184,9 @@ MonoBehaviour:
     Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
-    Name: 
-    Text: 
+    Name: "\u72AF\u4EBA"
+    Text: "\u73CD\u73E0\u9805\u93C8\u4E00\u5B9A\u662F\u5728\u4E09\u6A13\u7684\u57CE\u4E3B\u81E5\u623F
+      \uFF01"
     Image: {fileID: 0}
     Location: {x: 0, y: 0}
     IsFlip: 0

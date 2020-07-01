@@ -80,3 +80,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: e75d2c6237c80604c9f59a1cf590092e, type: 3}
     desc: "\u4E7E\u6DE8\u7684\u6BDB\u5DFE"
     inBag: 0
+  - name: "\u73CD\u73E0"
+    sprite: {fileID: 21300000, guid: e75d2c6237c80604c9f59a1cf590092e, type: 3}
+    desc: "\u4E00\u9846\u73CD\u73E0"
+    inBag: 0
