@@ -15,11 +15,11 @@ MonoBehaviour:
   - name: "\u8A18\u4E8B\u672C"
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
     desc: "\u8A18\u4E8B\u672C"
-    inBag: 1
+    inBag: 0
   - name: "\u5730\u5716"
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
     desc: "\u5730\u5716"
-    inBag: 1
+    inBag: 0
   - name: "\u7CD6\u679C"
     sprite: {fileID: 21300000, guid: 2c88ff86e5c68ce4087601400b3943f7, type: 3}
     desc: "\u5C31\u662F\u4E00\u9846\u7CD6\u679C\u3002"
@@ -55,7 +55,7 @@ MonoBehaviour:
   - name: "\u4E00\u5927\u4E32\u9470\u5319"
     sprite: {fileID: 21300000, guid: 7d4c5866c3bb8ce488dc6b60b82367d3, type: 3}
     desc: "\u4F3C\u4E4E\u662F\u5F88\u591A\u623F\u9593\u7684\u9470\u5319\u3002"
-    inBag: 0
+    inBag: 1
   - name: "\u860B\u679C"
     sprite: {fileID: 21300000, guid: 68424c55ecdee32468ceea9362d62cdc, type: 3}
     desc: "\u65B0\u9BAE\u7684\u860B\u679C\uFF0C\u662F\u8AB0\u683D\u7A2E\u7684\u5462\uFF1F"
@@ -75,8 +75,12 @@ MonoBehaviour:
   - name: "\u71ED\u53F0"
     sprite: {fileID: 21300000, guid: e75d2c6237c80604c9f59a1cf590092e, type: 3}
     desc: "\u5F9E\u50D5\u4EBA\u5148\u751F\u90A3\u62FF\u5230\u7684\u71ED\u53F0\u3002"
-    inBag: 0
+    inBag: 1
   - name: "\u6BDB\u5DFE"
     sprite: {fileID: 21300000, guid: e75d2c6237c80604c9f59a1cf590092e, type: 3}
     desc: "\u4E7E\u6DE8\u7684\u6BDB\u5DFE"
+    inBag: 0
+  - name: "\u6709\u6B98\u7F3A\u7C3D\u540D\u7684\u7D19\u689D"
+    sprite: {fileID: 21300000, guid: e75d2c6237c80604c9f59a1cf590092e, type: 3}
+    desc: "\u6709\u6B98\u7F3A\u7C3D\u540D\u7684\u7D19\u689D"
     inBag: 0

@@ -42,9 +42,10 @@ MonoBehaviour:
     Emotion: 
     Label: 
     LabelJump: 
-    Class: "\u9E1A\u9D61\u62CD\u7FC5"
+    Class: "\u9E1A\u9D612\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -78,6 +79,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 0
     "continue\u689D\u4EF6": 0
     Name: "\u9E1A\u9D61"
@@ -111,6 +113,7 @@ MonoBehaviour:
     Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0
   - "state\u985E\u578B": 8
     "continue\u689D\u4EF6": 2
     Name: "\u9E1A\u9D61"
@@ -141,6 +144,7 @@ MonoBehaviour:
     Emotion: 
     Label: 
     LabelJump: 
-    Class: "\u9E1A\u9D61\u505C\u6B62\u62CD\u7FC5"
+    Class: "\u9E1A\u9D612\u505C\u6B62\u62CD\u7FC5"
     Parameters: []
     WaitTime: 0
+    Mode: 0

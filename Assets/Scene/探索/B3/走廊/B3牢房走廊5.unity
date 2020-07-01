@@ -4080,6 +4080,142 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
+  - Name: "\u5C0F\u5B69\u63A5\u4EFB\u52D9\u8AAA\u8A71"
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1682151810}
+          m_MethodName: ChangeSprite
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Name: "\u5C0F\u5B69\u63A5\u4EFB\u52D9\u7D50\u675F\u8AAA\u8A71"
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1682151810}
+          m_MethodName: ChangeSprite
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Name: "\u5C0F\u5B69\u63A5\u4EFB\u52D9\u91CD\u8907\u5C0D\u8A71\u8AAA\u8A71"
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1830519821}
+          m_MethodName: ChangeSprite
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Name: "\u5C0F\u5B69\u63A5\u4EFB\u52D9\u91CD\u8907\u5C0D\u8A71\u7D50\u675F\u8AAA\u8A71"
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1830519821}
+          m_MethodName: ChangeSprite
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Name: "\u62FF\u5B8C\u7CD6\u679C\u56DE\u4F86\u8AAA\u8A71"
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1723777926}
+          m_MethodName: ChangeSprite
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Name: "\u62FF\u5B8C\u7CD6\u679C\u56DE\u4F86\u7D50\u675F\u8AAA\u8A71"
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1723777926}
+          m_MethodName: ChangeSprite
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Name: "\u771F\u7CD6\u679C\u91CD\u8907\u5C0D\u8A71\u8AAA\u8A71"
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1593008213}
+          m_MethodName: ChangeSprite
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Name: "\u771F\u7CD6\u679C\u91CD\u8907\u5C0D\u8A71\u7D50\u675F\u8AAA\u8A71"
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1593008213}
+          m_MethodName: ChangeSprite
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
 --- !u!4 &736304760
 Transform:
   m_ObjectHideFlags: 0
@@ -4619,6 +4755,7 @@ GameObject:
   - component: {fileID: 1593008211}
   - component: {fileID: 1593008210}
   - component: {fileID: 1593008209}
+  - component: {fileID: 1593008213}
   m_Layer: 8
   m_Name: "\u7CD6\u679C_\u771F\u7CD6\u679C\u91CD\u8907\u5C0D\u8A71"
   m_TagString: Untagged
@@ -4710,10 +4847,6 @@ MonoBehaviour:
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
   Radius: 0.44
   Offset: 0
-  "\u9580\u9396\u89E3\u9396\u5F8C": 2
-  "\u64BF\u53D6\u4E86\u7269\u4EF6\u5F8C": 2
-  "\u6545\u4E8B\u7CFB\u7D71\u5F8C": 2
-  "\u5207\u63DB\u5F8C\u7684NPC": {fileID: 0}
 --- !u!212 &1593008212
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4747,7 +4880,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d449c7e49fadcf54b9d3f5f860fc8a34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56c2f769b94b2d34b83c96aae7623905, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4757,6 +4890,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1593008213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593008207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506428dfdb374df40af76e70fb6fee4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "SpriteRenderer\u5728\u7684GameObject": {fileID: 1682151804}
+  "\u8981\u63DB\u7684sprite\u4E1F\u5728\u9019":
+  - {fileID: 21300000, guid: 0499d05e4113f2a4e892292ec751214a, type: 3}
+  - {fileID: 21300000, guid: 56c2f769b94b2d34b83c96aae7623905, type: 3}
+  "\u5982\u679C\u6709DragonBone": {fileID: 0}
 --- !u!1 &1663184302
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,6 +5039,7 @@ GameObject:
   - component: {fileID: 1682151807}
   - component: {fileID: 1682151806}
   - component: {fileID: 1682151805}
+  - component: {fileID: 1682151810}
   m_Layer: 8
   m_Name: "\u7CD6\u679C_\u5C0F\u5B69\u63A5\u4EFB\u52D9"
   m_TagString: Untagged
@@ -4954,12 +5104,8 @@ MonoBehaviour:
   "\u51B7\u537B\u6642\u9593": 2
   "\u9396\u7684\u540D\u5B57": 
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
-  Radius: 0.44
+  Radius: 0.86
   Offset: 0
-  "\u9580\u9396\u89E3\u9396\u5F8C": 2
-  "\u64BF\u53D6\u4E86\u7269\u4EF6\u5F8C": 2
-  "\u6545\u4E8B\u7CFB\u7D71\u5F8C": 2
-  "\u5207\u63DB\u5F8C\u7684NPC": {fileID: 0}
 --- !u!212 &1682151808
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4993,7 +5139,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d449c7e49fadcf54b9d3f5f860fc8a34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56c2f769b94b2d34b83c96aae7623905, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5018,6 +5164,22 @@ Transform:
   m_Father: {fileID: 1366306333}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682151810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1682151804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506428dfdb374df40af76e70fb6fee4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "SpriteRenderer\u5728\u7684GameObject": {fileID: 1682151804}
+  "\u8981\u63DB\u7684sprite\u4E1F\u5728\u9019":
+  - {fileID: 21300000, guid: 0499d05e4113f2a4e892292ec751214a, type: 3}
+  - {fileID: 0}
+  "\u5982\u679C\u6709DragonBone": {fileID: 0}
 --- !u!1 &1723777920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,6 +5193,7 @@ GameObject:
   - component: {fileID: 1723777924}
   - component: {fileID: 1723777923}
   - component: {fileID: 1723777922}
+  - component: {fileID: 1723777926}
   m_Layer: 8
   m_Name: "\u7CD6\u679C_\u62FF\u5B8C\u7CD6\u679C\u56DE\u4F86"
   m_TagString: Untagged
@@ -5117,10 +5280,6 @@ MonoBehaviour:
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
   Radius: 0.44
   Offset: 0
-  "\u9580\u9396\u89E3\u9396\u5F8C": 2
-  "\u64BF\u53D6\u4E86\u7269\u4EF6\u5F8C": 2
-  "\u6545\u4E8B\u7CFB\u7D71\u5F8C": 2
-  "\u5207\u63DB\u5F8C\u7684NPC": {fileID: 0}
 --- !u!212 &1723777925
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5154,7 +5313,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d449c7e49fadcf54b9d3f5f860fc8a34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56c2f769b94b2d34b83c96aae7623905, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5164,6 +5323,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1723777926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1723777920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506428dfdb374df40af76e70fb6fee4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "SpriteRenderer\u5728\u7684GameObject": {fileID: 1682151804}
+  "\u8981\u63DB\u7684sprite\u4E1F\u5728\u9019":
+  - {fileID: 21300000, guid: 0499d05e4113f2a4e892292ec751214a, type: 3}
+  - {fileID: 21300000, guid: 56c2f769b94b2d34b83c96aae7623905, type: 3}
+  "\u5982\u679C\u6709DragonBone": {fileID: 0}
 --- !u!1 &1778576199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5248,6 +5423,7 @@ GameObject:
   - component: {fileID: 1830519819}
   - component: {fileID: 1830519818}
   - component: {fileID: 1830519817}
+  - component: {fileID: 1830519821}
   m_Layer: 8
   m_Name: "\u7CD6\u679C_\u5C0F\u5B69\u63A5\u4EFB\u52D9\u91CD\u8907\u5C0D\u8A71"
   m_TagString: Untagged
@@ -5334,10 +5510,6 @@ MonoBehaviour:
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
   Radius: 0.44
   Offset: 0
-  "\u9580\u9396\u89E3\u9396\u5F8C": 2
-  "\u64BF\u53D6\u4E86\u7269\u4EF6\u5F8C": 2
-  "\u6545\u4E8B\u7CFB\u7D71\u5F8C": 2
-  "\u5207\u63DB\u5F8C\u7684NPC": {fileID: 0}
 --- !u!212 &1830519820
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5371,7 +5543,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d449c7e49fadcf54b9d3f5f860fc8a34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56c2f769b94b2d34b83c96aae7623905, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5381,6 +5553,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1830519821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1830519815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506428dfdb374df40af76e70fb6fee4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "SpriteRenderer\u5728\u7684GameObject": {fileID: 1682151804}
+  "\u8981\u63DB\u7684sprite\u4E1F\u5728\u9019":
+  - {fileID: 21300000, guid: 0499d05e4113f2a4e892292ec751214a, type: 3}
+  - {fileID: 21300000, guid: 56c2f769b94b2d34b83c96aae7623905, type: 3}
+  "\u5982\u679C\u6709DragonBone": {fileID: 0}
 --- !u!1 &1870740542
 GameObject:
   m_ObjectHideFlags: 0
