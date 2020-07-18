@@ -153,7 +153,13 @@ public class NPCFunction : MonoBehaviour {
             PickablePanel.ShowQuestion(functionList[functionElementIndex].可撿的物品的名字);
         }
         else if (functionList[functionElementIndex].type == FunctionElement.FunctionType.傳送) {
-            OpenDoorPanel.ShowQuestion(functionList[functionElementIndex].要傳送到的場景名字, functionList[functionElementIndex].傳送地點);
+            if(!functionList[functionElementIndex].自動傳送) {
+                OpenDoorPanel.ShowQuestion(functionList[functionElementIndex].要傳送到的場景名字, functionList[functionElementIndex].傳送地點);
+            }
+            else {
+                if((int)functionList[functionElementIndex].傳送地點 != 6) FindObjectOfType<GameStateManager>().黑幕轉場(functionList[functionElementIndex].要傳送到的場景名字, functionList[functionElementIndex].傳送地點, GameStateManager.Facing.保留);
+                else FindObjectOfType<GameStateManager>().黑幕轉場(functionList[functionElementIndex].要傳送到的場景名字, new Vector3(functionList[functionElementIndex].freeX, -3.2f, 0), GameStateManager.Facing.保留);
+            }
         }
         else if (functionList[functionElementIndex].type == FunctionElement.FunctionType.故事系統) {
             Debug.Log("1");
@@ -177,7 +183,9 @@ public class FunctionElement {
     public bool 不可撿結束後是否要設置變數;
     public string 變數名稱;
     public int 值;
+    public bool 自動傳送;
     public string 要傳送到的場景名字;
     public GameStateManager.SpawnPoint 傳送地點;
+    public float freeX;
     public StoryData 劇本;
 }

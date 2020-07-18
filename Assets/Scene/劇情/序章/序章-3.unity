@@ -206,8 +206,13 @@ MonoBehaviour:
   - type: 2
     "\u53EF\u64BF\u7684\u7269\u54C1\u7684\u540D\u5B57": 
     "\u4E0D\u53EF\u64BF\u7684\u7269\u54C1\u7684\u6558\u8FF0": 
+    "\u4E0D\u53EF\u64BF\u7D50\u675F\u5F8C\u662F\u5426\u8981\u8A2D\u7F6E\u8B8A\u6578": 0
+    "\u8B8A\u6578\u540D\u7A31": 
+    "\u503C": 0
+    "\u81EA\u52D5\u50B3\u9001": 0
     "\u8981\u50B3\u9001\u5230\u7684\u5834\u666F\u540D\u5B57": 
     "\u50B3\u9001\u5730\u9EDE": 0
+    freeX: 0
     "\u5287\u672C": {fileID: 11400000, guid: 91df45c2b7cf36746a9c958b095a9531, type: 2}
 --- !u!114 &100447712
 MonoBehaviour:
@@ -237,10 +242,6 @@ MonoBehaviour:
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
   Radius: 1.5
   Offset: 0
-  "\u9580\u9396\u89E3\u9396\u5F8C": 2
-  "\u64BF\u53D6\u4E86\u7269\u4EF6\u5F8C": 2
-  "\u6545\u4E8B\u7CFB\u7D71\u5F8C": 0
-  "\u5207\u63DB\u5F8C\u7684NPC": {fileID: 0}
 --- !u!212 &100447713
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7939,7 +7940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "SpriteRenderer\u5728\u7684GameObject": {fileID: 735615131}
   "\u8981\u63DB\u7684sprite\u4E1F\u5728\u9019":
-  - {fileID: 21300000, guid: 2a3453de514e77e409352f57443d47a9, type: 3}
+  - {fileID: 21300000, guid: 7033a1c4681c9f04faf578b3e763190b, type: 3}
   "\u5982\u679C\u6709DragonBone": {fileID: 0}
 --- !u!212 &735615133
 SpriteRenderer:
@@ -7974,7 +7975,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a1d2667dc5b5c5b48875c2325d5a5927, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7922c9e459864fd4eb5aaf2868c2c703, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11707,8 +11708,13 @@ MonoBehaviour:
   - type: 3
     "\u53EF\u64BF\u7684\u7269\u54C1\u7684\u540D\u5B57": 
     "\u4E0D\u53EF\u64BF\u7684\u7269\u54C1\u7684\u6558\u8FF0": 
+    "\u4E0D\u53EF\u64BF\u7D50\u675F\u5F8C\u662F\u5426\u8981\u8A2D\u7F6E\u8B8A\u6578": 0
+    "\u8B8A\u6578\u540D\u7A31": 
+    "\u503C": 0
+    "\u81EA\u52D5\u50B3\u9001": 0
     "\u8981\u50B3\u9001\u5230\u7684\u5834\u666F\u540D\u5B57": "\u5E8F\u7AE0-4"
     "\u50B3\u9001\u5730\u9EDE": 2
+    freeX: 0
     "\u5287\u672C": {fileID: 0}
 --- !u!114 &1123713636
 MonoBehaviour:
@@ -11738,10 +11744,6 @@ MonoBehaviour:
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
   Radius: 0.79
   Offset: 0
-  "\u9580\u9396\u89E3\u9396\u5F8C": 2
-  "\u64BF\u53D6\u4E86\u7269\u4EF6\u5F8C": 2
-  "\u6545\u4E8B\u7CFB\u7D71\u5F8C": 0
-  "\u5207\u63DB\u5F8C\u7684NPC": {fileID: 0}
 --- !u!212 &1123713637
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12074,8 +12076,13 @@ MonoBehaviour:
   - type: 2
     "\u53EF\u64BF\u7684\u7269\u54C1\u7684\u540D\u5B57": 
     "\u4E0D\u53EF\u64BF\u7684\u7269\u54C1\u7684\u6558\u8FF0": 
+    "\u4E0D\u53EF\u64BF\u7D50\u675F\u5F8C\u662F\u5426\u8981\u8A2D\u7F6E\u8B8A\u6578": 0
+    "\u8B8A\u6578\u540D\u7A31": 
+    "\u503C": 0
+    "\u81EA\u52D5\u50B3\u9001": 0
     "\u8981\u50B3\u9001\u5230\u7684\u5834\u666F\u540D\u5B57": 
     "\u50B3\u9001\u5730\u9EDE": 0
+    freeX: 0
     "\u5287\u672C": {fileID: 11400000, guid: 8dbc24f33c325a04b9097ebef53e6629, type: 2}
 --- !u!114 &1433863989
 MonoBehaviour:
@@ -12105,10 +12112,6 @@ MonoBehaviour:
   "\u9700\u8981\u7684\u9470\u5319\u540D\u5B57": 
   Radius: 1.5
   Offset: 0
-  "\u9580\u9396\u89E3\u9396\u5F8C": 2
-  "\u64BF\u53D6\u4E86\u7269\u4EF6\u5F8C": 2
-  "\u6545\u4E8B\u7CFB\u7D71\u5F8C": 0
-  "\u5207\u63DB\u5F8C\u7684NPC": {fileID: 0}
 --- !u!212 &1433863990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12222,7 +12225,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 735615131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.31, y: -0.09, z: 0}
+  m_LocalPosition: {x: -0.22, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1236175551}

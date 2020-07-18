@@ -36,14 +36,14 @@ public class WakeUpAnimation : MonoBehaviour {
             blurBase.material.SetFloat("_Size", i);
             yield return null;
         }
-        blurBase.material.SetFloat("_Size", 0);
+        blurBase.material.SetFloat("_Size", minValue);
     }
     IEnumerator AntiBlurAnimation() {
         for (float i = minValue; i <= maxValue; i += gapBetweenFrame) {
             blurBase.material.SetFloat("_Size", i);
             yield return null;
         }
-        blurBase.material.SetFloat("_Size", 0);
+        blurBase.material.SetFloat("_Size", maxValue);
     }
 
     public void StartWakeUpAnimation() {
