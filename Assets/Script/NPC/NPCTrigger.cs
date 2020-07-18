@@ -77,9 +77,9 @@ public class NPCTrigger : MonoBehaviour {
                 animator.SetBool("locked", b);
             }
         }
-        /*if(GetComponent<SpriteRenderer>()) {
+        if(GetComponent<SpriteRenderer>()) {
             sr = GetComponent<SpriteRenderer>();
-        }*/
+        }
     }
 
     void Update() {
@@ -160,13 +160,13 @@ public class NPCTrigger : MonoBehaviour {
                         if ((player.transform.position.x - transform.position.x) >= 0) {
                             if (!NPC面向右邊) {
                                 NPC面向右邊 = true;
-                                transform.localScale = new Vector2(-1 * transform.localScale.x, transform.localScale.y);
+                                sr.flipX = !sr.flipX;
                             }
                         }
                         else {
                             if (NPC面向右邊) {
                                 NPC面向右邊 = false;
-                                transform.localScale = new Vector2(-1 * transform.localScale.x, transform.localScale.y);
+                                sr.flipX = !sr.flipX;
                             }
                         }
                     }
