@@ -29,6 +29,10 @@ public class FishGM : MonoBehaviour {
     private Image Number;
 
     private bool duringTheGame;
+    private int nowLeftFish;
+    private float nowLeftInk;
+    private int nowbowlsNumber;
+    private float nowInkInCurrentBowl;
     
     private enum KeyDownStatus {
         rightKeyDownNow, 
@@ -57,6 +61,8 @@ public class FishGM : MonoBehaviour {
         PanelImg.material.SetFloat("_Size", 0);
         duringTheGame = false;
         keyDownStatus = KeyDownStatus.nothing;
+        nowLeftFish = 墨魚數量;
+        //nowLeftInk = 
 
         StartGame();
 	}
@@ -105,11 +111,24 @@ public class FishGM : MonoBehaviour {
         }
 
         Number.gameObject.SetActive(false);
+        RandomRangePosition();
+        Range.gameObject.SetActive(true);
         duringTheGame = true;
     }
 
-    private bool IsPointerInRange() {
+    /*private bool IsPointerInRange() {
 
+    }*/
+
+    private void RandomRangePosition() {
+        float absPosMax = BarRT.sizeDelta.x / 2 - Range.sizeDelta.x / 2;
+        Range.localPosition = new Vector2(Random.Range(-1 * absPosMax, absPosMax), Range.localPosition.y);
     }
 
+    /*IEnumerator UpdateInk() {
+        while() {
+
+            yield return new WaitForSeconds()
+        }
+    }*/
 }
